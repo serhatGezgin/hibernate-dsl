@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Codegenerator
+Bundle-SymbolicName: org.yazgel.hibernatedsl.codegenerator
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.yazgel.hibernatedsl.codegenerator.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
