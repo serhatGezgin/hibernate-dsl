@@ -26,7 +26,10 @@ public class Main {
 		em.getTransaction().begin();
 
 		// read the existing entries
-		Query q = em.createQuery("select m from Person m");
+		//Query q = em.createQuery("select m from Person m");
+		
+		Query q = em.createQuery("select p from Person p where p.firstName = :name");
+		q.setParameter("name", "Jim_32");
 
 		List<Person> persontList = q.getResultList();
 		for (Person person : persontList) {
