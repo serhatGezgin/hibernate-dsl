@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-2014-07-24 12:10:51.118 GMT:
- Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.1.1 - (764942): instance c013800d-0147-6847-f076-00000191cc08
-on database directory H:\Users\serhatg\databases\simpleDb  
+2014-07-25 12:35:00.410 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.1.1 - (764942): instance c013800d-0147-6d84-6a4a-00000285c358
+on database directory H:\derby\databases\relationsshipDb  
 
 Database Class Loader started - derby.database.classpath=''
