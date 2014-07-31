@@ -22,11 +22,11 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalJPQLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_DATE_LITERAL", "RULE_TIME_LITERAL", "RULE_TIMESTAMP_LITERAL", "RULE_DATE_STRING", "RULE_TIME_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'IMPORT'", "':'", "'HAVING'", "'ORDER'", "'BY'", "','", "'ASC'", "'DESC'", "'.'", "'UPDATE'", "'SET'", "'='", "'DELETE'", "'SELECT'", "'DISTINCT'", "'AVG'", "'('", "')'", "'MAX'", "'MIN'", "'SUM'", "'COUNT'", "'NEW'", "'FROM'", "'AS'", "'IN'", "'JOIN'", "'FETCH'", "'LEFT'", "'OUTER'", "'INNER'", "'WHERE'", "'OR'", "'AND'", "'NOT'", "'EXISTS'", "'ALL'", "'ANY'", "'SOME'", "'MEMBER'", "'OF'", "'IS'", "'NULL'", "'EMPTY'", "'LIKE'", "'BETWEEN'", "'CONCAT'", "'SUBSTRING'", "'LOWER'", "'UPPER'", "'LENGTH'", "'LOCATE'", "'ABS'", "'SQRT'", "'MOD'", "'SIZE'", "'TRUE'", "'FALSE'", "'<'", "'>'", "'<='", "'>='", "'!='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_DATE_LITERAL", "RULE_TIME_LITERAL", "RULE_TIMESTAMP_LITERAL", "RULE_DATE_STRING", "RULE_TIME_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'HAVING'", "'ORDER'", "'BY'", "','", "'ASC'", "'DESC'", "'.'", "'UPDATE'", "'SET'", "'='", "'DELETE'", "'SELECT'", "'DISTINCT'", "'AVG'", "'('", "')'", "'MAX'", "'MIN'", "'SUM'", "'COUNT'", "'NEW'", "'FROM'", "'AS'", "'IN'", "'JOIN'", "'FETCH'", "'LEFT'", "'OUTER'", "'INNER'", "'WHERE'", "'OR'", "'AND'", "'NOT'", "'EXISTS'", "'ALL'", "'ANY'", "'SOME'", "'MEMBER'", "'OF'", "'IS'", "'NULL'", "'EMPTY'", "'LIKE'", "'BETWEEN'", "':'", "'CONCAT'", "'SUBSTRING'", "'LOWER'", "'UPPER'", "'LENGTH'", "'LOCATE'", "'ABS'", "'SQRT'", "'MOD'", "'SIZE'", "'TRUE'", "'FALSE'", "'<'", "'>'", "'<='", "'>='", "'!='"
     };
     public static final int T__68=68;
     public static final int T__69=69;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int T__66=66;
     public static final int T__67=67;
     public static final int T__64=64;
@@ -80,7 +80,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
     public static final int RULE_ML_COMMENT=12;
     public static final int T__30=30;
     public static final int T__31=31;
-    public static final int RULE_STRING=4;
+    public static final int RULE_STRING=5;
     public static final int T__32=32;
     public static final int T__71=71;
     public static final int T__33=33;
@@ -98,7 +98,6 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
-    public static final int T__78=78;
     public static final int T__77=77;
 
     // delegates
@@ -176,49 +175,42 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQueryModule"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:77:1: ruleQueryModule returns [EObject current=null] : ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_defaultQuery_1_0= ruleJPQLQuery ) )? ( (lv_namedQueries_2_0= ruleNamedQuery ) )* ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:77:1: ruleQueryModule returns [EObject current=null] : ( (lv_queries_0_0= ruleQuery ) )* ;
     public final EObject ruleQueryModule() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_imports_0_0 = null;
-
-        EObject lv_defaultQuery_1_0 = null;
-
-        EObject lv_namedQueries_2_0 = null;
+        EObject lv_queries_0_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:80:28: ( ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_defaultQuery_1_0= ruleJPQLQuery ) )? ( (lv_namedQueries_2_0= ruleNamedQuery ) )* ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:81:1: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_defaultQuery_1_0= ruleJPQLQuery ) )? ( (lv_namedQueries_2_0= ruleNamedQuery ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:80:28: ( ( (lv_queries_0_0= ruleQuery ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:81:1: ( (lv_queries_0_0= ruleQuery ) )*
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:81:1: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_defaultQuery_1_0= ruleJPQLQuery ) )? ( (lv_namedQueries_2_0= ruleNamedQuery ) )* )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:81:2: ( (lv_imports_0_0= ruleImport ) )* ( (lv_defaultQuery_1_0= ruleJPQLQuery ) )? ( (lv_namedQueries_2_0= ruleNamedQuery ) )*
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:81:2: ( (lv_imports_0_0= ruleImport ) )*
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:81:1: ( (lv_queries_0_0= ruleQuery ) )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==16) ) {
+                if ( (LA1_0==23||(LA1_0>=26 && LA1_0<=27)||LA1_0==37) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:82:1: (lv_imports_0_0= ruleImport )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:82:1: (lv_queries_0_0= ruleQuery )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:82:1: (lv_imports_0_0= ruleImport )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:83:3: lv_imports_0_0= ruleImport
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:82:1: (lv_queries_0_0= ruleQuery )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:83:3: lv_queries_0_0= ruleQuery
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getQueryModuleAccess().getImportsImportParserRuleCall_0_0()); 
+            	    	        newCompositeNode(grammarAccess.getQueryModuleAccess().getQueriesQueryParserRuleCall_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleImport_in_ruleQueryModule131);
-            	    lv_imports_0_0=ruleImport();
+            	    pushFollow(FOLLOW_ruleQuery_in_ruleQueryModule130);
+            	    lv_queries_0_0=ruleQuery();
 
             	    state._fsp--;
 
@@ -228,9 +220,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    	        }
             	           		add(
             	           			current, 
-            	           			"imports",
-            	            		lv_imports_0_0, 
-            	            		"Import");
+            	           			"queries",
+            	            		lv_queries_0_0, 
+            	            		"Query");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -244,100 +236,6 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break loop1;
                 }
             } while (true);
-
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:99:3: ( (lv_defaultQuery_1_0= ruleJPQLQuery ) )?
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0==25||(LA2_0>=28 && LA2_0<=29)||LA2_0==39) ) {
-                alt2=1;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:100:1: (lv_defaultQuery_1_0= ruleJPQLQuery )
-                    {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:100:1: (lv_defaultQuery_1_0= ruleJPQLQuery )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:101:3: lv_defaultQuery_1_0= ruleJPQLQuery
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getQueryModuleAccess().getDefaultQueryJPQLQueryParserRuleCall_1_0()); 
-                    	    
-                    pushFollow(FOLLOW_ruleJPQLQuery_in_ruleQueryModule153);
-                    lv_defaultQuery_1_0=ruleJPQLQuery();
-
-                    state._fsp--;
-
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getQueryModuleRule());
-                    	        }
-                           		set(
-                           			current, 
-                           			"defaultQuery",
-                            		lv_defaultQuery_1_0, 
-                            		"JPQLQuery");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:117:3: ( (lv_namedQueries_2_0= ruleNamedQuery ) )*
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
-
-                if ( (LA3_0==RULE_ID) ) {
-                    alt3=1;
-                }
-
-
-                switch (alt3) {
-            	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:118:1: (lv_namedQueries_2_0= ruleNamedQuery )
-            	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:118:1: (lv_namedQueries_2_0= ruleNamedQuery )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:119:3: lv_namedQueries_2_0= ruleNamedQuery
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getQueryModuleAccess().getNamedQueriesNamedQueryParserRuleCall_2_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleNamedQuery_in_ruleQueryModule175);
-            	    lv_namedQueries_2_0=ruleNamedQuery();
-
-            	    state._fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getQueryModuleRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"namedQueries",
-            	            		lv_namedQueries_2_0, 
-            	            		"NamedQuery");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop3;
-                }
-            } while (true);
-
-
-            }
 
 
             }
@@ -356,26 +254,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleQueryModule"
 
 
-    // $ANTLR start "entryRuleImport"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:143:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
-    public final EObject entryRuleImport() throws RecognitionException {
+    // $ANTLR start "entryRuleQuery"
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:107:1: entryRuleQuery returns [EObject current=null] : iv_ruleQuery= ruleQuery EOF ;
+    public final EObject entryRuleQuery() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleImport = null;
+        EObject iv_ruleQuery = null;
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:144:2: (iv_ruleImport= ruleImport EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:145:2: iv_ruleImport= ruleImport EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:108:2: (iv_ruleQuery= ruleQuery EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:109:2: iv_ruleQuery= ruleQuery EOF
             {
-             newCompositeNode(grammarAccess.getImportRule()); 
-            pushFollow(FOLLOW_ruleImport_in_entryRuleImport212);
-            iv_ruleImport=ruleImport();
+             newCompositeNode(grammarAccess.getQueryRule()); 
+            pushFollow(FOLLOW_ruleQuery_in_entryRuleQuery166);
+            iv_ruleQuery=ruleQuery();
 
             state._fsp--;
 
-             current =iv_ruleImport; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImport222); 
+             current =iv_ruleQuery; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQuery176); 
 
             }
 
@@ -389,251 +287,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleImport"
+    // $ANTLR end "entryRuleQuery"
 
 
-    // $ANTLR start "ruleImport"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:152:1: ruleImport returns [EObject current=null] : (otherlv_0= 'IMPORT' ( (lv_importURI_1_0= RULE_STRING ) ) ) ;
-    public final EObject ruleImport() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token lv_importURI_1_0=null;
-
-         enterRule(); 
-            
-        try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:155:28: ( (otherlv_0= 'IMPORT' ( (lv_importURI_1_0= RULE_STRING ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:156:1: (otherlv_0= 'IMPORT' ( (lv_importURI_1_0= RULE_STRING ) ) )
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:156:1: (otherlv_0= 'IMPORT' ( (lv_importURI_1_0= RULE_STRING ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:156:3: otherlv_0= 'IMPORT' ( (lv_importURI_1_0= RULE_STRING ) )
-            {
-            otherlv_0=(Token)match(input,16,FOLLOW_16_in_ruleImport259); 
-
-                	newLeafNode(otherlv_0, grammarAccess.getImportAccess().getIMPORTKeyword_0());
-                
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:160:1: ( (lv_importURI_1_0= RULE_STRING ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:161:1: (lv_importURI_1_0= RULE_STRING )
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:161:1: (lv_importURI_1_0= RULE_STRING )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:162:3: lv_importURI_1_0= RULE_STRING
-            {
-            lv_importURI_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImport276); 
-
-            			newLeafNode(lv_importURI_1_0, grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getImportRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"importURI",
-                    		lv_importURI_1_0, 
-                    		"STRING");
-            	    
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleImport"
-
-
-    // $ANTLR start "entryRuleNamedQuery"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:186:1: entryRuleNamedQuery returns [EObject current=null] : iv_ruleNamedQuery= ruleNamedQuery EOF ;
-    public final EObject entryRuleNamedQuery() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleNamedQuery = null;
-
-
-        try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:187:2: (iv_ruleNamedQuery= ruleNamedQuery EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:188:2: iv_ruleNamedQuery= ruleNamedQuery EOF
-            {
-             newCompositeNode(grammarAccess.getNamedQueryRule()); 
-            pushFollow(FOLLOW_ruleNamedQuery_in_entryRuleNamedQuery317);
-            iv_ruleNamedQuery=ruleNamedQuery();
-
-            state._fsp--;
-
-             current =iv_ruleNamedQuery; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNamedQuery327); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleNamedQuery"
-
-
-    // $ANTLR start "ruleNamedQuery"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:195:1: ruleNamedQuery returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_query_2_0= ruleJPQLQuery ) ) ) ;
-    public final EObject ruleNamedQuery() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_name_0_0=null;
-        Token otherlv_1=null;
-        EObject lv_query_2_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:198:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_query_2_0= ruleJPQLQuery ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:199:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_query_2_0= ruleJPQLQuery ) ) )
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:199:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_query_2_0= ruleJPQLQuery ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:199:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_query_2_0= ruleJPQLQuery ) )
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:199:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:200:1: (lv_name_0_0= RULE_ID )
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:200:1: (lv_name_0_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:201:3: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNamedQuery369); 
-
-            			newLeafNode(lv_name_0_0, grammarAccess.getNamedQueryAccess().getNameIDTerminalRuleCall_0_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getNamedQueryRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_0_0, 
-                    		"ID");
-            	    
-
-            }
-
-
-            }
-
-            otherlv_1=(Token)match(input,17,FOLLOW_17_in_ruleNamedQuery386); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getNamedQueryAccess().getColonKeyword_1());
-                
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:221:1: ( (lv_query_2_0= ruleJPQLQuery ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:222:1: (lv_query_2_0= ruleJPQLQuery )
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:222:1: (lv_query_2_0= ruleJPQLQuery )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:223:3: lv_query_2_0= ruleJPQLQuery
-            {
-             
-            	        newCompositeNode(grammarAccess.getNamedQueryAccess().getQueryJPQLQueryParserRuleCall_2_0()); 
-            	    
-            pushFollow(FOLLOW_ruleJPQLQuery_in_ruleNamedQuery407);
-            lv_query_2_0=ruleJPQLQuery();
-
-            state._fsp--;
-
-
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getNamedQueryRule());
-            	        }
-                   		set(
-                   			current, 
-                   			"query",
-                    		lv_query_2_0, 
-                    		"JPQLQuery");
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleNamedQuery"
-
-
-    // $ANTLR start "entryRuleJPQLQuery"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:247:1: entryRuleJPQLQuery returns [EObject current=null] : iv_ruleJPQLQuery= ruleJPQLQuery EOF ;
-    public final EObject entryRuleJPQLQuery() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleJPQLQuery = null;
-
-
-        try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:248:2: (iv_ruleJPQLQuery= ruleJPQLQuery EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:249:2: iv_ruleJPQLQuery= ruleJPQLQuery EOF
-            {
-             newCompositeNode(grammarAccess.getJPQLQueryRule()); 
-            pushFollow(FOLLOW_ruleJPQLQuery_in_entryRuleJPQLQuery443);
-            iv_ruleJPQLQuery=ruleJPQLQuery();
-
-            state._fsp--;
-
-             current =iv_ruleJPQLQuery; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJPQLQuery453); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleJPQLQuery"
-
-
-    // $ANTLR start "ruleJPQLQuery"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:256:1: ruleJPQLQuery returns [EObject current=null] : (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement ) ;
-    public final EObject ruleJPQLQuery() throws RecognitionException {
+    // $ANTLR start "ruleQuery"
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:116:1: ruleQuery returns [EObject current=null] : (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement ) ;
+    public final EObject ruleQuery() throws RecognitionException {
         EObject current = null;
 
         EObject this_SelectStatement_0 = null;
@@ -646,43 +305,43 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:259:28: ( (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:260:1: (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:119:28: ( (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:120:1: (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:260:1: (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement )
-            int alt4=3;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:120:1: (this_SelectStatement_0= ruleSelectStatement | this_UpdateStatement_1= ruleUpdateStatement | this_DeleteStatement_2= ruleDeleteStatement )
+            int alt2=3;
             switch ( input.LA(1) ) {
-            case 29:
-            case 39:
+            case 27:
+            case 37:
                 {
-                alt4=1;
+                alt2=1;
                 }
                 break;
-            case 25:
+            case 23:
                 {
-                alt4=2;
+                alt2=2;
                 }
                 break;
-            case 28:
+            case 26:
                 {
-                alt4=3;
+                alt2=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 2, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt4) {
+            switch (alt2) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:261:5: this_SelectStatement_0= ruleSelectStatement
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:121:5: this_SelectStatement_0= ruleSelectStatement
                     {
                      
-                            newCompositeNode(grammarAccess.getJPQLQueryAccess().getSelectStatementParserRuleCall_0()); 
+                            newCompositeNode(grammarAccess.getQueryAccess().getSelectStatementParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSelectStatement_in_ruleJPQLQuery500);
+                    pushFollow(FOLLOW_ruleSelectStatement_in_ruleQuery223);
                     this_SelectStatement_0=ruleSelectStatement();
 
                     state._fsp--;
@@ -695,12 +354,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:271:5: this_UpdateStatement_1= ruleUpdateStatement
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:131:5: this_UpdateStatement_1= ruleUpdateStatement
                     {
                      
-                            newCompositeNode(grammarAccess.getJPQLQueryAccess().getUpdateStatementParserRuleCall_1()); 
+                            newCompositeNode(grammarAccess.getQueryAccess().getUpdateStatementParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleUpdateStatement_in_ruleJPQLQuery527);
+                    pushFollow(FOLLOW_ruleUpdateStatement_in_ruleQuery250);
                     this_UpdateStatement_1=ruleUpdateStatement();
 
                     state._fsp--;
@@ -713,12 +372,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:281:5: this_DeleteStatement_2= ruleDeleteStatement
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:141:5: this_DeleteStatement_2= ruleDeleteStatement
                     {
                      
-                            newCompositeNode(grammarAccess.getJPQLQueryAccess().getDeleteStatementParserRuleCall_2()); 
+                            newCompositeNode(grammarAccess.getQueryAccess().getDeleteStatementParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleDeleteStatement_in_ruleJPQLQuery554);
+                    pushFollow(FOLLOW_ruleDeleteStatement_in_ruleQuery277);
                     this_DeleteStatement_2=ruleDeleteStatement();
 
                     state._fsp--;
@@ -747,11 +406,11 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleJPQLQuery"
+    // $ANTLR end "ruleQuery"
 
 
     // $ANTLR start "entryRuleSelectStatement"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:297:1: entryRuleSelectStatement returns [EObject current=null] : iv_ruleSelectStatement= ruleSelectStatement EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:157:1: entryRuleSelectStatement returns [EObject current=null] : iv_ruleSelectStatement= ruleSelectStatement EOF ;
     public final EObject entryRuleSelectStatement() throws RecognitionException {
         EObject current = null;
 
@@ -759,17 +418,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:298:2: (iv_ruleSelectStatement= ruleSelectStatement EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:299:2: iv_ruleSelectStatement= ruleSelectStatement EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:158:2: (iv_ruleSelectStatement= ruleSelectStatement EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:159:2: iv_ruleSelectStatement= ruleSelectStatement EOF
             {
              newCompositeNode(grammarAccess.getSelectStatementRule()); 
-            pushFollow(FOLLOW_ruleSelectStatement_in_entryRuleSelectStatement589);
+            pushFollow(FOLLOW_ruleSelectStatement_in_entryRuleSelectStatement312);
             iv_ruleSelectStatement=ruleSelectStatement();
 
             state._fsp--;
 
              current =iv_ruleSelectStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectStatement599); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectStatement322); 
 
             }
 
@@ -787,7 +446,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectStatement"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:306:1: ruleSelectStatement returns [EObject current=null] : ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:166:1: ruleSelectStatement returns [EObject current=null] : ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? ) ;
     public final EObject ruleSelectStatement() throws RecognitionException {
         EObject current = null;
 
@@ -803,22 +462,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:309:28: ( ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:310:1: ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:169:28: ( ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:170:1: ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:310:1: ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:310:2: ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )?
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:170:1: ( ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:170:2: ( (lv_selectFromClause_0_0= ruleSelectFromClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ( (lv_having_2_0= ruleHavingClause ) )? ( (lv_order_3_0= ruleOrderClause ) )?
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:310:2: ( (lv_selectFromClause_0_0= ruleSelectFromClause ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:311:1: (lv_selectFromClause_0_0= ruleSelectFromClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:170:2: ( (lv_selectFromClause_0_0= ruleSelectFromClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:171:1: (lv_selectFromClause_0_0= ruleSelectFromClause )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:311:1: (lv_selectFromClause_0_0= ruleSelectFromClause )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:312:3: lv_selectFromClause_0_0= ruleSelectFromClause
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:171:1: (lv_selectFromClause_0_0= ruleSelectFromClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:172:3: lv_selectFromClause_0_0= ruleSelectFromClause
             {
              
             	        newCompositeNode(grammarAccess.getSelectStatementAccess().getSelectFromClauseSelectFromClauseParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleSelectFromClause_in_ruleSelectStatement645);
+            pushFollow(FOLLOW_ruleSelectFromClause_in_ruleSelectStatement368);
             lv_selectFromClause_0_0=ruleSelectFromClause();
 
             state._fsp--;
@@ -840,24 +499,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:328:2: ( (lv_whereClause_1_0= ruleWhereClause ) )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:188:2: ( (lv_whereClause_1_0= ruleWhereClause ) )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA5_0==47) ) {
-                alt5=1;
+            if ( (LA3_0==45) ) {
+                alt3=1;
             }
-            switch (alt5) {
+            switch (alt3) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:329:1: (lv_whereClause_1_0= ruleWhereClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:189:1: (lv_whereClause_1_0= ruleWhereClause )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:329:1: (lv_whereClause_1_0= ruleWhereClause )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:330:3: lv_whereClause_1_0= ruleWhereClause
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:189:1: (lv_whereClause_1_0= ruleWhereClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:190:3: lv_whereClause_1_0= ruleWhereClause
                     {
                      
                     	        newCompositeNode(grammarAccess.getSelectStatementAccess().getWhereClauseWhereClauseParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleWhereClause_in_ruleSelectStatement666);
+                    pushFollow(FOLLOW_ruleWhereClause_in_ruleSelectStatement389);
                     lv_whereClause_1_0=ruleWhereClause();
 
                     state._fsp--;
@@ -882,24 +541,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:346:3: ( (lv_having_2_0= ruleHavingClause ) )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:206:3: ( (lv_having_2_0= ruleHavingClause ) )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA6_0==18) ) {
-                alt6=1;
+            if ( (LA4_0==16) ) {
+                alt4=1;
             }
-            switch (alt6) {
+            switch (alt4) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:347:1: (lv_having_2_0= ruleHavingClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:207:1: (lv_having_2_0= ruleHavingClause )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:347:1: (lv_having_2_0= ruleHavingClause )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:348:3: lv_having_2_0= ruleHavingClause
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:207:1: (lv_having_2_0= ruleHavingClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:208:3: lv_having_2_0= ruleHavingClause
                     {
                      
                     	        newCompositeNode(grammarAccess.getSelectStatementAccess().getHavingHavingClauseParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleHavingClause_in_ruleSelectStatement688);
+                    pushFollow(FOLLOW_ruleHavingClause_in_ruleSelectStatement411);
                     lv_having_2_0=ruleHavingClause();
 
                     state._fsp--;
@@ -924,24 +583,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:364:3: ( (lv_order_3_0= ruleOrderClause ) )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:224:3: ( (lv_order_3_0= ruleOrderClause ) )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA7_0==19) ) {
-                alt7=1;
+            if ( (LA5_0==17) ) {
+                alt5=1;
             }
-            switch (alt7) {
+            switch (alt5) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:365:1: (lv_order_3_0= ruleOrderClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:225:1: (lv_order_3_0= ruleOrderClause )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:365:1: (lv_order_3_0= ruleOrderClause )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:366:3: lv_order_3_0= ruleOrderClause
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:225:1: (lv_order_3_0= ruleOrderClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:226:3: lv_order_3_0= ruleOrderClause
                     {
                      
                     	        newCompositeNode(grammarAccess.getSelectStatementAccess().getOrderOrderClauseParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleOrderClause_in_ruleSelectStatement710);
+                    pushFollow(FOLLOW_ruleOrderClause_in_ruleSelectStatement433);
                     lv_order_3_0=ruleOrderClause();
 
                     state._fsp--;
@@ -987,7 +646,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHavingClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:390:1: entryRuleHavingClause returns [EObject current=null] : iv_ruleHavingClause= ruleHavingClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:250:1: entryRuleHavingClause returns [EObject current=null] : iv_ruleHavingClause= ruleHavingClause EOF ;
     public final EObject entryRuleHavingClause() throws RecognitionException {
         EObject current = null;
 
@@ -995,17 +654,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:391:2: (iv_ruleHavingClause= ruleHavingClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:392:2: iv_ruleHavingClause= ruleHavingClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:251:2: (iv_ruleHavingClause= ruleHavingClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:252:2: iv_ruleHavingClause= ruleHavingClause EOF
             {
              newCompositeNode(grammarAccess.getHavingClauseRule()); 
-            pushFollow(FOLLOW_ruleHavingClause_in_entryRuleHavingClause747);
+            pushFollow(FOLLOW_ruleHavingClause_in_entryRuleHavingClause470);
             iv_ruleHavingClause=ruleHavingClause();
 
             state._fsp--;
 
              current =iv_ruleHavingClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHavingClause757); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHavingClause480); 
 
             }
 
@@ -1023,7 +682,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHavingClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:399:1: ruleHavingClause returns [EObject current=null] : (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:259:1: ruleHavingClause returns [EObject current=null] : (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) ) ;
     public final EObject ruleHavingClause() throws RecognitionException {
         EObject current = null;
 
@@ -1034,26 +693,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:402:28: ( (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:403:1: (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:262:28: ( (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:263:1: (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:403:1: (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:403:3: otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:263:1: (otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:263:3: otherlv_0= 'HAVING' ( (lv_having_1_0= ruleOrExpression ) )
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleHavingClause794); 
+            otherlv_0=(Token)match(input,16,FOLLOW_16_in_ruleHavingClause517); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getHavingClauseAccess().getHAVINGKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:407:1: ( (lv_having_1_0= ruleOrExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:408:1: (lv_having_1_0= ruleOrExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:267:1: ( (lv_having_1_0= ruleOrExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:268:1: (lv_having_1_0= ruleOrExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:408:1: (lv_having_1_0= ruleOrExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:409:3: lv_having_1_0= ruleOrExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:268:1: (lv_having_1_0= ruleOrExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:269:3: lv_having_1_0= ruleOrExpression
             {
              
             	        newCompositeNode(grammarAccess.getHavingClauseAccess().getHavingOrExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleOrExpression_in_ruleHavingClause815);
+            pushFollow(FOLLOW_ruleOrExpression_in_ruleHavingClause538);
             lv_having_1_0=ruleOrExpression();
 
             state._fsp--;
@@ -1096,7 +755,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOrderClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:433:1: entryRuleOrderClause returns [EObject current=null] : iv_ruleOrderClause= ruleOrderClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:293:1: entryRuleOrderClause returns [EObject current=null] : iv_ruleOrderClause= ruleOrderClause EOF ;
     public final EObject entryRuleOrderClause() throws RecognitionException {
         EObject current = null;
 
@@ -1104,17 +763,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:434:2: (iv_ruleOrderClause= ruleOrderClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:435:2: iv_ruleOrderClause= ruleOrderClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:294:2: (iv_ruleOrderClause= ruleOrderClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:295:2: iv_ruleOrderClause= ruleOrderClause EOF
             {
              newCompositeNode(grammarAccess.getOrderClauseRule()); 
-            pushFollow(FOLLOW_ruleOrderClause_in_entryRuleOrderClause851);
+            pushFollow(FOLLOW_ruleOrderClause_in_entryRuleOrderClause574);
             iv_ruleOrderClause=ruleOrderClause();
 
             state._fsp--;
 
              current =iv_ruleOrderClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOrderClause861); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOrderClause584); 
 
             }
 
@@ -1132,7 +791,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOrderClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:442:1: ruleOrderClause returns [EObject current=null] : (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:302:1: ruleOrderClause returns [EObject current=null] : (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? ) ;
     public final EObject ruleOrderClause() throws RecognitionException {
         EObject current = null;
 
@@ -1149,30 +808,30 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:445:28: ( (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:446:1: (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:305:28: ( (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:306:1: (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:446:1: (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:446:3: otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )?
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:306:1: (otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:306:3: otherlv_0= 'ORDER' otherlv_1= 'BY' ( (lv_ordering_2_0= ruleOrderItem ) ) (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )* ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )?
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleOrderClause898); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleOrderClause621); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getOrderClauseAccess().getORDERKeyword_0());
                 
-            otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleOrderClause910); 
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleOrderClause633); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getOrderClauseAccess().getBYKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:454:1: ( (lv_ordering_2_0= ruleOrderItem ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:455:1: (lv_ordering_2_0= ruleOrderItem )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:314:1: ( (lv_ordering_2_0= ruleOrderItem ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:315:1: (lv_ordering_2_0= ruleOrderItem )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:455:1: (lv_ordering_2_0= ruleOrderItem )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:456:3: lv_ordering_2_0= ruleOrderItem
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:315:1: (lv_ordering_2_0= ruleOrderItem )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:316:3: lv_ordering_2_0= ruleOrderItem
             {
              
             	        newCompositeNode(grammarAccess.getOrderClauseAccess().getOrderingOrderItemParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleOrderItem_in_ruleOrderClause931);
+            pushFollow(FOLLOW_ruleOrderItem_in_ruleOrderClause654);
             lv_ordering_2_0=ruleOrderItem();
 
             state._fsp--;
@@ -1194,35 +853,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:472:2: (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )*
-            loop8:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:332:2: (otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) ) )*
+            loop6:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( (LA8_0==21) ) {
-                    alt8=1;
+                if ( (LA6_0==19) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt6) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:472:4: otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:332:4: otherlv_3= ',' ( (lv_ordering_4_0= ruleOrderItem ) )
             	    {
-            	    otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleOrderClause944); 
+            	    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleOrderClause667); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getOrderClauseAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:476:1: ( (lv_ordering_4_0= ruleOrderItem ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:477:1: (lv_ordering_4_0= ruleOrderItem )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:336:1: ( (lv_ordering_4_0= ruleOrderItem ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:337:1: (lv_ordering_4_0= ruleOrderItem )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:477:1: (lv_ordering_4_0= ruleOrderItem )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:478:3: lv_ordering_4_0= ruleOrderItem
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:337:1: (lv_ordering_4_0= ruleOrderItem )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:338:3: lv_ordering_4_0= ruleOrderItem
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getOrderClauseAccess().getOrderingOrderItemParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleOrderItem_in_ruleOrderClause965);
+            	    pushFollow(FOLLOW_ruleOrderItem_in_ruleOrderClause688);
             	    lv_ordering_4_0=ruleOrderItem();
 
             	    state._fsp--;
@@ -1249,31 +908,31 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop6;
                 }
             } while (true);
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:494:4: ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )?
-            int alt9=3;
-            int LA9_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:354:4: ( ( (lv_isAsc_5_0= 'ASC' ) ) | ( (lv_isDesc_6_0= 'DESC' ) ) )?
+            int alt7=3;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA9_0==22) ) {
-                alt9=1;
+            if ( (LA7_0==20) ) {
+                alt7=1;
             }
-            else if ( (LA9_0==23) ) {
-                alt9=2;
+            else if ( (LA7_0==21) ) {
+                alt7=2;
             }
-            switch (alt9) {
+            switch (alt7) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:494:5: ( (lv_isAsc_5_0= 'ASC' ) )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:354:5: ( (lv_isAsc_5_0= 'ASC' ) )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:494:5: ( (lv_isAsc_5_0= 'ASC' ) )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:495:1: (lv_isAsc_5_0= 'ASC' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:354:5: ( (lv_isAsc_5_0= 'ASC' ) )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:355:1: (lv_isAsc_5_0= 'ASC' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:495:1: (lv_isAsc_5_0= 'ASC' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:496:3: lv_isAsc_5_0= 'ASC'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:355:1: (lv_isAsc_5_0= 'ASC' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:356:3: lv_isAsc_5_0= 'ASC'
                     {
-                    lv_isAsc_5_0=(Token)match(input,22,FOLLOW_22_in_ruleOrderClause986); 
+                    lv_isAsc_5_0=(Token)match(input,20,FOLLOW_20_in_ruleOrderClause709); 
 
                             newLeafNode(lv_isAsc_5_0, grammarAccess.getOrderClauseAccess().getIsAscASCKeyword_4_0_0());
                         
@@ -1293,15 +952,15 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:510:6: ( (lv_isDesc_6_0= 'DESC' ) )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:370:6: ( (lv_isDesc_6_0= 'DESC' ) )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:510:6: ( (lv_isDesc_6_0= 'DESC' ) )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:511:1: (lv_isDesc_6_0= 'DESC' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:370:6: ( (lv_isDesc_6_0= 'DESC' ) )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:371:1: (lv_isDesc_6_0= 'DESC' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:511:1: (lv_isDesc_6_0= 'DESC' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:512:3: lv_isDesc_6_0= 'DESC'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:371:1: (lv_isDesc_6_0= 'DESC' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:372:3: lv_isDesc_6_0= 'DESC'
                     {
-                    lv_isDesc_6_0=(Token)match(input,23,FOLLOW_23_in_ruleOrderClause1023); 
+                    lv_isDesc_6_0=(Token)match(input,21,FOLLOW_21_in_ruleOrderClause746); 
 
                             newLeafNode(lv_isDesc_6_0, grammarAccess.getOrderClauseAccess().getIsDescDESCKeyword_4_1_0());
                         
@@ -1344,7 +1003,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOrderItem"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:533:1: entryRuleOrderItem returns [EObject current=null] : iv_ruleOrderItem= ruleOrderItem EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:393:1: entryRuleOrderItem returns [EObject current=null] : iv_ruleOrderItem= ruleOrderItem EOF ;
     public final EObject entryRuleOrderItem() throws RecognitionException {
         EObject current = null;
 
@@ -1352,17 +1011,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:534:2: (iv_ruleOrderItem= ruleOrderItem EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:535:2: iv_ruleOrderItem= ruleOrderItem EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:394:2: (iv_ruleOrderItem= ruleOrderItem EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:395:2: iv_ruleOrderItem= ruleOrderItem EOF
             {
              newCompositeNode(grammarAccess.getOrderItemRule()); 
-            pushFollow(FOLLOW_ruleOrderItem_in_entryRuleOrderItem1074);
+            pushFollow(FOLLOW_ruleOrderItem_in_entryRuleOrderItem797);
             iv_ruleOrderItem=ruleOrderItem();
 
             state._fsp--;
 
              current =iv_ruleOrderItem; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOrderItem1084); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOrderItem807); 
 
             }
 
@@ -1380,7 +1039,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOrderItem"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:542:1: ruleOrderItem returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:402:1: ruleOrderItem returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) ) ;
     public final EObject ruleOrderItem() throws RecognitionException {
         EObject current = null;
 
@@ -1391,24 +1050,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:545:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:546:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:405:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:406:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:546:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:546:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:406:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:406:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= '.' ( (lv_feature_2_0= RULE_ID ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:546:2: ( (otherlv_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:547:1: (otherlv_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:406:2: ( (otherlv_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:407:1: (otherlv_0= RULE_ID )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:547:1: (otherlv_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:548:3: otherlv_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:407:1: (otherlv_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:408:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getOrderItemRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleOrderItem1129); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleOrderItem852); 
 
             		newLeafNode(otherlv_0, grammarAccess.getOrderItemAccess().getVarFromEntryCrossReference_0_0()); 
             	
@@ -1418,17 +1077,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleOrderItem1141); 
+            otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleOrderItem864); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getOrderItemAccess().getFullStopKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:563:1: ( (lv_feature_2_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:564:1: (lv_feature_2_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:423:1: ( (lv_feature_2_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:424:1: (lv_feature_2_0= RULE_ID )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:564:1: (lv_feature_2_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:565:3: lv_feature_2_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:424:1: (lv_feature_2_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:425:3: lv_feature_2_0= RULE_ID
             {
-            lv_feature_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleOrderItem1158); 
+            lv_feature_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleOrderItem881); 
 
             			newLeafNode(lv_feature_2_0, grammarAccess.getOrderItemAccess().getFeatureIDTerminalRuleCall_2_0()); 
             		
@@ -1469,7 +1128,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUpdateStatement"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:589:1: entryRuleUpdateStatement returns [EObject current=null] : iv_ruleUpdateStatement= ruleUpdateStatement EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:449:1: entryRuleUpdateStatement returns [EObject current=null] : iv_ruleUpdateStatement= ruleUpdateStatement EOF ;
     public final EObject entryRuleUpdateStatement() throws RecognitionException {
         EObject current = null;
 
@@ -1477,17 +1136,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:590:2: (iv_ruleUpdateStatement= ruleUpdateStatement EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:591:2: iv_ruleUpdateStatement= ruleUpdateStatement EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:450:2: (iv_ruleUpdateStatement= ruleUpdateStatement EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:451:2: iv_ruleUpdateStatement= ruleUpdateStatement EOF
             {
              newCompositeNode(grammarAccess.getUpdateStatementRule()); 
-            pushFollow(FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement1199);
+            pushFollow(FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement922);
             iv_ruleUpdateStatement=ruleUpdateStatement();
 
             state._fsp--;
 
              current =iv_ruleUpdateStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateStatement1209); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateStatement932); 
 
             }
 
@@ -1505,7 +1164,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUpdateStatement"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:598:1: ruleUpdateStatement returns [EObject current=null] : ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:458:1: ruleUpdateStatement returns [EObject current=null] : ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? ) ;
     public final EObject ruleUpdateStatement() throws RecognitionException {
         EObject current = null;
 
@@ -1519,22 +1178,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:601:28: ( ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:602:1: ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:461:28: ( ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:462:1: ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:602:1: ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:602:2: ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )?
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:462:1: ( ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:462:2: ( (lv_updateClause_0_0= ruleUpdateClause ) ) ( (lv_setClause_1_0= ruleSetClause ) ) ( (lv_whereClause_2_0= ruleWhereClause ) )?
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:602:2: ( (lv_updateClause_0_0= ruleUpdateClause ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:603:1: (lv_updateClause_0_0= ruleUpdateClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:462:2: ( (lv_updateClause_0_0= ruleUpdateClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:463:1: (lv_updateClause_0_0= ruleUpdateClause )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:603:1: (lv_updateClause_0_0= ruleUpdateClause )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:604:3: lv_updateClause_0_0= ruleUpdateClause
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:463:1: (lv_updateClause_0_0= ruleUpdateClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:464:3: lv_updateClause_0_0= ruleUpdateClause
             {
              
             	        newCompositeNode(grammarAccess.getUpdateStatementAccess().getUpdateClauseUpdateClauseParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleUpdateClause_in_ruleUpdateStatement1255);
+            pushFollow(FOLLOW_ruleUpdateClause_in_ruleUpdateStatement978);
             lv_updateClause_0_0=ruleUpdateClause();
 
             state._fsp--;
@@ -1556,16 +1215,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:620:2: ( (lv_setClause_1_0= ruleSetClause ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:621:1: (lv_setClause_1_0= ruleSetClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:480:2: ( (lv_setClause_1_0= ruleSetClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:481:1: (lv_setClause_1_0= ruleSetClause )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:621:1: (lv_setClause_1_0= ruleSetClause )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:622:3: lv_setClause_1_0= ruleSetClause
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:481:1: (lv_setClause_1_0= ruleSetClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:482:3: lv_setClause_1_0= ruleSetClause
             {
              
             	        newCompositeNode(grammarAccess.getUpdateStatementAccess().getSetClauseSetClauseParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleSetClause_in_ruleUpdateStatement1276);
+            pushFollow(FOLLOW_ruleSetClause_in_ruleUpdateStatement999);
             lv_setClause_1_0=ruleSetClause();
 
             state._fsp--;
@@ -1587,24 +1246,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:638:2: ( (lv_whereClause_2_0= ruleWhereClause ) )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:498:2: ( (lv_whereClause_2_0= ruleWhereClause ) )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA10_0==47) ) {
-                alt10=1;
+            if ( (LA8_0==45) ) {
+                alt8=1;
             }
-            switch (alt10) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:639:1: (lv_whereClause_2_0= ruleWhereClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:499:1: (lv_whereClause_2_0= ruleWhereClause )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:639:1: (lv_whereClause_2_0= ruleWhereClause )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:640:3: lv_whereClause_2_0= ruleWhereClause
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:499:1: (lv_whereClause_2_0= ruleWhereClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:500:3: lv_whereClause_2_0= ruleWhereClause
                     {
                      
                     	        newCompositeNode(grammarAccess.getUpdateStatementAccess().getWhereClauseWhereClauseParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleWhereClause_in_ruleUpdateStatement1297);
+                    pushFollow(FOLLOW_ruleWhereClause_in_ruleUpdateStatement1020);
                     lv_whereClause_2_0=ruleWhereClause();
 
                     state._fsp--;
@@ -1650,7 +1309,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUpdateClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:664:1: entryRuleUpdateClause returns [EObject current=null] : iv_ruleUpdateClause= ruleUpdateClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:524:1: entryRuleUpdateClause returns [EObject current=null] : iv_ruleUpdateClause= ruleUpdateClause EOF ;
     public final EObject entryRuleUpdateClause() throws RecognitionException {
         EObject current = null;
 
@@ -1658,17 +1317,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:665:2: (iv_ruleUpdateClause= ruleUpdateClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:666:2: iv_ruleUpdateClause= ruleUpdateClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:525:2: (iv_ruleUpdateClause= ruleUpdateClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:526:2: iv_ruleUpdateClause= ruleUpdateClause EOF
             {
              newCompositeNode(grammarAccess.getUpdateClauseRule()); 
-            pushFollow(FOLLOW_ruleUpdateClause_in_entryRuleUpdateClause1334);
+            pushFollow(FOLLOW_ruleUpdateClause_in_entryRuleUpdateClause1057);
             iv_ruleUpdateClause=ruleUpdateClause();
 
             state._fsp--;
 
              current =iv_ruleUpdateClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateClause1344); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateClause1067); 
 
             }
 
@@ -1686,7 +1345,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUpdateClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:673:1: ruleUpdateClause returns [EObject current=null] : (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:533:1: ruleUpdateClause returns [EObject current=null] : (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) ;
     public final EObject ruleUpdateClause() throws RecognitionException {
         EObject current = null;
 
@@ -1700,26 +1359,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:676:28: ( (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:677:1: (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:536:28: ( (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:537:1: (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:677:1: (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:677:3: otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:537:1: (otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:537:3: otherlv_0= 'UPDATE' ( (lv_fromEntries_1_0= ruleFromEntry ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleUpdateClause1381); 
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleUpdateClause1104); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getUpdateClauseAccess().getUPDATEKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:681:1: ( (lv_fromEntries_1_0= ruleFromEntry ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:682:1: (lv_fromEntries_1_0= ruleFromEntry )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:541:1: ( (lv_fromEntries_1_0= ruleFromEntry ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:542:1: (lv_fromEntries_1_0= ruleFromEntry )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:682:1: (lv_fromEntries_1_0= ruleFromEntry )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:683:3: lv_fromEntries_1_0= ruleFromEntry
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:542:1: (lv_fromEntries_1_0= ruleFromEntry )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:543:3: lv_fromEntries_1_0= ruleFromEntry
             {
              
             	        newCompositeNode(grammarAccess.getUpdateClauseAccess().getFromEntriesFromEntryParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFromEntry_in_ruleUpdateClause1402);
+            pushFollow(FOLLOW_ruleFromEntry_in_ruleUpdateClause1125);
             lv_fromEntries_1_0=ruleFromEntry();
 
             state._fsp--;
@@ -1741,35 +1400,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:699:2: (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
-            loop11:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:559:2: (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
+            loop9:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA11_0==21) ) {
-                    alt11=1;
+                if ( (LA9_0==19) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt9) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:699:4: otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:559:4: otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) )
             	    {
-            	    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleUpdateClause1415); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleUpdateClause1138); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getUpdateClauseAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:703:1: ( (lv_fromEntries_3_0= ruleFromEntry ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:704:1: (lv_fromEntries_3_0= ruleFromEntry )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:563:1: ( (lv_fromEntries_3_0= ruleFromEntry ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:564:1: (lv_fromEntries_3_0= ruleFromEntry )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:704:1: (lv_fromEntries_3_0= ruleFromEntry )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:705:3: lv_fromEntries_3_0= ruleFromEntry
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:564:1: (lv_fromEntries_3_0= ruleFromEntry )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:565:3: lv_fromEntries_3_0= ruleFromEntry
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getUpdateClauseAccess().getFromEntriesFromEntryParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleFromEntry_in_ruleUpdateClause1436);
+            	    pushFollow(FOLLOW_ruleFromEntry_in_ruleUpdateClause1159);
             	    lv_fromEntries_3_0=ruleFromEntry();
 
             	    state._fsp--;
@@ -1796,7 +1455,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop9;
                 }
             } while (true);
 
@@ -1821,7 +1480,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:729:1: entryRuleSetClause returns [EObject current=null] : iv_ruleSetClause= ruleSetClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:589:1: entryRuleSetClause returns [EObject current=null] : iv_ruleSetClause= ruleSetClause EOF ;
     public final EObject entryRuleSetClause() throws RecognitionException {
         EObject current = null;
 
@@ -1829,17 +1488,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:730:2: (iv_ruleSetClause= ruleSetClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:731:2: iv_ruleSetClause= ruleSetClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:590:2: (iv_ruleSetClause= ruleSetClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:591:2: iv_ruleSetClause= ruleSetClause EOF
             {
              newCompositeNode(grammarAccess.getSetClauseRule()); 
-            pushFollow(FOLLOW_ruleSetClause_in_entryRuleSetClause1474);
+            pushFollow(FOLLOW_ruleSetClause_in_entryRuleSetClause1197);
             iv_ruleSetClause=ruleSetClause();
 
             state._fsp--;
 
              current =iv_ruleSetClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetClause1484); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetClause1207); 
 
             }
 
@@ -1857,7 +1516,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:738:1: ruleSetClause returns [EObject current=null] : (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:598:1: ruleSetClause returns [EObject current=null] : (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* ) ;
     public final EObject ruleSetClause() throws RecognitionException {
         EObject current = null;
 
@@ -1871,26 +1530,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:741:28: ( (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:742:1: (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:601:28: ( (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:602:1: (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:742:1: (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:742:3: otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )*
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:602:1: (otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:602:3: otherlv_0= 'SET' ( (lv_items_1_0= ruleUpdateItem ) ) (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )*
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleSetClause1521); 
+            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleSetClause1244); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSetClauseAccess().getSETKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:746:1: ( (lv_items_1_0= ruleUpdateItem ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:747:1: (lv_items_1_0= ruleUpdateItem )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:606:1: ( (lv_items_1_0= ruleUpdateItem ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:607:1: (lv_items_1_0= ruleUpdateItem )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:747:1: (lv_items_1_0= ruleUpdateItem )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:748:3: lv_items_1_0= ruleUpdateItem
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:607:1: (lv_items_1_0= ruleUpdateItem )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:608:3: lv_items_1_0= ruleUpdateItem
             {
              
             	        newCompositeNode(grammarAccess.getSetClauseAccess().getItemsUpdateItemParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleUpdateItem_in_ruleSetClause1542);
+            pushFollow(FOLLOW_ruleUpdateItem_in_ruleSetClause1265);
             lv_items_1_0=ruleUpdateItem();
 
             state._fsp--;
@@ -1912,35 +1571,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:764:2: (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )*
-            loop12:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:624:2: (otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) ) )*
+            loop10:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA12_0==21) ) {
-                    alt12=1;
+                if ( (LA10_0==19) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt10) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:764:4: otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:624:4: otherlv_2= ',' ( (lv_items_3_0= ruleUpdateItem ) )
             	    {
-            	    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleSetClause1555); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleSetClause1278); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getSetClauseAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:768:1: ( (lv_items_3_0= ruleUpdateItem ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:769:1: (lv_items_3_0= ruleUpdateItem )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:628:1: ( (lv_items_3_0= ruleUpdateItem ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:629:1: (lv_items_3_0= ruleUpdateItem )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:769:1: (lv_items_3_0= ruleUpdateItem )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:770:3: lv_items_3_0= ruleUpdateItem
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:629:1: (lv_items_3_0= ruleUpdateItem )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:630:3: lv_items_3_0= ruleUpdateItem
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getSetClauseAccess().getItemsUpdateItemParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleUpdateItem_in_ruleSetClause1576);
+            	    pushFollow(FOLLOW_ruleUpdateItem_in_ruleSetClause1299);
             	    lv_items_3_0=ruleUpdateItem();
 
             	    state._fsp--;
@@ -1967,7 +1626,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop10;
                 }
             } while (true);
 
@@ -1992,7 +1651,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUpdateItem"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:794:1: entryRuleUpdateItem returns [EObject current=null] : iv_ruleUpdateItem= ruleUpdateItem EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:654:1: entryRuleUpdateItem returns [EObject current=null] : iv_ruleUpdateItem= ruleUpdateItem EOF ;
     public final EObject entryRuleUpdateItem() throws RecognitionException {
         EObject current = null;
 
@@ -2000,17 +1659,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:795:2: (iv_ruleUpdateItem= ruleUpdateItem EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:796:2: iv_ruleUpdateItem= ruleUpdateItem EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:655:2: (iv_ruleUpdateItem= ruleUpdateItem EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:656:2: iv_ruleUpdateItem= ruleUpdateItem EOF
             {
              newCompositeNode(grammarAccess.getUpdateItemRule()); 
-            pushFollow(FOLLOW_ruleUpdateItem_in_entryRuleUpdateItem1614);
+            pushFollow(FOLLOW_ruleUpdateItem_in_entryRuleUpdateItem1337);
             iv_ruleUpdateItem=ruleUpdateItem();
 
             state._fsp--;
 
              current =iv_ruleUpdateItem; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateItem1624); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateItem1347); 
 
             }
 
@@ -2028,7 +1687,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUpdateItem"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:803:1: ruleUpdateItem returns [EObject current=null] : ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:663:1: ruleUpdateItem returns [EObject current=null] : ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) ;
     public final EObject ruleUpdateItem() throws RecognitionException {
         EObject current = null;
 
@@ -2041,22 +1700,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:806:28: ( ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:807:1: ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:666:28: ( ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:667:1: ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:807:1: ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:807:2: ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:667:1: ( ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:667:2: ( (lv_alias_0_0= ruleAliasAttributeExpression ) ) otherlv_1= '=' ( (lv_value_2_0= ruleValue ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:807:2: ( (lv_alias_0_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:808:1: (lv_alias_0_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:667:2: ( (lv_alias_0_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:668:1: (lv_alias_0_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:808:1: (lv_alias_0_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:809:3: lv_alias_0_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:668:1: (lv_alias_0_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:669:3: lv_alias_0_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getUpdateItemAccess().getAliasAliasAttributeExpressionParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleUpdateItem1670);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleUpdateItem1393);
             lv_alias_0_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -2078,20 +1737,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,27,FOLLOW_27_in_ruleUpdateItem1682); 
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleUpdateItem1405); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getUpdateItemAccess().getEqualsSignKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:829:1: ( (lv_value_2_0= ruleValue ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:830:1: (lv_value_2_0= ruleValue )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:689:1: ( (lv_value_2_0= ruleValue ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:690:1: (lv_value_2_0= ruleValue )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:830:1: (lv_value_2_0= ruleValue )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:831:3: lv_value_2_0= ruleValue
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:690:1: (lv_value_2_0= ruleValue )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:691:3: lv_value_2_0= ruleValue
             {
              
             	        newCompositeNode(grammarAccess.getUpdateItemAccess().getValueValueParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleUpdateItem1703);
+            pushFollow(FOLLOW_ruleValue_in_ruleUpdateItem1426);
             lv_value_2_0=ruleValue();
 
             state._fsp--;
@@ -2134,7 +1793,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDeleteStatement"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:855:1: entryRuleDeleteStatement returns [EObject current=null] : iv_ruleDeleteStatement= ruleDeleteStatement EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:715:1: entryRuleDeleteStatement returns [EObject current=null] : iv_ruleDeleteStatement= ruleDeleteStatement EOF ;
     public final EObject entryRuleDeleteStatement() throws RecognitionException {
         EObject current = null;
 
@@ -2142,17 +1801,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:856:2: (iv_ruleDeleteStatement= ruleDeleteStatement EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:857:2: iv_ruleDeleteStatement= ruleDeleteStatement EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:716:2: (iv_ruleDeleteStatement= ruleDeleteStatement EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:717:2: iv_ruleDeleteStatement= ruleDeleteStatement EOF
             {
              newCompositeNode(grammarAccess.getDeleteStatementRule()); 
-            pushFollow(FOLLOW_ruleDeleteStatement_in_entryRuleDeleteStatement1739);
+            pushFollow(FOLLOW_ruleDeleteStatement_in_entryRuleDeleteStatement1462);
             iv_ruleDeleteStatement=ruleDeleteStatement();
 
             state._fsp--;
 
              current =iv_ruleDeleteStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDeleteStatement1749); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDeleteStatement1472); 
 
             }
 
@@ -2170,7 +1829,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDeleteStatement"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:864:1: ruleDeleteStatement returns [EObject current=null] : ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:724:1: ruleDeleteStatement returns [EObject current=null] : ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ) ;
     public final EObject ruleDeleteStatement() throws RecognitionException {
         EObject current = null;
 
@@ -2182,22 +1841,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:867:28: ( ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:868:1: ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:727:28: ( ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:728:1: ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:868:1: ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:868:2: ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )?
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:728:1: ( ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:728:2: ( (lv_deleteClause_0_0= ruleDeleteClause ) ) ( (lv_whereClause_1_0= ruleWhereClause ) )?
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:868:2: ( (lv_deleteClause_0_0= ruleDeleteClause ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:869:1: (lv_deleteClause_0_0= ruleDeleteClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:728:2: ( (lv_deleteClause_0_0= ruleDeleteClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:729:1: (lv_deleteClause_0_0= ruleDeleteClause )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:869:1: (lv_deleteClause_0_0= ruleDeleteClause )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:870:3: lv_deleteClause_0_0= ruleDeleteClause
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:729:1: (lv_deleteClause_0_0= ruleDeleteClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:730:3: lv_deleteClause_0_0= ruleDeleteClause
             {
              
             	        newCompositeNode(grammarAccess.getDeleteStatementAccess().getDeleteClauseDeleteClauseParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleDeleteClause_in_ruleDeleteStatement1795);
+            pushFollow(FOLLOW_ruleDeleteClause_in_ruleDeleteStatement1518);
             lv_deleteClause_0_0=ruleDeleteClause();
 
             state._fsp--;
@@ -2219,24 +1878,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:886:2: ( (lv_whereClause_1_0= ruleWhereClause ) )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:746:2: ( (lv_whereClause_1_0= ruleWhereClause ) )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA13_0==47) ) {
-                alt13=1;
+            if ( (LA11_0==45) ) {
+                alt11=1;
             }
-            switch (alt13) {
+            switch (alt11) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:887:1: (lv_whereClause_1_0= ruleWhereClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:747:1: (lv_whereClause_1_0= ruleWhereClause )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:887:1: (lv_whereClause_1_0= ruleWhereClause )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:888:3: lv_whereClause_1_0= ruleWhereClause
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:747:1: (lv_whereClause_1_0= ruleWhereClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:748:3: lv_whereClause_1_0= ruleWhereClause
                     {
                      
                     	        newCompositeNode(grammarAccess.getDeleteStatementAccess().getWhereClauseWhereClauseParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleWhereClause_in_ruleDeleteStatement1816);
+                    pushFollow(FOLLOW_ruleWhereClause_in_ruleDeleteStatement1539);
                     lv_whereClause_1_0=ruleWhereClause();
 
                     state._fsp--;
@@ -2282,7 +1941,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDeleteClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:912:1: entryRuleDeleteClause returns [EObject current=null] : iv_ruleDeleteClause= ruleDeleteClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:772:1: entryRuleDeleteClause returns [EObject current=null] : iv_ruleDeleteClause= ruleDeleteClause EOF ;
     public final EObject entryRuleDeleteClause() throws RecognitionException {
         EObject current = null;
 
@@ -2290,17 +1949,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:913:2: (iv_ruleDeleteClause= ruleDeleteClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:914:2: iv_ruleDeleteClause= ruleDeleteClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:773:2: (iv_ruleDeleteClause= ruleDeleteClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:774:2: iv_ruleDeleteClause= ruleDeleteClause EOF
             {
              newCompositeNode(grammarAccess.getDeleteClauseRule()); 
-            pushFollow(FOLLOW_ruleDeleteClause_in_entryRuleDeleteClause1853);
+            pushFollow(FOLLOW_ruleDeleteClause_in_entryRuleDeleteClause1576);
             iv_ruleDeleteClause=ruleDeleteClause();
 
             state._fsp--;
 
              current =iv_ruleDeleteClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDeleteClause1863); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDeleteClause1586); 
 
             }
 
@@ -2318,7 +1977,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDeleteClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:921:1: ruleDeleteClause returns [EObject current=null] : (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:781:1: ruleDeleteClause returns [EObject current=null] : (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) ) ;
     public final EObject ruleDeleteClause() throws RecognitionException {
         EObject current = null;
 
@@ -2329,26 +1988,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:924:28: ( (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:925:1: (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:784:28: ( (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:785:1: (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:925:1: (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:925:3: otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:785:1: (otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:785:3: otherlv_0= 'DELETE' ( (lv_fromClause_1_0= ruleFromClause ) )
             {
-            otherlv_0=(Token)match(input,28,FOLLOW_28_in_ruleDeleteClause1900); 
+            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleDeleteClause1623); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDeleteClauseAccess().getDELETEKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:929:1: ( (lv_fromClause_1_0= ruleFromClause ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:930:1: (lv_fromClause_1_0= ruleFromClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:789:1: ( (lv_fromClause_1_0= ruleFromClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:790:1: (lv_fromClause_1_0= ruleFromClause )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:930:1: (lv_fromClause_1_0= ruleFromClause )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:931:3: lv_fromClause_1_0= ruleFromClause
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:790:1: (lv_fromClause_1_0= ruleFromClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:791:3: lv_fromClause_1_0= ruleFromClause
             {
              
             	        newCompositeNode(grammarAccess.getDeleteClauseAccess().getFromClauseFromClauseParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFromClause_in_ruleDeleteClause1921);
+            pushFollow(FOLLOW_ruleFromClause_in_ruleDeleteClause1644);
             lv_fromClause_1_0=ruleFromClause();
 
             state._fsp--;
@@ -2391,7 +2050,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelectFromClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:955:1: entryRuleSelectFromClause returns [EObject current=null] : iv_ruleSelectFromClause= ruleSelectFromClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:815:1: entryRuleSelectFromClause returns [EObject current=null] : iv_ruleSelectFromClause= ruleSelectFromClause EOF ;
     public final EObject entryRuleSelectFromClause() throws RecognitionException {
         EObject current = null;
 
@@ -2399,17 +2058,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:956:2: (iv_ruleSelectFromClause= ruleSelectFromClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:957:2: iv_ruleSelectFromClause= ruleSelectFromClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:816:2: (iv_ruleSelectFromClause= ruleSelectFromClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:817:2: iv_ruleSelectFromClause= ruleSelectFromClause EOF
             {
              newCompositeNode(grammarAccess.getSelectFromClauseRule()); 
-            pushFollow(FOLLOW_ruleSelectFromClause_in_entryRuleSelectFromClause1957);
+            pushFollow(FOLLOW_ruleSelectFromClause_in_entryRuleSelectFromClause1680);
             iv_ruleSelectFromClause=ruleSelectFromClause();
 
             state._fsp--;
 
              current =iv_ruleSelectFromClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectFromClause1967); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectFromClause1690); 
 
             }
 
@@ -2427,7 +2086,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectFromClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:964:1: ruleSelectFromClause returns [EObject current=null] : ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:824:1: ruleSelectFromClause returns [EObject current=null] : ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) ) ;
     public final EObject ruleSelectFromClause() throws RecognitionException {
         EObject current = null;
 
@@ -2439,30 +2098,30 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:967:28: ( ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:968:1: ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:827:28: ( ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:828:1: ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:968:1: ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:968:2: ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:828:1: ( ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:828:2: ( (lv_selectClause_0_0= ruleSelectClause ) )? ( (lv_fromClause_1_0= ruleFromClause ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:968:2: ( (lv_selectClause_0_0= ruleSelectClause ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:828:2: ( (lv_selectClause_0_0= ruleSelectClause ) )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA14_0==29) ) {
-                alt14=1;
+            if ( (LA12_0==27) ) {
+                alt12=1;
             }
-            switch (alt14) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:969:1: (lv_selectClause_0_0= ruleSelectClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:829:1: (lv_selectClause_0_0= ruleSelectClause )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:969:1: (lv_selectClause_0_0= ruleSelectClause )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:970:3: lv_selectClause_0_0= ruleSelectClause
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:829:1: (lv_selectClause_0_0= ruleSelectClause )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:830:3: lv_selectClause_0_0= ruleSelectClause
                     {
                      
                     	        newCompositeNode(grammarAccess.getSelectFromClauseAccess().getSelectClauseSelectClauseParserRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSelectClause_in_ruleSelectFromClause2013);
+                    pushFollow(FOLLOW_ruleSelectClause_in_ruleSelectFromClause1736);
                     lv_selectClause_0_0=ruleSelectClause();
 
                     state._fsp--;
@@ -2487,16 +2146,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:986:3: ( (lv_fromClause_1_0= ruleFromClause ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:987:1: (lv_fromClause_1_0= ruleFromClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:846:3: ( (lv_fromClause_1_0= ruleFromClause ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:847:1: (lv_fromClause_1_0= ruleFromClause )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:987:1: (lv_fromClause_1_0= ruleFromClause )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:988:3: lv_fromClause_1_0= ruleFromClause
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:847:1: (lv_fromClause_1_0= ruleFromClause )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:848:3: lv_fromClause_1_0= ruleFromClause
             {
              
             	        newCompositeNode(grammarAccess.getSelectFromClauseAccess().getFromClauseFromClauseParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFromClause_in_ruleSelectFromClause2035);
+            pushFollow(FOLLOW_ruleFromClause_in_ruleSelectFromClause1758);
             lv_fromClause_1_0=ruleFromClause();
 
             state._fsp--;
@@ -2539,7 +2198,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelectClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1012:1: entryRuleSelectClause returns [EObject current=null] : iv_ruleSelectClause= ruleSelectClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:872:1: entryRuleSelectClause returns [EObject current=null] : iv_ruleSelectClause= ruleSelectClause EOF ;
     public final EObject entryRuleSelectClause() throws RecognitionException {
         EObject current = null;
 
@@ -2547,17 +2206,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1013:2: (iv_ruleSelectClause= ruleSelectClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1014:2: iv_ruleSelectClause= ruleSelectClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:873:2: (iv_ruleSelectClause= ruleSelectClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:874:2: iv_ruleSelectClause= ruleSelectClause EOF
             {
              newCompositeNode(grammarAccess.getSelectClauseRule()); 
-            pushFollow(FOLLOW_ruleSelectClause_in_entryRuleSelectClause2071);
+            pushFollow(FOLLOW_ruleSelectClause_in_entryRuleSelectClause1794);
             iv_ruleSelectClause=ruleSelectClause();
 
             state._fsp--;
 
              current =iv_ruleSelectClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectClause2081); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectClause1804); 
 
             }
 
@@ -2575,7 +2234,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1021:1: ruleSelectClause returns [EObject current=null] : (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:881:1: ruleSelectClause returns [EObject current=null] : (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* ) ;
     public final EObject ruleSelectClause() throws RecognitionException {
         EObject current = null;
 
@@ -2590,31 +2249,31 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1024:28: ( (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1025:1: (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:884:28: ( (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:885:1: (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1025:1: (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1025:3: otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )*
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:885:1: (otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:885:3: otherlv_0= 'SELECT' ( (lv_isDistinct_1_0= 'DISTINCT' ) )? ( (lv_expressions_2_0= ruleSelectExpression ) ) (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )*
             {
-            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleSelectClause2118); 
+            otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleSelectClause1841); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSelectClauseAccess().getSELECTKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1029:1: ( (lv_isDistinct_1_0= 'DISTINCT' ) )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:889:1: ( (lv_isDistinct_1_0= 'DISTINCT' ) )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA15_0==30) ) {
-                alt15=1;
+            if ( (LA13_0==28) ) {
+                alt13=1;
             }
-            switch (alt15) {
+            switch (alt13) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1030:1: (lv_isDistinct_1_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:890:1: (lv_isDistinct_1_0= 'DISTINCT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1030:1: (lv_isDistinct_1_0= 'DISTINCT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1031:3: lv_isDistinct_1_0= 'DISTINCT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:890:1: (lv_isDistinct_1_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:891:3: lv_isDistinct_1_0= 'DISTINCT'
                     {
-                    lv_isDistinct_1_0=(Token)match(input,30,FOLLOW_30_in_ruleSelectClause2136); 
+                    lv_isDistinct_1_0=(Token)match(input,28,FOLLOW_28_in_ruleSelectClause1859); 
 
                             newLeafNode(lv_isDistinct_1_0, grammarAccess.getSelectClauseAccess().getIsDistinctDISTINCTKeyword_1_0());
                         
@@ -2633,16 +2292,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1044:3: ( (lv_expressions_2_0= ruleSelectExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1045:1: (lv_expressions_2_0= ruleSelectExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:904:3: ( (lv_expressions_2_0= ruleSelectExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:905:1: (lv_expressions_2_0= ruleSelectExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1045:1: (lv_expressions_2_0= ruleSelectExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1046:3: lv_expressions_2_0= ruleSelectExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:905:1: (lv_expressions_2_0= ruleSelectExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:906:3: lv_expressions_2_0= ruleSelectExpression
             {
              
             	        newCompositeNode(grammarAccess.getSelectClauseAccess().getExpressionsSelectExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleSelectExpression_in_ruleSelectClause2171);
+            pushFollow(FOLLOW_ruleSelectExpression_in_ruleSelectClause1894);
             lv_expressions_2_0=ruleSelectExpression();
 
             state._fsp--;
@@ -2664,35 +2323,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1062:2: (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )*
-            loop16:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:922:2: (otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) ) )*
+            loop14:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA16_0==21) ) {
-                    alt16=1;
+                if ( (LA14_0==19) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt14) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1062:4: otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:922:4: otherlv_3= ',' ( (lv_expressions_4_0= ruleSelectExpression ) )
             	    {
-            	    otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleSelectClause2184); 
+            	    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleSelectClause1907); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getSelectClauseAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1066:1: ( (lv_expressions_4_0= ruleSelectExpression ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1067:1: (lv_expressions_4_0= ruleSelectExpression )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:926:1: ( (lv_expressions_4_0= ruleSelectExpression ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:927:1: (lv_expressions_4_0= ruleSelectExpression )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1067:1: (lv_expressions_4_0= ruleSelectExpression )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1068:3: lv_expressions_4_0= ruleSelectExpression
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:927:1: (lv_expressions_4_0= ruleSelectExpression )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:928:3: lv_expressions_4_0= ruleSelectExpression
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getSelectClauseAccess().getExpressionsSelectExpressionParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleSelectExpression_in_ruleSelectClause2205);
+            	    pushFollow(FOLLOW_ruleSelectExpression_in_ruleSelectClause1928);
             	    lv_expressions_4_0=ruleSelectExpression();
 
             	    state._fsp--;
@@ -2719,7 +2378,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop14;
                 }
             } while (true);
 
@@ -2744,7 +2403,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelectExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1092:1: entryRuleSelectExpression returns [EObject current=null] : iv_ruleSelectExpression= ruleSelectExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:952:1: entryRuleSelectExpression returns [EObject current=null] : iv_ruleSelectExpression= ruleSelectExpression EOF ;
     public final EObject entryRuleSelectExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2752,17 +2411,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1093:2: (iv_ruleSelectExpression= ruleSelectExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1094:2: iv_ruleSelectExpression= ruleSelectExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:953:2: (iv_ruleSelectExpression= ruleSelectExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:954:2: iv_ruleSelectExpression= ruleSelectExpression EOF
             {
              newCompositeNode(grammarAccess.getSelectExpressionRule()); 
-            pushFollow(FOLLOW_ruleSelectExpression_in_entryRuleSelectExpression2243);
+            pushFollow(FOLLOW_ruleSelectExpression_in_entryRuleSelectExpression1966);
             iv_ruleSelectExpression=ruleSelectExpression();
 
             state._fsp--;
 
              current =iv_ruleSelectExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectExpression2253); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectExpression1976); 
 
             }
 
@@ -2780,7 +2439,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1101:1: ruleSelectExpression returns [EObject current=null] : (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:961:1: ruleSelectExpression returns [EObject current=null] : (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression ) ;
     public final EObject ruleSelectExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2794,46 +2453,46 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1104:28: ( (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1105:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:964:28: ( (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:965:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1105:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression )
-            int alt17=3;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:965:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_SelectAggregateExpression_1= ruleSelectAggregateExpression | this_SelectConstructorExpression_2= ruleSelectConstructorExpression )
+            int alt15=3;
             switch ( input.LA(1) ) {
             case RULE_ID:
                 {
-                alt17=1;
+                alt15=1;
                 }
                 break;
-            case 31:
+            case 29:
+            case 32:
+            case 33:
             case 34:
             case 35:
-            case 36:
-            case 37:
                 {
-                alt17=2;
+                alt15=2;
                 }
                 break;
-            case 38:
+            case 36:
                 {
-                alt17=3;
+                alt15=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt17) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1106:5: this_AliasAttributeExpression_0= ruleAliasAttributeExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:966:5: this_AliasAttributeExpression_0= ruleAliasAttributeExpression
                     {
                      
                             newCompositeNode(grammarAccess.getSelectExpressionAccess().getAliasAttributeExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSelectExpression2300);
+                    pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSelectExpression2023);
                     this_AliasAttributeExpression_0=ruleAliasAttributeExpression();
 
                     state._fsp--;
@@ -2846,12 +2505,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1116:5: this_SelectAggregateExpression_1= ruleSelectAggregateExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:976:5: this_SelectAggregateExpression_1= ruleSelectAggregateExpression
                     {
                      
                             newCompositeNode(grammarAccess.getSelectExpressionAccess().getSelectAggregateExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleSelectAggregateExpression_in_ruleSelectExpression2327);
+                    pushFollow(FOLLOW_ruleSelectAggregateExpression_in_ruleSelectExpression2050);
                     this_SelectAggregateExpression_1=ruleSelectAggregateExpression();
 
                     state._fsp--;
@@ -2864,12 +2523,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1126:5: this_SelectConstructorExpression_2= ruleSelectConstructorExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:986:5: this_SelectConstructorExpression_2= ruleSelectConstructorExpression
                     {
                      
                             newCompositeNode(grammarAccess.getSelectExpressionAccess().getSelectConstructorExpressionParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleSelectConstructorExpression_in_ruleSelectExpression2354);
+                    pushFollow(FOLLOW_ruleSelectConstructorExpression_in_ruleSelectExpression2077);
                     this_SelectConstructorExpression_2=ruleSelectConstructorExpression();
 
                     state._fsp--;
@@ -2902,7 +2561,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelectAggregateExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1142:1: entryRuleSelectAggregateExpression returns [EObject current=null] : iv_ruleSelectAggregateExpression= ruleSelectAggregateExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1002:1: entryRuleSelectAggregateExpression returns [EObject current=null] : iv_ruleSelectAggregateExpression= ruleSelectAggregateExpression EOF ;
     public final EObject entryRuleSelectAggregateExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2910,17 +2569,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1143:2: (iv_ruleSelectAggregateExpression= ruleSelectAggregateExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1144:2: iv_ruleSelectAggregateExpression= ruleSelectAggregateExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1003:2: (iv_ruleSelectAggregateExpression= ruleSelectAggregateExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1004:2: iv_ruleSelectAggregateExpression= ruleSelectAggregateExpression EOF
             {
              newCompositeNode(grammarAccess.getSelectAggregateExpressionRule()); 
-            pushFollow(FOLLOW_ruleSelectAggregateExpression_in_entryRuleSelectAggregateExpression2389);
+            pushFollow(FOLLOW_ruleSelectAggregateExpression_in_entryRuleSelectAggregateExpression2112);
             iv_ruleSelectAggregateExpression=ruleSelectAggregateExpression();
 
             state._fsp--;
 
              current =iv_ruleSelectAggregateExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectAggregateExpression2399); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectAggregateExpression2122); 
 
             }
 
@@ -2938,7 +2597,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectAggregateExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1151:1: ruleSelectAggregateExpression returns [EObject current=null] : (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1011:1: ruleSelectAggregateExpression returns [EObject current=null] : (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate ) ;
     public final EObject ruleSelectAggregateExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2956,52 +2615,52 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1154:28: ( (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1155:1: (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1014:28: ( (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1015:1: (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1155:1: (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate )
-            int alt18=5;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1015:1: (this_AvgAggregate_0= ruleAvgAggregate | this_MaxAggregate_1= ruleMaxAggregate | this_MinAggregate_2= ruleMinAggregate | this_SumAggregate_3= ruleSumAggregate | this_CountAggregate_4= ruleCountAggregate )
+            int alt16=5;
             switch ( input.LA(1) ) {
-            case 31:
+            case 29:
                 {
-                alt18=1;
+                alt16=1;
+                }
+                break;
+            case 32:
+                {
+                alt16=2;
+                }
+                break;
+            case 33:
+                {
+                alt16=3;
                 }
                 break;
             case 34:
                 {
-                alt18=2;
+                alt16=4;
                 }
                 break;
             case 35:
                 {
-                alt18=3;
-                }
-                break;
-            case 36:
-                {
-                alt18=4;
-                }
-                break;
-            case 37:
-                {
-                alt18=5;
+                alt16=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt18) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1156:5: this_AvgAggregate_0= ruleAvgAggregate
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1016:5: this_AvgAggregate_0= ruleAvgAggregate
                     {
                      
                             newCompositeNode(grammarAccess.getSelectAggregateExpressionAccess().getAvgAggregateParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleAvgAggregate_in_ruleSelectAggregateExpression2446);
+                    pushFollow(FOLLOW_ruleAvgAggregate_in_ruleSelectAggregateExpression2169);
                     this_AvgAggregate_0=ruleAvgAggregate();
 
                     state._fsp--;
@@ -3014,12 +2673,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1166:5: this_MaxAggregate_1= ruleMaxAggregate
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1026:5: this_MaxAggregate_1= ruleMaxAggregate
                     {
                      
                             newCompositeNode(grammarAccess.getSelectAggregateExpressionAccess().getMaxAggregateParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleMaxAggregate_in_ruleSelectAggregateExpression2473);
+                    pushFollow(FOLLOW_ruleMaxAggregate_in_ruleSelectAggregateExpression2196);
                     this_MaxAggregate_1=ruleMaxAggregate();
 
                     state._fsp--;
@@ -3032,12 +2691,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1176:5: this_MinAggregate_2= ruleMinAggregate
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1036:5: this_MinAggregate_2= ruleMinAggregate
                     {
                      
                             newCompositeNode(grammarAccess.getSelectAggregateExpressionAccess().getMinAggregateParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleMinAggregate_in_ruleSelectAggregateExpression2500);
+                    pushFollow(FOLLOW_ruleMinAggregate_in_ruleSelectAggregateExpression2223);
                     this_MinAggregate_2=ruleMinAggregate();
 
                     state._fsp--;
@@ -3050,12 +2709,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1186:5: this_SumAggregate_3= ruleSumAggregate
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1046:5: this_SumAggregate_3= ruleSumAggregate
                     {
                      
                             newCompositeNode(grammarAccess.getSelectAggregateExpressionAccess().getSumAggregateParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleSumAggregate_in_ruleSelectAggregateExpression2527);
+                    pushFollow(FOLLOW_ruleSumAggregate_in_ruleSelectAggregateExpression2250);
                     this_SumAggregate_3=ruleSumAggregate();
 
                     state._fsp--;
@@ -3068,12 +2727,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1196:5: this_CountAggregate_4= ruleCountAggregate
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1056:5: this_CountAggregate_4= ruleCountAggregate
                     {
                      
                             newCompositeNode(grammarAccess.getSelectAggregateExpressionAccess().getCountAggregateParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleCountAggregate_in_ruleSelectAggregateExpression2554);
+                    pushFollow(FOLLOW_ruleCountAggregate_in_ruleSelectAggregateExpression2277);
                     this_CountAggregate_4=ruleCountAggregate();
 
                     state._fsp--;
@@ -3106,7 +2765,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAvgAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1212:1: entryRuleAvgAggregate returns [EObject current=null] : iv_ruleAvgAggregate= ruleAvgAggregate EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1072:1: entryRuleAvgAggregate returns [EObject current=null] : iv_ruleAvgAggregate= ruleAvgAggregate EOF ;
     public final EObject entryRuleAvgAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3114,17 +2773,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1213:2: (iv_ruleAvgAggregate= ruleAvgAggregate EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1214:2: iv_ruleAvgAggregate= ruleAvgAggregate EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1073:2: (iv_ruleAvgAggregate= ruleAvgAggregate EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1074:2: iv_ruleAvgAggregate= ruleAvgAggregate EOF
             {
              newCompositeNode(grammarAccess.getAvgAggregateRule()); 
-            pushFollow(FOLLOW_ruleAvgAggregate_in_entryRuleAvgAggregate2589);
+            pushFollow(FOLLOW_ruleAvgAggregate_in_entryRuleAvgAggregate2312);
             iv_ruleAvgAggregate=ruleAvgAggregate();
 
             state._fsp--;
 
              current =iv_ruleAvgAggregate; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAvgAggregate2599); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAvgAggregate2322); 
 
             }
 
@@ -3142,7 +2801,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAvgAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1221:1: ruleAvgAggregate returns [EObject current=null] : (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1081:1: ruleAvgAggregate returns [EObject current=null] : (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleAvgAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3156,35 +2815,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1224:28: ( (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1225:1: (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1084:28: ( (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1085:1: (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1225:1: (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1225:3: otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1085:1: (otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1085:3: otherlv_0= 'AVG' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleAvgAggregate2636); 
+            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleAvgAggregate2359); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAvgAggregateAccess().getAVGKeyword_0());
                 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleAvgAggregate2648); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleAvgAggregate2371); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAvgAggregateAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1233:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1093:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA19_0==30) ) {
-                alt19=1;
+            if ( (LA17_0==28) ) {
+                alt17=1;
             }
-            switch (alt19) {
+            switch (alt17) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1234:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1094:1: (lv_isDistinct_2_0= 'DISTINCT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1234:1: (lv_isDistinct_2_0= 'DISTINCT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1235:3: lv_isDistinct_2_0= 'DISTINCT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1094:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1095:3: lv_isDistinct_2_0= 'DISTINCT'
                     {
-                    lv_isDistinct_2_0=(Token)match(input,30,FOLLOW_30_in_ruleAvgAggregate2666); 
+                    lv_isDistinct_2_0=(Token)match(input,28,FOLLOW_28_in_ruleAvgAggregate2389); 
 
                             newLeafNode(lv_isDistinct_2_0, grammarAccess.getAvgAggregateAccess().getIsDistinctDISTINCTKeyword_2_0());
                         
@@ -3203,16 +2862,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1248:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1249:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1108:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1109:1: (lv_item_3_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1249:1: (lv_item_3_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1250:3: lv_item_3_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1109:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1110:3: lv_item_3_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getAvgAggregateAccess().getItemAliasAttributeExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleAvgAggregate2701);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleAvgAggregate2424);
             lv_item_3_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -3234,7 +2893,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,33,FOLLOW_33_in_ruleAvgAggregate2713); 
+            otherlv_4=(Token)match(input,31,FOLLOW_31_in_ruleAvgAggregate2436); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getAvgAggregateAccess().getRightParenthesisKeyword_4());
                 
@@ -3259,7 +2918,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMaxAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1278:1: entryRuleMaxAggregate returns [EObject current=null] : iv_ruleMaxAggregate= ruleMaxAggregate EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1138:1: entryRuleMaxAggregate returns [EObject current=null] : iv_ruleMaxAggregate= ruleMaxAggregate EOF ;
     public final EObject entryRuleMaxAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3267,17 +2926,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1279:2: (iv_ruleMaxAggregate= ruleMaxAggregate EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1280:2: iv_ruleMaxAggregate= ruleMaxAggregate EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1139:2: (iv_ruleMaxAggregate= ruleMaxAggregate EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1140:2: iv_ruleMaxAggregate= ruleMaxAggregate EOF
             {
              newCompositeNode(grammarAccess.getMaxAggregateRule()); 
-            pushFollow(FOLLOW_ruleMaxAggregate_in_entryRuleMaxAggregate2749);
+            pushFollow(FOLLOW_ruleMaxAggregate_in_entryRuleMaxAggregate2472);
             iv_ruleMaxAggregate=ruleMaxAggregate();
 
             state._fsp--;
 
              current =iv_ruleMaxAggregate; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMaxAggregate2759); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMaxAggregate2482); 
 
             }
 
@@ -3295,7 +2954,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMaxAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1287:1: ruleMaxAggregate returns [EObject current=null] : (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1147:1: ruleMaxAggregate returns [EObject current=null] : (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleMaxAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3309,35 +2968,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1290:28: ( (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1291:1: (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1150:28: ( (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1151:1: (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1291:1: (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1291:3: otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1151:1: (otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1151:3: otherlv_0= 'MAX' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleMaxAggregate2796); 
+            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleMaxAggregate2519); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMaxAggregateAccess().getMAXKeyword_0());
                 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleMaxAggregate2808); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleMaxAggregate2531); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMaxAggregateAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1299:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1159:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA20_0==30) ) {
-                alt20=1;
+            if ( (LA18_0==28) ) {
+                alt18=1;
             }
-            switch (alt20) {
+            switch (alt18) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1300:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1160:1: (lv_isDistinct_2_0= 'DISTINCT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1300:1: (lv_isDistinct_2_0= 'DISTINCT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1301:3: lv_isDistinct_2_0= 'DISTINCT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1160:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1161:3: lv_isDistinct_2_0= 'DISTINCT'
                     {
-                    lv_isDistinct_2_0=(Token)match(input,30,FOLLOW_30_in_ruleMaxAggregate2826); 
+                    lv_isDistinct_2_0=(Token)match(input,28,FOLLOW_28_in_ruleMaxAggregate2549); 
 
                             newLeafNode(lv_isDistinct_2_0, grammarAccess.getMaxAggregateAccess().getIsDistinctDISTINCTKeyword_2_0());
                         
@@ -3356,16 +3015,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1314:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1315:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1174:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1175:1: (lv_item_3_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1315:1: (lv_item_3_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1316:3: lv_item_3_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1175:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1176:3: lv_item_3_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getMaxAggregateAccess().getItemAliasAttributeExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleMaxAggregate2861);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleMaxAggregate2584);
             lv_item_3_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -3387,7 +3046,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,33,FOLLOW_33_in_ruleMaxAggregate2873); 
+            otherlv_4=(Token)match(input,31,FOLLOW_31_in_ruleMaxAggregate2596); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getMaxAggregateAccess().getRightParenthesisKeyword_4());
                 
@@ -3412,7 +3071,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMinAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1344:1: entryRuleMinAggregate returns [EObject current=null] : iv_ruleMinAggregate= ruleMinAggregate EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1204:1: entryRuleMinAggregate returns [EObject current=null] : iv_ruleMinAggregate= ruleMinAggregate EOF ;
     public final EObject entryRuleMinAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3420,17 +3079,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1345:2: (iv_ruleMinAggregate= ruleMinAggregate EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1346:2: iv_ruleMinAggregate= ruleMinAggregate EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1205:2: (iv_ruleMinAggregate= ruleMinAggregate EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1206:2: iv_ruleMinAggregate= ruleMinAggregate EOF
             {
              newCompositeNode(grammarAccess.getMinAggregateRule()); 
-            pushFollow(FOLLOW_ruleMinAggregate_in_entryRuleMinAggregate2909);
+            pushFollow(FOLLOW_ruleMinAggregate_in_entryRuleMinAggregate2632);
             iv_ruleMinAggregate=ruleMinAggregate();
 
             state._fsp--;
 
              current =iv_ruleMinAggregate; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMinAggregate2919); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMinAggregate2642); 
 
             }
 
@@ -3448,7 +3107,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMinAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1353:1: ruleMinAggregate returns [EObject current=null] : (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1213:1: ruleMinAggregate returns [EObject current=null] : (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleMinAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3462,35 +3121,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1356:28: ( (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1357:1: (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1216:28: ( (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1217:1: (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1357:1: (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1357:3: otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1217:1: (otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1217:3: otherlv_0= 'MIN' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleMinAggregate2956); 
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleMinAggregate2679); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMinAggregateAccess().getMINKeyword_0());
                 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleMinAggregate2968); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleMinAggregate2691); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMinAggregateAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1365:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1225:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA21_0==30) ) {
-                alt21=1;
+            if ( (LA19_0==28) ) {
+                alt19=1;
             }
-            switch (alt21) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1366:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1226:1: (lv_isDistinct_2_0= 'DISTINCT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1366:1: (lv_isDistinct_2_0= 'DISTINCT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1367:3: lv_isDistinct_2_0= 'DISTINCT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1226:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1227:3: lv_isDistinct_2_0= 'DISTINCT'
                     {
-                    lv_isDistinct_2_0=(Token)match(input,30,FOLLOW_30_in_ruleMinAggregate2986); 
+                    lv_isDistinct_2_0=(Token)match(input,28,FOLLOW_28_in_ruleMinAggregate2709); 
 
                             newLeafNode(lv_isDistinct_2_0, grammarAccess.getMinAggregateAccess().getIsDistinctDISTINCTKeyword_2_0());
                         
@@ -3509,16 +3168,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1380:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1381:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1240:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1241:1: (lv_item_3_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1381:1: (lv_item_3_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1382:3: lv_item_3_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1241:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1242:3: lv_item_3_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getMinAggregateAccess().getItemAliasAttributeExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleMinAggregate3021);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleMinAggregate2744);
             lv_item_3_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -3540,7 +3199,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,33,FOLLOW_33_in_ruleMinAggregate3033); 
+            otherlv_4=(Token)match(input,31,FOLLOW_31_in_ruleMinAggregate2756); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getMinAggregateAccess().getRightParenthesisKeyword_4());
                 
@@ -3565,7 +3224,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSumAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1410:1: entryRuleSumAggregate returns [EObject current=null] : iv_ruleSumAggregate= ruleSumAggregate EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1270:1: entryRuleSumAggregate returns [EObject current=null] : iv_ruleSumAggregate= ruleSumAggregate EOF ;
     public final EObject entryRuleSumAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3573,17 +3232,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1411:2: (iv_ruleSumAggregate= ruleSumAggregate EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1412:2: iv_ruleSumAggregate= ruleSumAggregate EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1271:2: (iv_ruleSumAggregate= ruleSumAggregate EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1272:2: iv_ruleSumAggregate= ruleSumAggregate EOF
             {
              newCompositeNode(grammarAccess.getSumAggregateRule()); 
-            pushFollow(FOLLOW_ruleSumAggregate_in_entryRuleSumAggregate3069);
+            pushFollow(FOLLOW_ruleSumAggregate_in_entryRuleSumAggregate2792);
             iv_ruleSumAggregate=ruleSumAggregate();
 
             state._fsp--;
 
              current =iv_ruleSumAggregate; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSumAggregate3079); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSumAggregate2802); 
 
             }
 
@@ -3601,7 +3260,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSumAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1419:1: ruleSumAggregate returns [EObject current=null] : (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1279:1: ruleSumAggregate returns [EObject current=null] : (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleSumAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3615,35 +3274,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1422:28: ( (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1423:1: (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1282:28: ( (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1283:1: (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1423:1: (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1423:3: otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1283:1: (otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1283:3: otherlv_0= 'SUM' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleSumAggregate3116); 
+            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleSumAggregate2839); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSumAggregateAccess().getSUMKeyword_0());
                 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleSumAggregate3128); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleSumAggregate2851); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSumAggregateAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1431:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1291:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA22_0==30) ) {
-                alt22=1;
+            if ( (LA20_0==28) ) {
+                alt20=1;
             }
-            switch (alt22) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1432:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1292:1: (lv_isDistinct_2_0= 'DISTINCT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1432:1: (lv_isDistinct_2_0= 'DISTINCT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1433:3: lv_isDistinct_2_0= 'DISTINCT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1292:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1293:3: lv_isDistinct_2_0= 'DISTINCT'
                     {
-                    lv_isDistinct_2_0=(Token)match(input,30,FOLLOW_30_in_ruleSumAggregate3146); 
+                    lv_isDistinct_2_0=(Token)match(input,28,FOLLOW_28_in_ruleSumAggregate2869); 
 
                             newLeafNode(lv_isDistinct_2_0, grammarAccess.getSumAggregateAccess().getIsDistinctDISTINCTKeyword_2_0());
                         
@@ -3662,16 +3321,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1446:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1447:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1306:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1307:1: (lv_item_3_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1447:1: (lv_item_3_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1448:3: lv_item_3_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1307:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1308:3: lv_item_3_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getSumAggregateAccess().getItemAliasAttributeExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSumAggregate3181);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSumAggregate2904);
             lv_item_3_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -3693,7 +3352,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,33,FOLLOW_33_in_ruleSumAggregate3193); 
+            otherlv_4=(Token)match(input,31,FOLLOW_31_in_ruleSumAggregate2916); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getSumAggregateAccess().getRightParenthesisKeyword_4());
                 
@@ -3718,7 +3377,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCountAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1476:1: entryRuleCountAggregate returns [EObject current=null] : iv_ruleCountAggregate= ruleCountAggregate EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1336:1: entryRuleCountAggregate returns [EObject current=null] : iv_ruleCountAggregate= ruleCountAggregate EOF ;
     public final EObject entryRuleCountAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3726,17 +3385,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1477:2: (iv_ruleCountAggregate= ruleCountAggregate EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1478:2: iv_ruleCountAggregate= ruleCountAggregate EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1337:2: (iv_ruleCountAggregate= ruleCountAggregate EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1338:2: iv_ruleCountAggregate= ruleCountAggregate EOF
             {
              newCompositeNode(grammarAccess.getCountAggregateRule()); 
-            pushFollow(FOLLOW_ruleCountAggregate_in_entryRuleCountAggregate3229);
+            pushFollow(FOLLOW_ruleCountAggregate_in_entryRuleCountAggregate2952);
             iv_ruleCountAggregate=ruleCountAggregate();
 
             state._fsp--;
 
              current =iv_ruleCountAggregate; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCountAggregate3239); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCountAggregate2962); 
 
             }
 
@@ -3754,7 +3413,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCountAggregate"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1485:1: ruleCountAggregate returns [EObject current=null] : (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1345:1: ruleCountAggregate returns [EObject current=null] : (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) ;
     public final EObject ruleCountAggregate() throws RecognitionException {
         EObject current = null;
 
@@ -3768,35 +3427,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1488:28: ( (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1489:1: (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1348:28: ( (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1349:1: (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1489:1: (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1489:3: otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1349:1: (otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1349:3: otherlv_0= 'COUNT' otherlv_1= '(' ( (lv_isDistinct_2_0= 'DISTINCT' ) )? ( (lv_item_3_0= ruleAliasAttributeExpression ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleCountAggregate3276); 
+            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleCountAggregate2999); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCountAggregateAccess().getCOUNTKeyword_0());
                 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleCountAggregate3288); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleCountAggregate3011); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getCountAggregateAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1497:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1357:1: ( (lv_isDistinct_2_0= 'DISTINCT' ) )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA23_0==30) ) {
-                alt23=1;
+            if ( (LA21_0==28) ) {
+                alt21=1;
             }
-            switch (alt23) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1498:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1358:1: (lv_isDistinct_2_0= 'DISTINCT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1498:1: (lv_isDistinct_2_0= 'DISTINCT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1499:3: lv_isDistinct_2_0= 'DISTINCT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1358:1: (lv_isDistinct_2_0= 'DISTINCT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1359:3: lv_isDistinct_2_0= 'DISTINCT'
                     {
-                    lv_isDistinct_2_0=(Token)match(input,30,FOLLOW_30_in_ruleCountAggregate3306); 
+                    lv_isDistinct_2_0=(Token)match(input,28,FOLLOW_28_in_ruleCountAggregate3029); 
 
                             newLeafNode(lv_isDistinct_2_0, grammarAccess.getCountAggregateAccess().getIsDistinctDISTINCTKeyword_2_0());
                         
@@ -3815,16 +3474,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1512:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1513:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1372:3: ( (lv_item_3_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1373:1: (lv_item_3_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1513:1: (lv_item_3_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1514:3: lv_item_3_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1373:1: (lv_item_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1374:3: lv_item_3_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getCountAggregateAccess().getItemAliasAttributeExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleCountAggregate3341);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleCountAggregate3064);
             lv_item_3_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -3846,7 +3505,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,33,FOLLOW_33_in_ruleCountAggregate3353); 
+            otherlv_4=(Token)match(input,31,FOLLOW_31_in_ruleCountAggregate3076); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getCountAggregateAccess().getRightParenthesisKeyword_4());
                 
@@ -3871,7 +3530,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelectConstructorExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1542:1: entryRuleSelectConstructorExpression returns [EObject current=null] : iv_ruleSelectConstructorExpression= ruleSelectConstructorExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1402:1: entryRuleSelectConstructorExpression returns [EObject current=null] : iv_ruleSelectConstructorExpression= ruleSelectConstructorExpression EOF ;
     public final EObject entryRuleSelectConstructorExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3879,17 +3538,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1543:2: (iv_ruleSelectConstructorExpression= ruleSelectConstructorExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1544:2: iv_ruleSelectConstructorExpression= ruleSelectConstructorExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1403:2: (iv_ruleSelectConstructorExpression= ruleSelectConstructorExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1404:2: iv_ruleSelectConstructorExpression= ruleSelectConstructorExpression EOF
             {
              newCompositeNode(grammarAccess.getSelectConstructorExpressionRule()); 
-            pushFollow(FOLLOW_ruleSelectConstructorExpression_in_entryRuleSelectConstructorExpression3389);
+            pushFollow(FOLLOW_ruleSelectConstructorExpression_in_entryRuleSelectConstructorExpression3112);
             iv_ruleSelectConstructorExpression=ruleSelectConstructorExpression();
 
             state._fsp--;
 
              current =iv_ruleSelectConstructorExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectConstructorExpression3399); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectConstructorExpression3122); 
 
             }
 
@@ -3907,7 +3566,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectConstructorExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1551:1: ruleSelectConstructorExpression returns [EObject current=null] : (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1411:1: ruleSelectConstructorExpression returns [EObject current=null] : (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' ) ;
     public final EObject ruleSelectConstructorExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3924,23 +3583,23 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1554:28: ( (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1555:1: (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1414:28: ( (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1415:1: (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1555:1: (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1555:3: otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1415:1: (otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1415:3: otherlv_0= 'NEW' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_items_3_0= ruleAliasAttributeExpression ) ) (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )* otherlv_6= ')'
             {
-            otherlv_0=(Token)match(input,38,FOLLOW_38_in_ruleSelectConstructorExpression3436); 
+            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleSelectConstructorExpression3159); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSelectConstructorExpressionAccess().getNEWKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1559:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1560:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1419:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1420:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1560:1: (lv_name_1_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1561:3: lv_name_1_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1420:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1421:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSelectConstructorExpression3453); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSelectConstructorExpression3176); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getSelectConstructorExpressionAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -3960,20 +3619,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleSelectConstructorExpression3470); 
+            otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleSelectConstructorExpression3193); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getSelectConstructorExpressionAccess().getLeftParenthesisKeyword_2());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1581:1: ( (lv_items_3_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1582:1: (lv_items_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1441:1: ( (lv_items_3_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1442:1: (lv_items_3_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1582:1: (lv_items_3_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1583:3: lv_items_3_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1442:1: (lv_items_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1443:3: lv_items_3_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getSelectConstructorExpressionAccess().getItemsAliasAttributeExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3491);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3214);
             lv_items_3_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -3995,35 +3654,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1599:2: (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )*
-            loop24:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1459:2: (otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) ) )*
+            loop22:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA24_0==21) ) {
-                    alt24=1;
+                if ( (LA22_0==19) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt22) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1599:4: otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1459:4: otherlv_4= ',' ( (lv_items_5_0= ruleAliasAttributeExpression ) )
             	    {
-            	    otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleSelectConstructorExpression3504); 
+            	    otherlv_4=(Token)match(input,19,FOLLOW_19_in_ruleSelectConstructorExpression3227); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getSelectConstructorExpressionAccess().getCommaKeyword_4_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1603:1: ( (lv_items_5_0= ruleAliasAttributeExpression ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1604:1: (lv_items_5_0= ruleAliasAttributeExpression )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1463:1: ( (lv_items_5_0= ruleAliasAttributeExpression ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1464:1: (lv_items_5_0= ruleAliasAttributeExpression )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1604:1: (lv_items_5_0= ruleAliasAttributeExpression )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1605:3: lv_items_5_0= ruleAliasAttributeExpression
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1464:1: (lv_items_5_0= ruleAliasAttributeExpression )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1465:3: lv_items_5_0= ruleAliasAttributeExpression
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getSelectConstructorExpressionAccess().getItemsAliasAttributeExpressionParserRuleCall_4_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3525);
+            	    pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3248);
             	    lv_items_5_0=ruleAliasAttributeExpression();
 
             	    state._fsp--;
@@ -4050,11 +3709,11 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop22;
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,33,FOLLOW_33_in_ruleSelectConstructorExpression3539); 
+            otherlv_6=(Token)match(input,31,FOLLOW_31_in_ruleSelectConstructorExpression3262); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getSelectConstructorExpressionAccess().getRightParenthesisKeyword_5());
                 
@@ -4079,7 +3738,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFromClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1633:1: entryRuleFromClause returns [EObject current=null] : iv_ruleFromClause= ruleFromClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1493:1: entryRuleFromClause returns [EObject current=null] : iv_ruleFromClause= ruleFromClause EOF ;
     public final EObject entryRuleFromClause() throws RecognitionException {
         EObject current = null;
 
@@ -4087,17 +3746,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1634:2: (iv_ruleFromClause= ruleFromClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1635:2: iv_ruleFromClause= ruleFromClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1494:2: (iv_ruleFromClause= ruleFromClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1495:2: iv_ruleFromClause= ruleFromClause EOF
             {
              newCompositeNode(grammarAccess.getFromClauseRule()); 
-            pushFollow(FOLLOW_ruleFromClause_in_entryRuleFromClause3575);
+            pushFollow(FOLLOW_ruleFromClause_in_entryRuleFromClause3298);
             iv_ruleFromClause=ruleFromClause();
 
             state._fsp--;
 
              current =iv_ruleFromClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClause3585); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClause3308); 
 
             }
 
@@ -4115,7 +3774,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFromClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1642:1: ruleFromClause returns [EObject current=null] : (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1502:1: ruleFromClause returns [EObject current=null] : (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) ;
     public final EObject ruleFromClause() throws RecognitionException {
         EObject current = null;
 
@@ -4129,26 +3788,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1645:28: ( (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1646:1: (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1505:28: ( (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1506:1: (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1646:1: (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1646:3: otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1506:1: (otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1506:3: otherlv_0= 'FROM' ( (lv_fromEntries_1_0= ruleFromClass ) ) (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
             {
-            otherlv_0=(Token)match(input,39,FOLLOW_39_in_ruleFromClause3622); 
+            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleFromClause3345); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFromClauseAccess().getFROMKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1650:1: ( (lv_fromEntries_1_0= ruleFromClass ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1651:1: (lv_fromEntries_1_0= ruleFromClass )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1510:1: ( (lv_fromEntries_1_0= ruleFromClass ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1511:1: (lv_fromEntries_1_0= ruleFromClass )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1651:1: (lv_fromEntries_1_0= ruleFromClass )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1652:3: lv_fromEntries_1_0= ruleFromClass
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1511:1: (lv_fromEntries_1_0= ruleFromClass )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1512:3: lv_fromEntries_1_0= ruleFromClass
             {
              
             	        newCompositeNode(grammarAccess.getFromClauseAccess().getFromEntriesFromClassParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFromClass_in_ruleFromClause3643);
+            pushFollow(FOLLOW_ruleFromClass_in_ruleFromClause3366);
             lv_fromEntries_1_0=ruleFromClass();
 
             state._fsp--;
@@ -4170,35 +3829,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1668:2: (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
-            loop25:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1528:2: (otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) ) )*
+            loop23:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA25_0==21) ) {
-                    alt25=1;
+                if ( (LA23_0==19) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt23) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1668:4: otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1528:4: otherlv_2= ',' ( (lv_fromEntries_3_0= ruleFromEntry ) )
             	    {
-            	    otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleFromClause3656); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleFromClause3379); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getFromClauseAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1672:1: ( (lv_fromEntries_3_0= ruleFromEntry ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1673:1: (lv_fromEntries_3_0= ruleFromEntry )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1532:1: ( (lv_fromEntries_3_0= ruleFromEntry ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1533:1: (lv_fromEntries_3_0= ruleFromEntry )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1673:1: (lv_fromEntries_3_0= ruleFromEntry )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1674:3: lv_fromEntries_3_0= ruleFromEntry
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1533:1: (lv_fromEntries_3_0= ruleFromEntry )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1534:3: lv_fromEntries_3_0= ruleFromEntry
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getFromClauseAccess().getFromEntriesFromEntryParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleFromEntry_in_ruleFromClause3677);
+            	    pushFollow(FOLLOW_ruleFromEntry_in_ruleFromClause3400);
             	    lv_fromEntries_3_0=ruleFromEntry();
 
             	    state._fsp--;
@@ -4225,7 +3884,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop23;
                 }
             } while (true);
 
@@ -4250,7 +3909,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFromEntry"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1698:1: entryRuleFromEntry returns [EObject current=null] : iv_ruleFromEntry= ruleFromEntry EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1558:1: entryRuleFromEntry returns [EObject current=null] : iv_ruleFromEntry= ruleFromEntry EOF ;
     public final EObject entryRuleFromEntry() throws RecognitionException {
         EObject current = null;
 
@@ -4258,17 +3917,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1699:2: (iv_ruleFromEntry= ruleFromEntry EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1700:2: iv_ruleFromEntry= ruleFromEntry EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1559:2: (iv_ruleFromEntry= ruleFromEntry EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1560:2: iv_ruleFromEntry= ruleFromEntry EOF
             {
              newCompositeNode(grammarAccess.getFromEntryRule()); 
-            pushFollow(FOLLOW_ruleFromEntry_in_entryRuleFromEntry3715);
+            pushFollow(FOLLOW_ruleFromEntry_in_entryRuleFromEntry3438);
             iv_ruleFromEntry=ruleFromEntry();
 
             state._fsp--;
 
              current =iv_ruleFromEntry; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFromEntry3725); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFromEntry3448); 
 
             }
 
@@ -4286,7 +3945,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFromEntry"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1707:1: ruleFromEntry returns [EObject current=null] : (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1567:1: ruleFromEntry returns [EObject current=null] : (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection ) ;
     public final EObject ruleFromEntry() throws RecognitionException {
         EObject current = null;
 
@@ -4298,33 +3957,33 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1710:28: ( (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1711:1: (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1570:28: ( (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1571:1: (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1711:1: (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection )
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1571:1: (this_FromClass_0= ruleFromClass | this_FromCollection_1= ruleFromCollection )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA26_0==RULE_ID) ) {
-                alt26=1;
+            if ( (LA24_0==RULE_ID) ) {
+                alt24=1;
             }
-            else if ( (LA26_0==41) ) {
-                alt26=2;
+            else if ( (LA24_0==39) ) {
+                alt24=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
-            switch (alt26) {
+            switch (alt24) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1712:5: this_FromClass_0= ruleFromClass
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1572:5: this_FromClass_0= ruleFromClass
                     {
                      
                             newCompositeNode(grammarAccess.getFromEntryAccess().getFromClassParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleFromClass_in_ruleFromEntry3772);
+                    pushFollow(FOLLOW_ruleFromClass_in_ruleFromEntry3495);
                     this_FromClass_0=ruleFromClass();
 
                     state._fsp--;
@@ -4337,12 +3996,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1722:5: this_FromCollection_1= ruleFromCollection
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1582:5: this_FromCollection_1= ruleFromCollection
                     {
                      
                             newCompositeNode(grammarAccess.getFromEntryAccess().getFromCollectionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleFromCollection_in_ruleFromEntry3799);
+                    pushFollow(FOLLOW_ruleFromCollection_in_ruleFromEntry3522);
                     this_FromCollection_1=ruleFromCollection();
 
                     state._fsp--;
@@ -4375,7 +4034,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariableDeclaration"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1738:1: entryRuleVariableDeclaration returns [EObject current=null] : iv_ruleVariableDeclaration= ruleVariableDeclaration EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1598:1: entryRuleVariableDeclaration returns [EObject current=null] : iv_ruleVariableDeclaration= ruleVariableDeclaration EOF ;
     public final EObject entryRuleVariableDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4383,17 +4042,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1739:2: (iv_ruleVariableDeclaration= ruleVariableDeclaration EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1740:2: iv_ruleVariableDeclaration= ruleVariableDeclaration EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1599:2: (iv_ruleVariableDeclaration= ruleVariableDeclaration EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1600:2: iv_ruleVariableDeclaration= ruleVariableDeclaration EOF
             {
              newCompositeNode(grammarAccess.getVariableDeclarationRule()); 
-            pushFollow(FOLLOW_ruleVariableDeclaration_in_entryRuleVariableDeclaration3834);
+            pushFollow(FOLLOW_ruleVariableDeclaration_in_entryRuleVariableDeclaration3557);
             iv_ruleVariableDeclaration=ruleVariableDeclaration();
 
             state._fsp--;
 
              current =iv_ruleVariableDeclaration; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableDeclaration3844); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableDeclaration3567); 
 
             }
 
@@ -4411,7 +4070,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariableDeclaration"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1747:1: ruleVariableDeclaration returns [EObject current=null] : ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1607:1: ruleVariableDeclaration returns [EObject current=null] : ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleVariableDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4421,24 +4080,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1750:28: ( ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1751:1: ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1610:28: ( ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1611:1: ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1751:1: ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1751:2: (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1611:1: ( (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1611:2: (otherlv_0= 'AS' )? ( (lv_name_1_0= RULE_ID ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1751:2: (otherlv_0= 'AS' )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1611:2: (otherlv_0= 'AS' )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA27_0==40) ) {
-                alt27=1;
+            if ( (LA25_0==38) ) {
+                alt25=1;
             }
-            switch (alt27) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1751:4: otherlv_0= 'AS'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1611:4: otherlv_0= 'AS'
                     {
-                    otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleVariableDeclaration3882); 
+                    otherlv_0=(Token)match(input,38,FOLLOW_38_in_ruleVariableDeclaration3605); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getVariableDeclarationAccess().getASKeyword_0());
                         
@@ -4448,13 +4107,13 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1755:3: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1756:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1615:3: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1616:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1756:1: (lv_name_1_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1757:3: lv_name_1_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1616:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1617:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleVariableDeclaration3901); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleVariableDeclaration3624); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getVariableDeclarationAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -4495,7 +4154,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFromClass"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1781:1: entryRuleFromClass returns [EObject current=null] : iv_ruleFromClass= ruleFromClass EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1641:1: entryRuleFromClass returns [EObject current=null] : iv_ruleFromClass= ruleFromClass EOF ;
     public final EObject entryRuleFromClass() throws RecognitionException {
         EObject current = null;
 
@@ -4503,17 +4162,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1782:2: (iv_ruleFromClass= ruleFromClass EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1783:2: iv_ruleFromClass= ruleFromClass EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1642:2: (iv_ruleFromClass= ruleFromClass EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1643:2: iv_ruleFromClass= ruleFromClass EOF
             {
              newCompositeNode(grammarAccess.getFromClassRule()); 
-            pushFollow(FOLLOW_ruleFromClass_in_entryRuleFromClass3942);
+            pushFollow(FOLLOW_ruleFromClass_in_entryRuleFromClass3665);
             iv_ruleFromClass=ruleFromClass();
 
             state._fsp--;
 
              current =iv_ruleFromClass; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClass3952); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClass3675); 
 
             }
 
@@ -4531,7 +4190,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFromClass"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1790:1: ruleFromClass returns [EObject current=null] : (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1650:1: ruleFromClass returns [EObject current=null] : (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar ) ;
     public final EObject ruleFromClass() throws RecognitionException {
         EObject current = null;
 
@@ -4543,71 +4202,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1793:28: ( (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1794:1: (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1653:28: ( (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1654:1: (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1794:1: (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar )
-            int alt28=2;
-            int LA28_0 = input.LA(1);
-
-            if ( (LA28_0==RULE_ID) ) {
-                switch ( input.LA(2) ) {
-                case 40:
-                    {
-                    alt28=2;
-                    }
-                    break;
-                case RULE_ID:
-                    {
-                    int LA28_3 = input.LA(3);
-
-                    if ( (LA28_3==EOF||LA28_3==RULE_ID||(LA28_3>=18 && LA28_3<=19)||LA28_3==21||LA28_3==26||LA28_3==33||LA28_3==42||LA28_3==44||(LA28_3>=46 && LA28_3<=47)) ) {
-                        alt28=2;
-                    }
-                    else if ( (LA28_3==17) ) {
-                        alt28=1;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 28, 3, input);
-
-                        throw nvae;
-                    }
-                    }
-                    break;
-                case EOF:
-                case 18:
-                case 19:
-                case 21:
-                case 26:
-                case 33:
-                case 47:
-                    {
-                    alt28=1;
-                    }
-                    break;
-                default:
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 28, 1, input);
-
-                    throw nvae;
-                }
-
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
-
-                throw nvae;
-            }
-            switch (alt28) {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1654:1: (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar )
+            int alt26=2;
+            alt26 = dfa26.predict(input);
+            switch (alt26) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1795:5: this_FromClassId_0= ruleFromClassId
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1655:5: this_FromClassId_0= ruleFromClassId
                     {
                      
                             newCompositeNode(grammarAccess.getFromClassAccess().getFromClassIdParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleFromClassId_in_ruleFromClass3999);
+                    pushFollow(FOLLOW_ruleFromClassId_in_ruleFromClass3722);
                     this_FromClassId_0=ruleFromClassId();
 
                     state._fsp--;
@@ -4620,12 +4228,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1805:5: this_FromClassVar_1= ruleFromClassVar
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1665:5: this_FromClassVar_1= ruleFromClassVar
                     {
                      
                             newCompositeNode(grammarAccess.getFromClassAccess().getFromClassVarParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleFromClassVar_in_ruleFromClass4026);
+                    pushFollow(FOLLOW_ruleFromClassVar_in_ruleFromClass3749);
                     this_FromClassVar_1=ruleFromClassVar();
 
                     state._fsp--;
@@ -4658,7 +4266,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFromClassId"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1821:1: entryRuleFromClassId returns [EObject current=null] : iv_ruleFromClassId= ruleFromClassId EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1681:1: entryRuleFromClassId returns [EObject current=null] : iv_ruleFromClassId= ruleFromClassId EOF ;
     public final EObject entryRuleFromClassId() throws RecognitionException {
         EObject current = null;
 
@@ -4666,17 +4274,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1822:2: (iv_ruleFromClassId= ruleFromClassId EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1823:2: iv_ruleFromClassId= ruleFromClassId EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1682:2: (iv_ruleFromClassId= ruleFromClassId EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1683:2: iv_ruleFromClassId= ruleFromClassId EOF
             {
              newCompositeNode(grammarAccess.getFromClassIdRule()); 
-            pushFollow(FOLLOW_ruleFromClassId_in_entryRuleFromClassId4061);
+            pushFollow(FOLLOW_ruleFromClassId_in_entryRuleFromClassId3784);
             iv_ruleFromClassId=ruleFromClassId();
 
             state._fsp--;
 
              current =iv_ruleFromClassId; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClassId4071); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClassId3794); 
 
             }
 
@@ -4694,37 +4302,37 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFromClassId"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1830:1: ruleFromClassId returns [EObject current=null] : ( (lv_type_0_0= RULE_ID ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1690:1: ruleFromClassId returns [EObject current=null] : ( ( ruleQualifiedName ) ) ;
     public final EObject ruleFromClassId() throws RecognitionException {
         EObject current = null;
-
-        Token lv_type_0_0=null;
 
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1833:28: ( ( (lv_type_0_0= RULE_ID ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1834:1: ( (lv_type_0_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1693:28: ( ( ( ruleQualifiedName ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1694:1: ( ( ruleQualifiedName ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1834:1: ( (lv_type_0_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1835:1: (lv_type_0_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1694:1: ( ( ruleQualifiedName ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1695:1: ( ruleQualifiedName )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1835:1: (lv_type_0_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1836:3: lv_type_0_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1695:1: ( ruleQualifiedName )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1696:3: ruleQualifiedName
             {
-            lv_type_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFromClassId4112); 
 
-            			newLeafNode(lv_type_0_0, grammarAccess.getFromClassIdAccess().getTypeIDTerminalRuleCall_0()); 
-            		
-
-            	        if (current==null) {
+            			if (current==null) {
             	            current = createModelElement(grammarAccess.getFromClassIdRule());
             	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"type",
-                    		lv_type_0_0, 
-                    		"ID");
+                    
+             
+            	        newCompositeNode(grammarAccess.getFromClassIdAccess().getTypeJvmTypeCrossReference_0()); 
+            	    
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleFromClassId3841);
+            ruleQualifiedName();
+
+            state._fsp--;
+
+             
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -4750,7 +4358,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFromClassVar"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1860:1: entryRuleFromClassVar returns [EObject current=null] : iv_ruleFromClassVar= ruleFromClassVar EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1717:1: entryRuleFromClassVar returns [EObject current=null] : iv_ruleFromClassVar= ruleFromClassVar EOF ;
     public final EObject entryRuleFromClassVar() throws RecognitionException {
         EObject current = null;
 
@@ -4758,17 +4366,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1861:2: (iv_ruleFromClassVar= ruleFromClassVar EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1862:2: iv_ruleFromClassVar= ruleFromClassVar EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1718:2: (iv_ruleFromClassVar= ruleFromClassVar EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1719:2: iv_ruleFromClassVar= ruleFromClassVar EOF
             {
              newCompositeNode(grammarAccess.getFromClassVarRule()); 
-            pushFollow(FOLLOW_ruleFromClassVar_in_entryRuleFromClassVar4152);
+            pushFollow(FOLLOW_ruleFromClassVar_in_entryRuleFromClassVar3876);
             iv_ruleFromClassVar=ruleFromClassVar();
 
             state._fsp--;
 
              current =iv_ruleFromClassVar; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClassVar4162); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFromClassVar3886); 
 
             }
 
@@ -4786,11 +4394,10 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFromClassVar"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1869:1: ruleFromClassVar returns [EObject current=null] : ( ( (lv_type_0_0= RULE_ID ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1726:1: ruleFromClassVar returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* ) ;
     public final EObject ruleFromClassVar() throws RecognitionException {
         EObject current = null;
 
-        Token lv_type_0_0=null;
         EObject lv_variable_1_0 = null;
 
         EObject lv_joins_2_0 = null;
@@ -4799,31 +4406,33 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1872:28: ( ( ( (lv_type_0_0= RULE_ID ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1873:1: ( ( (lv_type_0_0= RULE_ID ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1729:28: ( ( ( ( ruleQualifiedName ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1730:1: ( ( ( ruleQualifiedName ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1873:1: ( ( (lv_type_0_0= RULE_ID ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1873:2: ( (lv_type_0_0= RULE_ID ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )*
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1730:1: ( ( ( ruleQualifiedName ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1730:2: ( ( ruleQualifiedName ) ) ( (lv_variable_1_0= ruleVariableDeclaration ) ) ( (lv_joins_2_0= ruleFromJoin ) )*
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1873:2: ( (lv_type_0_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1874:1: (lv_type_0_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1730:2: ( ( ruleQualifiedName ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1731:1: ( ruleQualifiedName )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1874:1: (lv_type_0_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1875:3: lv_type_0_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1731:1: ( ruleQualifiedName )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1732:3: ruleQualifiedName
             {
-            lv_type_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFromClassVar4204); 
 
-            			newLeafNode(lv_type_0_0, grammarAccess.getFromClassVarAccess().getTypeIDTerminalRuleCall_0_0()); 
-            		
-
-            	        if (current==null) {
+            			if (current==null) {
             	            current = createModelElement(grammarAccess.getFromClassVarRule());
             	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"type",
-                    		lv_type_0_0, 
-                    		"ID");
+                    
+             
+            	        newCompositeNode(grammarAccess.getFromClassVarAccess().getTypeJvmTypeCrossReference_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleFromClassVar3934);
+            ruleQualifiedName();
+
+            state._fsp--;
+
+             
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -4831,16 +4440,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1891:2: ( (lv_variable_1_0= ruleVariableDeclaration ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1892:1: (lv_variable_1_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1745:2: ( (lv_variable_1_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1746:1: (lv_variable_1_0= ruleVariableDeclaration )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1892:1: (lv_variable_1_0= ruleVariableDeclaration )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1893:3: lv_variable_1_0= ruleVariableDeclaration
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1746:1: (lv_variable_1_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1747:3: lv_variable_1_0= ruleVariableDeclaration
             {
              
             	        newCompositeNode(grammarAccess.getFromClassVarAccess().getVariableVariableDeclarationParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleFromClassVar4230);
+            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleFromClassVar3955);
             lv_variable_1_0=ruleVariableDeclaration();
 
             state._fsp--;
@@ -4862,28 +4471,28 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1909:2: ( (lv_joins_2_0= ruleFromJoin ) )*
-            loop29:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1763:2: ( (lv_joins_2_0= ruleFromJoin ) )*
+            loop27:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA29_0==42||LA29_0==44||LA29_0==46) ) {
-                    alt29=1;
+                if ( (LA27_0==40||LA27_0==42||LA27_0==44) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt27) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1910:1: (lv_joins_2_0= ruleFromJoin )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1764:1: (lv_joins_2_0= ruleFromJoin )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1910:1: (lv_joins_2_0= ruleFromJoin )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1911:3: lv_joins_2_0= ruleFromJoin
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1764:1: (lv_joins_2_0= ruleFromJoin )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1765:3: lv_joins_2_0= ruleFromJoin
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getFromClassVarAccess().getJoinsFromJoinParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleFromJoin_in_ruleFromClassVar4251);
+            	    pushFollow(FOLLOW_ruleFromJoin_in_ruleFromClassVar3976);
             	    lv_joins_2_0=ruleFromJoin();
 
             	    state._fsp--;
@@ -4907,7 +4516,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop27;
                 }
             } while (true);
 
@@ -4932,7 +4541,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFromCollection"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1935:1: entryRuleFromCollection returns [EObject current=null] : iv_ruleFromCollection= ruleFromCollection EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1789:1: entryRuleFromCollection returns [EObject current=null] : iv_ruleFromCollection= ruleFromCollection EOF ;
     public final EObject entryRuleFromCollection() throws RecognitionException {
         EObject current = null;
 
@@ -4940,17 +4549,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1936:2: (iv_ruleFromCollection= ruleFromCollection EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1937:2: iv_ruleFromCollection= ruleFromCollection EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1790:2: (iv_ruleFromCollection= ruleFromCollection EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1791:2: iv_ruleFromCollection= ruleFromCollection EOF
             {
              newCompositeNode(grammarAccess.getFromCollectionRule()); 
-            pushFollow(FOLLOW_ruleFromCollection_in_entryRuleFromCollection4288);
+            pushFollow(FOLLOW_ruleFromCollection_in_entryRuleFromCollection4013);
             iv_ruleFromCollection=ruleFromCollection();
 
             state._fsp--;
 
              current =iv_ruleFromCollection; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFromCollection4298); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFromCollection4023); 
 
             }
 
@@ -4968,7 +4577,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFromCollection"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1944:1: ruleFromCollection returns [EObject current=null] : (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1798:1: ruleFromCollection returns [EObject current=null] : (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) ;
     public final EObject ruleFromCollection() throws RecognitionException {
         EObject current = null;
 
@@ -4983,30 +4592,30 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1947:28: ( (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1948:1: (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1801:28: ( (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1802:1: (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1948:1: (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1948:3: otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1802:1: (otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1802:3: otherlv_0= 'IN' otherlv_1= '(' ( (lv_path_2_0= ruleAliasAttributeExpression ) ) otherlv_3= ')' ( (lv_variable_4_0= ruleVariableDeclaration ) )
             {
-            otherlv_0=(Token)match(input,41,FOLLOW_41_in_ruleFromCollection4335); 
+            otherlv_0=(Token)match(input,39,FOLLOW_39_in_ruleFromCollection4060); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFromCollectionAccess().getINKeyword_0());
                 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleFromCollection4347); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleFromCollection4072); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getFromCollectionAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1956:1: ( (lv_path_2_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1957:1: (lv_path_2_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1810:1: ( (lv_path_2_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1811:1: (lv_path_2_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1957:1: (lv_path_2_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1958:3: lv_path_2_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1811:1: (lv_path_2_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1812:3: lv_path_2_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getFromCollectionAccess().getPathAliasAttributeExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleFromCollection4368);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleFromCollection4093);
             lv_path_2_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -5028,20 +4637,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,33,FOLLOW_33_in_ruleFromCollection4380); 
+            otherlv_3=(Token)match(input,31,FOLLOW_31_in_ruleFromCollection4105); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getFromCollectionAccess().getRightParenthesisKeyword_3());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1978:1: ( (lv_variable_4_0= ruleVariableDeclaration ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1979:1: (lv_variable_4_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1832:1: ( (lv_variable_4_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1833:1: (lv_variable_4_0= ruleVariableDeclaration )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1979:1: (lv_variable_4_0= ruleVariableDeclaration )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1980:3: lv_variable_4_0= ruleVariableDeclaration
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1833:1: (lv_variable_4_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1834:3: lv_variable_4_0= ruleVariableDeclaration
             {
              
             	        newCompositeNode(grammarAccess.getFromCollectionAccess().getVariableVariableDeclarationParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleFromCollection4401);
+            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleFromCollection4126);
             lv_variable_4_0=ruleVariableDeclaration();
 
             state._fsp--;
@@ -5084,7 +4693,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFromJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2004:1: entryRuleFromJoin returns [EObject current=null] : iv_ruleFromJoin= ruleFromJoin EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1858:1: entryRuleFromJoin returns [EObject current=null] : iv_ruleFromJoin= ruleFromJoin EOF ;
     public final EObject entryRuleFromJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5092,17 +4701,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2005:2: (iv_ruleFromJoin= ruleFromJoin EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2006:2: iv_ruleFromJoin= ruleFromJoin EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1859:2: (iv_ruleFromJoin= ruleFromJoin EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1860:2: iv_ruleFromJoin= ruleFromJoin EOF
             {
              newCompositeNode(grammarAccess.getFromJoinRule()); 
-            pushFollow(FOLLOW_ruleFromJoin_in_entryRuleFromJoin4437);
+            pushFollow(FOLLOW_ruleFromJoin_in_entryRuleFromJoin4162);
             iv_ruleFromJoin=ruleFromJoin();
 
             state._fsp--;
 
              current =iv_ruleFromJoin; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFromJoin4447); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFromJoin4172); 
 
             }
 
@@ -5120,7 +4729,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFromJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2013:1: ruleFromJoin returns [EObject current=null] : (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1867:1: ruleFromJoin returns [EObject current=null] : (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin ) ;
     public final EObject ruleFromJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5134,42 +4743,42 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2016:28: ( (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2017:1: (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1870:28: ( (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1871:1: (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2017:1: (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin )
-            int alt30=3;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1871:1: (this_Join_0= ruleJoin | this_LeftJoin_1= ruleLeftJoin | this_InnerJoin_2= ruleInnerJoin )
+            int alt28=3;
             switch ( input.LA(1) ) {
+            case 40:
+                {
+                alt28=1;
+                }
+                break;
             case 42:
                 {
-                alt30=1;
+                alt28=2;
                 }
                 break;
             case 44:
                 {
-                alt30=2;
-                }
-                break;
-            case 46:
-                {
-                alt30=3;
+                alt28=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt30) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2018:5: this_Join_0= ruleJoin
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1872:5: this_Join_0= ruleJoin
                     {
                      
                             newCompositeNode(grammarAccess.getFromJoinAccess().getJoinParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleJoin_in_ruleFromJoin4494);
+                    pushFollow(FOLLOW_ruleJoin_in_ruleFromJoin4219);
                     this_Join_0=ruleJoin();
 
                     state._fsp--;
@@ -5182,12 +4791,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2028:5: this_LeftJoin_1= ruleLeftJoin
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1882:5: this_LeftJoin_1= ruleLeftJoin
                     {
                      
                             newCompositeNode(grammarAccess.getFromJoinAccess().getLeftJoinParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLeftJoin_in_ruleFromJoin4521);
+                    pushFollow(FOLLOW_ruleLeftJoin_in_ruleFromJoin4246);
                     this_LeftJoin_1=ruleLeftJoin();
 
                     state._fsp--;
@@ -5200,12 +4809,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2038:5: this_InnerJoin_2= ruleInnerJoin
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1892:5: this_InnerJoin_2= ruleInnerJoin
                     {
                      
                             newCompositeNode(grammarAccess.getFromJoinAccess().getInnerJoinParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleInnerJoin_in_ruleFromJoin4548);
+                    pushFollow(FOLLOW_ruleInnerJoin_in_ruleFromJoin4273);
                     this_InnerJoin_2=ruleInnerJoin();
 
                     state._fsp--;
@@ -5238,7 +4847,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2054:1: entryRuleJoin returns [EObject current=null] : iv_ruleJoin= ruleJoin EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1908:1: entryRuleJoin returns [EObject current=null] : iv_ruleJoin= ruleJoin EOF ;
     public final EObject entryRuleJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5246,17 +4855,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2055:2: (iv_ruleJoin= ruleJoin EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2056:2: iv_ruleJoin= ruleJoin EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1909:2: (iv_ruleJoin= ruleJoin EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1910:2: iv_ruleJoin= ruleJoin EOF
             {
              newCompositeNode(grammarAccess.getJoinRule()); 
-            pushFollow(FOLLOW_ruleJoin_in_entryRuleJoin4583);
+            pushFollow(FOLLOW_ruleJoin_in_entryRuleJoin4308);
             iv_ruleJoin=ruleJoin();
 
             state._fsp--;
 
              current =iv_ruleJoin; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJoin4593); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJoin4318); 
 
             }
 
@@ -5274,7 +4883,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2063:1: ruleJoin returns [EObject current=null] : (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1917:1: ruleJoin returns [EObject current=null] : (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) ) ;
     public final EObject ruleJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5288,31 +4897,31 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2066:28: ( (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2067:1: (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1920:28: ( (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1921:1: (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2067:1: (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2067:3: otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1921:1: (otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1921:3: otherlv_0= 'JOIN' ( (lv_isFetch_1_0= 'FETCH' ) )? ( (lv_path_2_0= ruleAliasAttributeExpression ) ) ( (lv_variable_3_0= ruleVariableDeclaration ) )
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleJoin4630); 
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleJoin4355); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getJoinAccess().getJOINKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2071:1: ( (lv_isFetch_1_0= 'FETCH' ) )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1925:1: ( (lv_isFetch_1_0= 'FETCH' ) )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA31_0==43) ) {
-                alt31=1;
+            if ( (LA29_0==41) ) {
+                alt29=1;
             }
-            switch (alt31) {
+            switch (alt29) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2072:1: (lv_isFetch_1_0= 'FETCH' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1926:1: (lv_isFetch_1_0= 'FETCH' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2072:1: (lv_isFetch_1_0= 'FETCH' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2073:3: lv_isFetch_1_0= 'FETCH'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1926:1: (lv_isFetch_1_0= 'FETCH' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1927:3: lv_isFetch_1_0= 'FETCH'
                     {
-                    lv_isFetch_1_0=(Token)match(input,43,FOLLOW_43_in_ruleJoin4648); 
+                    lv_isFetch_1_0=(Token)match(input,41,FOLLOW_41_in_ruleJoin4373); 
 
                             newLeafNode(lv_isFetch_1_0, grammarAccess.getJoinAccess().getIsFetchFETCHKeyword_1_0());
                         
@@ -5331,16 +4940,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2086:3: ( (lv_path_2_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2087:1: (lv_path_2_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1940:3: ( (lv_path_2_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1941:1: (lv_path_2_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2087:1: (lv_path_2_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2088:3: lv_path_2_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1941:1: (lv_path_2_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1942:3: lv_path_2_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getJoinAccess().getPathAliasAttributeExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleJoin4683);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleJoin4408);
             lv_path_2_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -5362,16 +4971,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2104:2: ( (lv_variable_3_0= ruleVariableDeclaration ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2105:1: (lv_variable_3_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1958:2: ( (lv_variable_3_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1959:1: (lv_variable_3_0= ruleVariableDeclaration )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2105:1: (lv_variable_3_0= ruleVariableDeclaration )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2106:3: lv_variable_3_0= ruleVariableDeclaration
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1959:1: (lv_variable_3_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1960:3: lv_variable_3_0= ruleVariableDeclaration
             {
              
             	        newCompositeNode(grammarAccess.getJoinAccess().getVariableVariableDeclarationParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleJoin4704);
+            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleJoin4429);
             lv_variable_3_0=ruleVariableDeclaration();
 
             state._fsp--;
@@ -5414,7 +5023,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLeftJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2130:1: entryRuleLeftJoin returns [EObject current=null] : iv_ruleLeftJoin= ruleLeftJoin EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1984:1: entryRuleLeftJoin returns [EObject current=null] : iv_ruleLeftJoin= ruleLeftJoin EOF ;
     public final EObject entryRuleLeftJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5422,17 +5031,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2131:2: (iv_ruleLeftJoin= ruleLeftJoin EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2132:2: iv_ruleLeftJoin= ruleLeftJoin EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1985:2: (iv_ruleLeftJoin= ruleLeftJoin EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1986:2: iv_ruleLeftJoin= ruleLeftJoin EOF
             {
              newCompositeNode(grammarAccess.getLeftJoinRule()); 
-            pushFollow(FOLLOW_ruleLeftJoin_in_entryRuleLeftJoin4740);
+            pushFollow(FOLLOW_ruleLeftJoin_in_entryRuleLeftJoin4465);
             iv_ruleLeftJoin=ruleLeftJoin();
 
             state._fsp--;
 
              current =iv_ruleLeftJoin; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLeftJoin4750); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLeftJoin4475); 
 
             }
 
@@ -5450,7 +5059,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLeftJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2139:1: ruleLeftJoin returns [EObject current=null] : (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1993:1: ruleLeftJoin returns [EObject current=null] : (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) ) ;
     public final EObject ruleLeftJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5466,31 +5075,31 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2142:28: ( (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2143:1: (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1996:28: ( (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1997:1: (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2143:1: (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2143:3: otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1997:1: (otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:1997:3: otherlv_0= 'LEFT' ( (lv_isOuter_1_0= 'OUTER' ) )? otherlv_2= 'JOIN' ( (lv_isFetch_3_0= 'FETCH' ) )? ( (lv_path_4_0= ruleAliasAttributeExpression ) ) ( (lv_variable_5_0= ruleVariableDeclaration ) )
             {
-            otherlv_0=(Token)match(input,44,FOLLOW_44_in_ruleLeftJoin4787); 
+            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleLeftJoin4512); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLeftJoinAccess().getLEFTKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2147:1: ( (lv_isOuter_1_0= 'OUTER' ) )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2001:1: ( (lv_isOuter_1_0= 'OUTER' ) )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA32_0==45) ) {
-                alt32=1;
+            if ( (LA30_0==43) ) {
+                alt30=1;
             }
-            switch (alt32) {
+            switch (alt30) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2148:1: (lv_isOuter_1_0= 'OUTER' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2002:1: (lv_isOuter_1_0= 'OUTER' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2148:1: (lv_isOuter_1_0= 'OUTER' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2149:3: lv_isOuter_1_0= 'OUTER'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2002:1: (lv_isOuter_1_0= 'OUTER' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2003:3: lv_isOuter_1_0= 'OUTER'
                     {
-                    lv_isOuter_1_0=(Token)match(input,45,FOLLOW_45_in_ruleLeftJoin4805); 
+                    lv_isOuter_1_0=(Token)match(input,43,FOLLOW_43_in_ruleLeftJoin4530); 
 
                             newLeafNode(lv_isOuter_1_0, grammarAccess.getLeftJoinAccess().getIsOuterOUTERKeyword_1_0());
                         
@@ -5509,25 +5118,25 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,42,FOLLOW_42_in_ruleLeftJoin4831); 
+            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleLeftJoin4556); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getLeftJoinAccess().getJOINKeyword_2());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2166:1: ( (lv_isFetch_3_0= 'FETCH' ) )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2020:1: ( (lv_isFetch_3_0= 'FETCH' ) )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA33_0==43) ) {
-                alt33=1;
+            if ( (LA31_0==41) ) {
+                alt31=1;
             }
-            switch (alt33) {
+            switch (alt31) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2167:1: (lv_isFetch_3_0= 'FETCH' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2021:1: (lv_isFetch_3_0= 'FETCH' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2167:1: (lv_isFetch_3_0= 'FETCH' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2168:3: lv_isFetch_3_0= 'FETCH'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2021:1: (lv_isFetch_3_0= 'FETCH' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2022:3: lv_isFetch_3_0= 'FETCH'
                     {
-                    lv_isFetch_3_0=(Token)match(input,43,FOLLOW_43_in_ruleLeftJoin4849); 
+                    lv_isFetch_3_0=(Token)match(input,41,FOLLOW_41_in_ruleLeftJoin4574); 
 
                             newLeafNode(lv_isFetch_3_0, grammarAccess.getLeftJoinAccess().getIsFetchFETCHKeyword_3_0());
                         
@@ -5546,16 +5155,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2181:3: ( (lv_path_4_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2182:1: (lv_path_4_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2035:3: ( (lv_path_4_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2036:1: (lv_path_4_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2182:1: (lv_path_4_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2183:3: lv_path_4_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2036:1: (lv_path_4_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2037:3: lv_path_4_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getLeftJoinAccess().getPathAliasAttributeExpressionParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleLeftJoin4884);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleLeftJoin4609);
             lv_path_4_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -5577,16 +5186,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2199:2: ( (lv_variable_5_0= ruleVariableDeclaration ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2200:1: (lv_variable_5_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2053:2: ( (lv_variable_5_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2054:1: (lv_variable_5_0= ruleVariableDeclaration )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2200:1: (lv_variable_5_0= ruleVariableDeclaration )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2201:3: lv_variable_5_0= ruleVariableDeclaration
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2054:1: (lv_variable_5_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2055:3: lv_variable_5_0= ruleVariableDeclaration
             {
              
             	        newCompositeNode(grammarAccess.getLeftJoinAccess().getVariableVariableDeclarationParserRuleCall_5_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleLeftJoin4905);
+            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleLeftJoin4630);
             lv_variable_5_0=ruleVariableDeclaration();
 
             state._fsp--;
@@ -5629,7 +5238,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInnerJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2225:1: entryRuleInnerJoin returns [EObject current=null] : iv_ruleInnerJoin= ruleInnerJoin EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2079:1: entryRuleInnerJoin returns [EObject current=null] : iv_ruleInnerJoin= ruleInnerJoin EOF ;
     public final EObject entryRuleInnerJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5637,17 +5246,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2226:2: (iv_ruleInnerJoin= ruleInnerJoin EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2227:2: iv_ruleInnerJoin= ruleInnerJoin EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2080:2: (iv_ruleInnerJoin= ruleInnerJoin EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2081:2: iv_ruleInnerJoin= ruleInnerJoin EOF
             {
              newCompositeNode(grammarAccess.getInnerJoinRule()); 
-            pushFollow(FOLLOW_ruleInnerJoin_in_entryRuleInnerJoin4941);
+            pushFollow(FOLLOW_ruleInnerJoin_in_entryRuleInnerJoin4666);
             iv_ruleInnerJoin=ruleInnerJoin();
 
             state._fsp--;
 
              current =iv_ruleInnerJoin; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInnerJoin4951); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInnerJoin4676); 
 
             }
 
@@ -5665,7 +5274,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInnerJoin"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2234:1: ruleInnerJoin returns [EObject current=null] : (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2088:1: ruleInnerJoin returns [EObject current=null] : (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) ;
     public final EObject ruleInnerJoin() throws RecognitionException {
         EObject current = null;
 
@@ -5680,35 +5289,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2237:28: ( (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2238:1: (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2091:28: ( (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2092:1: (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2238:1: (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2238:3: otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2092:1: (otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2092:3: otherlv_0= 'INNER' otherlv_1= 'JOIN' ( (lv_isFetch_2_0= 'FETCH' ) )? ( (lv_path_3_0= ruleAliasAttributeExpression ) ) ( (lv_variable_4_0= ruleVariableDeclaration ) )
             {
-            otherlv_0=(Token)match(input,46,FOLLOW_46_in_ruleInnerJoin4988); 
+            otherlv_0=(Token)match(input,44,FOLLOW_44_in_ruleInnerJoin4713); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getInnerJoinAccess().getINNERKeyword_0());
                 
-            otherlv_1=(Token)match(input,42,FOLLOW_42_in_ruleInnerJoin5000); 
+            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleInnerJoin4725); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getInnerJoinAccess().getJOINKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2246:1: ( (lv_isFetch_2_0= 'FETCH' ) )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2100:1: ( (lv_isFetch_2_0= 'FETCH' ) )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA34_0==43) ) {
-                alt34=1;
+            if ( (LA32_0==41) ) {
+                alt32=1;
             }
-            switch (alt34) {
+            switch (alt32) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2247:1: (lv_isFetch_2_0= 'FETCH' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2101:1: (lv_isFetch_2_0= 'FETCH' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2247:1: (lv_isFetch_2_0= 'FETCH' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2248:3: lv_isFetch_2_0= 'FETCH'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2101:1: (lv_isFetch_2_0= 'FETCH' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2102:3: lv_isFetch_2_0= 'FETCH'
                     {
-                    lv_isFetch_2_0=(Token)match(input,43,FOLLOW_43_in_ruleInnerJoin5018); 
+                    lv_isFetch_2_0=(Token)match(input,41,FOLLOW_41_in_ruleInnerJoin4743); 
 
                             newLeafNode(lv_isFetch_2_0, grammarAccess.getInnerJoinAccess().getIsFetchFETCHKeyword_2_0());
                         
@@ -5727,16 +5336,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2261:3: ( (lv_path_3_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2262:1: (lv_path_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2115:3: ( (lv_path_3_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2116:1: (lv_path_3_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2262:1: (lv_path_3_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2263:3: lv_path_3_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2116:1: (lv_path_3_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2117:3: lv_path_3_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getInnerJoinAccess().getPathAliasAttributeExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleInnerJoin5053);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleInnerJoin4778);
             lv_path_3_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -5758,16 +5367,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2279:2: ( (lv_variable_4_0= ruleVariableDeclaration ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2280:1: (lv_variable_4_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2133:2: ( (lv_variable_4_0= ruleVariableDeclaration ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2134:1: (lv_variable_4_0= ruleVariableDeclaration )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2280:1: (lv_variable_4_0= ruleVariableDeclaration )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2281:3: lv_variable_4_0= ruleVariableDeclaration
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2134:1: (lv_variable_4_0= ruleVariableDeclaration )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2135:3: lv_variable_4_0= ruleVariableDeclaration
             {
              
             	        newCompositeNode(grammarAccess.getInnerJoinAccess().getVariableVariableDeclarationParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleInnerJoin5074);
+            pushFollow(FOLLOW_ruleVariableDeclaration_in_ruleInnerJoin4799);
             lv_variable_4_0=ruleVariableDeclaration();
 
             state._fsp--;
@@ -5810,7 +5419,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWhereClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2305:1: entryRuleWhereClause returns [EObject current=null] : iv_ruleWhereClause= ruleWhereClause EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2159:1: entryRuleWhereClause returns [EObject current=null] : iv_ruleWhereClause= ruleWhereClause EOF ;
     public final EObject entryRuleWhereClause() throws RecognitionException {
         EObject current = null;
 
@@ -5818,17 +5427,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2306:2: (iv_ruleWhereClause= ruleWhereClause EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2307:2: iv_ruleWhereClause= ruleWhereClause EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2160:2: (iv_ruleWhereClause= ruleWhereClause EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2161:2: iv_ruleWhereClause= ruleWhereClause EOF
             {
              newCompositeNode(grammarAccess.getWhereClauseRule()); 
-            pushFollow(FOLLOW_ruleWhereClause_in_entryRuleWhereClause5110);
+            pushFollow(FOLLOW_ruleWhereClause_in_entryRuleWhereClause4835);
             iv_ruleWhereClause=ruleWhereClause();
 
             state._fsp--;
 
              current =iv_ruleWhereClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleWhereClause5120); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWhereClause4845); 
 
             }
 
@@ -5846,7 +5455,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWhereClause"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2314:1: ruleWhereClause returns [EObject current=null] : (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2168:1: ruleWhereClause returns [EObject current=null] : (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) ) ;
     public final EObject ruleWhereClause() throws RecognitionException {
         EObject current = null;
 
@@ -5857,26 +5466,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2317:28: ( (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2318:1: (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2171:28: ( (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2172:1: (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2318:1: (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2318:3: otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2172:1: (otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2172:3: otherlv_0= 'WHERE' ( (lv_whereEntry_1_0= ruleOrExpression ) )
             {
-            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleWhereClause5157); 
+            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleWhereClause4882); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getWhereClauseAccess().getWHEREKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2322:1: ( (lv_whereEntry_1_0= ruleOrExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2323:1: (lv_whereEntry_1_0= ruleOrExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2176:1: ( (lv_whereEntry_1_0= ruleOrExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2177:1: (lv_whereEntry_1_0= ruleOrExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2323:1: (lv_whereEntry_1_0= ruleOrExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2324:3: lv_whereEntry_1_0= ruleOrExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2177:1: (lv_whereEntry_1_0= ruleOrExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2178:3: lv_whereEntry_1_0= ruleOrExpression
             {
              
             	        newCompositeNode(grammarAccess.getWhereClauseAccess().getWhereEntryOrExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleOrExpression_in_ruleWhereClause5178);
+            pushFollow(FOLLOW_ruleOrExpression_in_ruleWhereClause4903);
             lv_whereEntry_1_0=ruleOrExpression();
 
             state._fsp--;
@@ -5919,7 +5528,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOrExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2348:1: entryRuleOrExpression returns [EObject current=null] : iv_ruleOrExpression= ruleOrExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2202:1: entryRuleOrExpression returns [EObject current=null] : iv_ruleOrExpression= ruleOrExpression EOF ;
     public final EObject entryRuleOrExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5927,17 +5536,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2349:2: (iv_ruleOrExpression= ruleOrExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2350:2: iv_ruleOrExpression= ruleOrExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2203:2: (iv_ruleOrExpression= ruleOrExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2204:2: iv_ruleOrExpression= ruleOrExpression EOF
             {
              newCompositeNode(grammarAccess.getOrExpressionRule()); 
-            pushFollow(FOLLOW_ruleOrExpression_in_entryRuleOrExpression5214);
+            pushFollow(FOLLOW_ruleOrExpression_in_entryRuleOrExpression4939);
             iv_ruleOrExpression=ruleOrExpression();
 
             state._fsp--;
 
              current =iv_ruleOrExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOrExpression5224); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOrExpression4949); 
 
             }
 
@@ -5955,7 +5564,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOrExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2357:1: ruleOrExpression returns [EObject current=null] : (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2211:1: ruleOrExpression returns [EObject current=null] : (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? ) ;
     public final EObject ruleOrExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5968,16 +5577,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2360:28: ( (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2361:1: (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2214:28: ( (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2215:1: (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2361:1: (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2362:5: this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )?
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2215:1: (this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2216:5: this_AndExpression_0= ruleAndExpression ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )?
             {
              
                     newCompositeNode(grammarAccess.getOrExpressionAccess().getAndExpressionParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleAndExpression_in_ruleOrExpression5271);
+            pushFollow(FOLLOW_ruleAndExpression_in_ruleOrExpression4996);
             this_AndExpression_0=ruleAndExpression();
 
             state._fsp--;
@@ -5986,19 +5595,19 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     current = this_AndExpression_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2370:1: ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2224:1: ( () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+ )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA36_0==48) ) {
-                alt36=1;
+            if ( (LA34_0==46) ) {
+                alt34=1;
             }
-            switch (alt36) {
+            switch (alt34) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2370:2: () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2224:2: () (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2370:2: ()
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2371:5: 
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2224:2: ()
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2225:5: 
                     {
 
                             current = forceCreateModelElementAndAdd(
@@ -6008,36 +5617,36 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2376:2: (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+
-                    int cnt35=0;
-                    loop35:
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2230:2: (otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) ) )+
+                    int cnt33=0;
+                    loop33:
                     do {
-                        int alt35=2;
-                        int LA35_0 = input.LA(1);
+                        int alt33=2;
+                        int LA33_0 = input.LA(1);
 
-                        if ( (LA35_0==48) ) {
-                            alt35=1;
+                        if ( (LA33_0==46) ) {
+                            alt33=1;
                         }
 
 
-                        switch (alt35) {
+                        switch (alt33) {
                     	case 1 :
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2376:4: otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) )
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2230:4: otherlv_2= 'OR' ( (lv_entries_3_0= ruleAndExpression ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,48,FOLLOW_48_in_ruleOrExpression5293); 
+                    	    otherlv_2=(Token)match(input,46,FOLLOW_46_in_ruleOrExpression5018); 
 
                     	        	newLeafNode(otherlv_2, grammarAccess.getOrExpressionAccess().getORKeyword_1_1_0());
                     	        
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2380:1: ( (lv_entries_3_0= ruleAndExpression ) )
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2381:1: (lv_entries_3_0= ruleAndExpression )
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2234:1: ( (lv_entries_3_0= ruleAndExpression ) )
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2235:1: (lv_entries_3_0= ruleAndExpression )
                     	    {
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2381:1: (lv_entries_3_0= ruleAndExpression )
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2382:3: lv_entries_3_0= ruleAndExpression
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2235:1: (lv_entries_3_0= ruleAndExpression )
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2236:3: lv_entries_3_0= ruleAndExpression
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getOrExpressionAccess().getEntriesAndExpressionParserRuleCall_1_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleAndExpression_in_ruleOrExpression5314);
+                    	    pushFollow(FOLLOW_ruleAndExpression_in_ruleOrExpression5039);
                     	    lv_entries_3_0=ruleAndExpression();
 
                     	    state._fsp--;
@@ -6051,6 +5660,186 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     	           			"entries",
                     	            		lv_entries_3_0, 
                     	            		"AndExpression");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt33 >= 1 ) break loop33;
+                                EarlyExitException eee =
+                                    new EarlyExitException(33, input);
+                                throw eee;
+                        }
+                        cnt33++;
+                    } while (true);
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleOrExpression"
+
+
+    // $ANTLR start "entryRuleAndExpression"
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2260:1: entryRuleAndExpression returns [EObject current=null] : iv_ruleAndExpression= ruleAndExpression EOF ;
+    public final EObject entryRuleAndExpression() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleAndExpression = null;
+
+
+        try {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2261:2: (iv_ruleAndExpression= ruleAndExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2262:2: iv_ruleAndExpression= ruleAndExpression EOF
+            {
+             newCompositeNode(grammarAccess.getAndExpressionRule()); 
+            pushFollow(FOLLOW_ruleAndExpression_in_entryRuleAndExpression5079);
+            iv_ruleAndExpression=ruleAndExpression();
+
+            state._fsp--;
+
+             current =iv_ruleAndExpression; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAndExpression5089); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleAndExpression"
+
+
+    // $ANTLR start "ruleAndExpression"
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2269:1: ruleAndExpression returns [EObject current=null] : (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? ) ;
+    public final EObject ruleAndExpression() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_2=null;
+        EObject this_ConcreteExpression_0 = null;
+
+        EObject lv_entries_3_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2272:28: ( (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2273:1: (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? )
+            {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2273:1: (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2274:5: this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )?
+            {
+             
+                    newCompositeNode(grammarAccess.getAndExpressionAccess().getConcreteExpressionParserRuleCall_0()); 
+                
+            pushFollow(FOLLOW_ruleConcreteExpression_in_ruleAndExpression5136);
+            this_ConcreteExpression_0=ruleConcreteExpression();
+
+            state._fsp--;
+
+             
+                    current = this_ConcreteExpression_0; 
+                    afterParserOrEnumRuleCall();
+                
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2282:1: ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
+
+            if ( (LA36_0==47) ) {
+                alt36=1;
+            }
+            switch (alt36) {
+                case 1 :
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2282:2: () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+
+                    {
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2282:2: ()
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2283:5: 
+                    {
+
+                            current = forceCreateModelElementAndAdd(
+                                grammarAccess.getAndExpressionAccess().getAndExpressionEntriesAction_1_0(),
+                                current);
+                        
+
+                    }
+
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2288:2: (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+
+                    int cnt35=0;
+                    loop35:
+                    do {
+                        int alt35=2;
+                        int LA35_0 = input.LA(1);
+
+                        if ( (LA35_0==47) ) {
+                            alt35=1;
+                        }
+
+
+                        switch (alt35) {
+                    	case 1 :
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2288:4: otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) )
+                    	    {
+                    	    otherlv_2=(Token)match(input,47,FOLLOW_47_in_ruleAndExpression5158); 
+
+                    	        	newLeafNode(otherlv_2, grammarAccess.getAndExpressionAccess().getANDKeyword_1_1_0());
+                    	        
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2292:1: ( (lv_entries_3_0= ruleConcreteExpression ) )
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2293:1: (lv_entries_3_0= ruleConcreteExpression )
+                    	    {
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2293:1: (lv_entries_3_0= ruleConcreteExpression )
+                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2294:3: lv_entries_3_0= ruleConcreteExpression
+                    	    {
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getAndExpressionAccess().getEntriesConcreteExpressionParserRuleCall_1_1_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleConcreteExpression_in_ruleAndExpression5179);
+                    	    lv_entries_3_0=ruleConcreteExpression();
+
+                    	    state._fsp--;
+
+
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getAndExpressionRule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"entries",
+                    	            		lv_entries_3_0, 
+                    	            		"ConcreteExpression");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -6095,191 +5884,11 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleOrExpression"
-
-
-    // $ANTLR start "entryRuleAndExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2406:1: entryRuleAndExpression returns [EObject current=null] : iv_ruleAndExpression= ruleAndExpression EOF ;
-    public final EObject entryRuleAndExpression() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleAndExpression = null;
-
-
-        try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2407:2: (iv_ruleAndExpression= ruleAndExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2408:2: iv_ruleAndExpression= ruleAndExpression EOF
-            {
-             newCompositeNode(grammarAccess.getAndExpressionRule()); 
-            pushFollow(FOLLOW_ruleAndExpression_in_entryRuleAndExpression5354);
-            iv_ruleAndExpression=ruleAndExpression();
-
-            state._fsp--;
-
-             current =iv_ruleAndExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAndExpression5364); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleAndExpression"
-
-
-    // $ANTLR start "ruleAndExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2415:1: ruleAndExpression returns [EObject current=null] : (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? ) ;
-    public final EObject ruleAndExpression() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_2=null;
-        EObject this_ConcreteExpression_0 = null;
-
-        EObject lv_entries_3_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2418:28: ( (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2419:1: (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? )
-            {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2419:1: (this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )? )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2420:5: this_ConcreteExpression_0= ruleConcreteExpression ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )?
-            {
-             
-                    newCompositeNode(grammarAccess.getAndExpressionAccess().getConcreteExpressionParserRuleCall_0()); 
-                
-            pushFollow(FOLLOW_ruleConcreteExpression_in_ruleAndExpression5411);
-            this_ConcreteExpression_0=ruleConcreteExpression();
-
-            state._fsp--;
-
-             
-                    current = this_ConcreteExpression_0; 
-                    afterParserOrEnumRuleCall();
-                
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2428:1: ( () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+ )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
-
-            if ( (LA38_0==49) ) {
-                alt38=1;
-            }
-            switch (alt38) {
-                case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2428:2: () (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+
-                    {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2428:2: ()
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2429:5: 
-                    {
-
-                            current = forceCreateModelElementAndAdd(
-                                grammarAccess.getAndExpressionAccess().getAndExpressionEntriesAction_1_0(),
-                                current);
-                        
-
-                    }
-
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2434:2: (otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) ) )+
-                    int cnt37=0;
-                    loop37:
-                    do {
-                        int alt37=2;
-                        int LA37_0 = input.LA(1);
-
-                        if ( (LA37_0==49) ) {
-                            alt37=1;
-                        }
-
-
-                        switch (alt37) {
-                    	case 1 :
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2434:4: otherlv_2= 'AND' ( (lv_entries_3_0= ruleConcreteExpression ) )
-                    	    {
-                    	    otherlv_2=(Token)match(input,49,FOLLOW_49_in_ruleAndExpression5433); 
-
-                    	        	newLeafNode(otherlv_2, grammarAccess.getAndExpressionAccess().getANDKeyword_1_1_0());
-                    	        
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2438:1: ( (lv_entries_3_0= ruleConcreteExpression ) )
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2439:1: (lv_entries_3_0= ruleConcreteExpression )
-                    	    {
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2439:1: (lv_entries_3_0= ruleConcreteExpression )
-                    	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2440:3: lv_entries_3_0= ruleConcreteExpression
-                    	    {
-                    	     
-                    	    	        newCompositeNode(grammarAccess.getAndExpressionAccess().getEntriesConcreteExpressionParserRuleCall_1_1_1_0()); 
-                    	    	    
-                    	    pushFollow(FOLLOW_ruleConcreteExpression_in_ruleAndExpression5454);
-                    	    lv_entries_3_0=ruleConcreteExpression();
-
-                    	    state._fsp--;
-
-
-                    	    	        if (current==null) {
-                    	    	            current = createModelElementForParent(grammarAccess.getAndExpressionRule());
-                    	    	        }
-                    	           		add(
-                    	           			current, 
-                    	           			"entries",
-                    	            		lv_entries_3_0, 
-                    	            		"ConcreteExpression");
-                    	    	        afterParserOrEnumRuleCall();
-                    	    	    
-
-                    	    }
-
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    if ( cnt37 >= 1 ) break loop37;
-                                EarlyExitException eee =
-                                    new EarlyExitException(37, input);
-                                throw eee;
-                        }
-                        cnt37++;
-                    } while (true);
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
     // $ANTLR end "ruleAndExpression"
 
 
     // $ANTLR start "entryRuleConcreteExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2464:1: entryRuleConcreteExpression returns [EObject current=null] : iv_ruleConcreteExpression= ruleConcreteExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2318:1: entryRuleConcreteExpression returns [EObject current=null] : iv_ruleConcreteExpression= ruleConcreteExpression EOF ;
     public final EObject entryRuleConcreteExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6287,17 +5896,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2465:2: (iv_ruleConcreteExpression= ruleConcreteExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2466:2: iv_ruleConcreteExpression= ruleConcreteExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2319:2: (iv_ruleConcreteExpression= ruleConcreteExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2320:2: iv_ruleConcreteExpression= ruleConcreteExpression EOF
             {
              newCompositeNode(grammarAccess.getConcreteExpressionRule()); 
-            pushFollow(FOLLOW_ruleConcreteExpression_in_entryRuleConcreteExpression5494);
+            pushFollow(FOLLOW_ruleConcreteExpression_in_entryRuleConcreteExpression5219);
             iv_ruleConcreteExpression=ruleConcreteExpression();
 
             state._fsp--;
 
              current =iv_ruleConcreteExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConcreteExpression5504); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConcreteExpression5229); 
 
             }
 
@@ -6315,7 +5924,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConcreteExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2473:1: ruleConcreteExpression returns [EObject current=null] : (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2327:1: ruleConcreteExpression returns [EObject current=null] : (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression ) ;
     public final EObject ruleConcreteExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6347,20 +5956,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2476:28: ( (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2477:1: (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2330:28: ( (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2331:1: (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2477:1: (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression )
-            int alt39=12;
-            alt39 = dfa39.predict(input);
-            switch (alt39) {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2331:1: (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression )
+            int alt37=12;
+            alt37 = dfa37.predict(input);
+            switch (alt37) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2478:5: this_ParExpression_0= ruleParExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2332:5: this_ParExpression_0= ruleParExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getParExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleParExpression_in_ruleConcreteExpression5551);
+                    pushFollow(FOLLOW_ruleParExpression_in_ruleConcreteExpression5276);
                     this_ParExpression_0=ruleParExpression();
 
                     state._fsp--;
@@ -6373,12 +5982,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2488:5: this_OperatorExpression_1= ruleOperatorExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2342:5: this_OperatorExpression_1= ruleOperatorExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getOperatorExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleOperatorExpression_in_ruleConcreteExpression5578);
+                    pushFollow(FOLLOW_ruleOperatorExpression_in_ruleConcreteExpression5303);
                     this_OperatorExpression_1=ruleOperatorExpression();
 
                     state._fsp--;
@@ -6391,12 +6000,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2498:5: this_ExistsExpression_2= ruleExistsExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2352:5: this_ExistsExpression_2= ruleExistsExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getExistsExpressionParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleExistsExpression_in_ruleConcreteExpression5605);
+                    pushFollow(FOLLOW_ruleExistsExpression_in_ruleConcreteExpression5330);
                     this_ExistsExpression_2=ruleExistsExpression();
 
                     state._fsp--;
@@ -6409,12 +6018,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2508:5: this_AllExpression_3= ruleAllExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2362:5: this_AllExpression_3= ruleAllExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getAllExpressionParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleAllExpression_in_ruleConcreteExpression5632);
+                    pushFollow(FOLLOW_ruleAllExpression_in_ruleConcreteExpression5357);
                     this_AllExpression_3=ruleAllExpression();
 
                     state._fsp--;
@@ -6427,12 +6036,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2518:5: this_AnyExpression_4= ruleAnyExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2372:5: this_AnyExpression_4= ruleAnyExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getAnyExpressionParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleAnyExpression_in_ruleConcreteExpression5659);
+                    pushFollow(FOLLOW_ruleAnyExpression_in_ruleConcreteExpression5384);
                     this_AnyExpression_4=ruleAnyExpression();
 
                     state._fsp--;
@@ -6445,12 +6054,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2528:5: this_SomeExpression_5= ruleSomeExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2382:5: this_SomeExpression_5= ruleSomeExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getSomeExpressionParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleSomeExpression_in_ruleConcreteExpression5686);
+                    pushFollow(FOLLOW_ruleSomeExpression_in_ruleConcreteExpression5411);
                     this_SomeExpression_5=ruleSomeExpression();
 
                     state._fsp--;
@@ -6463,12 +6072,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2538:5: this_CollectionExpression_6= ruleCollectionExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2392:5: this_CollectionExpression_6= ruleCollectionExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getCollectionExpressionParserRuleCall_6()); 
                         
-                    pushFollow(FOLLOW_ruleCollectionExpression_in_ruleConcreteExpression5713);
+                    pushFollow(FOLLOW_ruleCollectionExpression_in_ruleConcreteExpression5438);
                     this_CollectionExpression_6=ruleCollectionExpression();
 
                     state._fsp--;
@@ -6481,12 +6090,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2548:5: this_NullComparisonExpression_7= ruleNullComparisonExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2402:5: this_NullComparisonExpression_7= ruleNullComparisonExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getNullComparisonExpressionParserRuleCall_7()); 
                         
-                    pushFollow(FOLLOW_ruleNullComparisonExpression_in_ruleConcreteExpression5740);
+                    pushFollow(FOLLOW_ruleNullComparisonExpression_in_ruleConcreteExpression5465);
                     this_NullComparisonExpression_7=ruleNullComparisonExpression();
 
                     state._fsp--;
@@ -6499,12 +6108,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2558:5: this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2412:5: this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getEmptyComparisonExpressionParserRuleCall_8()); 
                         
-                    pushFollow(FOLLOW_ruleEmptyComparisonExpression_in_ruleConcreteExpression5767);
+                    pushFollow(FOLLOW_ruleEmptyComparisonExpression_in_ruleConcreteExpression5492);
                     this_EmptyComparisonExpression_8=ruleEmptyComparisonExpression();
 
                     state._fsp--;
@@ -6517,12 +6126,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2568:5: this_LikeExpression_9= ruleLikeExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2422:5: this_LikeExpression_9= ruleLikeExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getLikeExpressionParserRuleCall_9()); 
                         
-                    pushFollow(FOLLOW_ruleLikeExpression_in_ruleConcreteExpression5794);
+                    pushFollow(FOLLOW_ruleLikeExpression_in_ruleConcreteExpression5519);
                     this_LikeExpression_9=ruleLikeExpression();
 
                     state._fsp--;
@@ -6535,12 +6144,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2578:5: this_InExpression_10= ruleInExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2432:5: this_InExpression_10= ruleInExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getInExpressionParserRuleCall_10()); 
                         
-                    pushFollow(FOLLOW_ruleInExpression_in_ruleConcreteExpression5821);
+                    pushFollow(FOLLOW_ruleInExpression_in_ruleConcreteExpression5546);
                     this_InExpression_10=ruleInExpression();
 
                     state._fsp--;
@@ -6553,12 +6162,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2588:5: this_BetweenExpression_11= ruleBetweenExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2442:5: this_BetweenExpression_11= ruleBetweenExpression
                     {
                      
                             newCompositeNode(grammarAccess.getConcreteExpressionAccess().getBetweenExpressionParserRuleCall_11()); 
                         
-                    pushFollow(FOLLOW_ruleBetweenExpression_in_ruleConcreteExpression5848);
+                    pushFollow(FOLLOW_ruleBetweenExpression_in_ruleConcreteExpression5573);
                     this_BetweenExpression_11=ruleBetweenExpression();
 
                     state._fsp--;
@@ -6591,7 +6200,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2604:1: entryRuleParExpression returns [EObject current=null] : iv_ruleParExpression= ruleParExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2458:1: entryRuleParExpression returns [EObject current=null] : iv_ruleParExpression= ruleParExpression EOF ;
     public final EObject entryRuleParExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6599,17 +6208,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2605:2: (iv_ruleParExpression= ruleParExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2606:2: iv_ruleParExpression= ruleParExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2459:2: (iv_ruleParExpression= ruleParExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2460:2: iv_ruleParExpression= ruleParExpression EOF
             {
              newCompositeNode(grammarAccess.getParExpressionRule()); 
-            pushFollow(FOLLOW_ruleParExpression_in_entryRuleParExpression5883);
+            pushFollow(FOLLOW_ruleParExpression_in_entryRuleParExpression5608);
             iv_ruleParExpression=ruleParExpression();
 
             state._fsp--;
 
              current =iv_ruleParExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParExpression5893); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleParExpression5618); 
 
             }
 
@@ -6627,7 +6236,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2613:1: ruleParExpression returns [EObject current=null] : (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2467:1: ruleParExpression returns [EObject current=null] : (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' ) ;
     public final EObject ruleParExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6639,20 +6248,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2616:28: ( (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2617:1: (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2470:28: ( (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2471:1: (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2617:1: (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2617:3: otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2471:1: (otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2471:3: otherlv_0= '(' this_ExpressionTerm_1= ruleExpressionTerm otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleParExpression5930); 
+            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleParExpression5655); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getParExpressionAccess().getLeftParenthesisKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getParExpressionAccess().getExpressionTermParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleExpressionTerm_in_ruleParExpression5952);
+            pushFollow(FOLLOW_ruleExpressionTerm_in_ruleParExpression5677);
             this_ExpressionTerm_1=ruleExpressionTerm();
 
             state._fsp--;
@@ -6661,7 +6270,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     current = this_ExpressionTerm_1; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_2=(Token)match(input,33,FOLLOW_33_in_ruleParExpression5963); 
+            otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleParExpression5688); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getParExpressionAccess().getRightParenthesisKeyword_2());
                 
@@ -6686,7 +6295,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperatorExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2642:1: entryRuleOperatorExpression returns [EObject current=null] : iv_ruleOperatorExpression= ruleOperatorExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2496:1: entryRuleOperatorExpression returns [EObject current=null] : iv_ruleOperatorExpression= ruleOperatorExpression EOF ;
     public final EObject entryRuleOperatorExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6694,17 +6303,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2643:2: (iv_ruleOperatorExpression= ruleOperatorExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2644:2: iv_ruleOperatorExpression= ruleOperatorExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2497:2: (iv_ruleOperatorExpression= ruleOperatorExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2498:2: iv_ruleOperatorExpression= ruleOperatorExpression EOF
             {
              newCompositeNode(grammarAccess.getOperatorExpressionRule()); 
-            pushFollow(FOLLOW_ruleOperatorExpression_in_entryRuleOperatorExpression5999);
+            pushFollow(FOLLOW_ruleOperatorExpression_in_entryRuleOperatorExpression5724);
             iv_ruleOperatorExpression=ruleOperatorExpression();
 
             state._fsp--;
 
              current =iv_ruleOperatorExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOperatorExpression6009); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOperatorExpression5734); 
 
             }
 
@@ -6722,7 +6331,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperatorExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2651:1: ruleOperatorExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2505:1: ruleOperatorExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) ) ;
     public final EObject ruleOperatorExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6736,22 +6345,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2654:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2655:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2508:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2509:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2655:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2655:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2509:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2509:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_operator_1_0= ruleOperator ) ) ( (lv_rhs_2_0= ruleExpressionTerm ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2655:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2656:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2509:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2510:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2656:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2657:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2510:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2511:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getOperatorExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleOperatorExpression6055);
+            pushFollow(FOLLOW_ruleVariable_in_ruleOperatorExpression5780);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -6773,16 +6382,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2673:2: ( (lv_operator_1_0= ruleOperator ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2674:1: (lv_operator_1_0= ruleOperator )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2527:2: ( (lv_operator_1_0= ruleOperator ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2528:1: (lv_operator_1_0= ruleOperator )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2674:1: (lv_operator_1_0= ruleOperator )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2675:3: lv_operator_1_0= ruleOperator
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2528:1: (lv_operator_1_0= ruleOperator )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2529:3: lv_operator_1_0= ruleOperator
             {
              
             	        newCompositeNode(grammarAccess.getOperatorExpressionAccess().getOperatorOperatorEnumRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleOperator_in_ruleOperatorExpression6076);
+            pushFollow(FOLLOW_ruleOperator_in_ruleOperatorExpression5801);
             lv_operator_1_0=ruleOperator();
 
             state._fsp--;
@@ -6804,16 +6413,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2691:2: ( (lv_rhs_2_0= ruleExpressionTerm ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2692:1: (lv_rhs_2_0= ruleExpressionTerm )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2545:2: ( (lv_rhs_2_0= ruleExpressionTerm ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2546:1: (lv_rhs_2_0= ruleExpressionTerm )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2692:1: (lv_rhs_2_0= ruleExpressionTerm )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2693:3: lv_rhs_2_0= ruleExpressionTerm
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2546:1: (lv_rhs_2_0= ruleExpressionTerm )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2547:3: lv_rhs_2_0= ruleExpressionTerm
             {
              
             	        newCompositeNode(grammarAccess.getOperatorExpressionAccess().getRhsExpressionTermParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleExpressionTerm_in_ruleOperatorExpression6097);
+            pushFollow(FOLLOW_ruleExpressionTerm_in_ruleOperatorExpression5822);
             lv_rhs_2_0=ruleExpressionTerm();
 
             state._fsp--;
@@ -6856,7 +6465,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExistsExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2717:1: entryRuleExistsExpression returns [EObject current=null] : iv_ruleExistsExpression= ruleExistsExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2571:1: entryRuleExistsExpression returns [EObject current=null] : iv_ruleExistsExpression= ruleExistsExpression EOF ;
     public final EObject entryRuleExistsExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6864,17 +6473,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2718:2: (iv_ruleExistsExpression= ruleExistsExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2719:2: iv_ruleExistsExpression= ruleExistsExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2572:2: (iv_ruleExistsExpression= ruleExistsExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2573:2: iv_ruleExistsExpression= ruleExistsExpression EOF
             {
              newCompositeNode(grammarAccess.getExistsExpressionRule()); 
-            pushFollow(FOLLOW_ruleExistsExpression_in_entryRuleExistsExpression6133);
+            pushFollow(FOLLOW_ruleExistsExpression_in_entryRuleExistsExpression5858);
             iv_ruleExistsExpression=ruleExistsExpression();
 
             state._fsp--;
 
              current =iv_ruleExistsExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExistsExpression6143); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExistsExpression5868); 
 
             }
 
@@ -6892,7 +6501,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExistsExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2726:1: ruleExistsExpression returns [EObject current=null] : ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2580:1: ruleExistsExpression returns [EObject current=null] : ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) ) ;
     public final EObject ruleExistsExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6904,27 +6513,27 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2729:28: ( ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2730:1: ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2583:28: ( ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2584:1: ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2730:1: ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2730:2: ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2584:1: ( ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2584:2: ( (lv_isNot_0_0= 'NOT' ) )? otherlv_1= 'EXISTS' ( (lv_query_2_0= ruleQueryExpression ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2730:2: ( (lv_isNot_0_0= 'NOT' ) )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2584:2: ( (lv_isNot_0_0= 'NOT' ) )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA40_0==50) ) {
-                alt40=1;
+            if ( (LA38_0==48) ) {
+                alt38=1;
             }
-            switch (alt40) {
+            switch (alt38) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2731:1: (lv_isNot_0_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2585:1: (lv_isNot_0_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2731:1: (lv_isNot_0_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2732:3: lv_isNot_0_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2585:1: (lv_isNot_0_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2586:3: lv_isNot_0_0= 'NOT'
                     {
-                    lv_isNot_0_0=(Token)match(input,50,FOLLOW_50_in_ruleExistsExpression6186); 
+                    lv_isNot_0_0=(Token)match(input,48,FOLLOW_48_in_ruleExistsExpression5911); 
 
                             newLeafNode(lv_isNot_0_0, grammarAccess.getExistsExpressionAccess().getIsNotNOTKeyword_0_0());
                         
@@ -6943,20 +6552,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,51,FOLLOW_51_in_ruleExistsExpression6212); 
+            otherlv_1=(Token)match(input,49,FOLLOW_49_in_ruleExistsExpression5937); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getExistsExpressionAccess().getEXISTSKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2749:1: ( (lv_query_2_0= ruleQueryExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2750:1: (lv_query_2_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2603:1: ( (lv_query_2_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2604:1: (lv_query_2_0= ruleQueryExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2750:1: (lv_query_2_0= ruleQueryExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2751:3: lv_query_2_0= ruleQueryExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2604:1: (lv_query_2_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2605:3: lv_query_2_0= ruleQueryExpression
             {
              
             	        newCompositeNode(grammarAccess.getExistsExpressionAccess().getQueryQueryExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleQueryExpression_in_ruleExistsExpression6233);
+            pushFollow(FOLLOW_ruleQueryExpression_in_ruleExistsExpression5958);
             lv_query_2_0=ruleQueryExpression();
 
             state._fsp--;
@@ -6999,7 +6608,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAllExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2775:1: entryRuleAllExpression returns [EObject current=null] : iv_ruleAllExpression= ruleAllExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2629:1: entryRuleAllExpression returns [EObject current=null] : iv_ruleAllExpression= ruleAllExpression EOF ;
     public final EObject entryRuleAllExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7007,17 +6616,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2776:2: (iv_ruleAllExpression= ruleAllExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2777:2: iv_ruleAllExpression= ruleAllExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2630:2: (iv_ruleAllExpression= ruleAllExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2631:2: iv_ruleAllExpression= ruleAllExpression EOF
             {
              newCompositeNode(grammarAccess.getAllExpressionRule()); 
-            pushFollow(FOLLOW_ruleAllExpression_in_entryRuleAllExpression6269);
+            pushFollow(FOLLOW_ruleAllExpression_in_entryRuleAllExpression5994);
             iv_ruleAllExpression=ruleAllExpression();
 
             state._fsp--;
 
              current =iv_ruleAllExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAllExpression6279); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAllExpression6004); 
 
             }
 
@@ -7035,7 +6644,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAllExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2784:1: ruleAllExpression returns [EObject current=null] : (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2638:1: ruleAllExpression returns [EObject current=null] : (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) ) ;
     public final EObject ruleAllExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7046,26 +6655,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2787:28: ( (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2788:1: (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2641:28: ( (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2642:1: (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2788:1: (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2788:3: otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2642:1: (otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2642:3: otherlv_0= 'ALL' ( (lv_query_1_0= ruleQueryExpression ) )
             {
-            otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleAllExpression6316); 
+            otherlv_0=(Token)match(input,50,FOLLOW_50_in_ruleAllExpression6041); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAllExpressionAccess().getALLKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2792:1: ( (lv_query_1_0= ruleQueryExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2793:1: (lv_query_1_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2646:1: ( (lv_query_1_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2647:1: (lv_query_1_0= ruleQueryExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2793:1: (lv_query_1_0= ruleQueryExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2794:3: lv_query_1_0= ruleQueryExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2647:1: (lv_query_1_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2648:3: lv_query_1_0= ruleQueryExpression
             {
              
             	        newCompositeNode(grammarAccess.getAllExpressionAccess().getQueryQueryExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQueryExpression_in_ruleAllExpression6337);
+            pushFollow(FOLLOW_ruleQueryExpression_in_ruleAllExpression6062);
             lv_query_1_0=ruleQueryExpression();
 
             state._fsp--;
@@ -7108,7 +6717,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnyExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2818:1: entryRuleAnyExpression returns [EObject current=null] : iv_ruleAnyExpression= ruleAnyExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2672:1: entryRuleAnyExpression returns [EObject current=null] : iv_ruleAnyExpression= ruleAnyExpression EOF ;
     public final EObject entryRuleAnyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7116,17 +6725,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2819:2: (iv_ruleAnyExpression= ruleAnyExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2820:2: iv_ruleAnyExpression= ruleAnyExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2673:2: (iv_ruleAnyExpression= ruleAnyExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2674:2: iv_ruleAnyExpression= ruleAnyExpression EOF
             {
              newCompositeNode(grammarAccess.getAnyExpressionRule()); 
-            pushFollow(FOLLOW_ruleAnyExpression_in_entryRuleAnyExpression6373);
+            pushFollow(FOLLOW_ruleAnyExpression_in_entryRuleAnyExpression6098);
             iv_ruleAnyExpression=ruleAnyExpression();
 
             state._fsp--;
 
              current =iv_ruleAnyExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnyExpression6383); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnyExpression6108); 
 
             }
 
@@ -7144,7 +6753,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnyExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2827:1: ruleAnyExpression returns [EObject current=null] : (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2681:1: ruleAnyExpression returns [EObject current=null] : (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) ) ;
     public final EObject ruleAnyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7155,26 +6764,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2830:28: ( (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2831:1: (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2684:28: ( (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2685:1: (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2831:1: (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2831:3: otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2685:1: (otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2685:3: otherlv_0= 'ANY' ( (lv_query_1_0= ruleQueryExpression ) )
             {
-            otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleAnyExpression6420); 
+            otherlv_0=(Token)match(input,51,FOLLOW_51_in_ruleAnyExpression6145); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAnyExpressionAccess().getANYKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2835:1: ( (lv_query_1_0= ruleQueryExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2836:1: (lv_query_1_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2689:1: ( (lv_query_1_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2690:1: (lv_query_1_0= ruleQueryExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2836:1: (lv_query_1_0= ruleQueryExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2837:3: lv_query_1_0= ruleQueryExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2690:1: (lv_query_1_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2691:3: lv_query_1_0= ruleQueryExpression
             {
              
             	        newCompositeNode(grammarAccess.getAnyExpressionAccess().getQueryQueryExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQueryExpression_in_ruleAnyExpression6441);
+            pushFollow(FOLLOW_ruleQueryExpression_in_ruleAnyExpression6166);
             lv_query_1_0=ruleQueryExpression();
 
             state._fsp--;
@@ -7217,7 +6826,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSomeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2861:1: entryRuleSomeExpression returns [EObject current=null] : iv_ruleSomeExpression= ruleSomeExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2715:1: entryRuleSomeExpression returns [EObject current=null] : iv_ruleSomeExpression= ruleSomeExpression EOF ;
     public final EObject entryRuleSomeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7225,17 +6834,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2862:2: (iv_ruleSomeExpression= ruleSomeExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2863:2: iv_ruleSomeExpression= ruleSomeExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2716:2: (iv_ruleSomeExpression= ruleSomeExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2717:2: iv_ruleSomeExpression= ruleSomeExpression EOF
             {
              newCompositeNode(grammarAccess.getSomeExpressionRule()); 
-            pushFollow(FOLLOW_ruleSomeExpression_in_entryRuleSomeExpression6477);
+            pushFollow(FOLLOW_ruleSomeExpression_in_entryRuleSomeExpression6202);
             iv_ruleSomeExpression=ruleSomeExpression();
 
             state._fsp--;
 
              current =iv_ruleSomeExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSomeExpression6487); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSomeExpression6212); 
 
             }
 
@@ -7253,7 +6862,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSomeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2870:1: ruleSomeExpression returns [EObject current=null] : (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2724:1: ruleSomeExpression returns [EObject current=null] : (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) ) ;
     public final EObject ruleSomeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7264,26 +6873,26 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2873:28: ( (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2874:1: (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2727:28: ( (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2728:1: (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2874:1: (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2874:3: otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2728:1: (otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2728:3: otherlv_0= 'SOME' ( (lv_query_1_0= ruleQueryExpression ) )
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleSomeExpression6524); 
+            otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleSomeExpression6249); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSomeExpressionAccess().getSOMEKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2878:1: ( (lv_query_1_0= ruleQueryExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2879:1: (lv_query_1_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2732:1: ( (lv_query_1_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2733:1: (lv_query_1_0= ruleQueryExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2879:1: (lv_query_1_0= ruleQueryExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2880:3: lv_query_1_0= ruleQueryExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2733:1: (lv_query_1_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2734:3: lv_query_1_0= ruleQueryExpression
             {
              
             	        newCompositeNode(grammarAccess.getSomeExpressionAccess().getQueryQueryExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQueryExpression_in_ruleSomeExpression6545);
+            pushFollow(FOLLOW_ruleQueryExpression_in_ruleSomeExpression6270);
             lv_query_1_0=ruleQueryExpression();
 
             state._fsp--;
@@ -7326,7 +6935,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCollectionExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2904:1: entryRuleCollectionExpression returns [EObject current=null] : iv_ruleCollectionExpression= ruleCollectionExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2758:1: entryRuleCollectionExpression returns [EObject current=null] : iv_ruleCollectionExpression= ruleCollectionExpression EOF ;
     public final EObject entryRuleCollectionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7334,17 +6943,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2905:2: (iv_ruleCollectionExpression= ruleCollectionExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2906:2: iv_ruleCollectionExpression= ruleCollectionExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2759:2: (iv_ruleCollectionExpression= ruleCollectionExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2760:2: iv_ruleCollectionExpression= ruleCollectionExpression EOF
             {
              newCompositeNode(grammarAccess.getCollectionExpressionRule()); 
-            pushFollow(FOLLOW_ruleCollectionExpression_in_entryRuleCollectionExpression6581);
+            pushFollow(FOLLOW_ruleCollectionExpression_in_entryRuleCollectionExpression6306);
             iv_ruleCollectionExpression=ruleCollectionExpression();
 
             state._fsp--;
 
              current =iv_ruleCollectionExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCollectionExpression6591); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCollectionExpression6316); 
 
             }
 
@@ -7362,7 +6971,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCollectionExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2913:1: ruleCollectionExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2767:1: ruleCollectionExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) ) ;
     public final EObject ruleCollectionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7377,22 +6986,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2916:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2917:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2770:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2771:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2917:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2917:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2771:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2771:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'MEMBER' (otherlv_3= 'OF' )? ( (lv_rhs_4_0= ruleAliasAttributeExpression ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2917:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2918:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2771:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2772:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2918:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2919:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2772:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2773:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getCollectionExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleCollectionExpression6637);
+            pushFollow(FOLLOW_ruleVariable_in_ruleCollectionExpression6362);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -7414,21 +7023,21 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2935:2: ( (lv_isNot_1_0= 'NOT' ) )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2789:2: ( (lv_isNot_1_0= 'NOT' ) )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA41_0==50) ) {
-                alt41=1;
+            if ( (LA39_0==48) ) {
+                alt39=1;
             }
-            switch (alt41) {
+            switch (alt39) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2936:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2790:1: (lv_isNot_1_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2936:1: (lv_isNot_1_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2937:3: lv_isNot_1_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2790:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2791:3: lv_isNot_1_0= 'NOT'
                     {
-                    lv_isNot_1_0=(Token)match(input,50,FOLLOW_50_in_ruleCollectionExpression6655); 
+                    lv_isNot_1_0=(Token)match(input,48,FOLLOW_48_in_ruleCollectionExpression6380); 
 
                             newLeafNode(lv_isNot_1_0, grammarAccess.getCollectionExpressionAccess().getIsNotNOTKeyword_1_0());
                         
@@ -7447,22 +7056,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,55,FOLLOW_55_in_ruleCollectionExpression6681); 
+            otherlv_2=(Token)match(input,53,FOLLOW_53_in_ruleCollectionExpression6406); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCollectionExpressionAccess().getMEMBERKeyword_2());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2954:1: (otherlv_3= 'OF' )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2808:1: (otherlv_3= 'OF' )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA42_0==56) ) {
-                alt42=1;
+            if ( (LA40_0==54) ) {
+                alt40=1;
             }
-            switch (alt42) {
+            switch (alt40) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2954:3: otherlv_3= 'OF'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2808:3: otherlv_3= 'OF'
                     {
-                    otherlv_3=(Token)match(input,56,FOLLOW_56_in_ruleCollectionExpression6694); 
+                    otherlv_3=(Token)match(input,54,FOLLOW_54_in_ruleCollectionExpression6419); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getCollectionExpressionAccess().getOFKeyword_3());
                         
@@ -7472,16 +7081,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2958:3: ( (lv_rhs_4_0= ruleAliasAttributeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2959:1: (lv_rhs_4_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2812:3: ( (lv_rhs_4_0= ruleAliasAttributeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2813:1: (lv_rhs_4_0= ruleAliasAttributeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2959:1: (lv_rhs_4_0= ruleAliasAttributeExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2960:3: lv_rhs_4_0= ruleAliasAttributeExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2813:1: (lv_rhs_4_0= ruleAliasAttributeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2814:3: lv_rhs_4_0= ruleAliasAttributeExpression
             {
              
             	        newCompositeNode(grammarAccess.getCollectionExpressionAccess().getRhsAliasAttributeExpressionParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleCollectionExpression6717);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleCollectionExpression6442);
             lv_rhs_4_0=ruleAliasAttributeExpression();
 
             state._fsp--;
@@ -7524,7 +7133,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNullComparisonExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2984:1: entryRuleNullComparisonExpression returns [EObject current=null] : iv_ruleNullComparisonExpression= ruleNullComparisonExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2838:1: entryRuleNullComparisonExpression returns [EObject current=null] : iv_ruleNullComparisonExpression= ruleNullComparisonExpression EOF ;
     public final EObject entryRuleNullComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7532,17 +7141,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2985:2: (iv_ruleNullComparisonExpression= ruleNullComparisonExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2986:2: iv_ruleNullComparisonExpression= ruleNullComparisonExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2839:2: (iv_ruleNullComparisonExpression= ruleNullComparisonExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2840:2: iv_ruleNullComparisonExpression= ruleNullComparisonExpression EOF
             {
              newCompositeNode(grammarAccess.getNullComparisonExpressionRule()); 
-            pushFollow(FOLLOW_ruleNullComparisonExpression_in_entryRuleNullComparisonExpression6753);
+            pushFollow(FOLLOW_ruleNullComparisonExpression_in_entryRuleNullComparisonExpression6478);
             iv_ruleNullComparisonExpression=ruleNullComparisonExpression();
 
             state._fsp--;
 
              current =iv_ruleNullComparisonExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNullComparisonExpression6763); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNullComparisonExpression6488); 
 
             }
 
@@ -7560,7 +7169,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNullComparisonExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2993:1: ruleNullComparisonExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2847:1: ruleNullComparisonExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' ) ;
     public final EObject ruleNullComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7573,22 +7182,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2996:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2997:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2850:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2851:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2997:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2997:2: ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2851:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2851:2: ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'NULL'
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2997:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2998:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2851:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2852:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2998:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2999:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2852:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2853:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getNullComparisonExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleNullComparisonExpression6809);
+            pushFollow(FOLLOW_ruleVariable_in_ruleNullComparisonExpression6534);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -7610,25 +7219,25 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,57,FOLLOW_57_in_ruleNullComparisonExpression6821); 
+            otherlv_1=(Token)match(input,55,FOLLOW_55_in_ruleNullComparisonExpression6546); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getNullComparisonExpressionAccess().getISKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3019:1: ( (lv_isNot_2_0= 'NOT' ) )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2873:1: ( (lv_isNot_2_0= 'NOT' ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA43_0==50) ) {
-                alt43=1;
+            if ( (LA41_0==48) ) {
+                alt41=1;
             }
-            switch (alt43) {
+            switch (alt41) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3020:1: (lv_isNot_2_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2874:1: (lv_isNot_2_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3020:1: (lv_isNot_2_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3021:3: lv_isNot_2_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2874:1: (lv_isNot_2_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2875:3: lv_isNot_2_0= 'NOT'
                     {
-                    lv_isNot_2_0=(Token)match(input,50,FOLLOW_50_in_ruleNullComparisonExpression6839); 
+                    lv_isNot_2_0=(Token)match(input,48,FOLLOW_48_in_ruleNullComparisonExpression6564); 
 
                             newLeafNode(lv_isNot_2_0, grammarAccess.getNullComparisonExpressionAccess().getIsNotNOTKeyword_2_0());
                         
@@ -7647,7 +7256,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,58,FOLLOW_58_in_ruleNullComparisonExpression6865); 
+            otherlv_3=(Token)match(input,56,FOLLOW_56_in_ruleNullComparisonExpression6590); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getNullComparisonExpressionAccess().getNULLKeyword_3());
                 
@@ -7672,7 +7281,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEmptyComparisonExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3046:1: entryRuleEmptyComparisonExpression returns [EObject current=null] : iv_ruleEmptyComparisonExpression= ruleEmptyComparisonExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2900:1: entryRuleEmptyComparisonExpression returns [EObject current=null] : iv_ruleEmptyComparisonExpression= ruleEmptyComparisonExpression EOF ;
     public final EObject entryRuleEmptyComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7680,17 +7289,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3047:2: (iv_ruleEmptyComparisonExpression= ruleEmptyComparisonExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3048:2: iv_ruleEmptyComparisonExpression= ruleEmptyComparisonExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2901:2: (iv_ruleEmptyComparisonExpression= ruleEmptyComparisonExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2902:2: iv_ruleEmptyComparisonExpression= ruleEmptyComparisonExpression EOF
             {
              newCompositeNode(grammarAccess.getEmptyComparisonExpressionRule()); 
-            pushFollow(FOLLOW_ruleEmptyComparisonExpression_in_entryRuleEmptyComparisonExpression6901);
+            pushFollow(FOLLOW_ruleEmptyComparisonExpression_in_entryRuleEmptyComparisonExpression6626);
             iv_ruleEmptyComparisonExpression=ruleEmptyComparisonExpression();
 
             state._fsp--;
 
              current =iv_ruleEmptyComparisonExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEmptyComparisonExpression6911); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEmptyComparisonExpression6636); 
 
             }
 
@@ -7708,7 +7317,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEmptyComparisonExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3055:1: ruleEmptyComparisonExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2909:1: ruleEmptyComparisonExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' ) ;
     public final EObject ruleEmptyComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7721,22 +7330,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3058:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3059:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2912:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2913:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3059:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3059:2: ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2913:1: ( ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2913:2: ( (lv_lhs_0_0= ruleVariable ) ) otherlv_1= 'IS' ( (lv_isNot_2_0= 'NOT' ) )? otherlv_3= 'EMPTY'
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3059:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3060:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2913:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2914:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3060:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3061:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2914:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2915:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getEmptyComparisonExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleEmptyComparisonExpression6957);
+            pushFollow(FOLLOW_ruleVariable_in_ruleEmptyComparisonExpression6682);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -7758,25 +7367,25 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,57,FOLLOW_57_in_ruleEmptyComparisonExpression6969); 
+            otherlv_1=(Token)match(input,55,FOLLOW_55_in_ruleEmptyComparisonExpression6694); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEmptyComparisonExpressionAccess().getISKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3081:1: ( (lv_isNot_2_0= 'NOT' ) )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2935:1: ( (lv_isNot_2_0= 'NOT' ) )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA44_0==50) ) {
-                alt44=1;
+            if ( (LA42_0==48) ) {
+                alt42=1;
             }
-            switch (alt44) {
+            switch (alt42) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3082:1: (lv_isNot_2_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2936:1: (lv_isNot_2_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3082:1: (lv_isNot_2_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3083:3: lv_isNot_2_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2936:1: (lv_isNot_2_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2937:3: lv_isNot_2_0= 'NOT'
                     {
-                    lv_isNot_2_0=(Token)match(input,50,FOLLOW_50_in_ruleEmptyComparisonExpression6987); 
+                    lv_isNot_2_0=(Token)match(input,48,FOLLOW_48_in_ruleEmptyComparisonExpression6712); 
 
                             newLeafNode(lv_isNot_2_0, grammarAccess.getEmptyComparisonExpressionAccess().getIsNotNOTKeyword_2_0());
                         
@@ -7795,7 +7404,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,59,FOLLOW_59_in_ruleEmptyComparisonExpression7013); 
+            otherlv_3=(Token)match(input,57,FOLLOW_57_in_ruleEmptyComparisonExpression6738); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getEmptyComparisonExpressionAccess().getEMPTYKeyword_3());
                 
@@ -7820,7 +7429,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLikeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3108:1: entryRuleLikeExpression returns [EObject current=null] : iv_ruleLikeExpression= ruleLikeExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2962:1: entryRuleLikeExpression returns [EObject current=null] : iv_ruleLikeExpression= ruleLikeExpression EOF ;
     public final EObject entryRuleLikeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7828,17 +7437,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3109:2: (iv_ruleLikeExpression= ruleLikeExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3110:2: iv_ruleLikeExpression= ruleLikeExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2963:2: (iv_ruleLikeExpression= ruleLikeExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2964:2: iv_ruleLikeExpression= ruleLikeExpression EOF
             {
              newCompositeNode(grammarAccess.getLikeExpressionRule()); 
-            pushFollow(FOLLOW_ruleLikeExpression_in_entryRuleLikeExpression7049);
+            pushFollow(FOLLOW_ruleLikeExpression_in_entryRuleLikeExpression6774);
             iv_ruleLikeExpression=ruleLikeExpression();
 
             state._fsp--;
 
              current =iv_ruleLikeExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLikeExpression7059); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLikeExpression6784); 
 
             }
 
@@ -7856,7 +7465,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLikeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3117:1: ruleLikeExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2971:1: ruleLikeExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) ) ;
     public final EObject ruleLikeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7869,22 +7478,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3120:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3121:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2974:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2975:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3121:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3121:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2975:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2975:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'LIKE' ( (lv_pattern_3_0= RULE_STRING ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3121:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3122:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2975:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2976:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3122:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3123:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2976:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2977:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getLikeExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleLikeExpression7105);
+            pushFollow(FOLLOW_ruleVariable_in_ruleLikeExpression6830);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -7906,21 +7515,21 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3139:2: ( (lv_isNot_1_0= 'NOT' ) )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2993:2: ( (lv_isNot_1_0= 'NOT' ) )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA45_0==50) ) {
-                alt45=1;
+            if ( (LA43_0==48) ) {
+                alt43=1;
             }
-            switch (alt45) {
+            switch (alt43) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3140:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2994:1: (lv_isNot_1_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3140:1: (lv_isNot_1_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3141:3: lv_isNot_1_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2994:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:2995:3: lv_isNot_1_0= 'NOT'
                     {
-                    lv_isNot_1_0=(Token)match(input,50,FOLLOW_50_in_ruleLikeExpression7123); 
+                    lv_isNot_1_0=(Token)match(input,48,FOLLOW_48_in_ruleLikeExpression6848); 
 
                             newLeafNode(lv_isNot_1_0, grammarAccess.getLikeExpressionAccess().getIsNotNOTKeyword_1_0());
                         
@@ -7939,17 +7548,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,60,FOLLOW_60_in_ruleLikeExpression7149); 
+            otherlv_2=(Token)match(input,58,FOLLOW_58_in_ruleLikeExpression6874); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getLikeExpressionAccess().getLIKEKeyword_2());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3158:1: ( (lv_pattern_3_0= RULE_STRING ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3159:1: (lv_pattern_3_0= RULE_STRING )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3012:1: ( (lv_pattern_3_0= RULE_STRING ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3013:1: (lv_pattern_3_0= RULE_STRING )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3159:1: (lv_pattern_3_0= RULE_STRING )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3160:3: lv_pattern_3_0= RULE_STRING
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3013:1: (lv_pattern_3_0= RULE_STRING )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3014:3: lv_pattern_3_0= RULE_STRING
             {
-            lv_pattern_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLikeExpression7166); 
+            lv_pattern_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLikeExpression6891); 
 
             			newLeafNode(lv_pattern_3_0, grammarAccess.getLikeExpressionAccess().getPatternSTRINGTerminalRuleCall_3_0()); 
             		
@@ -7990,7 +7599,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3184:1: entryRuleInExpression returns [EObject current=null] : iv_ruleInExpression= ruleInExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3038:1: entryRuleInExpression returns [EObject current=null] : iv_ruleInExpression= ruleInExpression EOF ;
     public final EObject entryRuleInExpression() throws RecognitionException {
         EObject current = null;
 
@@ -7998,17 +7607,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3185:2: (iv_ruleInExpression= ruleInExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3186:2: iv_ruleInExpression= ruleInExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3039:2: (iv_ruleInExpression= ruleInExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3040:2: iv_ruleInExpression= ruleInExpression EOF
             {
              newCompositeNode(grammarAccess.getInExpressionRule()); 
-            pushFollow(FOLLOW_ruleInExpression_in_entryRuleInExpression7207);
+            pushFollow(FOLLOW_ruleInExpression_in_entryRuleInExpression6932);
             iv_ruleInExpression=ruleInExpression();
 
             state._fsp--;
 
              current =iv_ruleInExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInExpression7217); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInExpression6942); 
 
             }
 
@@ -8026,7 +7635,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3193:1: ruleInExpression returns [EObject current=null] : (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3047:1: ruleInExpression returns [EObject current=null] : (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression ) ;
     public final EObject ruleInExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8038,20 +7647,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3196:28: ( (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3197:1: (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3050:28: ( (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3051:1: (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3197:1: (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression )
-            int alt46=2;
-            alt46 = dfa46.predict(input);
-            switch (alt46) {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3051:1: (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression )
+            int alt44=2;
+            alt44 = dfa44.predict(input);
+            switch (alt44) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3198:5: this_InSeqExpression_0= ruleInSeqExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3052:5: this_InSeqExpression_0= ruleInSeqExpression
                     {
                      
                             newCompositeNode(grammarAccess.getInExpressionAccess().getInSeqExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleInSeqExpression_in_ruleInExpression7264);
+                    pushFollow(FOLLOW_ruleInSeqExpression_in_ruleInExpression6989);
                     this_InSeqExpression_0=ruleInSeqExpression();
 
                     state._fsp--;
@@ -8064,12 +7673,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3208:5: this_InQueryExpression_1= ruleInQueryExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3062:5: this_InQueryExpression_1= ruleInQueryExpression
                     {
                      
                             newCompositeNode(grammarAccess.getInExpressionAccess().getInQueryExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleInQueryExpression_in_ruleInExpression7291);
+                    pushFollow(FOLLOW_ruleInQueryExpression_in_ruleInExpression7016);
                     this_InQueryExpression_1=ruleInQueryExpression();
 
                     state._fsp--;
@@ -8102,7 +7711,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInSeqExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3224:1: entryRuleInSeqExpression returns [EObject current=null] : iv_ruleInSeqExpression= ruleInSeqExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3078:1: entryRuleInSeqExpression returns [EObject current=null] : iv_ruleInSeqExpression= ruleInSeqExpression EOF ;
     public final EObject entryRuleInSeqExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8110,17 +7719,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3225:2: (iv_ruleInSeqExpression= ruleInSeqExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3226:2: iv_ruleInSeqExpression= ruleInSeqExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3079:2: (iv_ruleInSeqExpression= ruleInSeqExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3080:2: iv_ruleInSeqExpression= ruleInSeqExpression EOF
             {
              newCompositeNode(grammarAccess.getInSeqExpressionRule()); 
-            pushFollow(FOLLOW_ruleInSeqExpression_in_entryRuleInSeqExpression7326);
+            pushFollow(FOLLOW_ruleInSeqExpression_in_entryRuleInSeqExpression7051);
             iv_ruleInSeqExpression=ruleInSeqExpression();
 
             state._fsp--;
 
              current =iv_ruleInSeqExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInSeqExpression7336); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInSeqExpression7061); 
 
             }
 
@@ -8138,7 +7747,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInSeqExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3233:1: ruleInSeqExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3087:1: ruleInSeqExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' ) ;
     public final EObject ruleInSeqExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8157,22 +7766,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3236:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3237:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3090:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3091:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3237:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3237:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3091:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3091:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' otherlv_3= '(' ( (lv_items_4_0= ruleVariable ) ) (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )* otherlv_7= ')'
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3237:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3238:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3091:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3092:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3238:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3239:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3092:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3093:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getInSeqExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleInSeqExpression7382);
+            pushFollow(FOLLOW_ruleVariable_in_ruleInSeqExpression7107);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -8194,21 +7803,21 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3255:2: ( (lv_isNot_1_0= 'NOT' ) )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3109:2: ( (lv_isNot_1_0= 'NOT' ) )?
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA47_0==50) ) {
-                alt47=1;
+            if ( (LA45_0==48) ) {
+                alt45=1;
             }
-            switch (alt47) {
+            switch (alt45) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3256:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3110:1: (lv_isNot_1_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3256:1: (lv_isNot_1_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3257:3: lv_isNot_1_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3110:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3111:3: lv_isNot_1_0= 'NOT'
                     {
-                    lv_isNot_1_0=(Token)match(input,50,FOLLOW_50_in_ruleInSeqExpression7400); 
+                    lv_isNot_1_0=(Token)match(input,48,FOLLOW_48_in_ruleInSeqExpression7125); 
 
                             newLeafNode(lv_isNot_1_0, grammarAccess.getInSeqExpressionAccess().getIsNotNOTKeyword_1_0());
                         
@@ -8227,24 +7836,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleInSeqExpression7426); 
+            otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleInSeqExpression7151); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getInSeqExpressionAccess().getINKeyword_2());
                 
-            otherlv_3=(Token)match(input,32,FOLLOW_32_in_ruleInSeqExpression7438); 
+            otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleInSeqExpression7163); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getInSeqExpressionAccess().getLeftParenthesisKeyword_3());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3278:1: ( (lv_items_4_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3279:1: (lv_items_4_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3132:1: ( (lv_items_4_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3133:1: (lv_items_4_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3279:1: (lv_items_4_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3280:3: lv_items_4_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3133:1: (lv_items_4_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3134:3: lv_items_4_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getInSeqExpressionAccess().getItemsVariableParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleInSeqExpression7459);
+            pushFollow(FOLLOW_ruleVariable_in_ruleInSeqExpression7184);
             lv_items_4_0=ruleVariable();
 
             state._fsp--;
@@ -8266,35 +7875,35 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3296:2: (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )*
-            loop48:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3150:2: (otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) ) )*
+            loop46:
             do {
-                int alt48=2;
-                int LA48_0 = input.LA(1);
+                int alt46=2;
+                int LA46_0 = input.LA(1);
 
-                if ( (LA48_0==21) ) {
-                    alt48=1;
+                if ( (LA46_0==19) ) {
+                    alt46=1;
                 }
 
 
-                switch (alt48) {
+                switch (alt46) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3296:4: otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3150:4: otherlv_5= ',' ( (lv_items_6_0= ruleVariable ) )
             	    {
-            	    otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleInSeqExpression7472); 
+            	    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleInSeqExpression7197); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getInSeqExpressionAccess().getCommaKeyword_5_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3300:1: ( (lv_items_6_0= ruleVariable ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3301:1: (lv_items_6_0= ruleVariable )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3154:1: ( (lv_items_6_0= ruleVariable ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3155:1: (lv_items_6_0= ruleVariable )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3301:1: (lv_items_6_0= ruleVariable )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3302:3: lv_items_6_0= ruleVariable
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3155:1: (lv_items_6_0= ruleVariable )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3156:3: lv_items_6_0= ruleVariable
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getInSeqExpressionAccess().getItemsVariableParserRuleCall_5_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleVariable_in_ruleInSeqExpression7493);
+            	    pushFollow(FOLLOW_ruleVariable_in_ruleInSeqExpression7218);
             	    lv_items_6_0=ruleVariable();
 
             	    state._fsp--;
@@ -8321,11 +7930,11 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop48;
+            	    break loop46;
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,33,FOLLOW_33_in_ruleInSeqExpression7507); 
+            otherlv_7=(Token)match(input,31,FOLLOW_31_in_ruleInSeqExpression7232); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getInSeqExpressionAccess().getRightParenthesisKeyword_6());
                 
@@ -8350,7 +7959,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInQueryExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3330:1: entryRuleInQueryExpression returns [EObject current=null] : iv_ruleInQueryExpression= ruleInQueryExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3184:1: entryRuleInQueryExpression returns [EObject current=null] : iv_ruleInQueryExpression= ruleInQueryExpression EOF ;
     public final EObject entryRuleInQueryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8358,17 +7967,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3331:2: (iv_ruleInQueryExpression= ruleInQueryExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3332:2: iv_ruleInQueryExpression= ruleInQueryExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3185:2: (iv_ruleInQueryExpression= ruleInQueryExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3186:2: iv_ruleInQueryExpression= ruleInQueryExpression EOF
             {
              newCompositeNode(grammarAccess.getInQueryExpressionRule()); 
-            pushFollow(FOLLOW_ruleInQueryExpression_in_entryRuleInQueryExpression7543);
+            pushFollow(FOLLOW_ruleInQueryExpression_in_entryRuleInQueryExpression7268);
             iv_ruleInQueryExpression=ruleInQueryExpression();
 
             state._fsp--;
 
              current =iv_ruleInQueryExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInQueryExpression7553); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInQueryExpression7278); 
 
             }
 
@@ -8386,7 +7995,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInQueryExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3339:1: ruleInQueryExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3193:1: ruleInQueryExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) ) ;
     public final EObject ruleInQueryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8400,22 +8009,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3342:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3343:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3196:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3197:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3343:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3343:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3197:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3197:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'IN' ( (lv_query_3_0= ruleQueryExpression ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3343:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3344:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3197:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3198:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3344:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3345:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3198:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3199:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getInQueryExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleInQueryExpression7599);
+            pushFollow(FOLLOW_ruleVariable_in_ruleInQueryExpression7324);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -8437,21 +8046,21 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3361:2: ( (lv_isNot_1_0= 'NOT' ) )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3215:2: ( (lv_isNot_1_0= 'NOT' ) )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA49_0==50) ) {
-                alt49=1;
+            if ( (LA47_0==48) ) {
+                alt47=1;
             }
-            switch (alt49) {
+            switch (alt47) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3362:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3216:1: (lv_isNot_1_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3362:1: (lv_isNot_1_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3363:3: lv_isNot_1_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3216:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3217:3: lv_isNot_1_0= 'NOT'
                     {
-                    lv_isNot_1_0=(Token)match(input,50,FOLLOW_50_in_ruleInQueryExpression7617); 
+                    lv_isNot_1_0=(Token)match(input,48,FOLLOW_48_in_ruleInQueryExpression7342); 
 
                             newLeafNode(lv_isNot_1_0, grammarAccess.getInQueryExpressionAccess().getIsNotNOTKeyword_1_0());
                         
@@ -8470,20 +8079,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleInQueryExpression7643); 
+            otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleInQueryExpression7368); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getInQueryExpressionAccess().getINKeyword_2());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3380:1: ( (lv_query_3_0= ruleQueryExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3381:1: (lv_query_3_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3234:1: ( (lv_query_3_0= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3235:1: (lv_query_3_0= ruleQueryExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3381:1: (lv_query_3_0= ruleQueryExpression )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3382:3: lv_query_3_0= ruleQueryExpression
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3235:1: (lv_query_3_0= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3236:3: lv_query_3_0= ruleQueryExpression
             {
              
             	        newCompositeNode(grammarAccess.getInQueryExpressionAccess().getQueryQueryExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleQueryExpression_in_ruleInQueryExpression7664);
+            pushFollow(FOLLOW_ruleQueryExpression_in_ruleInQueryExpression7389);
             lv_query_3_0=ruleQueryExpression();
 
             state._fsp--;
@@ -8526,7 +8135,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBetweenExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3406:1: entryRuleBetweenExpression returns [EObject current=null] : iv_ruleBetweenExpression= ruleBetweenExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3260:1: entryRuleBetweenExpression returns [EObject current=null] : iv_ruleBetweenExpression= ruleBetweenExpression EOF ;
     public final EObject entryRuleBetweenExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8534,17 +8143,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3407:2: (iv_ruleBetweenExpression= ruleBetweenExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3408:2: iv_ruleBetweenExpression= ruleBetweenExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3261:2: (iv_ruleBetweenExpression= ruleBetweenExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3262:2: iv_ruleBetweenExpression= ruleBetweenExpression EOF
             {
              newCompositeNode(grammarAccess.getBetweenExpressionRule()); 
-            pushFollow(FOLLOW_ruleBetweenExpression_in_entryRuleBetweenExpression7700);
+            pushFollow(FOLLOW_ruleBetweenExpression_in_entryRuleBetweenExpression7425);
             iv_ruleBetweenExpression=ruleBetweenExpression();
 
             state._fsp--;
 
              current =iv_ruleBetweenExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBetweenExpression7710); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBetweenExpression7435); 
 
             }
 
@@ -8562,7 +8171,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBetweenExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3415:1: ruleBetweenExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3269:1: ruleBetweenExpression returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) ) ;
     public final EObject ruleBetweenExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8579,22 +8188,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3418:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3419:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3272:28: ( ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3273:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3419:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3419:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3273:1: ( ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3273:2: ( (lv_lhs_0_0= ruleVariable ) ) ( (lv_isNot_1_0= 'NOT' ) )? otherlv_2= 'BETWEEN' ( (lv_min_3_0= ruleValue ) ) otherlv_4= 'AND' ( (lv_max_5_0= ruleValue ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3419:2: ( (lv_lhs_0_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3420:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3273:2: ( (lv_lhs_0_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3274:1: (lv_lhs_0_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3420:1: (lv_lhs_0_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3421:3: lv_lhs_0_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3274:1: (lv_lhs_0_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3275:3: lv_lhs_0_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getBetweenExpressionAccess().getLhsVariableParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleBetweenExpression7756);
+            pushFollow(FOLLOW_ruleVariable_in_ruleBetweenExpression7481);
             lv_lhs_0_0=ruleVariable();
 
             state._fsp--;
@@ -8616,21 +8225,21 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3437:2: ( (lv_isNot_1_0= 'NOT' ) )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3291:2: ( (lv_isNot_1_0= 'NOT' ) )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA50_0==50) ) {
-                alt50=1;
+            if ( (LA48_0==48) ) {
+                alt48=1;
             }
-            switch (alt50) {
+            switch (alt48) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3438:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3292:1: (lv_isNot_1_0= 'NOT' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3438:1: (lv_isNot_1_0= 'NOT' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3439:3: lv_isNot_1_0= 'NOT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3292:1: (lv_isNot_1_0= 'NOT' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3293:3: lv_isNot_1_0= 'NOT'
                     {
-                    lv_isNot_1_0=(Token)match(input,50,FOLLOW_50_in_ruleBetweenExpression7774); 
+                    lv_isNot_1_0=(Token)match(input,48,FOLLOW_48_in_ruleBetweenExpression7499); 
 
                             newLeafNode(lv_isNot_1_0, grammarAccess.getBetweenExpressionAccess().getIsNotNOTKeyword_1_0());
                         
@@ -8649,20 +8258,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,61,FOLLOW_61_in_ruleBetweenExpression7800); 
+            otherlv_2=(Token)match(input,59,FOLLOW_59_in_ruleBetweenExpression7525); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getBetweenExpressionAccess().getBETWEENKeyword_2());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3456:1: ( (lv_min_3_0= ruleValue ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3457:1: (lv_min_3_0= ruleValue )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3310:1: ( (lv_min_3_0= ruleValue ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3311:1: (lv_min_3_0= ruleValue )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3457:1: (lv_min_3_0= ruleValue )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3458:3: lv_min_3_0= ruleValue
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3311:1: (lv_min_3_0= ruleValue )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3312:3: lv_min_3_0= ruleValue
             {
              
             	        newCompositeNode(grammarAccess.getBetweenExpressionAccess().getMinValueParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleBetweenExpression7821);
+            pushFollow(FOLLOW_ruleValue_in_ruleBetweenExpression7546);
             lv_min_3_0=ruleValue();
 
             state._fsp--;
@@ -8684,20 +8293,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,49,FOLLOW_49_in_ruleBetweenExpression7833); 
+            otherlv_4=(Token)match(input,47,FOLLOW_47_in_ruleBetweenExpression7558); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getBetweenExpressionAccess().getANDKeyword_4());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3478:1: ( (lv_max_5_0= ruleValue ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3479:1: (lv_max_5_0= ruleValue )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3332:1: ( (lv_max_5_0= ruleValue ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3333:1: (lv_max_5_0= ruleValue )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3479:1: (lv_max_5_0= ruleValue )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3480:3: lv_max_5_0= ruleValue
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3333:1: (lv_max_5_0= ruleValue )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3334:3: lv_max_5_0= ruleValue
             {
              
             	        newCompositeNode(grammarAccess.getBetweenExpressionAccess().getMaxValueParserRuleCall_5_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleBetweenExpression7854);
+            pushFollow(FOLLOW_ruleValue_in_ruleBetweenExpression7579);
             lv_max_5_0=ruleValue();
 
             state._fsp--;
@@ -8740,7 +8349,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariable"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3504:1: entryRuleVariable returns [EObject current=null] : iv_ruleVariable= ruleVariable EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3358:1: entryRuleVariable returns [EObject current=null] : iv_ruleVariable= ruleVariable EOF ;
     public final EObject entryRuleVariable() throws RecognitionException {
         EObject current = null;
 
@@ -8748,17 +8357,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3505:2: (iv_ruleVariable= ruleVariable EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3506:2: iv_ruleVariable= ruleVariable EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3359:2: (iv_ruleVariable= ruleVariable EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3360:2: iv_ruleVariable= ruleVariable EOF
             {
              newCompositeNode(grammarAccess.getVariableRule()); 
-            pushFollow(FOLLOW_ruleVariable_in_entryRuleVariable7890);
+            pushFollow(FOLLOW_ruleVariable_in_entryRuleVariable7615);
             iv_ruleVariable=ruleVariable();
 
             state._fsp--;
 
              current =iv_ruleVariable; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVariable7900); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariable7625); 
 
             }
 
@@ -8776,7 +8385,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariable"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3513:1: ruleVariable returns [EObject current=null] : (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3367:1: ruleVariable returns [EObject current=null] : (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue ) ;
     public final EObject ruleVariable() throws RecognitionException {
         EObject current = null;
 
@@ -8790,20 +8399,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3516:28: ( (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3517:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3370:28: ( (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3371:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3517:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue )
-            int alt51=3;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3371:1: (this_AliasAttributeExpression_0= ruleAliasAttributeExpression | this_ParameterExpression_1= ruleParameterExpression | this_Value_2= ruleValue )
+            int alt49=3;
             switch ( input.LA(1) ) {
             case RULE_ID:
                 {
-                alt51=1;
+                alt49=1;
                 }
                 break;
-            case 17:
+            case 60:
                 {
-                alt51=2;
+                alt49=2;
                 }
                 break;
             case RULE_STRING:
@@ -8811,28 +8420,28 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             case RULE_DATE_LITERAL:
             case RULE_TIME_LITERAL:
             case RULE_TIMESTAMP_LITERAL:
-            case 58:
+            case 56:
+            case 71:
             case 72:
-            case 73:
                 {
-                alt51=3;
+                alt49=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 51, 0, input);
+                    new NoViableAltException("", 49, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt51) {
+            switch (alt49) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3518:5: this_AliasAttributeExpression_0= ruleAliasAttributeExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3372:5: this_AliasAttributeExpression_0= ruleAliasAttributeExpression
                     {
                      
                             newCompositeNode(grammarAccess.getVariableAccess().getAliasAttributeExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleVariable7947);
+                    pushFollow(FOLLOW_ruleAliasAttributeExpression_in_ruleVariable7672);
                     this_AliasAttributeExpression_0=ruleAliasAttributeExpression();
 
                     state._fsp--;
@@ -8845,12 +8454,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3528:5: this_ParameterExpression_1= ruleParameterExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3382:5: this_ParameterExpression_1= ruleParameterExpression
                     {
                      
                             newCompositeNode(grammarAccess.getVariableAccess().getParameterExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleParameterExpression_in_ruleVariable7974);
+                    pushFollow(FOLLOW_ruleParameterExpression_in_ruleVariable7699);
                     this_ParameterExpression_1=ruleParameterExpression();
 
                     state._fsp--;
@@ -8863,12 +8472,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3538:5: this_Value_2= ruleValue
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3392:5: this_Value_2= ruleValue
                     {
                      
                             newCompositeNode(grammarAccess.getVariableAccess().getValueParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleValue_in_ruleVariable8001);
+                    pushFollow(FOLLOW_ruleValue_in_ruleVariable7726);
                     this_Value_2=ruleValue();
 
                     state._fsp--;
@@ -8901,7 +8510,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpressionTerm"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3554:1: entryRuleExpressionTerm returns [EObject current=null] : iv_ruleExpressionTerm= ruleExpressionTerm EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3408:1: entryRuleExpressionTerm returns [EObject current=null] : iv_ruleExpressionTerm= ruleExpressionTerm EOF ;
     public final EObject entryRuleExpressionTerm() throws RecognitionException {
         EObject current = null;
 
@@ -8909,17 +8518,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3555:2: (iv_ruleExpressionTerm= ruleExpressionTerm EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3556:2: iv_ruleExpressionTerm= ruleExpressionTerm EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3409:2: (iv_ruleExpressionTerm= ruleExpressionTerm EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3410:2: iv_ruleExpressionTerm= ruleExpressionTerm EOF
             {
              newCompositeNode(grammarAccess.getExpressionTermRule()); 
-            pushFollow(FOLLOW_ruleExpressionTerm_in_entryRuleExpressionTerm8036);
+            pushFollow(FOLLOW_ruleExpressionTerm_in_entryRuleExpressionTerm7761);
             iv_ruleExpressionTerm=ruleExpressionTerm();
 
             state._fsp--;
 
              current =iv_ruleExpressionTerm; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpressionTerm8046); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpressionTerm7771); 
 
             }
 
@@ -8937,7 +8546,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpressionTerm"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3563:1: ruleExpressionTerm returns [EObject current=null] : (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3417:1: ruleExpressionTerm returns [EObject current=null] : (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression ) ;
     public final EObject ruleExpressionTerm() throws RecognitionException {
         EObject current = null;
 
@@ -8949,33 +8558,33 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3566:28: ( (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3567:1: (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3420:28: ( (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3421:1: (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3567:1: (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression )
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3421:1: (this_Variable_0= ruleVariable | this_QueryExpression_1= ruleQueryExpression )
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( ((LA52_0>=RULE_STRING && LA52_0<=RULE_TIMESTAMP_LITERAL)||LA52_0==17||LA52_0==58||(LA52_0>=72 && LA52_0<=73)) ) {
-                alt52=1;
+            if ( ((LA50_0>=RULE_ID && LA50_0<=RULE_TIMESTAMP_LITERAL)||LA50_0==56||LA50_0==60||(LA50_0>=71 && LA50_0<=72)) ) {
+                alt50=1;
             }
-            else if ( (LA52_0==32) ) {
-                alt52=2;
+            else if ( (LA50_0==30) ) {
+                alt50=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 52, 0, input);
+                    new NoViableAltException("", 50, 0, input);
 
                 throw nvae;
             }
-            switch (alt52) {
+            switch (alt50) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3568:5: this_Variable_0= ruleVariable
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3422:5: this_Variable_0= ruleVariable
                     {
                      
                             newCompositeNode(grammarAccess.getExpressionTermAccess().getVariableParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleVariable_in_ruleExpressionTerm8093);
+                    pushFollow(FOLLOW_ruleVariable_in_ruleExpressionTerm7818);
                     this_Variable_0=ruleVariable();
 
                     state._fsp--;
@@ -8988,12 +8597,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3578:5: this_QueryExpression_1= ruleQueryExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3432:5: this_QueryExpression_1= ruleQueryExpression
                     {
                      
                             newCompositeNode(grammarAccess.getExpressionTermAccess().getQueryExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleQueryExpression_in_ruleExpressionTerm8120);
+                    pushFollow(FOLLOW_ruleQueryExpression_in_ruleExpressionTerm7845);
                     this_QueryExpression_1=ruleQueryExpression();
 
                     state._fsp--;
@@ -9026,7 +8635,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAliasAttributeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3594:1: entryRuleAliasAttributeExpression returns [EObject current=null] : iv_ruleAliasAttributeExpression= ruleAliasAttributeExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3448:1: entryRuleAliasAttributeExpression returns [EObject current=null] : iv_ruleAliasAttributeExpression= ruleAliasAttributeExpression EOF ;
     public final EObject entryRuleAliasAttributeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -9034,17 +8643,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3595:2: (iv_ruleAliasAttributeExpression= ruleAliasAttributeExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3596:2: iv_ruleAliasAttributeExpression= ruleAliasAttributeExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3449:2: (iv_ruleAliasAttributeExpression= ruleAliasAttributeExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3450:2: iv_ruleAliasAttributeExpression= ruleAliasAttributeExpression EOF
             {
              newCompositeNode(grammarAccess.getAliasAttributeExpressionRule()); 
-            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_entryRuleAliasAttributeExpression8155);
+            pushFollow(FOLLOW_ruleAliasAttributeExpression_in_entryRuleAliasAttributeExpression7880);
             iv_ruleAliasAttributeExpression=ruleAliasAttributeExpression();
 
             state._fsp--;
 
              current =iv_ruleAliasAttributeExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAliasAttributeExpression8165); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAliasAttributeExpression7890); 
 
             }
 
@@ -9062,7 +8671,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAliasAttributeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3603:1: ruleAliasAttributeExpression returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3457:1: ruleAliasAttributeExpression returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* ) ;
     public final EObject ruleAliasAttributeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -9073,24 +8682,24 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3606:28: ( ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3607:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3460:28: ( ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3461:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3607:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3607:2: ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )*
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3461:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3461:2: ( (otherlv_0= RULE_ID ) ) (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )*
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3607:2: ( (otherlv_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3608:1: (otherlv_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3461:2: ( (otherlv_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3462:1: (otherlv_0= RULE_ID )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3608:1: (otherlv_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3609:3: otherlv_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3462:1: (otherlv_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3463:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getAliasAttributeExpressionRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAliasAttributeExpression8210); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAliasAttributeExpression7935); 
 
             		newLeafNode(otherlv_0, grammarAccess.getAliasAttributeExpressionAccess().getAliasVariableDeclarationCrossReference_0_0()); 
             	
@@ -9100,32 +8709,32 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3620:2: (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )*
-            loop53:
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3474:2: (otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) ) )*
+            loop51:
             do {
-                int alt53=2;
-                int LA53_0 = input.LA(1);
+                int alt51=2;
+                int LA51_0 = input.LA(1);
 
-                if ( (LA53_0==24) ) {
-                    alt53=1;
+                if ( (LA51_0==22) ) {
+                    alt51=1;
                 }
 
 
-                switch (alt53) {
+                switch (alt51) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3620:4: otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3474:4: otherlv_1= '.' ( (lv_attributes_2_0= RULE_ID ) )
             	    {
-            	    otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleAliasAttributeExpression8223); 
+            	    otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleAliasAttributeExpression7948); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getAliasAttributeExpressionAccess().getFullStopKeyword_1_0());
             	        
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3624:1: ( (lv_attributes_2_0= RULE_ID ) )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3625:1: (lv_attributes_2_0= RULE_ID )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3478:1: ( (lv_attributes_2_0= RULE_ID ) )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3479:1: (lv_attributes_2_0= RULE_ID )
             	    {
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3625:1: (lv_attributes_2_0= RULE_ID )
-            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3626:3: lv_attributes_2_0= RULE_ID
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3479:1: (lv_attributes_2_0= RULE_ID )
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3480:3: lv_attributes_2_0= RULE_ID
             	    {
-            	    lv_attributes_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAliasAttributeExpression8240); 
+            	    lv_attributes_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAliasAttributeExpression7965); 
 
             	    			newLeafNode(lv_attributes_2_0, grammarAccess.getAliasAttributeExpressionAccess().getAttributesIDTerminalRuleCall_1_1_0()); 
             	    		
@@ -9150,7 +8759,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop53;
+            	    break loop51;
                 }
             } while (true);
 
@@ -9175,7 +8784,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParameterExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3650:1: entryRuleParameterExpression returns [EObject current=null] : iv_ruleParameterExpression= ruleParameterExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3504:1: entryRuleParameterExpression returns [EObject current=null] : iv_ruleParameterExpression= ruleParameterExpression EOF ;
     public final EObject entryRuleParameterExpression() throws RecognitionException {
         EObject current = null;
 
@@ -9183,17 +8792,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3651:2: (iv_ruleParameterExpression= ruleParameterExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3652:2: iv_ruleParameterExpression= ruleParameterExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3505:2: (iv_ruleParameterExpression= ruleParameterExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3506:2: iv_ruleParameterExpression= ruleParameterExpression EOF
             {
              newCompositeNode(grammarAccess.getParameterExpressionRule()); 
-            pushFollow(FOLLOW_ruleParameterExpression_in_entryRuleParameterExpression8283);
+            pushFollow(FOLLOW_ruleParameterExpression_in_entryRuleParameterExpression8008);
             iv_ruleParameterExpression=ruleParameterExpression();
 
             state._fsp--;
 
              current =iv_ruleParameterExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParameterExpression8293); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleParameterExpression8018); 
 
             }
 
@@ -9211,7 +8820,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParameterExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3659:1: ruleParameterExpression returns [EObject current=null] : (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3513:1: ruleParameterExpression returns [EObject current=null] : (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleParameterExpression() throws RecognitionException {
         EObject current = null;
 
@@ -9221,23 +8830,23 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3662:28: ( (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3663:1: (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3516:28: ( (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3517:1: (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3663:1: (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3663:3: otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3517:1: (otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3517:3: otherlv_0= ':' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleParameterExpression8330); 
+            otherlv_0=(Token)match(input,60,FOLLOW_60_in_ruleParameterExpression8055); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getParameterExpressionAccess().getColonKeyword_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3667:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3668:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3521:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3522:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3668:1: (lv_name_1_0= RULE_ID )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3669:3: lv_name_1_0= RULE_ID
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3522:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3523:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleParameterExpression8347); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleParameterExpression8072); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getParameterExpressionAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -9278,7 +8887,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringFunction"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3695:1: entryRuleStringFunction returns [EObject current=null] : iv_ruleStringFunction= ruleStringFunction EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3549:1: entryRuleStringFunction returns [EObject current=null] : iv_ruleStringFunction= ruleStringFunction EOF ;
     public final EObject entryRuleStringFunction() throws RecognitionException {
         EObject current = null;
 
@@ -9286,17 +8895,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3696:2: (iv_ruleStringFunction= ruleStringFunction EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3697:2: iv_ruleStringFunction= ruleStringFunction EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3550:2: (iv_ruleStringFunction= ruleStringFunction EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3551:2: iv_ruleStringFunction= ruleStringFunction EOF
             {
              newCompositeNode(grammarAccess.getStringFunctionRule()); 
-            pushFollow(FOLLOW_ruleStringFunction_in_entryRuleStringFunction8390);
+            pushFollow(FOLLOW_ruleStringFunction_in_entryRuleStringFunction8115);
             iv_ruleStringFunction=ruleStringFunction();
 
             state._fsp--;
 
              current =iv_ruleStringFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringFunction8400); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringFunction8125); 
 
             }
 
@@ -9314,7 +8923,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringFunction"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3704:1: ruleStringFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3558:1: ruleStringFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) ;
     public final EObject ruleStringFunction() throws RecognitionException {
         EObject current = null;
 
@@ -9331,22 +8940,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3707:28: ( ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3708:1: ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3561:28: ( ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3562:1: ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3708:1: ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3708:2: ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3562:1: ( ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3562:2: ( (lv_name_0_0= ruleStringFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')'
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3708:2: ( (lv_name_0_0= ruleStringFunctionName ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3709:1: (lv_name_0_0= ruleStringFunctionName )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3562:2: ( (lv_name_0_0= ruleStringFunctionName ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3563:1: (lv_name_0_0= ruleStringFunctionName )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3709:1: (lv_name_0_0= ruleStringFunctionName )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3710:3: lv_name_0_0= ruleStringFunctionName
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3563:1: (lv_name_0_0= ruleStringFunctionName )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3564:3: lv_name_0_0= ruleStringFunctionName
             {
              
             	        newCompositeNode(grammarAccess.getStringFunctionAccess().getNameStringFunctionNameParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleStringFunctionName_in_ruleStringFunction8446);
+            pushFollow(FOLLOW_ruleStringFunctionName_in_ruleStringFunction8171);
             lv_name_0_0=ruleStringFunctionName();
 
             state._fsp--;
@@ -9368,20 +8977,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleStringFunction8458); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleStringFunction8183); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getStringFunctionAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3730:1: ( (lv_params_2_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3731:1: (lv_params_2_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3584:1: ( (lv_params_2_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3585:1: (lv_params_2_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3731:1: (lv_params_2_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3732:3: lv_params_2_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3585:1: (lv_params_2_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3586:3: lv_params_2_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getStringFunctionAccess().getParamsVariableParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleStringFunction8479);
+            pushFollow(FOLLOW_ruleVariable_in_ruleStringFunction8204);
             lv_params_2_0=ruleVariable();
 
             state._fsp--;
@@ -9403,23 +9012,23 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3748:2: (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3748:4: otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3602:2: (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3602:4: otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) )
             {
-            otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleStringFunction8492); 
+            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleStringFunction8217); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getStringFunctionAccess().getCommaKeyword_3_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3752:1: ( (lv_params_4_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3753:1: (lv_params_4_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3606:1: ( (lv_params_4_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3607:1: (lv_params_4_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3753:1: (lv_params_4_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3754:3: lv_params_4_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3607:1: (lv_params_4_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3608:3: lv_params_4_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getStringFunctionAccess().getParamsVariableParserRuleCall_3_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleStringFunction8513);
+            pushFollow(FOLLOW_ruleVariable_in_ruleStringFunction8238);
             lv_params_4_0=ruleVariable();
 
             state._fsp--;
@@ -9444,7 +9053,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,33,FOLLOW_33_in_ruleStringFunction8526); 
+            otherlv_5=(Token)match(input,31,FOLLOW_31_in_ruleStringFunction8251); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getStringFunctionAccess().getRightParenthesisKeyword_4());
                 
@@ -9469,7 +9078,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringFunctionName"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3782:1: entryRuleStringFunctionName returns [String current=null] : iv_ruleStringFunctionName= ruleStringFunctionName EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3636:1: entryRuleStringFunctionName returns [String current=null] : iv_ruleStringFunctionName= ruleStringFunctionName EOF ;
     public final String entryRuleStringFunctionName() throws RecognitionException {
         String current = null;
 
@@ -9477,17 +9086,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3783:2: (iv_ruleStringFunctionName= ruleStringFunctionName EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3784:2: iv_ruleStringFunctionName= ruleStringFunctionName EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3637:2: (iv_ruleStringFunctionName= ruleStringFunctionName EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3638:2: iv_ruleStringFunctionName= ruleStringFunctionName EOF
             {
              newCompositeNode(grammarAccess.getStringFunctionNameRule()); 
-            pushFollow(FOLLOW_ruleStringFunctionName_in_entryRuleStringFunctionName8563);
+            pushFollow(FOLLOW_ruleStringFunctionName_in_entryRuleStringFunctionName8288);
             iv_ruleStringFunctionName=ruleStringFunctionName();
 
             state._fsp--;
 
              current =iv_ruleStringFunctionName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringFunctionName8574); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringFunctionName8299); 
 
             }
 
@@ -9505,7 +9114,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringFunctionName"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3791:1: ruleStringFunctionName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3645:1: ruleStringFunctionName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' ) ;
     public final AntlrDatatypeRuleToken ruleStringFunctionName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9514,54 +9123,54 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3794:28: ( (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3795:1: (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3648:28: ( (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3649:1: (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3795:1: (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' )
-            int alt54=6;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3649:1: (kw= 'CONCAT' | kw= 'SUBSTRING' | kw= 'LOWER' | kw= 'UPPER' | kw= 'LENGTH' | kw= 'LOCATE' )
+            int alt52=6;
             switch ( input.LA(1) ) {
+            case 61:
+                {
+                alt52=1;
+                }
+                break;
             case 62:
                 {
-                alt54=1;
+                alt52=2;
                 }
                 break;
             case 63:
                 {
-                alt54=2;
+                alt52=3;
                 }
                 break;
             case 64:
                 {
-                alt54=3;
+                alt52=4;
                 }
                 break;
             case 65:
                 {
-                alt54=4;
+                alt52=5;
                 }
                 break;
             case 66:
                 {
-                alt54=5;
-                }
-                break;
-            case 67:
-                {
-                alt54=6;
+                alt52=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 54, 0, input);
+                    new NoViableAltException("", 52, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt54) {
+            switch (alt52) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3796:2: kw= 'CONCAT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3650:2: kw= 'CONCAT'
                     {
-                    kw=(Token)match(input,62,FOLLOW_62_in_ruleStringFunctionName8612); 
+                    kw=(Token)match(input,61,FOLLOW_61_in_ruleStringFunctionName8337); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStringFunctionNameAccess().getCONCATKeyword_0()); 
@@ -9570,9 +9179,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3803:2: kw= 'SUBSTRING'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3657:2: kw= 'SUBSTRING'
                     {
-                    kw=(Token)match(input,63,FOLLOW_63_in_ruleStringFunctionName8631); 
+                    kw=(Token)match(input,62,FOLLOW_62_in_ruleStringFunctionName8356); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStringFunctionNameAccess().getSUBSTRINGKeyword_1()); 
@@ -9581,9 +9190,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3810:2: kw= 'LOWER'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3664:2: kw= 'LOWER'
                     {
-                    kw=(Token)match(input,64,FOLLOW_64_in_ruleStringFunctionName8650); 
+                    kw=(Token)match(input,63,FOLLOW_63_in_ruleStringFunctionName8375); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStringFunctionNameAccess().getLOWERKeyword_2()); 
@@ -9592,9 +9201,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3817:2: kw= 'UPPER'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3671:2: kw= 'UPPER'
                     {
-                    kw=(Token)match(input,65,FOLLOW_65_in_ruleStringFunctionName8669); 
+                    kw=(Token)match(input,64,FOLLOW_64_in_ruleStringFunctionName8394); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStringFunctionNameAccess().getUPPERKeyword_3()); 
@@ -9603,9 +9212,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3824:2: kw= 'LENGTH'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3678:2: kw= 'LENGTH'
                     {
-                    kw=(Token)match(input,66,FOLLOW_66_in_ruleStringFunctionName8688); 
+                    kw=(Token)match(input,65,FOLLOW_65_in_ruleStringFunctionName8413); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStringFunctionNameAccess().getLENGTHKeyword_4()); 
@@ -9614,9 +9223,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3831:2: kw= 'LOCATE'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3685:2: kw= 'LOCATE'
                     {
-                    kw=(Token)match(input,67,FOLLOW_67_in_ruleStringFunctionName8707); 
+                    kw=(Token)match(input,66,FOLLOW_66_in_ruleStringFunctionName8432); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStringFunctionNameAccess().getLOCATEKeyword_5()); 
@@ -9645,7 +9254,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumericFunction"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3844:1: entryRuleNumericFunction returns [EObject current=null] : iv_ruleNumericFunction= ruleNumericFunction EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3698:1: entryRuleNumericFunction returns [EObject current=null] : iv_ruleNumericFunction= ruleNumericFunction EOF ;
     public final EObject entryRuleNumericFunction() throws RecognitionException {
         EObject current = null;
 
@@ -9653,17 +9262,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3845:2: (iv_ruleNumericFunction= ruleNumericFunction EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3846:2: iv_ruleNumericFunction= ruleNumericFunction EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3699:2: (iv_ruleNumericFunction= ruleNumericFunction EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3700:2: iv_ruleNumericFunction= ruleNumericFunction EOF
             {
              newCompositeNode(grammarAccess.getNumericFunctionRule()); 
-            pushFollow(FOLLOW_ruleNumericFunction_in_entryRuleNumericFunction8747);
+            pushFollow(FOLLOW_ruleNumericFunction_in_entryRuleNumericFunction8472);
             iv_ruleNumericFunction=ruleNumericFunction();
 
             state._fsp--;
 
              current =iv_ruleNumericFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericFunction8757); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericFunction8482); 
 
             }
 
@@ -9681,7 +9290,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumericFunction"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3853:1: ruleNumericFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3707:1: ruleNumericFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) ;
     public final EObject ruleNumericFunction() throws RecognitionException {
         EObject current = null;
 
@@ -9698,22 +9307,22 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3856:28: ( ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3857:1: ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3710:28: ( ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3711:1: ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3857:1: ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3857:2: ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3711:1: ( ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3711:2: ( (lv_name_0_0= ruleNumericFunctionName ) ) otherlv_1= '(' ( (lv_params_2_0= ruleVariable ) ) (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) ) otherlv_5= ')'
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3857:2: ( (lv_name_0_0= ruleNumericFunctionName ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3858:1: (lv_name_0_0= ruleNumericFunctionName )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3711:2: ( (lv_name_0_0= ruleNumericFunctionName ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3712:1: (lv_name_0_0= ruleNumericFunctionName )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3858:1: (lv_name_0_0= ruleNumericFunctionName )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3859:3: lv_name_0_0= ruleNumericFunctionName
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3712:1: (lv_name_0_0= ruleNumericFunctionName )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3713:3: lv_name_0_0= ruleNumericFunctionName
             {
              
             	        newCompositeNode(grammarAccess.getNumericFunctionAccess().getNameNumericFunctionNameParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleNumericFunctionName_in_ruleNumericFunction8803);
+            pushFollow(FOLLOW_ruleNumericFunctionName_in_ruleNumericFunction8528);
             lv_name_0_0=ruleNumericFunctionName();
 
             state._fsp--;
@@ -9735,20 +9344,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleNumericFunction8815); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleNumericFunction8540); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getNumericFunctionAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3879:1: ( (lv_params_2_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3880:1: (lv_params_2_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3733:1: ( (lv_params_2_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3734:1: (lv_params_2_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3880:1: (lv_params_2_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3881:3: lv_params_2_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3734:1: (lv_params_2_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3735:3: lv_params_2_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getNumericFunctionAccess().getParamsVariableParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleNumericFunction8836);
+            pushFollow(FOLLOW_ruleVariable_in_ruleNumericFunction8561);
             lv_params_2_0=ruleVariable();
 
             state._fsp--;
@@ -9770,23 +9379,23 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3897:2: (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3897:4: otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3751:2: (otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3751:4: otherlv_3= ',' ( (lv_params_4_0= ruleVariable ) )
             {
-            otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleNumericFunction8849); 
+            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleNumericFunction8574); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getNumericFunctionAccess().getCommaKeyword_3_0());
                 
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3901:1: ( (lv_params_4_0= ruleVariable ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3902:1: (lv_params_4_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3755:1: ( (lv_params_4_0= ruleVariable ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3756:1: (lv_params_4_0= ruleVariable )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3902:1: (lv_params_4_0= ruleVariable )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3903:3: lv_params_4_0= ruleVariable
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3756:1: (lv_params_4_0= ruleVariable )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3757:3: lv_params_4_0= ruleVariable
             {
              
             	        newCompositeNode(grammarAccess.getNumericFunctionAccess().getParamsVariableParserRuleCall_3_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleVariable_in_ruleNumericFunction8870);
+            pushFollow(FOLLOW_ruleVariable_in_ruleNumericFunction8595);
             lv_params_4_0=ruleVariable();
 
             state._fsp--;
@@ -9811,7 +9420,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,33,FOLLOW_33_in_ruleNumericFunction8883); 
+            otherlv_5=(Token)match(input,31,FOLLOW_31_in_ruleNumericFunction8608); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getNumericFunctionAccess().getRightParenthesisKeyword_4());
                 
@@ -9836,7 +9445,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumericFunctionName"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3931:1: entryRuleNumericFunctionName returns [String current=null] : iv_ruleNumericFunctionName= ruleNumericFunctionName EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3785:1: entryRuleNumericFunctionName returns [String current=null] : iv_ruleNumericFunctionName= ruleNumericFunctionName EOF ;
     public final String entryRuleNumericFunctionName() throws RecognitionException {
         String current = null;
 
@@ -9844,17 +9453,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3932:2: (iv_ruleNumericFunctionName= ruleNumericFunctionName EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3933:2: iv_ruleNumericFunctionName= ruleNumericFunctionName EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3786:2: (iv_ruleNumericFunctionName= ruleNumericFunctionName EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3787:2: iv_ruleNumericFunctionName= ruleNumericFunctionName EOF
             {
              newCompositeNode(grammarAccess.getNumericFunctionNameRule()); 
-            pushFollow(FOLLOW_ruleNumericFunctionName_in_entryRuleNumericFunctionName8920);
+            pushFollow(FOLLOW_ruleNumericFunctionName_in_entryRuleNumericFunctionName8645);
             iv_ruleNumericFunctionName=ruleNumericFunctionName();
 
             state._fsp--;
 
              current =iv_ruleNumericFunctionName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericFunctionName8931); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericFunctionName8656); 
 
             }
 
@@ -9872,7 +9481,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumericFunctionName"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3940:1: ruleNumericFunctionName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3794:1: ruleNumericFunctionName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' ) ;
     public final AntlrDatatypeRuleToken ruleNumericFunctionName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9881,44 +9490,44 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3943:28: ( (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3944:1: (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3797:28: ( (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3798:1: (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3944:1: (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' )
-            int alt55=4;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3798:1: (kw= 'ABS' | kw= 'SQRT' | kw= 'MOD' | kw= 'SIZE' )
+            int alt53=4;
             switch ( input.LA(1) ) {
+            case 67:
+                {
+                alt53=1;
+                }
+                break;
             case 68:
                 {
-                alt55=1;
+                alt53=2;
                 }
                 break;
             case 69:
                 {
-                alt55=2;
+                alt53=3;
                 }
                 break;
             case 70:
                 {
-                alt55=3;
-                }
-                break;
-            case 71:
-                {
-                alt55=4;
+                alt53=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 55, 0, input);
+                    new NoViableAltException("", 53, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt55) {
+            switch (alt53) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3945:2: kw= 'ABS'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3799:2: kw= 'ABS'
                     {
-                    kw=(Token)match(input,68,FOLLOW_68_in_ruleNumericFunctionName8969); 
+                    kw=(Token)match(input,67,FOLLOW_67_in_ruleNumericFunctionName8694); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getNumericFunctionNameAccess().getABSKeyword_0()); 
@@ -9927,9 +9536,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3952:2: kw= 'SQRT'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3806:2: kw= 'SQRT'
                     {
-                    kw=(Token)match(input,69,FOLLOW_69_in_ruleNumericFunctionName8988); 
+                    kw=(Token)match(input,68,FOLLOW_68_in_ruleNumericFunctionName8713); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getNumericFunctionNameAccess().getSQRTKeyword_1()); 
@@ -9938,9 +9547,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3959:2: kw= 'MOD'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3813:2: kw= 'MOD'
                     {
-                    kw=(Token)match(input,70,FOLLOW_70_in_ruleNumericFunctionName9007); 
+                    kw=(Token)match(input,69,FOLLOW_69_in_ruleNumericFunctionName8732); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getNumericFunctionNameAccess().getMODKeyword_2()); 
@@ -9949,9 +9558,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3966:2: kw= 'SIZE'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3820:2: kw= 'SIZE'
                     {
-                    kw=(Token)match(input,71,FOLLOW_71_in_ruleNumericFunctionName9026); 
+                    kw=(Token)match(input,70,FOLLOW_70_in_ruleNumericFunctionName8751); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getNumericFunctionNameAccess().getSIZEKeyword_3()); 
@@ -9980,7 +9589,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValue"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3981:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3835:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
     public final EObject entryRuleValue() throws RecognitionException {
         EObject current = null;
 
@@ -9988,17 +9597,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3982:2: (iv_ruleValue= ruleValue EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3983:2: iv_ruleValue= ruleValue EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3836:2: (iv_ruleValue= ruleValue EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3837:2: iv_ruleValue= ruleValue EOF
             {
              newCompositeNode(grammarAccess.getValueRule()); 
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue9068);
+            pushFollow(FOLLOW_ruleValue_in_entryRuleValue8793);
             iv_ruleValue=ruleValue();
 
             state._fsp--;
 
              current =iv_ruleValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue9078); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValue8803); 
 
             }
 
@@ -10016,7 +9625,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3990:1: ruleValue returns [EObject current=null] : (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3844:1: ruleValue returns [EObject current=null] : (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression ) ;
     public final EObject ruleValue() throws RecognitionException {
         EObject current = null;
 
@@ -10034,55 +9643,55 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3993:28: ( (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3994:1: (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3847:28: ( (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3848:1: (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3994:1: (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression )
-            int alt56=5;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3848:1: (this_IntegerExpression_0= ruleIntegerExpression | this_StringExpression_1= ruleStringExpression | this_NullExpression_2= ruleNullExpression | this_BooleanExpression_3= ruleBooleanExpression | this_DateTimeExpression_4= ruleDateTimeExpression )
+            int alt54=5;
             switch ( input.LA(1) ) {
             case RULE_INT:
                 {
-                alt56=1;
+                alt54=1;
                 }
                 break;
             case RULE_STRING:
                 {
-                alt56=2;
+                alt54=2;
                 }
                 break;
-            case 58:
+            case 56:
                 {
-                alt56=3;
+                alt54=3;
                 }
                 break;
+            case 71:
             case 72:
-            case 73:
                 {
-                alt56=4;
+                alt54=4;
                 }
                 break;
             case RULE_DATE_LITERAL:
             case RULE_TIME_LITERAL:
             case RULE_TIMESTAMP_LITERAL:
                 {
-                alt56=5;
+                alt54=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 56, 0, input);
+                    new NoViableAltException("", 54, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt56) {
+            switch (alt54) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3995:5: this_IntegerExpression_0= ruleIntegerExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3849:5: this_IntegerExpression_0= ruleIntegerExpression
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getIntegerExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleIntegerExpression_in_ruleValue9125);
+                    pushFollow(FOLLOW_ruleIntegerExpression_in_ruleValue8850);
                     this_IntegerExpression_0=ruleIntegerExpression();
 
                     state._fsp--;
@@ -10095,12 +9704,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4005:5: this_StringExpression_1= ruleStringExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3859:5: this_StringExpression_1= ruleStringExpression
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getStringExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleStringExpression_in_ruleValue9152);
+                    pushFollow(FOLLOW_ruleStringExpression_in_ruleValue8877);
                     this_StringExpression_1=ruleStringExpression();
 
                     state._fsp--;
@@ -10113,12 +9722,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4015:5: this_NullExpression_2= ruleNullExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3869:5: this_NullExpression_2= ruleNullExpression
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getNullExpressionParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleNullExpression_in_ruleValue9179);
+                    pushFollow(FOLLOW_ruleNullExpression_in_ruleValue8904);
                     this_NullExpression_2=ruleNullExpression();
 
                     state._fsp--;
@@ -10131,12 +9740,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4025:5: this_BooleanExpression_3= ruleBooleanExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3879:5: this_BooleanExpression_3= ruleBooleanExpression
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getBooleanExpressionParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleBooleanExpression_in_ruleValue9206);
+                    pushFollow(FOLLOW_ruleBooleanExpression_in_ruleValue8931);
                     this_BooleanExpression_3=ruleBooleanExpression();
 
                     state._fsp--;
@@ -10149,12 +9758,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4035:5: this_DateTimeExpression_4= ruleDateTimeExpression
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3889:5: this_DateTimeExpression_4= ruleDateTimeExpression
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getDateTimeExpressionParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleDateTimeExpression_in_ruleValue9233);
+                    pushFollow(FOLLOW_ruleDateTimeExpression_in_ruleValue8958);
                     this_DateTimeExpression_4=ruleDateTimeExpression();
 
                     state._fsp--;
@@ -10187,7 +9796,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntegerExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4051:1: entryRuleIntegerExpression returns [EObject current=null] : iv_ruleIntegerExpression= ruleIntegerExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3905:1: entryRuleIntegerExpression returns [EObject current=null] : iv_ruleIntegerExpression= ruleIntegerExpression EOF ;
     public final EObject entryRuleIntegerExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10195,17 +9804,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4052:2: (iv_ruleIntegerExpression= ruleIntegerExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4053:2: iv_ruleIntegerExpression= ruleIntegerExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3906:2: (iv_ruleIntegerExpression= ruleIntegerExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3907:2: iv_ruleIntegerExpression= ruleIntegerExpression EOF
             {
              newCompositeNode(grammarAccess.getIntegerExpressionRule()); 
-            pushFollow(FOLLOW_ruleIntegerExpression_in_entryRuleIntegerExpression9268);
+            pushFollow(FOLLOW_ruleIntegerExpression_in_entryRuleIntegerExpression8993);
             iv_ruleIntegerExpression=ruleIntegerExpression();
 
             state._fsp--;
 
              current =iv_ruleIntegerExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerExpression9278); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerExpression9003); 
 
             }
 
@@ -10223,7 +9832,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4060:1: ruleIntegerExpression returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3914:1: ruleIntegerExpression returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
     public final EObject ruleIntegerExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10232,16 +9841,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4063:28: ( ( (lv_value_0_0= RULE_INT ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4064:1: ( (lv_value_0_0= RULE_INT ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3917:28: ( ( (lv_value_0_0= RULE_INT ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3918:1: ( (lv_value_0_0= RULE_INT ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4064:1: ( (lv_value_0_0= RULE_INT ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4065:1: (lv_value_0_0= RULE_INT )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3918:1: ( (lv_value_0_0= RULE_INT ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3919:1: (lv_value_0_0= RULE_INT )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4065:1: (lv_value_0_0= RULE_INT )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4066:3: lv_value_0_0= RULE_INT
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3919:1: (lv_value_0_0= RULE_INT )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3920:3: lv_value_0_0= RULE_INT
             {
-            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleIntegerExpression9319); 
+            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleIntegerExpression9044); 
 
             			newLeafNode(lv_value_0_0, grammarAccess.getIntegerExpressionAccess().getValueINTTerminalRuleCall_0()); 
             		
@@ -10279,7 +9888,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4090:1: entryRuleStringExpression returns [EObject current=null] : iv_ruleStringExpression= ruleStringExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3944:1: entryRuleStringExpression returns [EObject current=null] : iv_ruleStringExpression= ruleStringExpression EOF ;
     public final EObject entryRuleStringExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10287,17 +9896,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4091:2: (iv_ruleStringExpression= ruleStringExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4092:2: iv_ruleStringExpression= ruleStringExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3945:2: (iv_ruleStringExpression= ruleStringExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3946:2: iv_ruleStringExpression= ruleStringExpression EOF
             {
              newCompositeNode(grammarAccess.getStringExpressionRule()); 
-            pushFollow(FOLLOW_ruleStringExpression_in_entryRuleStringExpression9359);
+            pushFollow(FOLLOW_ruleStringExpression_in_entryRuleStringExpression9084);
             iv_ruleStringExpression=ruleStringExpression();
 
             state._fsp--;
 
              current =iv_ruleStringExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringExpression9369); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringExpression9094); 
 
             }
 
@@ -10315,7 +9924,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4099:1: ruleStringExpression returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3953:1: ruleStringExpression returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
     public final EObject ruleStringExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10324,16 +9933,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4102:28: ( ( (lv_value_0_0= RULE_STRING ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4103:1: ( (lv_value_0_0= RULE_STRING ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3956:28: ( ( (lv_value_0_0= RULE_STRING ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3957:1: ( (lv_value_0_0= RULE_STRING ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4103:1: ( (lv_value_0_0= RULE_STRING ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4104:1: (lv_value_0_0= RULE_STRING )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3957:1: ( (lv_value_0_0= RULE_STRING ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3958:1: (lv_value_0_0= RULE_STRING )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4104:1: (lv_value_0_0= RULE_STRING )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4105:3: lv_value_0_0= RULE_STRING
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3958:1: (lv_value_0_0= RULE_STRING )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3959:3: lv_value_0_0= RULE_STRING
             {
-            lv_value_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringExpression9410); 
+            lv_value_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringExpression9135); 
 
             			newLeafNode(lv_value_0_0, grammarAccess.getStringExpressionAccess().getValueSTRINGTerminalRuleCall_0()); 
             		
@@ -10371,7 +9980,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNullExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4129:1: entryRuleNullExpression returns [EObject current=null] : iv_ruleNullExpression= ruleNullExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3983:1: entryRuleNullExpression returns [EObject current=null] : iv_ruleNullExpression= ruleNullExpression EOF ;
     public final EObject entryRuleNullExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10379,17 +9988,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4130:2: (iv_ruleNullExpression= ruleNullExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4131:2: iv_ruleNullExpression= ruleNullExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3984:2: (iv_ruleNullExpression= ruleNullExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3985:2: iv_ruleNullExpression= ruleNullExpression EOF
             {
              newCompositeNode(grammarAccess.getNullExpressionRule()); 
-            pushFollow(FOLLOW_ruleNullExpression_in_entryRuleNullExpression9450);
+            pushFollow(FOLLOW_ruleNullExpression_in_entryRuleNullExpression9175);
             iv_ruleNullExpression=ruleNullExpression();
 
             state._fsp--;
 
              current =iv_ruleNullExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNullExpression9460); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNullExpression9185); 
 
             }
 
@@ -10407,7 +10016,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNullExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4138:1: ruleNullExpression returns [EObject current=null] : ( (lv_value_0_0= 'NULL' ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3992:1: ruleNullExpression returns [EObject current=null] : ( (lv_value_0_0= 'NULL' ) ) ;
     public final EObject ruleNullExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10416,16 +10025,16 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4141:28: ( ( (lv_value_0_0= 'NULL' ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4142:1: ( (lv_value_0_0= 'NULL' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3995:28: ( ( (lv_value_0_0= 'NULL' ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3996:1: ( (lv_value_0_0= 'NULL' ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4142:1: ( (lv_value_0_0= 'NULL' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4143:1: (lv_value_0_0= 'NULL' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3996:1: ( (lv_value_0_0= 'NULL' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3997:1: (lv_value_0_0= 'NULL' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4143:1: (lv_value_0_0= 'NULL' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4144:3: lv_value_0_0= 'NULL'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3997:1: (lv_value_0_0= 'NULL' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:3998:3: lv_value_0_0= 'NULL'
             {
-            lv_value_0_0=(Token)match(input,58,FOLLOW_58_in_ruleNullExpression9502); 
+            lv_value_0_0=(Token)match(input,56,FOLLOW_56_in_ruleNullExpression9227); 
 
                     newLeafNode(lv_value_0_0, grammarAccess.getNullExpressionAccess().getValueNULLKeyword_0());
                 
@@ -10459,7 +10068,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBooleanExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4165:1: entryRuleBooleanExpression returns [EObject current=null] : iv_ruleBooleanExpression= ruleBooleanExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4019:1: entryRuleBooleanExpression returns [EObject current=null] : iv_ruleBooleanExpression= ruleBooleanExpression EOF ;
     public final EObject entryRuleBooleanExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10467,17 +10076,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4166:2: (iv_ruleBooleanExpression= ruleBooleanExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4167:2: iv_ruleBooleanExpression= ruleBooleanExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4020:2: (iv_ruleBooleanExpression= ruleBooleanExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4021:2: iv_ruleBooleanExpression= ruleBooleanExpression EOF
             {
              newCompositeNode(grammarAccess.getBooleanExpressionRule()); 
-            pushFollow(FOLLOW_ruleBooleanExpression_in_entryRuleBooleanExpression9550);
+            pushFollow(FOLLOW_ruleBooleanExpression_in_entryRuleBooleanExpression9275);
             iv_ruleBooleanExpression=ruleBooleanExpression();
 
             state._fsp--;
 
              current =iv_ruleBooleanExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanExpression9560); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanExpression9285); 
 
             }
 
@@ -10495,7 +10104,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4174:1: ruleBooleanExpression returns [EObject current=null] : ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4028:1: ruleBooleanExpression returns [EObject current=null] : ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) ) ;
     public final EObject ruleBooleanExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10505,36 +10114,36 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4177:28: ( ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4178:1: ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4031:28: ( ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4032:1: ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4178:1: ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4179:1: ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4032:1: ( ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4033:1: ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4179:1: ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4180:1: (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4033:1: ( (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4034:1: (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4180:1: (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' )
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4034:1: (lv_value_0_1= 'TRUE' | lv_value_0_2= 'FALSE' )
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( (LA57_0==72) ) {
-                alt57=1;
+            if ( (LA55_0==71) ) {
+                alt55=1;
             }
-            else if ( (LA57_0==73) ) {
-                alt57=2;
+            else if ( (LA55_0==72) ) {
+                alt55=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 57, 0, input);
+                    new NoViableAltException("", 55, 0, input);
 
                 throw nvae;
             }
-            switch (alt57) {
+            switch (alt55) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4181:3: lv_value_0_1= 'TRUE'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4035:3: lv_value_0_1= 'TRUE'
                     {
-                    lv_value_0_1=(Token)match(input,72,FOLLOW_72_in_ruleBooleanExpression9604); 
+                    lv_value_0_1=(Token)match(input,71,FOLLOW_71_in_ruleBooleanExpression9329); 
 
                             newLeafNode(lv_value_0_1, grammarAccess.getBooleanExpressionAccess().getValueTRUEKeyword_0_0());
                         
@@ -10548,9 +10157,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4193:8: lv_value_0_2= 'FALSE'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4047:8: lv_value_0_2= 'FALSE'
                     {
-                    lv_value_0_2=(Token)match(input,73,FOLLOW_73_in_ruleBooleanExpression9633); 
+                    lv_value_0_2=(Token)match(input,72,FOLLOW_72_in_ruleBooleanExpression9358); 
 
                             newLeafNode(lv_value_0_2, grammarAccess.getBooleanExpressionAccess().getValueFALSEKeyword_0_1());
                         
@@ -10590,7 +10199,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDateTimeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4216:1: entryRuleDateTimeExpression returns [EObject current=null] : iv_ruleDateTimeExpression= ruleDateTimeExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4070:1: entryRuleDateTimeExpression returns [EObject current=null] : iv_ruleDateTimeExpression= ruleDateTimeExpression EOF ;
     public final EObject entryRuleDateTimeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10598,17 +10207,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4217:2: (iv_ruleDateTimeExpression= ruleDateTimeExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4218:2: iv_ruleDateTimeExpression= ruleDateTimeExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4071:2: (iv_ruleDateTimeExpression= ruleDateTimeExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4072:2: iv_ruleDateTimeExpression= ruleDateTimeExpression EOF
             {
              newCompositeNode(grammarAccess.getDateTimeExpressionRule()); 
-            pushFollow(FOLLOW_ruleDateTimeExpression_in_entryRuleDateTimeExpression9684);
+            pushFollow(FOLLOW_ruleDateTimeExpression_in_entryRuleDateTimeExpression9409);
             iv_ruleDateTimeExpression=ruleDateTimeExpression();
 
             state._fsp--;
 
              current =iv_ruleDateTimeExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDateTimeExpression9694); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDateTimeExpression9419); 
 
             }
 
@@ -10626,7 +10235,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDateTimeExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4225:1: ruleDateTimeExpression returns [EObject current=null] : ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4079:1: ruleDateTimeExpression returns [EObject current=null] : ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) ) ;
     public final EObject ruleDateTimeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10636,19 +10245,19 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4228:28: ( ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4229:1: ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4082:28: ( ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4083:1: ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4229:1: ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4230:1: (lv_value_0_0= ruleLITERAL_TEMPORAL )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4083:1: ( (lv_value_0_0= ruleLITERAL_TEMPORAL ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4084:1: (lv_value_0_0= ruleLITERAL_TEMPORAL )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4230:1: (lv_value_0_0= ruleLITERAL_TEMPORAL )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4231:3: lv_value_0_0= ruleLITERAL_TEMPORAL
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4084:1: (lv_value_0_0= ruleLITERAL_TEMPORAL )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4085:3: lv_value_0_0= ruleLITERAL_TEMPORAL
             {
              
             	        newCompositeNode(grammarAccess.getDateTimeExpressionAccess().getValueLITERAL_TEMPORALParserRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_ruleLITERAL_TEMPORAL_in_ruleDateTimeExpression9739);
+            pushFollow(FOLLOW_ruleLITERAL_TEMPORAL_in_ruleDateTimeExpression9464);
             lv_value_0_0=ruleLITERAL_TEMPORAL();
 
             state._fsp--;
@@ -10688,7 +10297,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQueryExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4255:1: entryRuleQueryExpression returns [EObject current=null] : iv_ruleQueryExpression= ruleQueryExpression EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4109:1: entryRuleQueryExpression returns [EObject current=null] : iv_ruleQueryExpression= ruleQueryExpression EOF ;
     public final EObject entryRuleQueryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10696,17 +10305,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4256:2: (iv_ruleQueryExpression= ruleQueryExpression EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4257:2: iv_ruleQueryExpression= ruleQueryExpression EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4110:2: (iv_ruleQueryExpression= ruleQueryExpression EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4111:2: iv_ruleQueryExpression= ruleQueryExpression EOF
             {
              newCompositeNode(grammarAccess.getQueryExpressionRule()); 
-            pushFollow(FOLLOW_ruleQueryExpression_in_entryRuleQueryExpression9774);
+            pushFollow(FOLLOW_ruleQueryExpression_in_entryRuleQueryExpression9499);
             iv_ruleQueryExpression=ruleQueryExpression();
 
             state._fsp--;
 
              current =iv_ruleQueryExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQueryExpression9784); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQueryExpression9509); 
 
             }
 
@@ -10724,7 +10333,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQueryExpression"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4264:1: ruleQueryExpression returns [EObject current=null] : (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4118:1: ruleQueryExpression returns [EObject current=null] : (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' ) ;
     public final EObject ruleQueryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10736,20 +10345,20 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4267:28: ( (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4268:1: (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4121:28: ( (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4122:1: (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4268:1: (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4268:3: otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')'
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4122:1: (otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')' )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4122:3: otherlv_0= '(' this_SelectStatement_1= ruleSelectStatement otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleQueryExpression9821); 
+            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleQueryExpression9546); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getQueryExpressionAccess().getLeftParenthesisKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getQueryExpressionAccess().getSelectStatementParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleSelectStatement_in_ruleQueryExpression9843);
+            pushFollow(FOLLOW_ruleSelectStatement_in_ruleQueryExpression9568);
             this_SelectStatement_1=ruleSelectStatement();
 
             state._fsp--;
@@ -10758,7 +10367,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     current = this_SelectStatement_1; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_2=(Token)match(input,33,FOLLOW_33_in_ruleQueryExpression9854); 
+            otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleQueryExpression9579); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getQueryExpressionAccess().getRightParenthesisKeyword_2());
                 
@@ -10783,7 +10392,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLITERAL_TEMPORAL"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4293:1: entryRuleLITERAL_TEMPORAL returns [String current=null] : iv_ruleLITERAL_TEMPORAL= ruleLITERAL_TEMPORAL EOF ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4147:1: entryRuleLITERAL_TEMPORAL returns [String current=null] : iv_ruleLITERAL_TEMPORAL= ruleLITERAL_TEMPORAL EOF ;
     public final String entryRuleLITERAL_TEMPORAL() throws RecognitionException {
         String current = null;
 
@@ -10791,17 +10400,17 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4294:2: (iv_ruleLITERAL_TEMPORAL= ruleLITERAL_TEMPORAL EOF )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4295:2: iv_ruleLITERAL_TEMPORAL= ruleLITERAL_TEMPORAL EOF
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4148:2: (iv_ruleLITERAL_TEMPORAL= ruleLITERAL_TEMPORAL EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4149:2: iv_ruleLITERAL_TEMPORAL= ruleLITERAL_TEMPORAL EOF
             {
              newCompositeNode(grammarAccess.getLITERAL_TEMPORALRule()); 
-            pushFollow(FOLLOW_ruleLITERAL_TEMPORAL_in_entryRuleLITERAL_TEMPORAL9891);
+            pushFollow(FOLLOW_ruleLITERAL_TEMPORAL_in_entryRuleLITERAL_TEMPORAL9616);
             iv_ruleLITERAL_TEMPORAL=ruleLITERAL_TEMPORAL();
 
             state._fsp--;
 
              current =iv_ruleLITERAL_TEMPORAL.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLITERAL_TEMPORAL9902); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLITERAL_TEMPORAL9627); 
 
             }
 
@@ -10819,7 +10428,7 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLITERAL_TEMPORAL"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4302:1: ruleLITERAL_TEMPORAL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4156:1: ruleLITERAL_TEMPORAL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL ) ;
     public final AntlrDatatypeRuleToken ruleLITERAL_TEMPORAL() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10830,39 +10439,39 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4305:28: ( (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4306:1: (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4159:28: ( (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4160:1: (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4306:1: (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL )
-            int alt58=3;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4160:1: (this_DATE_LITERAL_0= RULE_DATE_LITERAL | this_TIME_LITERAL_1= RULE_TIME_LITERAL | this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL )
+            int alt56=3;
             switch ( input.LA(1) ) {
             case RULE_DATE_LITERAL:
                 {
-                alt58=1;
+                alt56=1;
                 }
                 break;
             case RULE_TIME_LITERAL:
                 {
-                alt58=2;
+                alt56=2;
                 }
                 break;
             case RULE_TIMESTAMP_LITERAL:
                 {
-                alt58=3;
+                alt56=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 58, 0, input);
+                    new NoViableAltException("", 56, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt58) {
+            switch (alt56) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4306:6: this_DATE_LITERAL_0= RULE_DATE_LITERAL
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4160:6: this_DATE_LITERAL_0= RULE_DATE_LITERAL
                     {
-                    this_DATE_LITERAL_0=(Token)match(input,RULE_DATE_LITERAL,FOLLOW_RULE_DATE_LITERAL_in_ruleLITERAL_TEMPORAL9942); 
+                    this_DATE_LITERAL_0=(Token)match(input,RULE_DATE_LITERAL,FOLLOW_RULE_DATE_LITERAL_in_ruleLITERAL_TEMPORAL9667); 
 
                     		current.merge(this_DATE_LITERAL_0);
                         
@@ -10873,9 +10482,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4314:10: this_TIME_LITERAL_1= RULE_TIME_LITERAL
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4168:10: this_TIME_LITERAL_1= RULE_TIME_LITERAL
                     {
-                    this_TIME_LITERAL_1=(Token)match(input,RULE_TIME_LITERAL,FOLLOW_RULE_TIME_LITERAL_in_ruleLITERAL_TEMPORAL9968); 
+                    this_TIME_LITERAL_1=(Token)match(input,RULE_TIME_LITERAL,FOLLOW_RULE_TIME_LITERAL_in_ruleLITERAL_TEMPORAL9693); 
 
                     		current.merge(this_TIME_LITERAL_1);
                         
@@ -10886,9 +10495,9 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4322:10: this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4176:10: this_TIMESTAMP_LITERAL_2= RULE_TIMESTAMP_LITERAL
                     {
-                    this_TIMESTAMP_LITERAL_2=(Token)match(input,RULE_TIMESTAMP_LITERAL,FOLLOW_RULE_TIMESTAMP_LITERAL_in_ruleLITERAL_TEMPORAL9994); 
+                    this_TIMESTAMP_LITERAL_2=(Token)match(input,RULE_TIMESTAMP_LITERAL,FOLLOW_RULE_TIMESTAMP_LITERAL_in_ruleLITERAL_TEMPORAL9719); 
 
                     		current.merge(this_TIMESTAMP_LITERAL_2);
                         
@@ -10918,8 +10527,125 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleLITERAL_TEMPORAL"
 
 
+    // $ANTLR start "entryRuleQualifiedName"
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4191:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    public final String entryRuleQualifiedName() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleQualifiedName = null;
+
+
+        try {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4192:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4193:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            {
+             newCompositeNode(grammarAccess.getQualifiedNameRule()); 
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName9765);
+            iv_ruleQualifiedName=ruleQualifiedName();
+
+            state._fsp--;
+
+             current =iv_ruleQualifiedName.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName9776); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleQualifiedName"
+
+
+    // $ANTLR start "ruleQualifiedName"
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4200:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token this_ID_0=null;
+        Token kw=null;
+        Token this_ID_2=null;
+
+         enterRule(); 
+            
+        try {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4203:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4204:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            {
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4204:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4204:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            {
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName9816); 
+
+            		current.merge(this_ID_0);
+                
+             
+                newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
+                
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4211:1: (kw= '.' this_ID_2= RULE_ID )*
+            loop57:
+            do {
+                int alt57=2;
+                int LA57_0 = input.LA(1);
+
+                if ( (LA57_0==22) ) {
+                    alt57=1;
+                }
+
+
+                switch (alt57) {
+            	case 1 :
+            	    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4212:2: kw= '.' this_ID_2= RULE_ID
+            	    {
+            	    kw=(Token)match(input,22,FOLLOW_22_in_ruleQualifiedName9835); 
+
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
+            	        
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName9850); 
+
+            	    		current.merge(this_ID_2);
+            	        
+            	     
+            	        newLeafNode(this_ID_2, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop57;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleQualifiedName"
+
+
     // $ANTLR start "ruleOperator"
-    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4337:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) ) ;
+    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4232:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) ) ;
     public final Enumerator ruleOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -10932,57 +10658,57 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4339:28: ( ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) ) )
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4340:1: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4234:28: ( ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) ) )
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4235:1: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) )
             {
-            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4340:1: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) )
-            int alt59=6;
+            // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4235:1: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<=' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= '!=' ) )
+            int alt58=6;
             switch ( input.LA(1) ) {
+            case 73:
+                {
+                alt58=1;
+                }
+                break;
             case 74:
                 {
-                alt59=1;
+                alt58=2;
                 }
                 break;
             case 75:
                 {
-                alt59=2;
+                alt58=3;
                 }
                 break;
             case 76:
                 {
-                alt59=3;
+                alt58=4;
+                }
+                break;
+            case 25:
+                {
+                alt58=5;
                 }
                 break;
             case 77:
                 {
-                alt59=4;
-                }
-                break;
-            case 27:
-                {
-                alt59=5;
-                }
-                break;
-            case 78:
-                {
-                alt59=6;
+                alt58=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 59, 0, input);
+                    new NoViableAltException("", 58, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt59) {
+            switch (alt58) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4340:2: (enumLiteral_0= '<' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4235:2: (enumLiteral_0= '<' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4340:2: (enumLiteral_0= '<' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4340:4: enumLiteral_0= '<'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4235:2: (enumLiteral_0= '<' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4235:4: enumLiteral_0= '<'
                     {
-                    enumLiteral_0=(Token)match(input,74,FOLLOW_74_in_ruleOperator10053); 
+                    enumLiteral_0=(Token)match(input,73,FOLLOW_73_in_ruleOperator9911); 
 
                             current = grammarAccess.getOperatorAccess().getLessThenEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getOperatorAccess().getLessThenEnumLiteralDeclaration_0()); 
@@ -10994,12 +10720,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4346:6: (enumLiteral_1= '>' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4241:6: (enumLiteral_1= '>' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4346:6: (enumLiteral_1= '>' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4346:8: enumLiteral_1= '>'
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4241:6: (enumLiteral_1= '>' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4241:8: enumLiteral_1= '>'
                     {
-                    enumLiteral_1=(Token)match(input,75,FOLLOW_75_in_ruleOperator10070); 
+                    enumLiteral_1=(Token)match(input,74,FOLLOW_74_in_ruleOperator9928); 
 
                             current = grammarAccess.getOperatorAccess().getGreaterThenEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getGreaterThenEnumLiteralDeclaration_1()); 
@@ -11011,12 +10737,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4352:6: (enumLiteral_2= '<=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4247:6: (enumLiteral_2= '<=' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4352:6: (enumLiteral_2= '<=' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4352:8: enumLiteral_2= '<='
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4247:6: (enumLiteral_2= '<=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4247:8: enumLiteral_2= '<='
                     {
-                    enumLiteral_2=(Token)match(input,76,FOLLOW_76_in_ruleOperator10087); 
+                    enumLiteral_2=(Token)match(input,75,FOLLOW_75_in_ruleOperator9945); 
 
                             current = grammarAccess.getOperatorAccess().getLessEqualEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getOperatorAccess().getLessEqualEnumLiteralDeclaration_2()); 
@@ -11028,12 +10754,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4358:6: (enumLiteral_3= '>=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4253:6: (enumLiteral_3= '>=' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4358:6: (enumLiteral_3= '>=' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4358:8: enumLiteral_3= '>='
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4253:6: (enumLiteral_3= '>=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4253:8: enumLiteral_3= '>='
                     {
-                    enumLiteral_3=(Token)match(input,77,FOLLOW_77_in_ruleOperator10104); 
+                    enumLiteral_3=(Token)match(input,76,FOLLOW_76_in_ruleOperator9962); 
 
                             current = grammarAccess.getOperatorAccess().getGreaterEqualEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getOperatorAccess().getGreaterEqualEnumLiteralDeclaration_3()); 
@@ -11045,12 +10771,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4364:6: (enumLiteral_4= '=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4259:6: (enumLiteral_4= '=' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4364:6: (enumLiteral_4= '=' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4364:8: enumLiteral_4= '='
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4259:6: (enumLiteral_4= '=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4259:8: enumLiteral_4= '='
                     {
-                    enumLiteral_4=(Token)match(input,27,FOLLOW_27_in_ruleOperator10121); 
+                    enumLiteral_4=(Token)match(input,25,FOLLOW_25_in_ruleOperator9979); 
 
                             current = grammarAccess.getOperatorAccess().getEqualEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getOperatorAccess().getEqualEnumLiteralDeclaration_4()); 
@@ -11062,12 +10788,12 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4370:6: (enumLiteral_5= '!=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4265:6: (enumLiteral_5= '!=' )
                     {
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4370:6: (enumLiteral_5= '!=' )
-                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4370:8: enumLiteral_5= '!='
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4265:6: (enumLiteral_5= '!=' )
+                    // ../org.yazgel.jpql.xtext/src-gen/org/yazgel/jpql/xtext/parser/antlr/internal/InternalJPQL.g:4265:8: enumLiteral_5= '!='
                     {
-                    enumLiteral_5=(Token)match(input,78,FOLLOW_78_in_ruleOperator10138); 
+                    enumLiteral_5=(Token)match(input,77,FOLLOW_77_in_ruleOperator9996); 
 
                             current = grammarAccess.getOperatorAccess().getNotEqualEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getOperatorAccess().getNotEqualEnumLiteralDeclaration_5()); 
@@ -11100,114 +10826,171 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
-    protected DFA39 dfa39 = new DFA39(this);
-    protected DFA46 dfa46 = new DFA46(this);
-    static final String DFA39_eotS =
-        "\35\uffff";
-    static final String DFA39_eofS =
-        "\35\uffff";
-    static final String DFA39_minS =
-        "\1\4\1\uffff\1\30\1\5\10\33\4\uffff\1\5\1\51\3\uffff\1\62\2\uffff"+
-        "\1\33\1\30\1\72\2\uffff";
-    static final String DFA39_maxS =
-        "\1\111\1\uffff\1\116\1\5\10\116\4\uffff\1\5\1\75\3\uffff\1\73\2"+
-        "\uffff\2\116\1\73\2\uffff";
-    static final String DFA39_acceptS =
-        "\1\uffff\1\1\12\uffff\1\3\1\4\1\5\1\6\2\uffff\1\13\1\7\1\2\1\uffff"+
-        "\1\14\1\12\3\uffff\1\10\1\11";
-    static final String DFA39_specialS =
-        "\35\uffff}>";
-    static final String[] DFA39_transitionS = {
-            "\1\5\1\2\1\4\1\11\1\12\1\13\7\uffff\1\3\16\uffff\1\1\21\uffff"+
-            "\2\14\1\15\1\16\1\17\3\uffff\1\6\15\uffff\1\7\1\10",
+    protected DFA26 dfa26 = new DFA26(this);
+    protected DFA37 dfa37 = new DFA37(this);
+    protected DFA44 dfa44 = new DFA44(this);
+    static final String DFA26_eotS =
+        "\6\uffff";
+    static final String DFA26_eofS =
+        "\1\uffff\1\4\3\uffff\1\4";
+    static final String DFA26_minS =
+        "\3\4\2\uffff\1\4";
+    static final String DFA26_maxS =
+        "\1\4\1\55\1\4\2\uffff\1\55";
+    static final String DFA26_acceptS =
+        "\3\uffff\1\2\1\1\1\uffff";
+    static final String DFA26_specialS =
+        "\6\uffff}>";
+    static final String[] DFA26_transitionS = {
+            "\1\1",
+            "\1\3\13\uffff\2\4\1\uffff\1\4\2\uffff\1\2\2\4\1\uffff\2\4"+
+            "\3\uffff\1\4\5\uffff\1\4\1\3\6\uffff\1\4",
+            "\1\5",
             "",
-            "\1\20\2\uffff\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23"+
-            "\1\uffff\1\25\2\uffff\1\27\1\26\14\uffff\5\24",
+            "",
+            "\1\3\13\uffff\2\4\1\uffff\1\4\2\uffff\1\2\2\4\1\uffff\2\4"+
+            "\3\uffff\1\4\5\uffff\1\4\1\3\6\uffff\1\4"
+    };
+
+    static final short[] DFA26_eot = DFA.unpackEncodedString(DFA26_eotS);
+    static final short[] DFA26_eof = DFA.unpackEncodedString(DFA26_eofS);
+    static final char[] DFA26_min = DFA.unpackEncodedStringToUnsignedChars(DFA26_minS);
+    static final char[] DFA26_max = DFA.unpackEncodedStringToUnsignedChars(DFA26_maxS);
+    static final short[] DFA26_accept = DFA.unpackEncodedString(DFA26_acceptS);
+    static final short[] DFA26_special = DFA.unpackEncodedString(DFA26_specialS);
+    static final short[][] DFA26_transition;
+
+    static {
+        int numStates = DFA26_transitionS.length;
+        DFA26_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA26_transition[i] = DFA.unpackEncodedString(DFA26_transitionS[i]);
+        }
+    }
+
+    class DFA26 extends DFA {
+
+        public DFA26(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 26;
+            this.eot = DFA26_eot;
+            this.eof = DFA26_eof;
+            this.min = DFA26_min;
+            this.max = DFA26_max;
+            this.accept = DFA26_accept;
+            this.special = DFA26_special;
+            this.transition = DFA26_transition;
+        }
+        public String getDescription() {
+            return "1654:1: (this_FromClassId_0= ruleFromClassId | this_FromClassVar_1= ruleFromClassVar )";
+        }
+    }
+    static final String DFA37_eotS =
+        "\35\uffff";
+    static final String DFA37_eofS =
+        "\35\uffff";
+    static final String DFA37_minS =
+        "\1\4\1\uffff\1\26\1\4\10\31\4\uffff\1\4\1\60\1\47\5\uffff\1\31"+
+        "\1\26\1\70\2\uffff";
+    static final String DFA37_maxS =
+        "\1\110\1\uffff\1\115\1\4\10\115\4\uffff\1\4\1\71\1\73\5\uffff\2"+
+        "\115\1\71\2\uffff";
+    static final String DFA37_acceptS =
+        "\1\uffff\1\1\12\uffff\1\3\1\4\1\5\1\6\3\uffff\1\14\1\13\1\12\1"+
+        "\2\1\7\3\uffff\1\11\1\10";
+    static final String DFA37_specialS =
+        "\35\uffff}>";
+    static final String[] DFA37_transitionS = {
+            "\1\2\1\5\1\4\1\11\1\12\1\13\24\uffff\1\1\21\uffff\2\14\1\15"+
+            "\1\16\1\17\3\uffff\1\6\3\uffff\1\3\12\uffff\1\7\1\10",
+            "",
+            "\1\20\2\uffff\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27"+
+            "\1\uffff\1\21\2\uffff\1\25\1\23\15\uffff\5\26",
             "\1\30",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
             "",
             "",
             "",
             "",
             "\1\31",
-            "\1\22\15\uffff\1\23\4\uffff\1\27\1\26",
+            "\1\32\7\uffff\1\34\1\33",
+            "\1\24\15\uffff\1\27\4\uffff\1\25\1\23",
             "",
             "",
             "",
-            "\1\32\7\uffff\1\33\1\34",
             "",
             "",
-            "\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23\1\uffff\1\25"+
-            "\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\20\2\uffff\1\24\15\uffff\1\22\10\uffff\1\21\4\uffff\1\23"+
-            "\1\uffff\1\25\2\uffff\1\27\1\26\14\uffff\5\24",
-            "\1\33\1\34",
+            "\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27\1\uffff\1\21"+
+            "\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\20\2\uffff\1\26\15\uffff\1\24\10\uffff\1\22\4\uffff\1\27"+
+            "\1\uffff\1\21\2\uffff\1\25\1\23\15\uffff\5\26",
+            "\1\34\1\33",
             "",
             ""
     };
 
-    static final short[] DFA39_eot = DFA.unpackEncodedString(DFA39_eotS);
-    static final short[] DFA39_eof = DFA.unpackEncodedString(DFA39_eofS);
-    static final char[] DFA39_min = DFA.unpackEncodedStringToUnsignedChars(DFA39_minS);
-    static final char[] DFA39_max = DFA.unpackEncodedStringToUnsignedChars(DFA39_maxS);
-    static final short[] DFA39_accept = DFA.unpackEncodedString(DFA39_acceptS);
-    static final short[] DFA39_special = DFA.unpackEncodedString(DFA39_specialS);
-    static final short[][] DFA39_transition;
+    static final short[] DFA37_eot = DFA.unpackEncodedString(DFA37_eotS);
+    static final short[] DFA37_eof = DFA.unpackEncodedString(DFA37_eofS);
+    static final char[] DFA37_min = DFA.unpackEncodedStringToUnsignedChars(DFA37_minS);
+    static final char[] DFA37_max = DFA.unpackEncodedStringToUnsignedChars(DFA37_maxS);
+    static final short[] DFA37_accept = DFA.unpackEncodedString(DFA37_acceptS);
+    static final short[] DFA37_special = DFA.unpackEncodedString(DFA37_specialS);
+    static final short[][] DFA37_transition;
 
     static {
-        int numStates = DFA39_transitionS.length;
-        DFA39_transition = new short[numStates][];
+        int numStates = DFA37_transitionS.length;
+        DFA37_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA39_transition[i] = DFA.unpackEncodedString(DFA39_transitionS[i]);
+            DFA37_transition[i] = DFA.unpackEncodedString(DFA37_transitionS[i]);
         }
     }
 
-    class DFA39 extends DFA {
+    class DFA37 extends DFA {
 
-        public DFA39(BaseRecognizer recognizer) {
+        public DFA37(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 39;
-            this.eot = DFA39_eot;
-            this.eof = DFA39_eof;
-            this.min = DFA39_min;
-            this.max = DFA39_max;
-            this.accept = DFA39_accept;
-            this.special = DFA39_special;
-            this.transition = DFA39_transition;
+            this.decisionNumber = 37;
+            this.eot = DFA37_eot;
+            this.eof = DFA37_eof;
+            this.min = DFA37_min;
+            this.max = DFA37_max;
+            this.accept = DFA37_accept;
+            this.special = DFA37_special;
+            this.transition = DFA37_transition;
         }
         public String getDescription() {
-            return "2477:1: (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression )";
+            return "2331:1: (this_ParExpression_0= ruleParExpression | this_OperatorExpression_1= ruleOperatorExpression | this_ExistsExpression_2= ruleExistsExpression | this_AllExpression_3= ruleAllExpression | this_AnyExpression_4= ruleAnyExpression | this_SomeExpression_5= ruleSomeExpression | this_CollectionExpression_6= ruleCollectionExpression | this_NullComparisonExpression_7= ruleNullComparisonExpression | this_EmptyComparisonExpression_8= ruleEmptyComparisonExpression | this_LikeExpression_9= ruleLikeExpression | this_InExpression_10= ruleInExpression | this_BetweenExpression_11= ruleBetweenExpression )";
         }
     }
-    static final String DFA46_eotS =
+    static final String DFA44_eotS =
         "\23\uffff";
-    static final String DFA46_eofS =
+    static final String DFA44_eofS =
         "\23\uffff";
-    static final String DFA46_minS =
-        "\1\4\1\30\1\5\10\51\1\5\1\51\1\40\1\51\1\30\1\4\2\uffff";
-    static final String DFA46_maxS =
-        "\1\111\1\62\1\5\10\62\1\5\1\51\1\40\2\62\1\111\2\uffff";
-    static final String DFA46_acceptS =
+    static final String DFA44_minS =
+        "\1\4\1\26\1\4\10\47\1\4\1\47\1\36\1\47\1\26\1\4\2\uffff";
+    static final String DFA44_maxS =
+        "\1\110\1\60\1\4\10\60\1\4\1\47\1\36\2\60\1\110\2\uffff";
+    static final String DFA44_acceptS =
         "\21\uffff\1\1\1\2";
-    static final String DFA46_specialS =
+    static final String DFA44_specialS =
         "\23\uffff}>";
-    static final String[] DFA46_transitionS = {
-            "\1\4\1\1\1\3\1\10\1\11\1\12\7\uffff\1\2\50\uffff\1\5\15\uffff"+
+    static final String[] DFA44_transitionS = {
+            "\1\1\1\4\1\3\1\10\1\11\1\12\56\uffff\1\5\3\uffff\1\2\12\uffff"+
             "\1\6\1\7",
             "\1\13\20\uffff\1\15\10\uffff\1\14",
             "\1\16",
@@ -11224,440 +11007,434 @@ public class InternalJPQLParser extends AbstractInternalAntlrParser {
             "\1\20",
             "\1\15\10\uffff\1\14",
             "\1\13\20\uffff\1\15\10\uffff\1\14",
-            "\6\21\7\uffff\1\21\13\uffff\1\22\11\uffff\1\22\22\uffff\1"+
-            "\21\15\uffff\2\21",
+            "\6\21\21\uffff\1\22\11\uffff\1\22\22\uffff\1\21\3\uffff\1"+
+            "\21\12\uffff\2\21",
             "",
             ""
     };
 
-    static final short[] DFA46_eot = DFA.unpackEncodedString(DFA46_eotS);
-    static final short[] DFA46_eof = DFA.unpackEncodedString(DFA46_eofS);
-    static final char[] DFA46_min = DFA.unpackEncodedStringToUnsignedChars(DFA46_minS);
-    static final char[] DFA46_max = DFA.unpackEncodedStringToUnsignedChars(DFA46_maxS);
-    static final short[] DFA46_accept = DFA.unpackEncodedString(DFA46_acceptS);
-    static final short[] DFA46_special = DFA.unpackEncodedString(DFA46_specialS);
-    static final short[][] DFA46_transition;
+    static final short[] DFA44_eot = DFA.unpackEncodedString(DFA44_eotS);
+    static final short[] DFA44_eof = DFA.unpackEncodedString(DFA44_eofS);
+    static final char[] DFA44_min = DFA.unpackEncodedStringToUnsignedChars(DFA44_minS);
+    static final char[] DFA44_max = DFA.unpackEncodedStringToUnsignedChars(DFA44_maxS);
+    static final short[] DFA44_accept = DFA.unpackEncodedString(DFA44_acceptS);
+    static final short[] DFA44_special = DFA.unpackEncodedString(DFA44_specialS);
+    static final short[][] DFA44_transition;
 
     static {
-        int numStates = DFA46_transitionS.length;
-        DFA46_transition = new short[numStates][];
+        int numStates = DFA44_transitionS.length;
+        DFA44_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA46_transition[i] = DFA.unpackEncodedString(DFA46_transitionS[i]);
+            DFA44_transition[i] = DFA.unpackEncodedString(DFA44_transitionS[i]);
         }
     }
 
-    class DFA46 extends DFA {
+    class DFA44 extends DFA {
 
-        public DFA46(BaseRecognizer recognizer) {
+        public DFA44(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 46;
-            this.eot = DFA46_eot;
-            this.eof = DFA46_eof;
-            this.min = DFA46_min;
-            this.max = DFA46_max;
-            this.accept = DFA46_accept;
-            this.special = DFA46_special;
-            this.transition = DFA46_transition;
+            this.decisionNumber = 44;
+            this.eot = DFA44_eot;
+            this.eof = DFA44_eof;
+            this.min = DFA44_min;
+            this.max = DFA44_max;
+            this.accept = DFA44_accept;
+            this.special = DFA44_special;
+            this.transition = DFA44_transition;
         }
         public String getDescription() {
-            return "3197:1: (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression )";
+            return "3051:1: (this_InSeqExpression_0= ruleInSeqExpression | this_InQueryExpression_1= ruleInQueryExpression )";
         }
     }
  
 
     public static final BitSet FOLLOW_ruleQueryModule_in_entryRuleQueryModule75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQueryModule85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_ruleQueryModule131 = new BitSet(new long[]{0x0000008032010022L});
-    public static final BitSet FOLLOW_ruleJPQLQuery_in_ruleQueryModule153 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_ruleNamedQuery_in_ruleQueryModule175 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport212 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImport222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleImport259 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleImport276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNamedQuery_in_entryRuleNamedQuery317 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNamedQuery327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNamedQuery369 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleNamedQuery386 = new BitSet(new long[]{0x0000008032000000L});
-    public static final BitSet FOLLOW_ruleJPQLQuery_in_ruleNamedQuery407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJPQLQuery_in_entryRuleJPQLQuery443 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJPQLQuery453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectStatement_in_ruleJPQLQuery500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateStatement_in_ruleJPQLQuery527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeleteStatement_in_ruleJPQLQuery554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectStatement_in_entryRuleSelectStatement589 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelectStatement599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectFromClause_in_ruleSelectStatement645 = new BitSet(new long[]{0x00008000000C0002L});
-    public static final BitSet FOLLOW_ruleWhereClause_in_ruleSelectStatement666 = new BitSet(new long[]{0x00000000000C0002L});
-    public static final BitSet FOLLOW_ruleHavingClause_in_ruleSelectStatement688 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleOrderClause_in_ruleSelectStatement710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHavingClause_in_entryRuleHavingClause747 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHavingClause757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleHavingClause794 = new BitSet(new long[]{0x047C0001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleOrExpression_in_ruleHavingClause815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrderClause_in_entryRuleOrderClause851 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOrderClause861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleOrderClause898 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleOrderClause910 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleOrderItem_in_ruleOrderClause931 = new BitSet(new long[]{0x0000000000E00002L});
-    public static final BitSet FOLLOW_21_in_ruleOrderClause944 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleOrderItem_in_ruleOrderClause965 = new BitSet(new long[]{0x0000000000E00002L});
-    public static final BitSet FOLLOW_22_in_ruleOrderClause986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleOrderClause1023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrderItem_in_entryRuleOrderItem1074 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOrderItem1084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleOrderItem1129 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleOrderItem1141 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleOrderItem1158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement1199 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateStatement1209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateClause_in_ruleUpdateStatement1255 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_ruleSetClause_in_ruleUpdateStatement1276 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_ruleWhereClause_in_ruleUpdateStatement1297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateClause_in_entryRuleUpdateClause1334 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateClause1344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleUpdateClause1381 = new BitSet(new long[]{0x0000020000000020L});
-    public static final BitSet FOLLOW_ruleFromEntry_in_ruleUpdateClause1402 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleUpdateClause1415 = new BitSet(new long[]{0x0000020000000020L});
-    public static final BitSet FOLLOW_ruleFromEntry_in_ruleUpdateClause1436 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_ruleSetClause_in_entryRuleSetClause1474 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetClause1484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleSetClause1521 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleUpdateItem_in_ruleSetClause1542 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleSetClause1555 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleUpdateItem_in_ruleSetClause1576 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_ruleUpdateItem_in_entryRuleUpdateItem1614 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateItem1624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleUpdateItem1670 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleUpdateItem1682 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleUpdateItem1703 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeleteStatement_in_entryRuleDeleteStatement1739 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDeleteStatement1749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeleteClause_in_ruleDeleteStatement1795 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_ruleWhereClause_in_ruleDeleteStatement1816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeleteClause_in_entryRuleDeleteClause1853 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDeleteClause1863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleDeleteClause1900 = new BitSet(new long[]{0x0000008020000000L});
-    public static final BitSet FOLLOW_ruleFromClause_in_ruleDeleteClause1921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectFromClause_in_entryRuleSelectFromClause1957 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelectFromClause1967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectClause_in_ruleSelectFromClause2013 = new BitSet(new long[]{0x0000008020000000L});
-    public static final BitSet FOLLOW_ruleFromClause_in_ruleSelectFromClause2035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectClause_in_entryRuleSelectClause2071 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelectClause2081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleSelectClause2118 = new BitSet(new long[]{0x0000007CC0000020L});
-    public static final BitSet FOLLOW_30_in_ruleSelectClause2136 = new BitSet(new long[]{0x0000007CC0000020L});
-    public static final BitSet FOLLOW_ruleSelectExpression_in_ruleSelectClause2171 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleSelectClause2184 = new BitSet(new long[]{0x0000007CC0000020L});
-    public static final BitSet FOLLOW_ruleSelectExpression_in_ruleSelectClause2205 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_ruleSelectExpression_in_entryRuleSelectExpression2243 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelectExpression2253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSelectExpression2300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectAggregateExpression_in_ruleSelectExpression2327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectConstructorExpression_in_ruleSelectExpression2354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectAggregateExpression_in_entryRuleSelectAggregateExpression2389 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelectAggregateExpression2399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAvgAggregate_in_ruleSelectAggregateExpression2446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMaxAggregate_in_ruleSelectAggregateExpression2473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMinAggregate_in_ruleSelectAggregateExpression2500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSumAggregate_in_ruleSelectAggregateExpression2527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCountAggregate_in_ruleSelectAggregateExpression2554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAvgAggregate_in_entryRuleAvgAggregate2589 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAvgAggregate2599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleAvgAggregate2636 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleAvgAggregate2648 = new BitSet(new long[]{0x0000000040000020L});
-    public static final BitSet FOLLOW_30_in_ruleAvgAggregate2666 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleAvgAggregate2701 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleAvgAggregate2713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMaxAggregate_in_entryRuleMaxAggregate2749 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMaxAggregate2759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleMaxAggregate2796 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleMaxAggregate2808 = new BitSet(new long[]{0x0000000040000020L});
-    public static final BitSet FOLLOW_30_in_ruleMaxAggregate2826 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleMaxAggregate2861 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleMaxAggregate2873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMinAggregate_in_entryRuleMinAggregate2909 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMinAggregate2919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleMinAggregate2956 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleMinAggregate2968 = new BitSet(new long[]{0x0000000040000020L});
-    public static final BitSet FOLLOW_30_in_ruleMinAggregate2986 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleMinAggregate3021 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleMinAggregate3033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSumAggregate_in_entryRuleSumAggregate3069 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSumAggregate3079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleSumAggregate3116 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleSumAggregate3128 = new BitSet(new long[]{0x0000000040000020L});
-    public static final BitSet FOLLOW_30_in_ruleSumAggregate3146 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSumAggregate3181 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleSumAggregate3193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCountAggregate_in_entryRuleCountAggregate3229 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCountAggregate3239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleCountAggregate3276 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleCountAggregate3288 = new BitSet(new long[]{0x0000000040000020L});
-    public static final BitSet FOLLOW_30_in_ruleCountAggregate3306 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleCountAggregate3341 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleCountAggregate3353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectConstructorExpression_in_entryRuleSelectConstructorExpression3389 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelectConstructorExpression3399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleSelectConstructorExpression3436 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSelectConstructorExpression3453 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleSelectConstructorExpression3470 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3491 = new BitSet(new long[]{0x0000000200200000L});
-    public static final BitSet FOLLOW_21_in_ruleSelectConstructorExpression3504 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3525 = new BitSet(new long[]{0x0000000200200000L});
-    public static final BitSet FOLLOW_33_in_ruleSelectConstructorExpression3539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromClause_in_entryRuleFromClause3575 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFromClause3585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleFromClause3622 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleFromClass_in_ruleFromClause3643 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleFromClause3656 = new BitSet(new long[]{0x0000020000000020L});
-    public static final BitSet FOLLOW_ruleFromEntry_in_ruleFromClause3677 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_ruleFromEntry_in_entryRuleFromEntry3715 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFromEntry3725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromClass_in_ruleFromEntry3772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromCollection_in_ruleFromEntry3799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableDeclaration_in_entryRuleVariableDeclaration3834 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVariableDeclaration3844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleVariableDeclaration3882 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleVariableDeclaration3901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromClass_in_entryRuleFromClass3942 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFromClass3952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromClassId_in_ruleFromClass3999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromClassVar_in_ruleFromClass4026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromClassId_in_entryRuleFromClassId4061 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFromClassId4071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFromClassId4112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromClassVar_in_entryRuleFromClassVar4152 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFromClassVar4162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFromClassVar4204 = new BitSet(new long[]{0x0000010000000020L});
-    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleFromClassVar4230 = new BitSet(new long[]{0x0000540000000002L});
-    public static final BitSet FOLLOW_ruleFromJoin_in_ruleFromClassVar4251 = new BitSet(new long[]{0x0000540000000002L});
-    public static final BitSet FOLLOW_ruleFromCollection_in_entryRuleFromCollection4288 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFromCollection4298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleFromCollection4335 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleFromCollection4347 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleFromCollection4368 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleFromCollection4380 = new BitSet(new long[]{0x0000010000000020L});
-    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleFromCollection4401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFromJoin_in_entryRuleFromJoin4437 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFromJoin4447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJoin_in_ruleFromJoin4494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLeftJoin_in_ruleFromJoin4521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInnerJoin_in_ruleFromJoin4548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJoin_in_entryRuleJoin4583 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJoin4593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleJoin4630 = new BitSet(new long[]{0x0000080000000020L});
-    public static final BitSet FOLLOW_43_in_ruleJoin4648 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleJoin4683 = new BitSet(new long[]{0x0000010000000020L});
-    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleJoin4704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLeftJoin_in_entryRuleLeftJoin4740 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLeftJoin4750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleLeftJoin4787 = new BitSet(new long[]{0x0000240000000000L});
-    public static final BitSet FOLLOW_45_in_ruleLeftJoin4805 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_ruleLeftJoin4831 = new BitSet(new long[]{0x0000080000000020L});
-    public static final BitSet FOLLOW_43_in_ruleLeftJoin4849 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleLeftJoin4884 = new BitSet(new long[]{0x0000010000000020L});
-    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleLeftJoin4905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInnerJoin_in_entryRuleInnerJoin4941 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInnerJoin4951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleInnerJoin4988 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_ruleInnerJoin5000 = new BitSet(new long[]{0x0000080000000020L});
-    public static final BitSet FOLLOW_43_in_ruleInnerJoin5018 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleInnerJoin5053 = new BitSet(new long[]{0x0000010000000020L});
-    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleInnerJoin5074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWhereClause_in_entryRuleWhereClause5110 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleWhereClause5120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleWhereClause5157 = new BitSet(new long[]{0x047C0001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleOrExpression_in_ruleWhereClause5178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrExpression_in_entryRuleOrExpression5214 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOrExpression5224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndExpression_in_ruleOrExpression5271 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleOrExpression5293 = new BitSet(new long[]{0x047C0001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleAndExpression_in_ruleOrExpression5314 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_ruleAndExpression_in_entryRuleAndExpression5354 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAndExpression5364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConcreteExpression_in_ruleAndExpression5411 = new BitSet(new long[]{0x0002000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleAndExpression5433 = new BitSet(new long[]{0x047C0001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleConcreteExpression_in_ruleAndExpression5454 = new BitSet(new long[]{0x0002000000000002L});
-    public static final BitSet FOLLOW_ruleConcreteExpression_in_entryRuleConcreteExpression5494 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConcreteExpression5504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParExpression_in_ruleConcreteExpression5551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperatorExpression_in_ruleConcreteExpression5578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExistsExpression_in_ruleConcreteExpression5605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAllExpression_in_ruleConcreteExpression5632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnyExpression_in_ruleConcreteExpression5659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSomeExpression_in_ruleConcreteExpression5686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCollectionExpression_in_ruleConcreteExpression5713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullComparisonExpression_in_ruleConcreteExpression5740 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEmptyComparisonExpression_in_ruleConcreteExpression5767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLikeExpression_in_ruleConcreteExpression5794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInExpression_in_ruleConcreteExpression5821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBetweenExpression_in_ruleConcreteExpression5848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParExpression_in_entryRuleParExpression5883 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParExpression5893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleParExpression5930 = new BitSet(new long[]{0x04000001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleExpressionTerm_in_ruleParExpression5952 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleParExpression5963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperatorExpression_in_entryRuleOperatorExpression5999 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOperatorExpression6009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleOperatorExpression6055 = new BitSet(new long[]{0x0000000008000000L,0x0000000000007C00L});
-    public static final BitSet FOLLOW_ruleOperator_in_ruleOperatorExpression6076 = new BitSet(new long[]{0x04000001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleExpressionTerm_in_ruleOperatorExpression6097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExistsExpression_in_entryRuleExistsExpression6133 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExistsExpression6143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleExistsExpression6186 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_51_in_ruleExistsExpression6212 = new BitSet(new long[]{0x04000001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleExistsExpression6233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAllExpression_in_entryRuleAllExpression6269 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAllExpression6279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleAllExpression6316 = new BitSet(new long[]{0x04000001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleAllExpression6337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnyExpression_in_entryRuleAnyExpression6373 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAnyExpression6383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleAnyExpression6420 = new BitSet(new long[]{0x04000001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleAnyExpression6441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSomeExpression_in_entryRuleSomeExpression6477 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSomeExpression6487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleSomeExpression6524 = new BitSet(new long[]{0x04000001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleSomeExpression6545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCollectionExpression_in_entryRuleCollectionExpression6581 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCollectionExpression6591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleCollectionExpression6637 = new BitSet(new long[]{0x0084000000000000L});
-    public static final BitSet FOLLOW_50_in_ruleCollectionExpression6655 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_ruleCollectionExpression6681 = new BitSet(new long[]{0x0100000000000020L});
-    public static final BitSet FOLLOW_56_in_ruleCollectionExpression6694 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleCollectionExpression6717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullComparisonExpression_in_entryRuleNullComparisonExpression6753 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNullComparisonExpression6763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleNullComparisonExpression6809 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_ruleNullComparisonExpression6821 = new BitSet(new long[]{0x0404000000000000L});
-    public static final BitSet FOLLOW_50_in_ruleNullComparisonExpression6839 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_ruleNullComparisonExpression6865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEmptyComparisonExpression_in_entryRuleEmptyComparisonExpression6901 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEmptyComparisonExpression6911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleEmptyComparisonExpression6957 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_ruleEmptyComparisonExpression6969 = new BitSet(new long[]{0x0804000000000000L});
-    public static final BitSet FOLLOW_50_in_ruleEmptyComparisonExpression6987 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_59_in_ruleEmptyComparisonExpression7013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLikeExpression_in_entryRuleLikeExpression7049 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLikeExpression7059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleLikeExpression7105 = new BitSet(new long[]{0x1004000000000000L});
-    public static final BitSet FOLLOW_50_in_ruleLikeExpression7123 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_60_in_ruleLikeExpression7149 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLikeExpression7166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInExpression_in_entryRuleInExpression7207 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInExpression7217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInSeqExpression_in_ruleInExpression7264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInQueryExpression_in_ruleInExpression7291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInSeqExpression_in_entryRuleInSeqExpression7326 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInSeqExpression7336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleInSeqExpression7382 = new BitSet(new long[]{0x0004020000000000L});
-    public static final BitSet FOLLOW_50_in_ruleInSeqExpression7400 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleInSeqExpression7426 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleInSeqExpression7438 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleInSeqExpression7459 = new BitSet(new long[]{0x0000000200200000L});
-    public static final BitSet FOLLOW_21_in_ruleInSeqExpression7472 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleInSeqExpression7493 = new BitSet(new long[]{0x0000000200200000L});
-    public static final BitSet FOLLOW_33_in_ruleInSeqExpression7507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInQueryExpression_in_entryRuleInQueryExpression7543 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInQueryExpression7553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleInQueryExpression7599 = new BitSet(new long[]{0x0004020000000000L});
-    public static final BitSet FOLLOW_50_in_ruleInQueryExpression7617 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleInQueryExpression7643 = new BitSet(new long[]{0x04000001000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleInQueryExpression7664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBetweenExpression_in_entryRuleBetweenExpression7700 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBetweenExpression7710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleBetweenExpression7756 = new BitSet(new long[]{0x2004000000000000L});
-    public static final BitSet FOLLOW_50_in_ruleBetweenExpression7774 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_61_in_ruleBetweenExpression7800 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleBetweenExpression7821 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_49_in_ruleBetweenExpression7833 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleBetweenExpression7854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_entryRuleVariable7890 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVariable7900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleVariable7947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParameterExpression_in_ruleVariable7974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleVariable8001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpressionTerm_in_entryRuleExpressionTerm8036 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpressionTerm8046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleExpressionTerm8093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleExpressionTerm8120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_entryRuleAliasAttributeExpression8155 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAliasAttributeExpression8165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAliasAttributeExpression8210 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleAliasAttributeExpression8223 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAliasAttributeExpression8240 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_ruleParameterExpression_in_entryRuleParameterExpression8283 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParameterExpression8293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleParameterExpression8330 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleParameterExpression8347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringFunction_in_entryRuleStringFunction8390 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringFunction8400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringFunctionName_in_ruleStringFunction8446 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleStringFunction8458 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleStringFunction8479 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleStringFunction8492 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleStringFunction8513 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleStringFunction8526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringFunctionName_in_entryRuleStringFunctionName8563 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringFunctionName8574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_ruleStringFunctionName8612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleStringFunctionName8631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleStringFunctionName8650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleStringFunctionName8669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleStringFunctionName8688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleStringFunctionName8707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericFunction_in_entryRuleNumericFunction8747 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumericFunction8757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericFunctionName_in_ruleNumericFunction8803 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleNumericFunction8815 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleNumericFunction8836 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleNumericFunction8849 = new BitSet(new long[]{0x04000000000203F0L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleNumericFunction8870 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleNumericFunction8883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericFunctionName_in_entryRuleNumericFunctionName8920 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumericFunctionName8931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleNumericFunctionName8969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleNumericFunctionName8988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleNumericFunctionName9007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleNumericFunctionName9026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue9068 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue9078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerExpression_in_ruleValue9125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringExpression_in_ruleValue9152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullExpression_in_ruleValue9179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanExpression_in_ruleValue9206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDateTimeExpression_in_ruleValue9233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerExpression_in_entryRuleIntegerExpression9268 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerExpression9278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleIntegerExpression9319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringExpression_in_entryRuleStringExpression9359 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringExpression9369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringExpression9410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullExpression_in_entryRuleNullExpression9450 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNullExpression9460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleNullExpression9502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanExpression_in_entryRuleBooleanExpression9550 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanExpression9560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleBooleanExpression9604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleBooleanExpression9633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDateTimeExpression_in_entryRuleDateTimeExpression9684 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDateTimeExpression9694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLITERAL_TEMPORAL_in_ruleDateTimeExpression9739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQueryExpression_in_entryRuleQueryExpression9774 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQueryExpression9784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleQueryExpression9821 = new BitSet(new long[]{0x0000008020000000L});
-    public static final BitSet FOLLOW_ruleSelectStatement_in_ruleQueryExpression9843 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleQueryExpression9854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLITERAL_TEMPORAL_in_entryRuleLITERAL_TEMPORAL9891 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLITERAL_TEMPORAL9902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DATE_LITERAL_in_ruleLITERAL_TEMPORAL9942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_TIME_LITERAL_in_ruleLITERAL_TEMPORAL9968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_TIMESTAMP_LITERAL_in_ruleLITERAL_TEMPORAL9994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleOperator10053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleOperator10070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleOperator10087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleOperator10104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleOperator10121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_ruleOperator10138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQuery_in_ruleQueryModule130 = new BitSet(new long[]{0x000000200C800002L});
+    public static final BitSet FOLLOW_ruleQuery_in_entryRuleQuery166 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQuery176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectStatement_in_ruleQuery223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateStatement_in_ruleQuery250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeleteStatement_in_ruleQuery277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectStatement_in_entryRuleSelectStatement312 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelectStatement322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectFromClause_in_ruleSelectStatement368 = new BitSet(new long[]{0x0000200000030002L});
+    public static final BitSet FOLLOW_ruleWhereClause_in_ruleSelectStatement389 = new BitSet(new long[]{0x0000000000030002L});
+    public static final BitSet FOLLOW_ruleHavingClause_in_ruleSelectStatement411 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_ruleOrderClause_in_ruleSelectStatement433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHavingClause_in_entryRuleHavingClause470 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHavingClause480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleHavingClause517 = new BitSet(new long[]{0x111F0000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleOrExpression_in_ruleHavingClause538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrderClause_in_entryRuleOrderClause574 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOrderClause584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleOrderClause621 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleOrderClause633 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleOrderItem_in_ruleOrderClause654 = new BitSet(new long[]{0x0000000000380002L});
+    public static final BitSet FOLLOW_19_in_ruleOrderClause667 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleOrderItem_in_ruleOrderClause688 = new BitSet(new long[]{0x0000000000380002L});
+    public static final BitSet FOLLOW_20_in_ruleOrderClause709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleOrderClause746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrderItem_in_entryRuleOrderItem797 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOrderItem807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleOrderItem852 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleOrderItem864 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleOrderItem881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement922 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateStatement932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateClause_in_ruleUpdateStatement978 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleSetClause_in_ruleUpdateStatement999 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_ruleWhereClause_in_ruleUpdateStatement1020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateClause_in_entryRuleUpdateClause1057 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateClause1067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleUpdateClause1104 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_ruleFromEntry_in_ruleUpdateClause1125 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleUpdateClause1138 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_ruleFromEntry_in_ruleUpdateClause1159 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleSetClause_in_entryRuleSetClause1197 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetClause1207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleSetClause1244 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleUpdateItem_in_ruleSetClause1265 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleSetClause1278 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleUpdateItem_in_ruleSetClause1299 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleUpdateItem_in_entryRuleUpdateItem1337 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateItem1347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleUpdateItem1393 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleUpdateItem1405 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleUpdateItem1426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeleteStatement_in_entryRuleDeleteStatement1462 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDeleteStatement1472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeleteClause_in_ruleDeleteStatement1518 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_ruleWhereClause_in_ruleDeleteStatement1539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeleteClause_in_entryRuleDeleteClause1576 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDeleteClause1586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleDeleteClause1623 = new BitSet(new long[]{0x0000002008000000L});
+    public static final BitSet FOLLOW_ruleFromClause_in_ruleDeleteClause1644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectFromClause_in_entryRuleSelectFromClause1680 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelectFromClause1690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectClause_in_ruleSelectFromClause1736 = new BitSet(new long[]{0x0000002008000000L});
+    public static final BitSet FOLLOW_ruleFromClause_in_ruleSelectFromClause1758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectClause_in_entryRuleSelectClause1794 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelectClause1804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleSelectClause1841 = new BitSet(new long[]{0x0000001F30000010L});
+    public static final BitSet FOLLOW_28_in_ruleSelectClause1859 = new BitSet(new long[]{0x0000001F30000010L});
+    public static final BitSet FOLLOW_ruleSelectExpression_in_ruleSelectClause1894 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleSelectClause1907 = new BitSet(new long[]{0x0000001F30000010L});
+    public static final BitSet FOLLOW_ruleSelectExpression_in_ruleSelectClause1928 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleSelectExpression_in_entryRuleSelectExpression1966 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelectExpression1976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSelectExpression2023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectAggregateExpression_in_ruleSelectExpression2050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectConstructorExpression_in_ruleSelectExpression2077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectAggregateExpression_in_entryRuleSelectAggregateExpression2112 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelectAggregateExpression2122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAvgAggregate_in_ruleSelectAggregateExpression2169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMaxAggregate_in_ruleSelectAggregateExpression2196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMinAggregate_in_ruleSelectAggregateExpression2223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSumAggregate_in_ruleSelectAggregateExpression2250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCountAggregate_in_ruleSelectAggregateExpression2277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAvgAggregate_in_entryRuleAvgAggregate2312 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAvgAggregate2322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleAvgAggregate2359 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleAvgAggregate2371 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_28_in_ruleAvgAggregate2389 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleAvgAggregate2424 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleAvgAggregate2436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMaxAggregate_in_entryRuleMaxAggregate2472 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMaxAggregate2482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleMaxAggregate2519 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleMaxAggregate2531 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_28_in_ruleMaxAggregate2549 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleMaxAggregate2584 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleMaxAggregate2596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMinAggregate_in_entryRuleMinAggregate2632 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMinAggregate2642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleMinAggregate2679 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleMinAggregate2691 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_28_in_ruleMinAggregate2709 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleMinAggregate2744 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleMinAggregate2756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSumAggregate_in_entryRuleSumAggregate2792 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSumAggregate2802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleSumAggregate2839 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleSumAggregate2851 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_28_in_ruleSumAggregate2869 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSumAggregate2904 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleSumAggregate2916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCountAggregate_in_entryRuleCountAggregate2952 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCountAggregate2962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleCountAggregate2999 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleCountAggregate3011 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_28_in_ruleCountAggregate3029 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleCountAggregate3064 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleCountAggregate3076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectConstructorExpression_in_entryRuleSelectConstructorExpression3112 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelectConstructorExpression3122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleSelectConstructorExpression3159 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSelectConstructorExpression3176 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleSelectConstructorExpression3193 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3214 = new BitSet(new long[]{0x0000000080080000L});
+    public static final BitSet FOLLOW_19_in_ruleSelectConstructorExpression3227 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleSelectConstructorExpression3248 = new BitSet(new long[]{0x0000000080080000L});
+    public static final BitSet FOLLOW_31_in_ruleSelectConstructorExpression3262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromClause_in_entryRuleFromClause3298 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFromClause3308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleFromClause3345 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleFromClass_in_ruleFromClause3366 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleFromClause3379 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_ruleFromEntry_in_ruleFromClause3400 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleFromEntry_in_entryRuleFromEntry3438 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFromEntry3448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromClass_in_ruleFromEntry3495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromCollection_in_ruleFromEntry3522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableDeclaration_in_entryRuleVariableDeclaration3557 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariableDeclaration3567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleVariableDeclaration3605 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleVariableDeclaration3624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromClass_in_entryRuleFromClass3665 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFromClass3675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromClassId_in_ruleFromClass3722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromClassVar_in_ruleFromClass3749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromClassId_in_entryRuleFromClassId3784 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFromClassId3794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleFromClassId3841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromClassVar_in_entryRuleFromClassVar3876 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFromClassVar3886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleFromClassVar3934 = new BitSet(new long[]{0x0000004000000010L});
+    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleFromClassVar3955 = new BitSet(new long[]{0x0000150000000002L});
+    public static final BitSet FOLLOW_ruleFromJoin_in_ruleFromClassVar3976 = new BitSet(new long[]{0x0000150000000002L});
+    public static final BitSet FOLLOW_ruleFromCollection_in_entryRuleFromCollection4013 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFromCollection4023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleFromCollection4060 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleFromCollection4072 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleFromCollection4093 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleFromCollection4105 = new BitSet(new long[]{0x0000004000000010L});
+    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleFromCollection4126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFromJoin_in_entryRuleFromJoin4162 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFromJoin4172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJoin_in_ruleFromJoin4219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLeftJoin_in_ruleFromJoin4246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInnerJoin_in_ruleFromJoin4273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJoin_in_entryRuleJoin4308 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJoin4318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleJoin4355 = new BitSet(new long[]{0x0000020000000010L});
+    public static final BitSet FOLLOW_41_in_ruleJoin4373 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleJoin4408 = new BitSet(new long[]{0x0000004000000010L});
+    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleJoin4429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLeftJoin_in_entryRuleLeftJoin4465 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLeftJoin4475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleLeftJoin4512 = new BitSet(new long[]{0x0000090000000000L});
+    public static final BitSet FOLLOW_43_in_ruleLeftJoin4530 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleLeftJoin4556 = new BitSet(new long[]{0x0000020000000010L});
+    public static final BitSet FOLLOW_41_in_ruleLeftJoin4574 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleLeftJoin4609 = new BitSet(new long[]{0x0000004000000010L});
+    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleLeftJoin4630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInnerJoin_in_entryRuleInnerJoin4666 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInnerJoin4676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleInnerJoin4713 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleInnerJoin4725 = new BitSet(new long[]{0x0000020000000010L});
+    public static final BitSet FOLLOW_41_in_ruleInnerJoin4743 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleInnerJoin4778 = new BitSet(new long[]{0x0000004000000010L});
+    public static final BitSet FOLLOW_ruleVariableDeclaration_in_ruleInnerJoin4799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWhereClause_in_entryRuleWhereClause4835 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWhereClause4845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleWhereClause4882 = new BitSet(new long[]{0x111F0000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleOrExpression_in_ruleWhereClause4903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrExpression_in_entryRuleOrExpression4939 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOrExpression4949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndExpression_in_ruleOrExpression4996 = new BitSet(new long[]{0x0000400000000002L});
+    public static final BitSet FOLLOW_46_in_ruleOrExpression5018 = new BitSet(new long[]{0x111F0000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleAndExpression_in_ruleOrExpression5039 = new BitSet(new long[]{0x0000400000000002L});
+    public static final BitSet FOLLOW_ruleAndExpression_in_entryRuleAndExpression5079 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAndExpression5089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConcreteExpression_in_ruleAndExpression5136 = new BitSet(new long[]{0x0000800000000002L});
+    public static final BitSet FOLLOW_47_in_ruleAndExpression5158 = new BitSet(new long[]{0x111F0000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleConcreteExpression_in_ruleAndExpression5179 = new BitSet(new long[]{0x0000800000000002L});
+    public static final BitSet FOLLOW_ruleConcreteExpression_in_entryRuleConcreteExpression5219 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConcreteExpression5229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParExpression_in_ruleConcreteExpression5276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperatorExpression_in_ruleConcreteExpression5303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExistsExpression_in_ruleConcreteExpression5330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAllExpression_in_ruleConcreteExpression5357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyExpression_in_ruleConcreteExpression5384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSomeExpression_in_ruleConcreteExpression5411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCollectionExpression_in_ruleConcreteExpression5438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullComparisonExpression_in_ruleConcreteExpression5465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEmptyComparisonExpression_in_ruleConcreteExpression5492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLikeExpression_in_ruleConcreteExpression5519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInExpression_in_ruleConcreteExpression5546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBetweenExpression_in_ruleConcreteExpression5573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParExpression_in_entryRuleParExpression5608 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleParExpression5618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleParExpression5655 = new BitSet(new long[]{0x11000000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleExpressionTerm_in_ruleParExpression5677 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleParExpression5688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperatorExpression_in_entryRuleOperatorExpression5724 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOperatorExpression5734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleOperatorExpression5780 = new BitSet(new long[]{0x0000000002000000L,0x0000000000003E00L});
+    public static final BitSet FOLLOW_ruleOperator_in_ruleOperatorExpression5801 = new BitSet(new long[]{0x11000000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleExpressionTerm_in_ruleOperatorExpression5822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExistsExpression_in_entryRuleExistsExpression5858 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExistsExpression5868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExistsExpression5911 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_ruleExistsExpression5937 = new BitSet(new long[]{0x11000000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleExistsExpression5958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAllExpression_in_entryRuleAllExpression5994 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAllExpression6004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleAllExpression6041 = new BitSet(new long[]{0x11000000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleAllExpression6062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyExpression_in_entryRuleAnyExpression6098 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnyExpression6108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleAnyExpression6145 = new BitSet(new long[]{0x11000000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleAnyExpression6166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSomeExpression_in_entryRuleSomeExpression6202 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSomeExpression6212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleSomeExpression6249 = new BitSet(new long[]{0x11000000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleSomeExpression6270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCollectionExpression_in_entryRuleCollectionExpression6306 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCollectionExpression6316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleCollectionExpression6362 = new BitSet(new long[]{0x0021000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleCollectionExpression6380 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleCollectionExpression6406 = new BitSet(new long[]{0x0040000000000010L});
+    public static final BitSet FOLLOW_54_in_ruleCollectionExpression6419 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleCollectionExpression6442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullComparisonExpression_in_entryRuleNullComparisonExpression6478 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNullComparisonExpression6488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleNullComparisonExpression6534 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_ruleNullComparisonExpression6546 = new BitSet(new long[]{0x0101000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleNullComparisonExpression6564 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_ruleNullComparisonExpression6590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEmptyComparisonExpression_in_entryRuleEmptyComparisonExpression6626 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEmptyComparisonExpression6636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleEmptyComparisonExpression6682 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_ruleEmptyComparisonExpression6694 = new BitSet(new long[]{0x0201000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleEmptyComparisonExpression6712 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_57_in_ruleEmptyComparisonExpression6738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLikeExpression_in_entryRuleLikeExpression6774 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLikeExpression6784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleLikeExpression6830 = new BitSet(new long[]{0x0401000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleLikeExpression6848 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_ruleLikeExpression6874 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleLikeExpression6891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInExpression_in_entryRuleInExpression6932 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInExpression6942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInSeqExpression_in_ruleInExpression6989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInQueryExpression_in_ruleInExpression7016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInSeqExpression_in_entryRuleInSeqExpression7051 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInSeqExpression7061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleInSeqExpression7107 = new BitSet(new long[]{0x0001008000000000L});
+    public static final BitSet FOLLOW_48_in_ruleInSeqExpression7125 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleInSeqExpression7151 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleInSeqExpression7163 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleInSeqExpression7184 = new BitSet(new long[]{0x0000000080080000L});
+    public static final BitSet FOLLOW_19_in_ruleInSeqExpression7197 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleInSeqExpression7218 = new BitSet(new long[]{0x0000000080080000L});
+    public static final BitSet FOLLOW_31_in_ruleInSeqExpression7232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInQueryExpression_in_entryRuleInQueryExpression7268 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInQueryExpression7278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleInQueryExpression7324 = new BitSet(new long[]{0x0001008000000000L});
+    public static final BitSet FOLLOW_48_in_ruleInQueryExpression7342 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleInQueryExpression7368 = new BitSet(new long[]{0x11000000400003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleInQueryExpression7389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBetweenExpression_in_entryRuleBetweenExpression7425 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBetweenExpression7435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleBetweenExpression7481 = new BitSet(new long[]{0x0801000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleBetweenExpression7499 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_59_in_ruleBetweenExpression7525 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleBetweenExpression7546 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_ruleBetweenExpression7558 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleBetweenExpression7579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_entryRuleVariable7615 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariable7625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_ruleVariable7672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParameterExpression_in_ruleVariable7699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleVariable7726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpressionTerm_in_entryRuleExpressionTerm7761 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpressionTerm7771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleExpressionTerm7818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQueryExpression_in_ruleExpressionTerm7845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasAttributeExpression_in_entryRuleAliasAttributeExpression7880 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAliasAttributeExpression7890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAliasAttributeExpression7935 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleAliasAttributeExpression7948 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAliasAttributeExpression7965 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_ruleParameterExpression_in_entryRuleParameterExpression8008 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleParameterExpression8018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleParameterExpression8055 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleParameterExpression8072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringFunction_in_entryRuleStringFunction8115 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringFunction8125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringFunctionName_in_ruleStringFunction8171 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleStringFunction8183 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleStringFunction8204 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleStringFunction8217 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleStringFunction8238 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleStringFunction8251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringFunctionName_in_entryRuleStringFunctionName8288 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringFunctionName8299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleStringFunctionName8337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_ruleStringFunctionName8356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleStringFunctionName8375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleStringFunctionName8394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleStringFunctionName8413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleStringFunctionName8432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumericFunction_in_entryRuleNumericFunction8472 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumericFunction8482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumericFunctionName_in_ruleNumericFunction8528 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleNumericFunction8540 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleNumericFunction8561 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleNumericFunction8574 = new BitSet(new long[]{0x11000000000003F0L,0x0000000000000180L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleNumericFunction8595 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleNumericFunction8608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumericFunctionName_in_entryRuleNumericFunctionName8645 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumericFunctionName8656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleNumericFunctionName8694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleNumericFunctionName8713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleNumericFunctionName8732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleNumericFunctionName8751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue8793 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValue8803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerExpression_in_ruleValue8850 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringExpression_in_ruleValue8877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullExpression_in_ruleValue8904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanExpression_in_ruleValue8931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDateTimeExpression_in_ruleValue8958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerExpression_in_entryRuleIntegerExpression8993 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerExpression9003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleIntegerExpression9044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringExpression_in_entryRuleStringExpression9084 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringExpression9094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringExpression9135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullExpression_in_entryRuleNullExpression9175 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNullExpression9185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleNullExpression9227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanExpression_in_entryRuleBooleanExpression9275 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanExpression9285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleBooleanExpression9329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleBooleanExpression9358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDateTimeExpression_in_entryRuleDateTimeExpression9409 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDateTimeExpression9419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLITERAL_TEMPORAL_in_ruleDateTimeExpression9464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQueryExpression_in_entryRuleQueryExpression9499 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQueryExpression9509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleQueryExpression9546 = new BitSet(new long[]{0x0000002008000000L});
+    public static final BitSet FOLLOW_ruleSelectStatement_in_ruleQueryExpression9568 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleQueryExpression9579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLITERAL_TEMPORAL_in_entryRuleLITERAL_TEMPORAL9616 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLITERAL_TEMPORAL9627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DATE_LITERAL_in_ruleLITERAL_TEMPORAL9667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_TIME_LITERAL_in_ruleLITERAL_TEMPORAL9693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_TIMESTAMP_LITERAL_in_ruleLITERAL_TEMPORAL9719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName9765 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName9776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName9816 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleQualifiedName9835 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName9850 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_73_in_ruleOperator9911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleOperator9928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleOperator9945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleOperator9962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleOperator9979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleOperator9996 = new BitSet(new long[]{0x0000000000000002L});
 
 }

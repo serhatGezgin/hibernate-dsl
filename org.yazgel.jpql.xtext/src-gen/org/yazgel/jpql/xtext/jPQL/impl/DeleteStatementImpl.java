@@ -27,7 +27,7 @@ import org.yazgel.jpql.xtext.jPQL.JPQLPackage;
  *
  * @generated
  */
-public class DeleteStatementImpl extends JPQLQueryImpl implements DeleteStatement
+public class DeleteStatementImpl extends QueryImpl implements DeleteStatement
 {
   /**
    * The cached value of the '{@link #getDeleteClause() <em>Delete Clause</em>}' containment reference.

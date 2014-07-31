@@ -79,24 +79,10 @@ public class JPQLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case JPQLPackage.IMPORT:
+      case JPQLPackage.QUERY:
       {
-        Import import_ = (Import)theEObject;
-        T result = caseImport(import_);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case JPQLPackage.NAMED_QUERY:
-      {
-        NamedQuery namedQuery = (NamedQuery)theEObject;
-        T result = caseNamedQuery(namedQuery);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case JPQLPackage.JPQL_QUERY:
-      {
-        JPQLQuery jpqlQuery = (JPQLQuery)theEObject;
-        T result = caseJPQLQuery(jpqlQuery);
+        Query query = (Query)theEObject;
+        T result = caseQuery(query);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -104,7 +90,7 @@ public class JPQLSwitch<T> extends Switch<T>
       {
         SelectStatement selectStatement = (SelectStatement)theEObject;
         T result = caseSelectStatement(selectStatement);
-        if (result == null) result = caseJPQLQuery(selectStatement);
+        if (result == null) result = caseQuery(selectStatement);
         if (result == null) result = caseExpressionTerm(selectStatement);
         if (result == null) result = caseExpression(selectStatement);
         if (result == null) result = defaultCase(theEObject);
@@ -135,7 +121,7 @@ public class JPQLSwitch<T> extends Switch<T>
       {
         UpdateStatement updateStatement = (UpdateStatement)theEObject;
         T result = caseUpdateStatement(updateStatement);
-        if (result == null) result = caseJPQLQuery(updateStatement);
+        if (result == null) result = caseQuery(updateStatement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -164,7 +150,7 @@ public class JPQLSwitch<T> extends Switch<T>
       {
         DeleteStatement deleteStatement = (DeleteStatement)theEObject;
         T result = caseDeleteStatement(deleteStatement);
-        if (result == null) result = caseJPQLQuery(deleteStatement);
+        if (result == null) result = caseQuery(deleteStatement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -592,38 +578,6 @@ public class JPQLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImport(Import object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Named Query</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Named Query</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseNamedQuery(NamedQuery object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Query</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -634,7 +588,7 @@ public class JPQLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseJPQLQuery(JPQLQuery object)
+  public T caseQuery(Query object)
   {
     return null;
   }

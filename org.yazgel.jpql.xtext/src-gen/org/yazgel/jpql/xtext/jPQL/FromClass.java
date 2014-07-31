@@ -4,6 +4,8 @@ package org.yazgel.jpql.xtext.jPQL;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.xtext.common.types.JvmType;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>From Class</b></em>'.
@@ -24,30 +26,30 @@ import org.eclipse.emf.common.util.EList;
 public interface FromClass extends FromEntry
 {
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Type</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Type</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
+   * @return the value of the '<em>Type</em>' reference.
+   * @see #setType(JvmType)
    * @see org.yazgel.jpql.xtext.jPQL.JPQLPackage#getFromClass_Type()
    * @model
    * @generated
    */
-  String getType();
+  JvmType getType();
 
   /**
-   * Sets the value of the '{@link org.yazgel.jpql.xtext.jPQL.FromClass#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link org.yazgel.jpql.xtext.jPQL.FromClass#getType <em>Type</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
+   * @param value the new value of the '<em>Type</em>' reference.
    * @see #getType()
    * @generated
    */
-  void setType(String value);
+  void setType(JvmType value);
 
   /**
    * Returns the value of the '<em><b>Joins</b></em>' containment reference list.

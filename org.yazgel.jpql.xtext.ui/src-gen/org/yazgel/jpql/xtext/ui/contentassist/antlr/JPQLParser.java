@@ -37,7 +37,7 @@ public class JPQLParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getJPQLQueryAccess().getAlternatives(), "rule__JPQLQuery__Alternatives");
+					put(grammarAccess.getQueryAccess().getAlternatives(), "rule__Query__Alternatives");
 					put(grammarAccess.getOrderClauseAccess().getAlternatives_4(), "rule__OrderClause__Alternatives_4");
 					put(grammarAccess.getSelectExpressionAccess().getAlternatives(), "rule__SelectExpression__Alternatives");
 					put(grammarAccess.getSelectAggregateExpressionAccess().getAlternatives(), "rule__SelectAggregateExpression__Alternatives");
@@ -56,9 +56,6 @@ public class JPQLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBooleanExpressionAccess().getValueAlternatives_0(), "rule__BooleanExpression__ValueAlternatives_0");
 					put(grammarAccess.getLITERAL_TEMPORALAccess().getAlternatives(), "rule__LITERAL_TEMPORAL__Alternatives");
 					put(grammarAccess.getOperatorAccess().getAlternatives(), "rule__Operator__Alternatives");
-					put(grammarAccess.getQueryModuleAccess().getGroup(), "rule__QueryModule__Group__0");
-					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
-					put(grammarAccess.getNamedQueryAccess().getGroup(), "rule__NamedQuery__Group__0");
 					put(grammarAccess.getSelectStatementAccess().getGroup(), "rule__SelectStatement__Group__0");
 					put(grammarAccess.getHavingClauseAccess().getGroup(), "rule__HavingClause__Group__0");
 					put(grammarAccess.getOrderClauseAccess().getGroup(), "rule__OrderClause__Group__0");
@@ -119,12 +116,9 @@ public class JPQLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNumericFunctionAccess().getGroup(), "rule__NumericFunction__Group__0");
 					put(grammarAccess.getNumericFunctionAccess().getGroup_3(), "rule__NumericFunction__Group_3__0");
 					put(grammarAccess.getQueryExpressionAccess().getGroup(), "rule__QueryExpression__Group__0");
-					put(grammarAccess.getQueryModuleAccess().getImportsAssignment_0(), "rule__QueryModule__ImportsAssignment_0");
-					put(grammarAccess.getQueryModuleAccess().getDefaultQueryAssignment_1(), "rule__QueryModule__DefaultQueryAssignment_1");
-					put(grammarAccess.getQueryModuleAccess().getNamedQueriesAssignment_2(), "rule__QueryModule__NamedQueriesAssignment_2");
-					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
-					put(grammarAccess.getNamedQueryAccess().getNameAssignment_0(), "rule__NamedQuery__NameAssignment_0");
-					put(grammarAccess.getNamedQueryAccess().getQueryAssignment_2(), "rule__NamedQuery__QueryAssignment_2");
+					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
+					put(grammarAccess.getQueryModuleAccess().getQueriesAssignment(), "rule__QueryModule__QueriesAssignment");
 					put(grammarAccess.getSelectStatementAccess().getSelectFromClauseAssignment_0(), "rule__SelectStatement__SelectFromClauseAssignment_0");
 					put(grammarAccess.getSelectStatementAccess().getWhereClauseAssignment_1(), "rule__SelectStatement__WhereClauseAssignment_1");
 					put(grammarAccess.getSelectStatementAccess().getHavingAssignment_2(), "rule__SelectStatement__HavingAssignment_2");

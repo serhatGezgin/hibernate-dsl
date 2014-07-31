@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.xtext.common.types.JvmType;
+
 import org.yazgel.jpql.xtext.jPQL.FromClass;
 import org.yazgel.jpql.xtext.jPQL.FromJoin;
 import org.yazgel.jpql.xtext.jPQL.JPQLPackage;
@@ -38,24 +40,14 @@ import org.yazgel.jpql.xtext.jPQL.JPQLPackage;
 public class FromClassImpl extends FromEntryImpl implements FromClass
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected String type = TYPE_EDEFAULT;
+  protected JvmType type;
 
   /**
    * The cached value of the '{@link #getJoins() <em>Joins</em>}' containment reference list.
@@ -93,7 +85,27 @@ public class FromClassImpl extends FromEntryImpl implements FromClass
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public JvmType getType()
+  {
+    if (type != null && type.eIsProxy())
+    {
+      InternalEObject oldType = (InternalEObject)type;
+      type = (JvmType)eResolveProxy(oldType);
+      if (type != oldType)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, JPQLPackage.FROM_CLASS__TYPE, oldType, type));
+      }
+    }
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JvmType basicGetType()
   {
     return type;
   }
@@ -103,9 +115,9 @@ public class FromClassImpl extends FromEntryImpl implements FromClass
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(String newType)
+  public void setType(JvmType newType)
   {
-    String oldType = type;
+    JvmType oldType = type;
     type = newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, JPQLPackage.FROM_CLASS__TYPE, oldType, type));
@@ -152,7 +164,8 @@ public class FromClassImpl extends FromEntryImpl implements FromClass
     switch (featureID)
     {
       case JPQLPackage.FROM_CLASS__TYPE:
-        return getType();
+        if (resolve) return getType();
+        return basicGetType();
       case JPQLPackage.FROM_CLASS__JOINS:
         return getJoins();
     }
@@ -171,7 +184,7 @@ public class FromClassImpl extends FromEntryImpl implements FromClass
     switch (featureID)
     {
       case JPQLPackage.FROM_CLASS__TYPE:
-        setType((String)newValue);
+        setType((JvmType)newValue);
         return;
       case JPQLPackage.FROM_CLASS__JOINS:
         getJoins().clear();
@@ -192,7 +205,7 @@ public class FromClassImpl extends FromEntryImpl implements FromClass
     switch (featureID)
     {
       case JPQLPackage.FROM_CLASS__TYPE:
-        setType(TYPE_EDEFAULT);
+        setType((JvmType)null);
         return;
       case JPQLPackage.FROM_CLASS__JOINS:
         getJoins().clear();
@@ -212,28 +225,11 @@ public class FromClassImpl extends FromEntryImpl implements FromClass
     switch (featureID)
     {
       case JPQLPackage.FROM_CLASS__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+        return type != null;
       case JPQLPackage.FROM_CLASS__JOINS:
         return joins != null && !joins.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
-    result.append(')');
-    return result.toString();
   }
 
 } //FromClassImpl

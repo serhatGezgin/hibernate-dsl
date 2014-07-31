@@ -15,7 +15,7 @@ public class InternalJPQLLexer extends Lexer {
     public static final int T__68=68;
     public static final int T__69=69;
     public static final int T__66=66;
-    public static final int RULE_ID=8;
+    public static final int RULE_ID=7;
     public static final int T__67=67;
     public static final int T__29=29;
     public static final int T__64=64;
@@ -69,7 +69,7 @@ public class InternalJPQLLexer extends Lexer {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_STRING=7;
+    public static final int RULE_STRING=8;
     public static final int T__33=33;
     public static final int T__71=71;
     public static final int T__34=34;
@@ -86,7 +86,6 @@ public class InternalJPQLLexer extends Lexer {
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
-    public static final int T__78=78;
     public static final int T__77=77;
 
     // delegates
@@ -482,10 +481,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:29:7: ( 'IMPORT' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:29:9: 'IMPORT'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:29:7: ( 'HAVING' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:29:9: 'HAVING'
             {
-            match("IMPORT"); 
+            match("HAVING"); 
 
 
             }
@@ -503,10 +502,11 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:30:7: ( ':' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:30:9: ':'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:30:7: ( 'ORDER' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:30:9: 'ORDER'
             {
-            match(':'); 
+            match("ORDER"); 
+
 
             }
 
@@ -523,10 +523,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:31:7: ( 'HAVING' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:31:9: 'HAVING'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:31:7: ( 'BY' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:31:9: 'BY'
             {
-            match("HAVING"); 
+            match("BY"); 
 
 
             }
@@ -544,11 +544,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:32:7: ( 'ORDER' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:32:9: 'ORDER'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:32:7: ( ',' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:32:9: ','
             {
-            match("ORDER"); 
-
+            match(','); 
 
             }
 
@@ -565,11 +564,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:33:7: ( 'BY' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:33:9: 'BY'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:33:7: ( '.' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:33:9: '.'
             {
-            match("BY"); 
-
+            match('.'); 
 
             }
 
@@ -586,10 +584,11 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:34:7: ( ',' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:34:9: ','
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:34:7: ( 'UPDATE' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:34:9: 'UPDATE'
             {
-            match(','); 
+            match("UPDATE"); 
+
 
             }
 
@@ -606,10 +605,11 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:35:7: ( '.' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:35:9: '.'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:35:7: ( 'SET' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:35:9: 'SET'
             {
-            match('.'); 
+            match("SET"); 
+
 
             }
 
@@ -626,10 +626,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:36:7: ( 'UPDATE' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:36:9: 'UPDATE'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:36:7: ( 'DELETE' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:36:9: 'DELETE'
             {
-            match("UPDATE"); 
+            match("DELETE"); 
 
 
             }
@@ -647,10 +647,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:37:7: ( 'SET' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:37:9: 'SET'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:37:7: ( 'SELECT' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:37:9: 'SELECT'
             {
-            match("SET"); 
+            match("SELECT"); 
 
 
             }
@@ -668,10 +668,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:38:7: ( 'DELETE' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:38:9: 'DELETE'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:38:7: ( 'AVG' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:38:9: 'AVG'
             {
-            match("DELETE"); 
+            match("AVG"); 
 
 
             }
@@ -689,11 +689,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:39:7: ( 'SELECT' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:39:9: 'SELECT'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:39:7: ( '(' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:39:9: '('
             {
-            match("SELECT"); 
-
+            match('('); 
 
             }
 
@@ -710,11 +709,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:40:7: ( 'AVG' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:40:9: 'AVG'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:40:7: ( ')' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:40:9: ')'
             {
-            match("AVG"); 
-
+            match(')'); 
 
             }
 
@@ -731,10 +729,11 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:41:7: ( '(' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:41:9: '('
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:41:7: ( 'MAX' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:41:9: 'MAX'
             {
-            match('('); 
+            match("MAX"); 
+
 
             }
 
@@ -751,10 +750,11 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:42:7: ( ')' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:42:9: ')'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:42:7: ( 'MIN' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:42:9: 'MIN'
             {
-            match(')'); 
+            match("MIN"); 
+
 
             }
 
@@ -771,10 +771,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:43:7: ( 'MAX' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:43:9: 'MAX'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:43:7: ( 'SUM' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:43:9: 'SUM'
             {
-            match("MAX"); 
+            match("SUM"); 
 
 
             }
@@ -792,10 +792,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:44:7: ( 'MIN' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:44:9: 'MIN'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:44:7: ( 'COUNT' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:44:9: 'COUNT'
             {
-            match("MIN"); 
+            match("COUNT"); 
 
 
             }
@@ -813,10 +813,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:45:7: ( 'SUM' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:45:9: 'SUM'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:45:7: ( 'NEW' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:45:9: 'NEW'
             {
-            match("SUM"); 
+            match("NEW"); 
 
 
             }
@@ -834,10 +834,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:46:7: ( 'COUNT' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:46:9: 'COUNT'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:46:7: ( 'FROM' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:46:9: 'FROM'
             {
-            match("COUNT"); 
+            match("FROM"); 
 
 
             }
@@ -855,10 +855,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:47:7: ( 'NEW' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:47:9: 'NEW'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:47:7: ( 'AS' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:47:9: 'AS'
             {
-            match("NEW"); 
+            match("AS"); 
 
 
             }
@@ -876,10 +876,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:48:7: ( 'FROM' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:48:9: 'FROM'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:48:7: ( 'IN' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:48:9: 'IN'
             {
-            match("FROM"); 
+            match("IN"); 
 
 
             }
@@ -897,10 +897,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:49:7: ( 'AS' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:49:9: 'AS'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:49:7: ( 'JOIN' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:49:9: 'JOIN'
             {
-            match("AS"); 
+            match("JOIN"); 
 
 
             }
@@ -918,10 +918,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:50:7: ( 'IN' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:50:9: 'IN'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:50:7: ( 'LEFT' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:50:9: 'LEFT'
             {
-            match("IN"); 
+            match("LEFT"); 
 
 
             }
@@ -939,10 +939,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:51:7: ( 'JOIN' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:51:9: 'JOIN'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:51:7: ( 'INNER' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:51:9: 'INNER'
             {
-            match("JOIN"); 
+            match("INNER"); 
 
 
             }
@@ -960,10 +960,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:52:7: ( 'LEFT' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:52:9: 'LEFT'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:52:7: ( 'WHERE' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:52:9: 'WHERE'
             {
-            match("LEFT"); 
+            match("WHERE"); 
 
 
             }
@@ -981,10 +981,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:53:7: ( 'INNER' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:53:9: 'INNER'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:53:7: ( 'OR' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:53:9: 'OR'
             {
-            match("INNER"); 
+            match("OR"); 
 
 
             }
@@ -1002,10 +1002,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:54:7: ( 'WHERE' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:54:9: 'WHERE'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:54:7: ( 'AND' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:54:9: 'AND'
             {
-            match("WHERE"); 
+            match("AND"); 
 
 
             }
@@ -1023,10 +1023,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:55:7: ( 'OR' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:55:9: 'OR'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:55:7: ( 'EXISTS' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:55:9: 'EXISTS'
             {
-            match("OR"); 
+            match("EXISTS"); 
 
 
             }
@@ -1044,10 +1044,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:56:7: ( 'AND' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:56:9: 'AND'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:56:7: ( 'ALL' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:56:9: 'ALL'
             {
-            match("AND"); 
+            match("ALL"); 
 
 
             }
@@ -1065,10 +1065,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:57:7: ( 'EXISTS' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:57:9: 'EXISTS'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:57:7: ( 'ANY' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:57:9: 'ANY'
             {
-            match("EXISTS"); 
+            match("ANY"); 
 
 
             }
@@ -1086,10 +1086,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:58:7: ( 'ALL' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:58:9: 'ALL'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:58:7: ( 'SOME' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:58:9: 'SOME'
             {
-            match("ALL"); 
+            match("SOME"); 
 
 
             }
@@ -1107,10 +1107,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:59:7: ( 'ANY' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:59:9: 'ANY'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:59:7: ( 'MEMBER' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:59:9: 'MEMBER'
             {
-            match("ANY"); 
+            match("MEMBER"); 
 
 
             }
@@ -1128,10 +1128,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:60:7: ( 'SOME' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:60:9: 'SOME'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:60:7: ( 'OF' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:60:9: 'OF'
             {
-            match("SOME"); 
+            match("OF"); 
 
 
             }
@@ -1149,10 +1149,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:61:7: ( 'MEMBER' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:61:9: 'MEMBER'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:61:7: ( 'IS' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:61:9: 'IS'
             {
-            match("MEMBER"); 
+            match("IS"); 
 
 
             }
@@ -1170,10 +1170,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:62:7: ( 'OF' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:62:9: 'OF'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:62:7: ( 'NULL' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:62:9: 'NULL'
             {
-            match("OF"); 
+            match("NULL"); 
 
 
             }
@@ -1191,10 +1191,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:63:7: ( 'IS' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:63:9: 'IS'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:63:7: ( 'EMPTY' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:63:9: 'EMPTY'
             {
-            match("IS"); 
+            match("EMPTY"); 
 
 
             }
@@ -1212,10 +1212,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:64:7: ( 'NULL' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:64:9: 'NULL'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:64:7: ( 'LIKE' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:64:9: 'LIKE'
             {
-            match("NULL"); 
+            match("LIKE"); 
 
 
             }
@@ -1233,10 +1233,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:65:7: ( 'EMPTY' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:65:9: 'EMPTY'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:65:7: ( 'BETWEEN' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:65:9: 'BETWEEN'
             {
-            match("EMPTY"); 
+            match("BETWEEN"); 
 
 
             }
@@ -1254,11 +1254,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:66:7: ( 'LIKE' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:66:9: 'LIKE'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:66:7: ( ':' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:66:9: ':'
             {
-            match("LIKE"); 
-
+            match(':'); 
 
             }
 
@@ -1275,10 +1274,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:67:7: ( 'BETWEEN' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:67:9: 'BETWEEN'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:67:7: ( 'ASC' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:67:9: 'ASC'
             {
-            match("BETWEEN"); 
+            match("ASC"); 
 
 
             }
@@ -1296,10 +1295,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:68:7: ( 'ASC' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:68:9: 'ASC'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:68:7: ( 'DESC' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:68:9: 'DESC'
             {
-            match("ASC"); 
+            match("DESC"); 
 
 
             }
@@ -1317,10 +1316,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:69:7: ( 'DESC' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:69:9: 'DESC'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:69:7: ( 'DISTINCT' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:69:9: 'DISTINCT'
             {
-            match("DESC"); 
+            match("DISTINCT"); 
 
 
             }
@@ -1338,10 +1337,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:70:7: ( 'DISTINCT' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:70:9: 'DISTINCT'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:70:7: ( 'FETCH' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:70:9: 'FETCH'
             {
-            match("DISTINCT"); 
+            match("FETCH"); 
 
 
             }
@@ -1359,10 +1358,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:71:7: ( 'FETCH' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:71:9: 'FETCH'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:71:7: ( 'OUTER' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:71:9: 'OUTER'
             {
-            match("FETCH"); 
+            match("OUTER"); 
 
 
             }
@@ -1380,29 +1379,8 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:72:7: ( 'OUTER' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:72:9: 'OUTER'
-            {
-            match("OUTER"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__77"
-
-    // $ANTLR start "T__78"
-    public final void mT__78() throws RecognitionException {
-        try {
-            int _type = T__78;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:73:7: ( 'NOT' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:73:9: 'NOT'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:72:7: ( 'NOT' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:72:9: 'NOT'
             {
             match("NOT"); 
 
@@ -1415,19 +1393,19 @@ public class InternalJPQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__78"
+    // $ANTLR end "T__77"
 
     // $ANTLR start "RULE_DATE_LITERAL"
     public final void mRULE_DATE_LITERAL() throws RecognitionException {
         try {
             int _type = RULE_DATE_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10872:19: ( '(' 'd' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING '\\'' ( ' ' | '\\t' )* ')' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10872:21: '(' 'd' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING '\\'' ( ' ' | '\\t' )* ')'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10652:19: ( '(' 'd' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING '\\'' ( ' ' | '\\t' )* ')' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10652:21: '(' 'd' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING '\\'' ( ' ' | '\\t' )* ')'
             {
             match('('); 
             match('d'); 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10872:29: ( ' ' | '\\t' )+
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10652:29: ( ' ' | '\\t' )+
             int cnt1=0;
             loop1:
             do {
@@ -1468,7 +1446,7 @@ public class InternalJPQLLexer extends Lexer {
             match('\''); 
             mRULE_DATE_STRING(); 
             match('\''); 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10872:68: ( ' ' | '\\t' )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10652:68: ( ' ' | '\\t' )*
             loop2:
             do {
                 int alt2=2;
@@ -1518,12 +1496,12 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_TIME_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10874:19: ( '(' 't' ( ' ' | '\\t' )+ '\\'' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10874:21: '(' 't' ( ' ' | '\\t' )+ '\\'' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10654:19: ( '(' 't' ( ' ' | '\\t' )+ '\\'' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10654:21: '(' 't' ( ' ' | '\\t' )+ '\\'' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')'
             {
             match('('); 
             match('t'); 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10874:29: ( ' ' | '\\t' )+
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10654:29: ( ' ' | '\\t' )+
             int cnt3=0;
             loop3:
             do {
@@ -1564,7 +1542,7 @@ public class InternalJPQLLexer extends Lexer {
             match('\''); 
             mRULE_TIME_STRING(); 
             match('\''); 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10874:68: ( ' ' | '\\t' )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10654:68: ( ' ' | '\\t' )*
             loop4:
             do {
                 int alt4=2;
@@ -1614,13 +1592,13 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_TIMESTAMP_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10876:24: ( '(' 'ts' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING ' ' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10876:26: '(' 'ts' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING ' ' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10656:24: ( '(' 'ts' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING ' ' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10656:26: '(' 'ts' ( ' ' | '\\t' )+ '\\'' RULE_DATE_STRING ' ' RULE_TIME_STRING '\\'' ( ' ' | '\\t' )* ')'
             {
             match('('); 
             match("ts"); 
 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10876:35: ( ' ' | '\\t' )+
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10656:35: ( ' ' | '\\t' )+
             int cnt5=0;
             loop5:
             do {
@@ -1663,7 +1641,7 @@ public class InternalJPQLLexer extends Lexer {
             match(' '); 
             mRULE_TIME_STRING(); 
             match('\''); 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10876:95: ( ' ' | '\\t' )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10656:95: ( ' ' | '\\t' )*
             loop6:
             do {
                 int alt6=2;
@@ -1713,8 +1691,8 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_DATE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10878:18: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10878:20: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10658:18: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10658:20: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9'
             {
             matchRange('0','9'); 
             matchRange('0','9'); 
@@ -1742,11 +1720,11 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_TIME_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10880:18: ( '0' .. '9' ( '0' .. '9' )? ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' '.' ( '0' .. '9' )* )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10880:20: '0' .. '9' ( '0' .. '9' )? ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' '.' ( '0' .. '9' )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10660:18: ( '0' .. '9' ( '0' .. '9' )? ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' '.' ( '0' .. '9' )* )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10660:20: '0' .. '9' ( '0' .. '9' )? ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' '.' ( '0' .. '9' )*
             {
             matchRange('0','9'); 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10880:29: ( '0' .. '9' )?
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10660:29: ( '0' .. '9' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1755,7 +1733,7 @@ public class InternalJPQLLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10880:30: '0' .. '9'
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10660:30: '0' .. '9'
                     {
                     matchRange('0','9'); 
 
@@ -1771,7 +1749,7 @@ public class InternalJPQLLexer extends Lexer {
             matchRange('0','9'); 
             matchRange('0','9'); 
             match('.'); 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10880:89: ( '0' .. '9' )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10660:89: ( '0' .. '9' )*
             loop8:
             do {
                 int alt8=2;
@@ -1784,7 +1762,7 @@ public class InternalJPQLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10880:90: '0' .. '9'
+            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10660:90: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1812,10 +1790,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10882:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10882:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10662:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10662:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10882:11: ( '^' )?
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10662:11: ( '^' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1824,7 +1802,7 @@ public class InternalJPQLLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10882:11: '^'
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10662:11: '^'
                     {
                     match('^'); 
 
@@ -1842,7 +1820,7 @@ public class InternalJPQLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10882:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10662:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop10:
             do {
                 int alt10=2;
@@ -1891,10 +1869,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10884:10: ( ( '0' .. '9' )+ )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10884:12: ( '0' .. '9' )+
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10664:10: ( ( '0' .. '9' )+ )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10664:12: ( '0' .. '9' )+
             {
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10884:12: ( '0' .. '9' )+
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10664:12: ( '0' .. '9' )+
             int cnt11=0;
             loop11:
             do {
@@ -1908,7 +1886,7 @@ public class InternalJPQLLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10884:13: '0' .. '9'
+            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10664:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1940,10 +1918,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1961,10 +1939,10 @@ public class InternalJPQLLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop12:
                     do {
                         int alt12=3;
@@ -1980,7 +1958,7 @@ public class InternalJPQLLexer extends Lexer {
 
                         switch (alt12) {
                     	case 1 :
-                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1996,7 +1974,7 @@ public class InternalJPQLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2021,10 +1999,10 @@ public class InternalJPQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop13:
                     do {
                         int alt13=3;
@@ -2040,7 +2018,7 @@ public class InternalJPQLLexer extends Lexer {
 
                         switch (alt13) {
                     	case 1 :
-                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2056,7 +2034,7 @@ public class InternalJPQLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10886:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10666:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2099,12 +2077,12 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10888:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10888:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10668:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10668:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10888:24: ( options {greedy=false; } : . )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10668:24: ( options {greedy=false; } : . )*
             loop15:
             do {
                 int alt15=2;
@@ -2129,7 +2107,7 @@ public class InternalJPQLLexer extends Lexer {
 
                 switch (alt15) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10888:52: .
+            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10668:52: .
             	    {
             	    matchAny(); 
 
@@ -2159,12 +2137,12 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop16:
             do {
                 int alt16=2;
@@ -2177,7 +2155,7 @@ public class InternalJPQLLexer extends Lexer {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2197,7 +2175,7 @@ public class InternalJPQLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:40: ( ( '\\r' )? '\\n' )?
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:40: ( ( '\\r' )? '\\n' )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -2206,9 +2184,9 @@ public class InternalJPQLLexer extends Lexer {
             }
             switch (alt18) {
                 case 1 :
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:41: ( '\\r' )? '\\n'
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:41: ( '\\r' )?
+                    // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:41: ( '\\r' )?
                     int alt17=2;
                     int LA17_0 = input.LA(1);
 
@@ -2217,7 +2195,7 @@ public class InternalJPQLLexer extends Lexer {
                     }
                     switch (alt17) {
                         case 1 :
-                            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10890:41: '\\r'
+                            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10670:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2249,10 +2227,10 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10892:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10892:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10672:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10672:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10892:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10672:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt19=0;
             loop19:
             do {
@@ -2306,8 +2284,8 @@ public class InternalJPQLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10894:16: ( . )
-            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10894:18: .
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10674:16: ( . )
+            // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:10674:18: .
             {
             matchAny(); 
 
@@ -2322,8 +2300,8 @@ public class InternalJPQLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:8: ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | RULE_DATE_LITERAL | RULE_TIME_LITERAL | RULE_TIMESTAMP_LITERAL | RULE_DATE_STRING | RULE_TIME_STRING | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt20=75;
+        // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:8: ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | RULE_DATE_LITERAL | RULE_TIME_LITERAL | RULE_TIMESTAMP_LITERAL | RULE_DATE_STRING | RULE_TIME_STRING | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt20=74;
         alt20 = dfa20.predict(input);
         switch (alt20) {
             case 1 :
@@ -2761,91 +2739,84 @@ public class InternalJPQLLexer extends Lexer {
                 }
                 break;
             case 63 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:382: T__78
-                {
-                mT__78(); 
-
-                }
-                break;
-            case 64 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:388: RULE_DATE_LITERAL
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:382: RULE_DATE_LITERAL
                 {
                 mRULE_DATE_LITERAL(); 
 
                 }
                 break;
-            case 65 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:406: RULE_TIME_LITERAL
+            case 64 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:400: RULE_TIME_LITERAL
                 {
                 mRULE_TIME_LITERAL(); 
 
                 }
                 break;
-            case 66 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:424: RULE_TIMESTAMP_LITERAL
+            case 65 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:418: RULE_TIMESTAMP_LITERAL
                 {
                 mRULE_TIMESTAMP_LITERAL(); 
 
                 }
                 break;
-            case 67 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:447: RULE_DATE_STRING
+            case 66 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:441: RULE_DATE_STRING
                 {
                 mRULE_DATE_STRING(); 
 
                 }
                 break;
-            case 68 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:464: RULE_TIME_STRING
+            case 67 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:458: RULE_TIME_STRING
                 {
                 mRULE_TIME_STRING(); 
 
                 }
                 break;
-            case 69 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:481: RULE_ID
+            case 68 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:475: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 70 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:489: RULE_INT
+            case 69 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:483: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 71 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:498: RULE_STRING
+            case 70 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:492: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 72 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:510: RULE_ML_COMMENT
+            case 71 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:504: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 73 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:526: RULE_SL_COMMENT
+            case 72 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:520: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 74 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:542: RULE_WS
+            case 73 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:536: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 75 :
-                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:550: RULE_ANY_OTHER
+            case 74 :
+                // ../org.yazgel.jpql.xtext.ui/src-gen/org/yazgel/jpql/xtext/ui/contentassist/antlr/internal/InternalJPQL.g:1:544: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2859,90 +2830,88 @@ public class InternalJPQLLexer extends Lexer {
 
     protected DFA20 dfa20 = new DFA20(this);
     static final String DFA20_eotS =
-        "\1\uffff\10\44\1\74\1\76\1\uffff\1\42\1\44\1\uffff\3\44\2\uffff"+
-        "\1\44\1\121\1\uffff\4\44\1\133\1\42\1\uffff\3\42\2\uffff\1\44\1"+
-        "\uffff\13\44\1\164\12\44\6\uffff\1\44\1\u0082\1\u0083\1\uffff\1"+
-        "\44\1\u0086\1\u0087\1\44\1\u0089\1\44\2\uffff\2\44\4\uffff\7\44"+
-        "\1\133\6\uffff\3\44\1\u009b\2\44\1\u009e\11\44\1\u00a8\1\u00a9\1"+
-        "\u00aa\1\uffff\1\u00ab\1\u00ac\1\u00ad\1\u00ae\1\u00af\1\u00b0\7"+
-        "\44\2\uffff\2\44\2\uffff\1\44\1\uffff\4\44\2\uffff\1\u00bf\1\44"+
-        "\1\u00c1\4\44\1\133\3\44\1\uffff\1\u00ca\1\u00cb\1\uffff\1\44\1"+
-        "\u00cd\3\44\1\u00d1\1\u00d2\2\44\11\uffff\1\44\1\u00d6\1\44\1\u00d8"+
-        "\10\44\1\u00e1\1\44\1\uffff\1\u00e3\1\uffff\1\u00e4\3\44\1\133\1"+
-        "\44\1\u00ea\1\44\2\uffff\1\44\1\uffff\1\u00ed\2\44\2\uffff\1\u00f0"+
-        "\2\44\1\uffff\1\u00f3\1\uffff\1\u00f4\1\44\1\u00f6\1\44\1\u00f8"+
-        "\1\u00f9\2\44\1\uffff\1\44\2\uffff\1\u00fd\1\44\1\u00ff\1\uffff"+
-        "\1\u0100\1\uffff\1\44\1\u0102\1\uffff\1\u0103\1\u0104\1\uffff\1"+
-        "\u0105\1\u0106\2\uffff\1\u0107\1\uffff\1\u0108\2\uffff\1\44\1\u010a"+
-        "\1\44\1\uffff\1\u010c\2\uffff\1\44\7\uffff\1\u010e\1\uffff\1\44"+
-        "\1\uffff\1\44\1\uffff\1\u0111\1\u0112\2\uffff";
+        "\1\uffff\10\44\1\74\1\76\1\uffff\1\42\3\44\2\uffff\1\44\1\115\1"+
+        "\uffff\5\44\1\uffff\1\133\1\42\1\uffff\3\42\2\uffff\1\44\1\uffff"+
+        "\13\44\1\163\12\44\6\uffff\1\44\1\u0081\1\u0082\1\44\1\u0084\1\44"+
+        "\2\uffff\2\44\4\uffff\3\44\1\u008f\1\u0090\4\44\1\uffff\1\133\6"+
+        "\uffff\3\44\1\u0099\2\44\1\u009c\11\44\1\u00a6\1\u00a7\1\u00a8\1"+
+        "\uffff\1\u00a9\1\u00aa\1\u00ab\1\u00ac\1\u00ad\1\u00ae\7\44\2\uffff"+
+        "\1\44\1\uffff\4\44\2\uffff\1\u00bb\1\44\1\u00bd\1\44\2\uffff\4\44"+
+        "\1\133\3\44\1\uffff\1\u00c7\1\u00c8\1\uffff\1\44\1\u00ca\3\44\1"+
+        "\u00ce\1\u00cf\2\44\11\uffff\1\44\1\u00d3\1\44\1\u00d5\6\44\1\u00dc"+
+        "\1\44\1\uffff\1\u00de\1\uffff\1\44\1\u00e0\3\44\1\133\1\44\1\u00e6"+
+        "\1\44\2\uffff\1\44\1\uffff\1\u00e9\2\44\2\uffff\1\u00ec\2\44\1\uffff"+
+        "\1\u00ef\1\uffff\1\u00f0\1\44\1\u00f2\1\u00f3\2\44\1\uffff\1\44"+
+        "\1\uffff\1\u00f7\1\uffff\1\u00f8\1\44\1\u00fa\1\uffff\1\u00fb\1"+
+        "\uffff\1\44\1\u00fd\1\uffff\1\u00fe\1\u00ff\1\uffff\1\u0100\1\u0101"+
+        "\2\uffff\1\u0102\2\uffff\1\44\1\u0104\1\44\2\uffff\1\u0106\2\uffff"+
+        "\1\44\6\uffff\1\u0108\1\uffff\1\44\1\uffff\1\44\1\uffff\1\u010b"+
+        "\1\u010c\2\uffff";
     static final String DFA20_eofS =
-        "\u0113\uffff";
+        "\u010d\uffff";
     static final String DFA20_minS =
         "\1\0\1\117\2\105\1\120\1\102\1\101\1\122\1\101\2\75\1\uffff\1\75"+
-        "\1\115\1\uffff\1\101\1\106\1\105\2\uffff\1\105\1\144\1\uffff\1\105"+
-        "\1\117\1\110\1\115\1\60\1\101\1\uffff\2\0\1\52\2\uffff\1\116\1\uffff"+
-        "\1\102\1\122\1\132\1\114\1\115\1\103\1\106\1\113\1\104\1\123\1\107"+
-        "\1\60\1\104\1\114\1\104\1\130\1\116\1\115\1\125\1\114\1\117\1\124"+
-        "\6\uffff\1\120\2\60\1\uffff\1\126\2\60\1\124\1\60\1\124\2\uffff"+
-        "\1\114\1\123\1\uffff\1\11\2\uffff\1\127\1\114\1\124\1\111\1\105"+
-        "\1\111\1\120\1\60\6\uffff\1\103\1\116\1\123\1\60\1\124\1\105\1\60"+
-        "\3\105\1\101\1\107\1\124\2\105\1\101\3\60\1\uffff\6\60\1\102\1\105"+
-        "\1\123\1\115\1\103\1\117\1\105\2\uffff\1\111\1\105\2\uffff\1\105"+
-        "\1\uffff\1\127\1\105\1\103\1\124\2\uffff\1\60\1\114\1\60\1\116\1"+
-        "\122\1\123\1\124\1\60\1\101\2\124\1\uffff\2\60\1\uffff\1\103\1\60"+
-        "\1\122\2\124\2\60\1\122\1\124\11\uffff\1\105\1\60\1\105\1\60\1\110"+
-        "\2\122\1\116\2\122\1\105\1\124\1\60\1\111\1\uffff\1\60\1\uffff\1"+
-        "\60\1\105\1\124\1\131\1\55\1\124\1\60\1\122\2\uffff\1\124\1\uffff"+
-        "\1\60\1\105\1\110\2\uffff\1\60\1\105\1\122\1\uffff\1\60\1\uffff"+
-        "\1\60\1\124\1\60\1\107\2\60\2\105\1\uffff\1\116\2\uffff\1\60\1\123"+
+        "\1\101\1\106\1\105\2\uffff\1\105\1\144\1\uffff\1\105\1\116\1\117"+
+        "\1\110\1\115\1\uffff\1\60\1\101\1\uffff\2\0\1\52\2\uffff\1\116\1"+
+        "\uffff\1\102\1\122\1\132\1\114\1\115\1\103\1\106\1\113\1\104\1\123"+
+        "\1\107\1\60\1\104\1\114\1\104\1\130\1\116\1\115\1\125\1\114\1\117"+
+        "\1\124\6\uffff\1\126\2\60\1\124\1\60\1\124\2\uffff\1\114\1\123\1"+
+        "\uffff\1\11\2\uffff\1\127\1\114\1\124\2\60\1\111\1\105\1\111\1\120"+
+        "\1\uffff\1\60\6\uffff\1\103\1\116\1\123\1\60\1\124\1\105\1\60\3"+
+        "\105\1\101\1\107\1\124\2\105\1\101\3\60\1\uffff\6\60\1\102\1\105"+
+        "\1\123\1\115\1\103\1\111\1\105\2\uffff\1\105\1\uffff\1\127\1\105"+
+        "\1\103\1\124\2\uffff\1\60\1\114\1\60\1\105\2\uffff\1\116\1\122\1"+
+        "\123\1\124\1\60\1\101\2\124\1\uffff\2\60\1\uffff\1\103\1\60\1\122"+
+        "\2\124\2\60\1\122\1\124\11\uffff\1\105\1\60\1\105\1\60\1\110\1\116"+
+        "\2\122\1\105\1\124\1\60\1\111\1\uffff\1\60\1\uffff\1\122\1\60\1"+
+        "\105\1\124\1\131\1\55\1\124\1\60\1\122\2\uffff\1\124\1\uffff\1\60"+
+        "\1\105\1\110\2\uffff\1\60\1\105\1\122\1\uffff\1\60\1\uffff\1\60"+
+        "\1\107\2\60\2\105\1\uffff\1\116\1\uffff\1\60\1\uffff\1\60\1\123"+
         "\1\60\1\uffff\1\60\1\uffff\1\111\1\60\1\uffff\2\60\1\uffff\2\60"+
-        "\2\uffff\1\60\1\uffff\1\60\2\uffff\1\116\1\60\1\103\1\uffff\1\60"+
-        "\2\uffff\1\116\7\uffff\1\60\1\uffff\1\124\1\uffff\1\107\1\uffff"+
-        "\2\60\2\uffff";
+        "\2\uffff\1\60\2\uffff\1\116\1\60\1\103\2\uffff\1\60\2\uffff\1\116"+
+        "\6\uffff\1\60\1\uffff\1\124\1\uffff\1\107\1\uffff\2\60\2\uffff";
     static final String DFA20_maxS =
         "\1\uffff\1\117\1\125\1\117\1\120\1\126\1\117\2\122\2\75\1\uffff"+
-        "\1\75\1\123\1\uffff\1\101\1\125\1\131\2\uffff\1\111\1\164\1\uffff"+
-        "\1\125\1\117\1\110\1\130\1\72\1\172\1\uffff\2\uffff\1\57\2\uffff"+
+        "\1\75\1\101\1\125\1\131\2\uffff\1\111\1\164\1\uffff\1\125\1\123"+
+        "\1\117\1\110\1\130\1\uffff\1\72\1\172\1\uffff\2\uffff\1\57\2\uffff"+
         "\1\125\1\uffff\1\115\1\122\1\132\1\124\1\115\1\127\1\116\1\113\1"+
         "\120\1\123\1\107\1\172\1\131\1\114\1\104\1\130\1\116\1\115\1\125"+
-        "\1\114\1\117\1\124\6\uffff\1\120\2\172\1\uffff\1\126\2\172\1\124"+
-        "\1\172\1\124\2\uffff\2\123\1\uffff\1\163\2\uffff\1\127\1\114\1\124"+
-        "\1\111\1\105\1\111\1\120\1\72\6\uffff\1\103\1\116\1\123\1\172\1"+
-        "\124\1\105\1\172\3\105\1\101\1\107\1\124\2\105\1\101\3\172\1\uffff"+
-        "\6\172\1\102\1\105\1\123\1\115\1\103\1\117\1\105\2\uffff\1\111\1"+
-        "\105\2\uffff\1\105\1\uffff\1\127\1\105\1\103\1\124\2\uffff\1\172"+
-        "\1\114\1\172\1\116\1\122\1\123\1\124\1\71\1\101\2\124\1\uffff\2"+
-        "\172\1\uffff\1\103\1\172\1\122\2\124\2\172\1\122\1\124\11\uffff"+
-        "\1\105\1\172\1\105\1\172\1\110\2\122\1\116\2\122\1\105\1\124\1\172"+
-        "\1\111\1\uffff\1\172\1\uffff\1\172\1\105\1\124\1\131\1\55\1\124"+
-        "\1\172\1\122\2\uffff\1\124\1\uffff\1\172\1\105\1\110\2\uffff\1\172"+
-        "\1\105\1\122\1\uffff\1\172\1\uffff\1\172\1\124\1\172\1\107\2\172"+
-        "\2\105\1\uffff\1\116\2\uffff\1\172\1\123\1\172\1\uffff\1\172\1\uffff"+
-        "\1\111\1\172\1\uffff\2\172\1\uffff\2\172\2\uffff\1\172\1\uffff\1"+
-        "\172\2\uffff\1\116\1\172\1\103\1\uffff\1\172\2\uffff\1\116\7\uffff"+
-        "\1\172\1\uffff\1\124\1\uffff\1\107\1\uffff\2\172\2\uffff";
+        "\1\114\1\117\1\124\6\uffff\1\126\2\172\1\124\1\172\1\124\2\uffff"+
+        "\2\123\1\uffff\1\163\2\uffff\1\127\1\114\1\124\2\172\1\111\1\105"+
+        "\1\111\1\120\1\uffff\1\72\6\uffff\1\103\1\116\1\123\1\172\1\124"+
+        "\1\105\1\172\3\105\1\101\1\107\1\124\2\105\1\101\3\172\1\uffff\6"+
+        "\172\1\102\1\105\1\123\1\115\1\103\1\111\1\105\2\uffff\1\105\1\uffff"+
+        "\1\127\1\105\1\103\1\124\2\uffff\1\172\1\114\1\172\1\105\2\uffff"+
+        "\1\116\1\122\1\123\1\124\1\71\1\101\2\124\1\uffff\2\172\1\uffff"+
+        "\1\103\1\172\1\122\2\124\2\172\1\122\1\124\11\uffff\1\105\1\172"+
+        "\1\105\1\172\1\110\1\116\2\122\1\105\1\124\1\172\1\111\1\uffff\1"+
+        "\172\1\uffff\1\122\1\172\1\105\1\124\1\131\1\55\1\124\1\172\1\122"+
+        "\2\uffff\1\124\1\uffff\1\172\1\105\1\110\2\uffff\1\172\1\105\1\122"+
+        "\1\uffff\1\172\1\uffff\1\172\1\107\2\172\2\105\1\uffff\1\116\1\uffff"+
+        "\1\172\1\uffff\1\172\1\123\1\172\1\uffff\1\172\1\uffff\1\111\1\172"+
+        "\1\uffff\2\172\1\uffff\2\172\2\uffff\1\172\2\uffff\1\116\1\172\1"+
+        "\103\2\uffff\1\172\2\uffff\1\116\6\uffff\1\172\1\uffff\1\124\1\uffff"+
+        "\1\107\1\uffff\2\172\2\uffff";
     static final String DFA20_acceptS =
-        "\13\uffff\1\21\2\uffff\1\24\3\uffff\1\30\1\31\2\uffff\1\40\6\uffff"+
-        "\1\105\3\uffff\1\112\1\113\1\uffff\1\105\26\uffff\1\17\1\15\1\20"+
-        "\1\16\1\21\1\22\3\uffff\1\24\6\uffff\1\30\1\31\2\uffff\1\100\1\uffff"+
-        "\1\37\1\40\10\uffff\1\106\1\104\1\107\1\110\1\111\1\112\23\uffff"+
-        "\1\47\15\uffff\1\50\1\65\2\uffff\1\55\1\64\1\uffff\1\27\4\uffff"+
-        "\1\102\1\101\13\uffff\1\43\2\uffff\1\33\11\uffff\1\7\1\36\1\72\1"+
-        "\56\1\61\1\60\1\11\1\41\1\42\16\uffff\1\45\1\uffff\1\77\10\uffff"+
-        "\1\10\1\12\1\uffff\1\62\3\uffff\1\52\1\70\3\uffff\1\13\1\uffff\1"+
-        "\46\10\uffff\1\73\1\uffff\1\66\1\51\3\uffff\1\103\1\uffff\1\44\2"+
-        "\uffff\1\3\2\uffff\1\4\2\uffff\1\14\1\75\1\uffff\1\53\1\uffff\1"+
-        "\26\1\76\3\uffff\1\54\1\uffff\1\67\1\1\1\uffff\1\35\1\6\1\5\1\32"+
-        "\1\63\1\23\1\25\1\uffff\1\34\1\uffff\1\57\1\uffff\1\71\2\uffff\1"+
-        "\74\1\2";
+        "\13\uffff\1\21\4\uffff\1\26\1\27\2\uffff\1\36\5\uffff\1\70\2\uffff"+
+        "\1\104\3\uffff\1\111\1\112\1\uffff\1\104\26\uffff\1\17\1\15\1\20"+
+        "\1\16\1\21\1\22\6\uffff\1\26\1\27\2\uffff\1\77\1\uffff\1\35\1\36"+
+        "\11\uffff\1\70\1\uffff\1\103\1\105\1\106\1\107\1\110\1\111\23\uffff"+
+        "\1\45\15\uffff\1\53\1\62\1\uffff\1\25\4\uffff\1\101\1\100\4\uffff"+
+        "\1\46\1\63\10\uffff\1\41\2\uffff\1\31\11\uffff\1\7\1\34\1\71\1\54"+
+        "\1\57\1\56\1\11\1\37\1\40\14\uffff\1\43\1\uffff\1\76\11\uffff\1"+
+        "\10\1\12\1\uffff\1\60\3\uffff\1\50\1\66\3\uffff\1\13\1\uffff\1\44"+
+        "\6\uffff\1\72\1\uffff\1\64\1\uffff\1\47\3\uffff\1\102\1\uffff\1"+
+        "\42\2\uffff\1\3\2\uffff\1\4\2\uffff\1\14\1\74\1\uffff\1\24\1\75"+
+        "\3\uffff\1\51\1\52\1\uffff\1\65\1\1\1\uffff\1\33\1\6\1\5\1\30\1"+
+        "\61\1\23\1\uffff\1\32\1\uffff\1\55\1\uffff\1\67\2\uffff\1\73\1\2";
     static final String DFA20_specialS =
-        "\1\0\35\uffff\1\2\1\1\u00f3\uffff}>";
+        "\1\1\35\uffff\1\2\1\0\u00ed\uffff}>";
     static final String[] DFA20_transitionS = {
-            "\11\42\2\41\2\42\1\41\22\42\1\41\1\14\1\36\4\42\1\37\1\25\1"+
-            "\26\2\42\1\22\1\42\1\23\1\40\12\33\1\16\1\42\1\11\1\13\1\12"+
-            "\2\42\1\5\1\21\1\1\1\24\1\32\1\10\1\35\1\17\1\15\1\30\1\35\1"+
-            "\3\1\6\1\27\1\20\3\35\1\2\1\7\1\4\1\35\1\31\3\35\3\42\1\34\1"+
+            "\11\42\2\41\2\42\1\41\22\42\1\41\1\14\1\36\4\42\1\37\1\23\1"+
+            "\24\2\42\1\20\1\42\1\21\1\40\12\33\1\32\1\42\1\11\1\13\1\12"+
+            "\2\42\1\5\1\17\1\1\1\22\1\31\1\10\1\35\1\15\1\26\1\27\1\35\1"+
+            "\3\1\6\1\25\1\16\3\35\1\2\1\7\1\4\1\35\1\30\3\35\3\42\1\34\1"+
             "\35\1\42\32\35\uff85\42",
             "\1\43",
             "\1\50\3\uffff\1\47\5\uffff\1\51\1\uffff\1\46\3\uffff\1\45",
@@ -2956,43 +2925,44 @@ public class InternalJPQLLexer extends Lexer {
             "\1\75",
             "",
             "\1\100",
-            "\1\101\1\102\4\uffff\1\103",
-            "",
-            "\1\105",
-            "\1\107\13\uffff\1\106\2\uffff\1\110",
-            "\1\112\23\uffff\1\111",
+            "\1\101",
+            "\1\103\13\uffff\1\102\2\uffff\1\104",
+            "\1\106\23\uffff\1\105",
             "",
             "",
-            "\1\115\3\uffff\1\116",
-            "\1\117\17\uffff\1\120",
+            "\1\111\3\uffff\1\112",
+            "\1\113\17\uffff\1\114",
             "",
-            "\1\123\11\uffff\1\125\5\uffff\1\124",
-            "\1\126",
-            "\1\127",
-            "\1\131\12\uffff\1\130",
-            "\12\132\1\134",
+            "\1\117\11\uffff\1\121\5\uffff\1\120",
+            "\1\122\4\uffff\1\123",
+            "\1\124",
+            "\1\125",
+            "\1\127\12\uffff\1\126",
+            "",
+            "\12\131\1\132",
             "\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
-            "\0\135",
-            "\0\135",
-            "\1\136\4\uffff\1\137",
+            "\0\134",
+            "\0\134",
+            "\1\135\4\uffff\1\136",
             "",
             "",
-            "\1\141\6\uffff\1\142",
+            "\1\140\6\uffff\1\141",
             "",
-            "\1\143\12\uffff\1\144",
+            "\1\142\12\uffff\1\143",
+            "\1\144",
             "\1\145",
-            "\1\146",
-            "\1\150\7\uffff\1\147",
-            "\1\151",
-            "\1\153\23\uffff\1\152",
-            "\1\155\7\uffff\1\154",
-            "\1\156",
-            "\1\160\13\uffff\1\157",
+            "\1\147\7\uffff\1\146",
+            "\1\150",
+            "\1\152\23\uffff\1\151",
+            "\1\154\7\uffff\1\153",
+            "\1\155",
+            "\1\157\13\uffff\1\156",
+            "\1\160",
             "\1\161",
-            "\1\162",
-            "\12\44\7\uffff\2\44\1\163\27\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\165\24\uffff\1\166",
+            "\12\44\7\uffff\2\44\1\162\27\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\164\24\uffff\1\165",
+            "\1\166",
             "\1\167",
             "\1\170",
             "\1\171",
@@ -3001,54 +2971,54 @@ public class InternalJPQLLexer extends Lexer {
             "\1\174",
             "\1\175",
             "\1\176",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\177",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0080",
-            "\12\44\7\uffff\15\44\1\u0081\14\44\4\uffff\1\44\1\uffff\32"+
+            "\12\44\7\uffff\3\44\1\u0080\26\44\4\uffff\1\44\1\uffff\32"+
             "\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
-            "\1\u0084",
-            "\12\44\7\uffff\3\44\1\u0085\26\44\4\uffff\1\44\1\uffff\32"+
-            "\44",
+            "\1\u0083",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u0085",
+            "",
+            "",
+            "\1\u0086\6\uffff\1\u0087",
             "\1\u0088",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u008a",
+            "",
+            "\1\u008a\26\uffff\1\u008a\122\uffff\1\u0089",
             "",
             "",
-            "\1\u008b\6\uffff\1\u008c",
+            "\1\u008b",
+            "\1\u008c",
             "\1\u008d",
-            "",
-            "\1\u008f\26\uffff\1\u008f\122\uffff\1\u008e",
-            "",
-            "",
-            "\1\u0090",
+            "\12\44\7\uffff\15\44\1\u008e\14\44\4\uffff\1\44\1\uffff\32"+
+            "\44",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u0091",
             "\1\u0092",
             "\1\u0093",
             "\1\u0094",
-            "\1\u0095",
+            "",
+            "\12\u0095\1\132",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u0096",
-            "\12\u0097\1\134",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\u0097",
             "\1\u0098",
-            "\1\u0099",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u009a",
+            "\1\u009b",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u009c",
             "\1\u009d",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u009e",
             "\1\u009f",
             "\1\u00a0",
             "\1\u00a1",
@@ -3056,8 +3026,6 @@ public class InternalJPQLLexer extends Lexer {
             "\1\u00a3",
             "\1\u00a4",
             "\1\u00a5",
-            "\1\u00a6",
-            "\1\u00a7",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
@@ -3068,119 +3036,116 @@ public class InternalJPQLLexer extends Lexer {
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00af",
+            "\1\u00b0",
             "\1\u00b1",
             "\1\u00b2",
             "\1\u00b3",
             "\1\u00b4",
             "\1\u00b5",
+            "",
+            "",
             "\1\u00b6",
+            "",
             "\1\u00b7",
-            "",
-            "",
             "\1\u00b8",
             "\1\u00b9",
-            "",
-            "",
             "\1\u00ba",
             "",
-            "\1\u00bb",
+            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u00bc",
-            "\1\u00bd",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u00be",
             "",
             "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00bf",
             "\1\u00c0",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00c1",
             "\1\u00c2",
-            "\1\u00c3",
+            "\12\u00c3",
             "\1\u00c4",
             "\1\u00c5",
-            "\12\u00c6",
-            "\1\u00c7",
-            "\1\u00c8",
+            "\1\u00c6",
+            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "",
             "\1\u00c9",
-            "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
+            "\1\u00cb",
             "\1\u00cc",
+            "\1\u00cd",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u00ce",
-            "\1\u00cf",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u00d0",
+            "\1\u00d1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u00d2",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u00d3",
             "\1\u00d4",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00d5",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00d6",
             "\1\u00d7",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
             "\1\u00db",
-            "\1\u00dc",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u00dd",
-            "\1\u00de",
+            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "",
             "\1\u00df",
-            "\1\u00e0",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00e1",
             "\1\u00e2",
-            "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00e3",
+            "\1\u00e4",
             "\1\u00e5",
-            "\1\u00e6",
-            "\1\u00e7",
-            "\1\u00e8",
-            "\1\u00e9",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00e7",
+            "",
+            "",
+            "\1\u00e8",
+            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00ea",
             "\1\u00eb",
             "",
             "",
-            "\1\u00ec",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00ed",
+            "\1\u00ee",
             "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u00ee",
-            "\1\u00ef",
-            "",
             "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u00f1",
-            "\1\u00f2",
-            "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00f4",
             "\1\u00f5",
+            "",
+            "\1\u00f6",
+            "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u00f7",
+            "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u00f9",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u00fa",
-            "\1\u00fb",
+            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
             "\1\u00fc",
-            "",
-            "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u00fe",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
-            "\1\u0101",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
@@ -3192,29 +3157,27 @@ public class InternalJPQLLexer extends Lexer {
             "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
+            "",
+            "\1\u0103",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\u0105",
+            "",
+            "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
+            "",
+            "\1\u0107",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
             "\1\u0109",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\u010b",
             "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
-            "",
-            "\1\u010d",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "",
-            "\1\u010f",
-            "",
-            "\1\u0110",
+            "\1\u010a",
             "",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
@@ -3252,13 +3215,23 @@ public class InternalJPQLLexer extends Lexer {
             this.transition = DFA20_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | RULE_DATE_LITERAL | RULE_TIME_LITERAL | RULE_TIMESTAMP_LITERAL | RULE_DATE_STRING | RULE_TIME_STRING | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | RULE_DATE_LITERAL | RULE_TIME_LITERAL | RULE_TIMESTAMP_LITERAL | RULE_DATE_STRING | RULE_TIME_STRING | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA20_31 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA20_31>='\u0000' && LA20_31<='\uFFFF')) ) {s = 92;}
+
+                        else s = 34;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA20_0 = input.LA(1);
 
                         s = -1;
@@ -3286,33 +3259,33 @@ public class InternalJPQLLexer extends Lexer {
 
                         else if ( (LA20_0=='!') ) {s = 12;}
 
-                        else if ( (LA20_0=='I') ) {s = 13;}
+                        else if ( (LA20_0=='H') ) {s = 13;}
 
-                        else if ( (LA20_0==':') ) {s = 14;}
+                        else if ( (LA20_0=='O') ) {s = 14;}
 
-                        else if ( (LA20_0=='H') ) {s = 15;}
+                        else if ( (LA20_0=='B') ) {s = 15;}
 
-                        else if ( (LA20_0=='O') ) {s = 16;}
+                        else if ( (LA20_0==',') ) {s = 16;}
 
-                        else if ( (LA20_0=='B') ) {s = 17;}
+                        else if ( (LA20_0=='.') ) {s = 17;}
 
-                        else if ( (LA20_0==',') ) {s = 18;}
+                        else if ( (LA20_0=='D') ) {s = 18;}
 
-                        else if ( (LA20_0=='.') ) {s = 19;}
+                        else if ( (LA20_0=='(') ) {s = 19;}
 
-                        else if ( (LA20_0=='D') ) {s = 20;}
+                        else if ( (LA20_0==')') ) {s = 20;}
 
-                        else if ( (LA20_0=='(') ) {s = 21;}
+                        else if ( (LA20_0=='N') ) {s = 21;}
 
-                        else if ( (LA20_0==')') ) {s = 22;}
+                        else if ( (LA20_0=='I') ) {s = 22;}
 
-                        else if ( (LA20_0=='N') ) {s = 23;}
+                        else if ( (LA20_0=='J') ) {s = 23;}
 
-                        else if ( (LA20_0=='J') ) {s = 24;}
+                        else if ( (LA20_0=='W') ) {s = 24;}
 
-                        else if ( (LA20_0=='W') ) {s = 25;}
+                        else if ( (LA20_0=='E') ) {s = 25;}
 
-                        else if ( (LA20_0=='E') ) {s = 26;}
+                        else if ( (LA20_0==':') ) {s = 26;}
 
                         else if ( ((LA20_0>='0' && LA20_0<='9')) ) {s = 27;}
 
@@ -3332,21 +3305,11 @@ public class InternalJPQLLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
-                    case 1 : 
-                        int LA20_31 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA20_31>='\u0000' && LA20_31<='\uFFFF')) ) {s = 93;}
-
-                        else s = 34;
-
-                        if ( s>=0 ) return s;
-                        break;
                     case 2 : 
                         int LA20_30 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA20_30>='\u0000' && LA20_30<='\uFFFF')) ) {s = 93;}
+                        if ( ((LA20_30>='\u0000' && LA20_30<='\uFFFF')) ) {s = 92;}
 
                         else s = 34;
 

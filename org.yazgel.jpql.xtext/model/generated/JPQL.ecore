@@ -2,26 +2,14 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="jPQL" nsURI="http://www.yazgel.org/jpql/xtext/JPQL" nsPrefix="jPQL">
   <eClassifiers xsi:type="ecore:EClass" name="QueryModule">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//Import" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultQuery" eType="#//JPQLQuery"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="namedQueries" upperBound="-1"
-        eType="#//NamedQuery" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queries" upperBound="-1"
+        eType="#//Query" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Import">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NamedQuery">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="query" eType="#//JPQLQuery"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JPQLQuery">
+  <eClassifiers xsi:type="ecore:EClass" name="Query">
     <eStructuralFeatures xsi:type="ecore:EReference" name="whereClause" eType="#//WhereClause"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SelectStatement" eSuperTypes="#//JPQLQuery #//ExpressionTerm">
+  <eClassifiers xsi:type="ecore:EClass" name="SelectStatement" eSuperTypes="#//Query #//ExpressionTerm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectFromClause" eType="#//SelectFromClause"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="having" eType="#//HavingClause"
@@ -43,7 +31,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//FromEntry"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UpdateStatement" eSuperTypes="#//JPQLQuery">
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateStatement" eSuperTypes="#//Query">
     <eStructuralFeatures xsi:type="ecore:EReference" name="updateClause" eType="#//UpdateClause"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setClause" eType="#//SetClause"
@@ -63,7 +51,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Value"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DeleteStatement" eSuperTypes="#//JPQLQuery">
+  <eClassifiers xsi:type="ecore:EClass" name="DeleteStatement" eSuperTypes="#//Query">
     <eStructuralFeatures xsi:type="ecore:EReference" name="deleteClause" eType="#//DeleteClause"
         containment="true"/>
   </eClassifiers>
@@ -110,7 +98,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FromClass" eSuperTypes="#//FromEntry">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="joins" upperBound="-1"
         eType="#//FromJoin" containment="true"/>
   </eClassifiers>

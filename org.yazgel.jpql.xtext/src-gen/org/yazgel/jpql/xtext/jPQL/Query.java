@@ -12,15 +12,15 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.yazgel.jpql.xtext.jPQL.JPQLQuery#getWhereClause <em>Where Clause</em>}</li>
+ *   <li>{@link org.yazgel.jpql.xtext.jPQL.Query#getWhereClause <em>Where Clause</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.yazgel.jpql.xtext.jPQL.JPQLPackage#getJPQLQuery()
+ * @see org.yazgel.jpql.xtext.jPQL.JPQLPackage#getQuery()
  * @model
  * @generated
  */
-public interface JPQLQuery extends EObject
+public interface Query extends EObject
 {
   /**
    * Returns the value of the '<em><b>Where Clause</b></em>' containment reference.
@@ -32,14 +32,14 @@ public interface JPQLQuery extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Where Clause</em>' containment reference.
    * @see #setWhereClause(WhereClause)
-   * @see org.yazgel.jpql.xtext.jPQL.JPQLPackage#getJPQLQuery_WhereClause()
+   * @see org.yazgel.jpql.xtext.jPQL.JPQLPackage#getQuery_WhereClause()
    * @model containment="true"
    * @generated
    */
   WhereClause getWhereClause();
 
   /**
-   * Sets the value of the '{@link org.yazgel.jpql.xtext.jPQL.JPQLQuery#getWhereClause <em>Where Clause</em>}' containment reference.
+   * Sets the value of the '{@link org.yazgel.jpql.xtext.jPQL.Query#getWhereClause <em>Where Clause</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Where Clause</em>' containment reference.
@@ -48,4 +48,4 @@ public interface JPQLQuery extends EObject
    */
   void setWhereClause(WhereClause value);
 
-} // JPQLQuery
+} // Query

@@ -32,31 +32,13 @@ public interface JPQLFactory extends EFactory
   QueryModule createQueryModule();
 
   /**
-   * Returns a new object of class '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Import</em>'.
-   * @generated
-   */
-  Import createImport();
-
-  /**
-   * Returns a new object of class '<em>Named Query</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Named Query</em>'.
-   * @generated
-   */
-  NamedQuery createNamedQuery();
-
-  /**
    * Returns a new object of class '<em>Query</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return a new object of class '<em>Query</em>'.
    * @generated
    */
-  JPQLQuery createJPQLQuery();
+  Query createQuery();
 
   /**
    * Returns a new object of class '<em>Select Statement</em>'.

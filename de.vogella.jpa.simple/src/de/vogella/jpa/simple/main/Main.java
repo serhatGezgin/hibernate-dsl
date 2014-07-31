@@ -28,7 +28,7 @@ public class Main {
 		// read the existing entries
 		//Query q = em.createQuery("select m from Person m");
 		
-		Query q = em.createQuery("select p from Person p where p.firstName = :name");
+		Query q = em.createQuery("select p from de.vogella.jpa.simple.model.Person p where p.firstName = :name");
 		q.setParameter("name", "Jim_32");
 
 		List<Person> persontList = q.getResultList();

@@ -20,7 +20,7 @@ package org.yazgel.jpql.xtext.jPQL;
  * @model
  * @generated
  */
-public interface UpdateStatement extends JPQLQuery
+public interface UpdateStatement extends Query
 {
   /**
    * Returns the value of the '<em><b>Update Clause</b></em>' containment reference.

@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.xtext.common.types.TypesPackage;
+
 import org.yazgel.jpql.xtext.jPQL.AliasAttributeExpression;
 import org.yazgel.jpql.xtext.jPQL.AllExpression;
 import org.yazgel.jpql.xtext.jPQL.AndExpression;
@@ -33,7 +35,6 @@ import org.yazgel.jpql.xtext.jPQL.FromEntry;
 import org.yazgel.jpql.xtext.jPQL.FromJoin;
 import org.yazgel.jpql.xtext.jPQL.Function;
 import org.yazgel.jpql.xtext.jPQL.HavingClause;
-import org.yazgel.jpql.xtext.jPQL.Import;
 import org.yazgel.jpql.xtext.jPQL.InExpression;
 import org.yazgel.jpql.xtext.jPQL.InQueryExpression;
 import org.yazgel.jpql.xtext.jPQL.InSeqExpression;
@@ -41,13 +42,11 @@ import org.yazgel.jpql.xtext.jPQL.InnerJoin;
 import org.yazgel.jpql.xtext.jPQL.IntegerExpression;
 import org.yazgel.jpql.xtext.jPQL.JPQLFactory;
 import org.yazgel.jpql.xtext.jPQL.JPQLPackage;
-import org.yazgel.jpql.xtext.jPQL.JPQLQuery;
 import org.yazgel.jpql.xtext.jPQL.Join;
 import org.yazgel.jpql.xtext.jPQL.LeftJoin;
 import org.yazgel.jpql.xtext.jPQL.LikeExpression;
 import org.yazgel.jpql.xtext.jPQL.MaxAggregate;
 import org.yazgel.jpql.xtext.jPQL.MinAggregate;
-import org.yazgel.jpql.xtext.jPQL.NamedQuery;
 import org.yazgel.jpql.xtext.jPQL.NullComparisonExpression;
 import org.yazgel.jpql.xtext.jPQL.NullExpression;
 import org.yazgel.jpql.xtext.jPQL.Operator;
@@ -56,6 +55,7 @@ import org.yazgel.jpql.xtext.jPQL.OrExpression;
 import org.yazgel.jpql.xtext.jPQL.OrderClause;
 import org.yazgel.jpql.xtext.jPQL.OrderItem;
 import org.yazgel.jpql.xtext.jPQL.ParameterExpression;
+import org.yazgel.jpql.xtext.jPQL.Query;
 import org.yazgel.jpql.xtext.jPQL.QueryModule;
 import org.yazgel.jpql.xtext.jPQL.SelectAggregateExpression;
 import org.yazgel.jpql.xtext.jPQL.SelectClause;
@@ -95,21 +95,7 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass importEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass namedQueryEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass jpqlQueryEClass = null;
+  private EClass queryEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -565,6 +551,9 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
 
     isInited = true;
 
+    // Initialize simple dependencies
+    TypesPackage.eINSTANCE.eClass();
+
     // Create package meta-data objects
     theJPQLPackage.createPackageContents();
 
@@ -595,7 +584,7 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryModule_Imports()
+  public EReference getQueryModule_Queries()
   {
     return (EReference)queryModuleEClass.getEStructuralFeatures().get(0);
   }
@@ -605,9 +594,9 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryModule_DefaultQuery()
+  public EClass getQuery()
   {
-    return (EReference)queryModuleEClass.getEStructuralFeatures().get(1);
+    return queryEClass;
   }
 
   /**
@@ -615,79 +604,9 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQueryModule_NamedQueries()
+  public EReference getQuery_WhereClause()
   {
-    return (EReference)queryModuleEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getImport()
-  {
-    return importEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImport_ImportURI()
-  {
-    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getNamedQuery()
-  {
-    return namedQueryEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNamedQuery_Name()
-  {
-    return (EAttribute)namedQueryEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getNamedQuery_Query()
-  {
-    return (EReference)namedQueryEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getJPQLQuery()
-  {
-    return jpqlQueryEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getJPQLQuery_WhereClause()
-  {
-    return (EReference)jpqlQueryEClass.getEStructuralFeatures().get(0);
+    return (EReference)queryEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1215,9 +1134,9 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFromClass_Type()
+  public EReference getFromClass_Type()
   {
-    return (EAttribute)fromClassEClass.getEStructuralFeatures().get(0);
+    return (EReference)fromClassEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2041,19 +1960,10 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
 
     // Create classes and their features
     queryModuleEClass = createEClass(QUERY_MODULE);
-    createEReference(queryModuleEClass, QUERY_MODULE__IMPORTS);
-    createEReference(queryModuleEClass, QUERY_MODULE__DEFAULT_QUERY);
-    createEReference(queryModuleEClass, QUERY_MODULE__NAMED_QUERIES);
+    createEReference(queryModuleEClass, QUERY_MODULE__QUERIES);
 
-    importEClass = createEClass(IMPORT);
-    createEAttribute(importEClass, IMPORT__IMPORT_URI);
-
-    namedQueryEClass = createEClass(NAMED_QUERY);
-    createEAttribute(namedQueryEClass, NAMED_QUERY__NAME);
-    createEReference(namedQueryEClass, NAMED_QUERY__QUERY);
-
-    jpqlQueryEClass = createEClass(JPQL_QUERY);
-    createEReference(jpqlQueryEClass, JPQL_QUERY__WHERE_CLAUSE);
+    queryEClass = createEClass(QUERY);
+    createEReference(queryEClass, QUERY__WHERE_CLAUSE);
 
     selectStatementEClass = createEClass(SELECT_STATEMENT);
     createEReference(selectStatementEClass, SELECT_STATEMENT__SELECT_FROM_CLAUSE);
@@ -2130,7 +2040,7 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
     createEAttribute(variableDeclarationEClass, VARIABLE_DECLARATION__NAME);
 
     fromClassEClass = createEClass(FROM_CLASS);
-    createEAttribute(fromClassEClass, FROM_CLASS__TYPE);
+    createEReference(fromClassEClass, FROM_CLASS__TYPE);
     createEReference(fromClassEClass, FROM_CLASS__JOINS);
 
     fromCollectionEClass = createEClass(FROM_COLLECTION);
@@ -2271,15 +2181,18 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
     setNsPrefix(eNS_PREFIX);
     setNsURI(eNS_URI);
 
+    // Obtain other dependent packages
+    TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+
     // Create type parameters
 
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    selectStatementEClass.getESuperTypes().add(this.getJPQLQuery());
+    selectStatementEClass.getESuperTypes().add(this.getQuery());
     selectStatementEClass.getESuperTypes().add(this.getExpressionTerm());
-    updateStatementEClass.getESuperTypes().add(this.getJPQLQuery());
-    deleteStatementEClass.getESuperTypes().add(this.getJPQLQuery());
+    updateStatementEClass.getESuperTypes().add(this.getQuery());
+    deleteStatementEClass.getESuperTypes().add(this.getQuery());
     selectAggregateExpressionEClass.getESuperTypes().add(this.getSelectExpression());
     avgAggregateEClass.getESuperTypes().add(this.getSelectAggregateExpression());
     maxAggregateEClass.getESuperTypes().add(this.getSelectAggregateExpression());
@@ -2321,19 +2234,10 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(queryModuleEClass, QueryModule.class, "QueryModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getQueryModule_Imports(), this.getImport(), null, "imports", null, 0, -1, QueryModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQueryModule_DefaultQuery(), this.getJPQLQuery(), null, "defaultQuery", null, 0, 1, QueryModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQueryModule_NamedQueries(), this.getNamedQuery(), null, "namedQueries", null, 0, -1, QueryModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQueryModule_Queries(), this.getQuery(), null, "queries", null, 0, -1, QueryModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(namedQueryEClass, NamedQuery.class, "NamedQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNamedQuery_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNamedQuery_Query(), this.getJPQLQuery(), null, "query", null, 0, 1, NamedQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(jpqlQueryEClass, JPQLQuery.class, "JPQLQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getJPQLQuery_WhereClause(), this.getWhereClause(), null, "whereClause", null, 0, 1, JPQLQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(queryEClass, Query.class, "Query", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getQuery_WhereClause(), this.getWhereClause(), null, "whereClause", null, 0, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(selectStatementEClass, SelectStatement.class, "SelectStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSelectStatement_SelectFromClause(), this.getSelectFromClause(), null, "selectFromClause", null, 0, 1, SelectStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2410,7 +2314,7 @@ public class JPQLPackageImpl extends EPackageImpl implements JPQLPackage
     initEAttribute(getVariableDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fromClassEClass, FromClass.class, "FromClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFromClass_Type(), ecorePackage.getEString(), "type", null, 0, 1, FromClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFromClass_Type(), theTypesPackage.getJvmType(), null, "type", null, 0, 1, FromClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFromClass_Joins(), this.getFromJoin(), null, "joins", null, 0, -1, FromClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fromCollectionEClass, FromCollection.class, "FromCollection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

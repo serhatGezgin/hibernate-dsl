@@ -4,7 +4,6 @@ package org.yazgel.jpql.xtext.jPQL.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -12,16 +11,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.yazgel.jpql.xtext.jPQL.Import;
 import org.yazgel.jpql.xtext.jPQL.JPQLPackage;
-import org.yazgel.jpql.xtext.jPQL.JPQLQuery;
-import org.yazgel.jpql.xtext.jPQL.NamedQuery;
+import org.yazgel.jpql.xtext.jPQL.Query;
 import org.yazgel.jpql.xtext.jPQL.QueryModule;
 
 /**
@@ -31,9 +27,7 @@ import org.yazgel.jpql.xtext.jPQL.QueryModule;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.yazgel.jpql.xtext.jPQL.impl.QueryModuleImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link org.yazgel.jpql.xtext.jPQL.impl.QueryModuleImpl#getDefaultQuery <em>Default Query</em>}</li>
- *   <li>{@link org.yazgel.jpql.xtext.jPQL.impl.QueryModuleImpl#getNamedQueries <em>Named Queries</em>}</li>
+ *   <li>{@link org.yazgel.jpql.xtext.jPQL.impl.QueryModuleImpl#getQueries <em>Queries</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,34 +36,14 @@ import org.yazgel.jpql.xtext.jPQL.QueryModule;
 public class QueryModuleImpl extends MinimalEObjectImpl.Container implements QueryModule
 {
   /**
-   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
+   * The cached value of the '{@link #getQueries() <em>Queries</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImports()
+   * @see #getQueries()
    * @generated
    * @ordered
    */
-  protected EList<Import> imports;
-
-  /**
-   * The cached value of the '{@link #getDefaultQuery() <em>Default Query</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDefaultQuery()
-   * @generated
-   * @ordered
-   */
-  protected JPQLQuery defaultQuery;
-
-  /**
-   * The cached value of the '{@link #getNamedQueries() <em>Named Queries</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNamedQueries()
-   * @generated
-   * @ordered
-   */
-  protected EList<NamedQuery> namedQueries;
+  protected EList<Query> queries;
 
   /**
    * <!-- begin-user-doc -->
@@ -97,75 +71,13 @@ public class QueryModuleImpl extends MinimalEObjectImpl.Container implements Que
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Import> getImports()
+  public EList<Query> getQueries()
   {
-    if (imports == null)
+    if (queries == null)
     {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, JPQLPackage.QUERY_MODULE__IMPORTS);
+      queries = new EObjectContainmentEList<Query>(Query.class, this, JPQLPackage.QUERY_MODULE__QUERIES);
     }
-    return imports;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public JPQLQuery getDefaultQuery()
-  {
-    return defaultQuery;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetDefaultQuery(JPQLQuery newDefaultQuery, NotificationChain msgs)
-  {
-    JPQLQuery oldDefaultQuery = defaultQuery;
-    defaultQuery = newDefaultQuery;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JPQLPackage.QUERY_MODULE__DEFAULT_QUERY, oldDefaultQuery, newDefaultQuery);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDefaultQuery(JPQLQuery newDefaultQuery)
-  {
-    if (newDefaultQuery != defaultQuery)
-    {
-      NotificationChain msgs = null;
-      if (defaultQuery != null)
-        msgs = ((InternalEObject)defaultQuery).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JPQLPackage.QUERY_MODULE__DEFAULT_QUERY, null, msgs);
-      if (newDefaultQuery != null)
-        msgs = ((InternalEObject)newDefaultQuery).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JPQLPackage.QUERY_MODULE__DEFAULT_QUERY, null, msgs);
-      msgs = basicSetDefaultQuery(newDefaultQuery, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JPQLPackage.QUERY_MODULE__DEFAULT_QUERY, newDefaultQuery, newDefaultQuery));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<NamedQuery> getNamedQueries()
-  {
-    if (namedQueries == null)
-    {
-      namedQueries = new EObjectContainmentEList<NamedQuery>(NamedQuery.class, this, JPQLPackage.QUERY_MODULE__NAMED_QUERIES);
-    }
-    return namedQueries;
+    return queries;
   }
 
   /**
@@ -178,12 +90,8 @@ public class QueryModuleImpl extends MinimalEObjectImpl.Container implements Que
   {
     switch (featureID)
     {
-      case JPQLPackage.QUERY_MODULE__IMPORTS:
-        return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case JPQLPackage.QUERY_MODULE__DEFAULT_QUERY:
-        return basicSetDefaultQuery(null, msgs);
-      case JPQLPackage.QUERY_MODULE__NAMED_QUERIES:
-        return ((InternalEList<?>)getNamedQueries()).basicRemove(otherEnd, msgs);
+      case JPQLPackage.QUERY_MODULE__QUERIES:
+        return ((InternalEList<?>)getQueries()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -198,12 +106,8 @@ public class QueryModuleImpl extends MinimalEObjectImpl.Container implements Que
   {
     switch (featureID)
     {
-      case JPQLPackage.QUERY_MODULE__IMPORTS:
-        return getImports();
-      case JPQLPackage.QUERY_MODULE__DEFAULT_QUERY:
-        return getDefaultQuery();
-      case JPQLPackage.QUERY_MODULE__NAMED_QUERIES:
-        return getNamedQueries();
+      case JPQLPackage.QUERY_MODULE__QUERIES:
+        return getQueries();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -219,16 +123,9 @@ public class QueryModuleImpl extends MinimalEObjectImpl.Container implements Que
   {
     switch (featureID)
     {
-      case JPQLPackage.QUERY_MODULE__IMPORTS:
-        getImports().clear();
-        getImports().addAll((Collection<? extends Import>)newValue);
-        return;
-      case JPQLPackage.QUERY_MODULE__DEFAULT_QUERY:
-        setDefaultQuery((JPQLQuery)newValue);
-        return;
-      case JPQLPackage.QUERY_MODULE__NAMED_QUERIES:
-        getNamedQueries().clear();
-        getNamedQueries().addAll((Collection<? extends NamedQuery>)newValue);
+      case JPQLPackage.QUERY_MODULE__QUERIES:
+        getQueries().clear();
+        getQueries().addAll((Collection<? extends Query>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -244,14 +141,8 @@ public class QueryModuleImpl extends MinimalEObjectImpl.Container implements Que
   {
     switch (featureID)
     {
-      case JPQLPackage.QUERY_MODULE__IMPORTS:
-        getImports().clear();
-        return;
-      case JPQLPackage.QUERY_MODULE__DEFAULT_QUERY:
-        setDefaultQuery((JPQLQuery)null);
-        return;
-      case JPQLPackage.QUERY_MODULE__NAMED_QUERIES:
-        getNamedQueries().clear();
+      case JPQLPackage.QUERY_MODULE__QUERIES:
+        getQueries().clear();
         return;
     }
     super.eUnset(featureID);
@@ -267,12 +158,8 @@ public class QueryModuleImpl extends MinimalEObjectImpl.Container implements Que
   {
     switch (featureID)
     {
-      case JPQLPackage.QUERY_MODULE__IMPORTS:
-        return imports != null && !imports.isEmpty();
-      case JPQLPackage.QUERY_MODULE__DEFAULT_QUERY:
-        return defaultQuery != null;
-      case JPQLPackage.QUERY_MODULE__NAMED_QUERIES:
-        return namedQueries != null && !namedQueries.isEmpty();
+      case JPQLPackage.QUERY_MODULE__QUERIES:
+        return queries != null && !queries.isEmpty();
     }
     return super.eIsSet(featureID);
   }

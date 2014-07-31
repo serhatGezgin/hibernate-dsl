@@ -4,7 +4,7 @@
     editorDirectory="/org.yazgel.jpql.xtext.editor/src" modelPluginID="org.yazgel.jpql.xtext"
     forceOverwrite="true" modelName="JPQL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.yazgel.jpql.xtext.edit"
-    editorPluginID="org.yazgel.jpql.xtext.editor" runtimeVersion="2.10">
+    editorPluginID="org.yazgel.jpql.xtext.editor" runtimeVersion="2.10" usedGenPackages="platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types">
   <genPackages prefix="JPQL" basePackage="org.yazgel.jpql.xtext" disposableProviderFactory="true"
       fileExtensions="jpql" ecorePackage="JPQL.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="JPQL.ecore#//Operator">
@@ -16,19 +16,10 @@
       <genEnumLiterals ecoreEnumLiteral="JPQL.ecore#//Operator/notEqual"/>
     </genEnums>
     <genClasses ecoreClass="JPQL.ecore#//QueryModule">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//QueryModule/imports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//QueryModule/defaultQuery"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//QueryModule/namedQueries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//QueryModule/queries"/>
     </genClasses>
-    <genClasses ecoreClass="JPQL.ecore#//Import">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JPQL.ecore#//Import/importURI"/>
-    </genClasses>
-    <genClasses ecoreClass="JPQL.ecore#//NamedQuery">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JPQL.ecore#//NamedQuery/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//NamedQuery/query"/>
-    </genClasses>
-    <genClasses ecoreClass="JPQL.ecore#//JPQLQuery">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//JPQLQuery/whereClause"/>
+    <genClasses ecoreClass="JPQL.ecore#//Query">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//Query/whereClause"/>
     </genClasses>
     <genClasses ecoreClass="JPQL.ecore#//SelectStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//SelectStatement/selectFromClause"/>
@@ -99,7 +90,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JPQL.ecore#//VariableDeclaration/name"/>
     </genClasses>
     <genClasses ecoreClass="JPQL.ecore#//FromClass">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JPQL.ecore#//FromClass/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JPQL.ecore#//FromClass/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JPQL.ecore#//FromClass/joins"/>
     </genClasses>
     <genClasses ecoreClass="JPQL.ecore#//FromCollection">

@@ -68,31 +68,13 @@ public interface JPQLPackage extends EPackage
   int QUERY_MODULE = 0;
 
   /**
-   * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+   * The feature id for the '<em><b>Queries</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUERY_MODULE__IMPORTS = 0;
-
-  /**
-   * The feature id for the '<em><b>Default Query</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_MODULE__DEFAULT_QUERY = 1;
-
-  /**
-   * The feature id for the '<em><b>Named Queries</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUERY_MODULE__NAMED_QUERIES = 2;
+  int QUERY_MODULE__QUERIES = 0;
 
   /**
    * The number of structural features of the '<em>Query Module</em>' class.
@@ -101,82 +83,17 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUERY_MODULE_FEATURE_COUNT = 3;
+  int QUERY_MODULE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.ImportImpl <em>Import</em>}' class.
+   * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.QueryImpl <em>Query</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.yazgel.jpql.xtext.jPQL.impl.ImportImpl
-   * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getImport()
+   * @see org.yazgel.jpql.xtext.jPQL.impl.QueryImpl
+   * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getQuery()
    * @generated
    */
-  int IMPORT = 1;
-
-  /**
-   * The feature id for the '<em><b>Import URI</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IMPORT__IMPORT_URI = 0;
-
-  /**
-   * The number of structural features of the '<em>Import</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IMPORT_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.NamedQueryImpl <em>Named Query</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.yazgel.jpql.xtext.jPQL.impl.NamedQueryImpl
-   * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getNamedQuery()
-   * @generated
-   */
-  int NAMED_QUERY = 2;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NAMED_QUERY__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Query</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NAMED_QUERY__QUERY = 1;
-
-  /**
-   * The number of structural features of the '<em>Named Query</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NAMED_QUERY_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.JPQLQueryImpl <em>Query</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLQueryImpl
-   * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getJPQLQuery()
-   * @generated
-   */
-  int JPQL_QUERY = 3;
+  int QUERY = 1;
 
   /**
    * The feature id for the '<em><b>Where Clause</b></em>' containment reference.
@@ -185,7 +102,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JPQL_QUERY__WHERE_CLAUSE = 0;
+  int QUERY__WHERE_CLAUSE = 0;
 
   /**
    * The number of structural features of the '<em>Query</em>' class.
@@ -194,7 +111,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JPQL_QUERY_FEATURE_COUNT = 1;
+  int QUERY_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.SelectStatementImpl <em>Select Statement</em>}' class.
@@ -204,7 +121,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSelectStatement()
    * @generated
    */
-  int SELECT_STATEMENT = 4;
+  int SELECT_STATEMENT = 2;
 
   /**
    * The feature id for the '<em><b>Where Clause</b></em>' containment reference.
@@ -213,7 +130,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECT_STATEMENT__WHERE_CLAUSE = JPQL_QUERY__WHERE_CLAUSE;
+  int SELECT_STATEMENT__WHERE_CLAUSE = QUERY__WHERE_CLAUSE;
 
   /**
    * The feature id for the '<em><b>Select From Clause</b></em>' containment reference.
@@ -222,7 +139,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECT_STATEMENT__SELECT_FROM_CLAUSE = JPQL_QUERY_FEATURE_COUNT + 0;
+  int SELECT_STATEMENT__SELECT_FROM_CLAUSE = QUERY_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Having</b></em>' containment reference.
@@ -231,7 +148,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECT_STATEMENT__HAVING = JPQL_QUERY_FEATURE_COUNT + 1;
+  int SELECT_STATEMENT__HAVING = QUERY_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Order</b></em>' containment reference.
@@ -240,7 +157,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECT_STATEMENT__ORDER = JPQL_QUERY_FEATURE_COUNT + 2;
+  int SELECT_STATEMENT__ORDER = QUERY_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Select Statement</em>' class.
@@ -249,7 +166,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECT_STATEMENT_FEATURE_COUNT = JPQL_QUERY_FEATURE_COUNT + 3;
+  int SELECT_STATEMENT_FEATURE_COUNT = QUERY_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.HavingClauseImpl <em>Having Clause</em>}' class.
@@ -259,7 +176,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getHavingClause()
    * @generated
    */
-  int HAVING_CLAUSE = 5;
+  int HAVING_CLAUSE = 3;
 
   /**
    * The feature id for the '<em><b>Having</b></em>' containment reference.
@@ -287,7 +204,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getOrderClause()
    * @generated
    */
-  int ORDER_CLAUSE = 6;
+  int ORDER_CLAUSE = 4;
 
   /**
    * The feature id for the '<em><b>Ordering</b></em>' containment reference list.
@@ -333,7 +250,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getOrderItem()
    * @generated
    */
-  int ORDER_ITEM = 7;
+  int ORDER_ITEM = 5;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' reference.
@@ -370,7 +287,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getUpdateStatement()
    * @generated
    */
-  int UPDATE_STATEMENT = 8;
+  int UPDATE_STATEMENT = 6;
 
   /**
    * The feature id for the '<em><b>Where Clause</b></em>' containment reference.
@@ -379,7 +296,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UPDATE_STATEMENT__WHERE_CLAUSE = JPQL_QUERY__WHERE_CLAUSE;
+  int UPDATE_STATEMENT__WHERE_CLAUSE = QUERY__WHERE_CLAUSE;
 
   /**
    * The feature id for the '<em><b>Update Clause</b></em>' containment reference.
@@ -388,7 +305,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UPDATE_STATEMENT__UPDATE_CLAUSE = JPQL_QUERY_FEATURE_COUNT + 0;
+  int UPDATE_STATEMENT__UPDATE_CLAUSE = QUERY_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Set Clause</b></em>' containment reference.
@@ -397,7 +314,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UPDATE_STATEMENT__SET_CLAUSE = JPQL_QUERY_FEATURE_COUNT + 1;
+  int UPDATE_STATEMENT__SET_CLAUSE = QUERY_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Update Statement</em>' class.
@@ -406,7 +323,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int UPDATE_STATEMENT_FEATURE_COUNT = JPQL_QUERY_FEATURE_COUNT + 2;
+  int UPDATE_STATEMENT_FEATURE_COUNT = QUERY_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.UpdateClauseImpl <em>Update Clause</em>}' class.
@@ -416,7 +333,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getUpdateClause()
    * @generated
    */
-  int UPDATE_CLAUSE = 9;
+  int UPDATE_CLAUSE = 7;
 
   /**
    * The feature id for the '<em><b>From Entries</b></em>' containment reference list.
@@ -444,7 +361,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSetClause()
    * @generated
    */
-  int SET_CLAUSE = 10;
+  int SET_CLAUSE = 8;
 
   /**
    * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -472,7 +389,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getUpdateItem()
    * @generated
    */
-  int UPDATE_ITEM = 11;
+  int UPDATE_ITEM = 9;
 
   /**
    * The feature id for the '<em><b>Alias</b></em>' containment reference.
@@ -509,7 +426,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getDeleteStatement()
    * @generated
    */
-  int DELETE_STATEMENT = 12;
+  int DELETE_STATEMENT = 10;
 
   /**
    * The feature id for the '<em><b>Where Clause</b></em>' containment reference.
@@ -518,7 +435,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DELETE_STATEMENT__WHERE_CLAUSE = JPQL_QUERY__WHERE_CLAUSE;
+  int DELETE_STATEMENT__WHERE_CLAUSE = QUERY__WHERE_CLAUSE;
 
   /**
    * The feature id for the '<em><b>Delete Clause</b></em>' containment reference.
@@ -527,7 +444,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DELETE_STATEMENT__DELETE_CLAUSE = JPQL_QUERY_FEATURE_COUNT + 0;
+  int DELETE_STATEMENT__DELETE_CLAUSE = QUERY_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Delete Statement</em>' class.
@@ -536,7 +453,7 @@ public interface JPQLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DELETE_STATEMENT_FEATURE_COUNT = JPQL_QUERY_FEATURE_COUNT + 1;
+  int DELETE_STATEMENT_FEATURE_COUNT = QUERY_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.yazgel.jpql.xtext.jPQL.impl.DeleteClauseImpl <em>Delete Clause</em>}' class.
@@ -546,7 +463,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getDeleteClause()
    * @generated
    */
-  int DELETE_CLAUSE = 13;
+  int DELETE_CLAUSE = 11;
 
   /**
    * The feature id for the '<em><b>From Clause</b></em>' containment reference.
@@ -574,7 +491,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSelectFromClause()
    * @generated
    */
-  int SELECT_FROM_CLAUSE = 14;
+  int SELECT_FROM_CLAUSE = 12;
 
   /**
    * The feature id for the '<em><b>Select Clause</b></em>' containment reference.
@@ -611,7 +528,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSelectClause()
    * @generated
    */
-  int SELECT_CLAUSE = 15;
+  int SELECT_CLAUSE = 13;
 
   /**
    * The feature id for the '<em><b>Is Distinct</b></em>' attribute.
@@ -648,7 +565,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSelectExpression()
    * @generated
    */
-  int SELECT_EXPRESSION = 16;
+  int SELECT_EXPRESSION = 14;
 
   /**
    * The number of structural features of the '<em>Select Expression</em>' class.
@@ -667,7 +584,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSelectAggregateExpression()
    * @generated
    */
-  int SELECT_AGGREGATE_EXPRESSION = 17;
+  int SELECT_AGGREGATE_EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Is Distinct</b></em>' attribute.
@@ -704,7 +621,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getAvgAggregate()
    * @generated
    */
-  int AVG_AGGREGATE = 18;
+  int AVG_AGGREGATE = 16;
 
   /**
    * The feature id for the '<em><b>Is Distinct</b></em>' attribute.
@@ -741,7 +658,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getMaxAggregate()
    * @generated
    */
-  int MAX_AGGREGATE = 19;
+  int MAX_AGGREGATE = 17;
 
   /**
    * The feature id for the '<em><b>Is Distinct</b></em>' attribute.
@@ -778,7 +695,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getMinAggregate()
    * @generated
    */
-  int MIN_AGGREGATE = 20;
+  int MIN_AGGREGATE = 18;
 
   /**
    * The feature id for the '<em><b>Is Distinct</b></em>' attribute.
@@ -815,7 +732,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSumAggregate()
    * @generated
    */
-  int SUM_AGGREGATE = 21;
+  int SUM_AGGREGATE = 19;
 
   /**
    * The feature id for the '<em><b>Is Distinct</b></em>' attribute.
@@ -852,7 +769,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getCountAggregate()
    * @generated
    */
-  int COUNT_AGGREGATE = 22;
+  int COUNT_AGGREGATE = 20;
 
   /**
    * The feature id for the '<em><b>Is Distinct</b></em>' attribute.
@@ -889,7 +806,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSelectConstructorExpression()
    * @generated
    */
-  int SELECT_CONSTRUCTOR_EXPRESSION = 23;
+  int SELECT_CONSTRUCTOR_EXPRESSION = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -926,7 +843,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getFromClause()
    * @generated
    */
-  int FROM_CLAUSE = 24;
+  int FROM_CLAUSE = 22;
 
   /**
    * The feature id for the '<em><b>From Entries</b></em>' containment reference list.
@@ -954,7 +871,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getFromEntry()
    * @generated
    */
-  int FROM_ENTRY = 25;
+  int FROM_ENTRY = 23;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -982,7 +899,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getVariableDeclaration()
    * @generated
    */
-  int VARIABLE_DECLARATION = 26;
+  int VARIABLE_DECLARATION = 24;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1010,7 +927,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getFromClass()
    * @generated
    */
-  int FROM_CLASS = 27;
+  int FROM_CLASS = 25;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -1022,7 +939,7 @@ public interface JPQLPackage extends EPackage
   int FROM_CLASS__VARIABLE = FROM_ENTRY__VARIABLE;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1056,7 +973,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getFromCollection()
    * @generated
    */
-  int FROM_COLLECTION = 28;
+  int FROM_COLLECTION = 26;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -1093,7 +1010,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getFromJoin()
    * @generated
    */
-  int FROM_JOIN = 29;
+  int FROM_JOIN = 27;
 
   /**
    * The feature id for the '<em><b>Is Fetch</b></em>' attribute.
@@ -1139,7 +1056,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getJoin()
    * @generated
    */
-  int JOIN = 30;
+  int JOIN = 28;
 
   /**
    * The feature id for the '<em><b>Is Fetch</b></em>' attribute.
@@ -1185,7 +1102,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getLeftJoin()
    * @generated
    */
-  int LEFT_JOIN = 31;
+  int LEFT_JOIN = 29;
 
   /**
    * The feature id for the '<em><b>Is Fetch</b></em>' attribute.
@@ -1240,7 +1157,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getInnerJoin()
    * @generated
    */
-  int INNER_JOIN = 32;
+  int INNER_JOIN = 30;
 
   /**
    * The feature id for the '<em><b>Is Fetch</b></em>' attribute.
@@ -1286,7 +1203,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getWhereClause()
    * @generated
    */
-  int WHERE_CLAUSE = 33;
+  int WHERE_CLAUSE = 31;
 
   /**
    * The feature id for the '<em><b>Where Entry</b></em>' containment reference.
@@ -1314,7 +1231,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 34;
+  int EXPRESSION = 32;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -1333,7 +1250,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getOperatorExpression()
    * @generated
    */
-  int OPERATOR_EXPRESSION = 35;
+  int OPERATOR_EXPRESSION = 33;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1379,7 +1296,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getExistsExpression()
    * @generated
    */
-  int EXISTS_EXPRESSION = 36;
+  int EXISTS_EXPRESSION = 34;
 
   /**
    * The feature id for the '<em><b>Is Not</b></em>' attribute.
@@ -1416,7 +1333,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getAllExpression()
    * @generated
    */
-  int ALL_EXPRESSION = 37;
+  int ALL_EXPRESSION = 35;
 
   /**
    * The feature id for the '<em><b>Query</b></em>' containment reference.
@@ -1444,7 +1361,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getAnyExpression()
    * @generated
    */
-  int ANY_EXPRESSION = 38;
+  int ANY_EXPRESSION = 36;
 
   /**
    * The feature id for the '<em><b>Query</b></em>' containment reference.
@@ -1472,7 +1389,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getSomeExpression()
    * @generated
    */
-  int SOME_EXPRESSION = 39;
+  int SOME_EXPRESSION = 37;
 
   /**
    * The feature id for the '<em><b>Query</b></em>' containment reference.
@@ -1500,7 +1417,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getCollectionExpression()
    * @generated
    */
-  int COLLECTION_EXPRESSION = 40;
+  int COLLECTION_EXPRESSION = 38;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1546,7 +1463,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getNullComparisonExpression()
    * @generated
    */
-  int NULL_COMPARISON_EXPRESSION = 41;
+  int NULL_COMPARISON_EXPRESSION = 39;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1583,7 +1500,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getEmptyComparisonExpression()
    * @generated
    */
-  int EMPTY_COMPARISON_EXPRESSION = 42;
+  int EMPTY_COMPARISON_EXPRESSION = 40;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1620,7 +1537,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getLikeExpression()
    * @generated
    */
-  int LIKE_EXPRESSION = 43;
+  int LIKE_EXPRESSION = 41;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1666,7 +1583,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getInExpression()
    * @generated
    */
-  int IN_EXPRESSION = 44;
+  int IN_EXPRESSION = 42;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1703,7 +1620,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getInSeqExpression()
    * @generated
    */
-  int IN_SEQ_EXPRESSION = 45;
+  int IN_SEQ_EXPRESSION = 43;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1749,7 +1666,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getInQueryExpression()
    * @generated
    */
-  int IN_QUERY_EXPRESSION = 46;
+  int IN_QUERY_EXPRESSION = 44;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1795,7 +1712,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getBetweenExpression()
    * @generated
    */
-  int BETWEEN_EXPRESSION = 47;
+  int BETWEEN_EXPRESSION = 45;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1850,7 +1767,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getExpressionTerm()
    * @generated
    */
-  int EXPRESSION_TERM = 49;
+  int EXPRESSION_TERM = 47;
 
   /**
    * The number of structural features of the '<em>Expression Term</em>' class.
@@ -1869,7 +1786,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getVariable()
    * @generated
    */
-  int VARIABLE = 48;
+  int VARIABLE = 46;
 
   /**
    * The number of structural features of the '<em>Variable</em>' class.
@@ -1888,7 +1805,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getAliasAttributeExpression()
    * @generated
    */
-  int ALIAS_ATTRIBUTE_EXPRESSION = 50;
+  int ALIAS_ATTRIBUTE_EXPRESSION = 48;
 
   /**
    * The feature id for the '<em><b>Alias</b></em>' reference.
@@ -1925,7 +1842,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getParameterExpression()
    * @generated
    */
-  int PARAMETER_EXPRESSION = 51;
+  int PARAMETER_EXPRESSION = 49;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1953,7 +1870,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 52;
+  int FUNCTION = 50;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1990,7 +1907,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getValue()
    * @generated
    */
-  int VALUE = 53;
+  int VALUE = 51;
 
   /**
    * The number of structural features of the '<em>Value</em>' class.
@@ -2009,7 +1926,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getIntegerExpression()
    * @generated
    */
-  int INTEGER_EXPRESSION = 54;
+  int INTEGER_EXPRESSION = 52;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2037,7 +1954,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getStringExpression()
    * @generated
    */
-  int STRING_EXPRESSION = 55;
+  int STRING_EXPRESSION = 53;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2065,7 +1982,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getNullExpression()
    * @generated
    */
-  int NULL_EXPRESSION = 56;
+  int NULL_EXPRESSION = 54;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2093,7 +2010,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getBooleanExpression()
    * @generated
    */
-  int BOOLEAN_EXPRESSION = 57;
+  int BOOLEAN_EXPRESSION = 55;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2121,7 +2038,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getDateTimeExpression()
    * @generated
    */
-  int DATE_TIME_EXPRESSION = 58;
+  int DATE_TIME_EXPRESSION = 56;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2149,7 +2066,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 59;
+  int OR_EXPRESSION = 57;
 
   /**
    * The feature id for the '<em><b>Entries</b></em>' containment reference list.
@@ -2177,7 +2094,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 60;
+  int AND_EXPRESSION = 58;
 
   /**
    * The feature id for the '<em><b>Entries</b></em>' containment reference list.
@@ -2205,7 +2122,7 @@ public interface JPQLPackage extends EPackage
    * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getOperator()
    * @generated
    */
-  int OPERATOR = 61;
+  int OPERATOR = 59;
 
 
   /**
@@ -2219,111 +2136,36 @@ public interface JPQLPackage extends EPackage
   EClass getQueryModule();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.yazgel.jpql.xtext.jPQL.QueryModule#getImports <em>Imports</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.yazgel.jpql.xtext.jPQL.QueryModule#getQueries <em>Queries</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Imports</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.QueryModule#getImports()
+   * @return the meta object for the containment reference list '<em>Queries</em>'.
+   * @see org.yazgel.jpql.xtext.jPQL.QueryModule#getQueries()
    * @see #getQueryModule()
    * @generated
    */
-  EReference getQueryModule_Imports();
+  EReference getQueryModule_Queries();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.yazgel.jpql.xtext.jPQL.QueryModule#getDefaultQuery <em>Default Query</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Default Query</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.QueryModule#getDefaultQuery()
-   * @see #getQueryModule()
-   * @generated
-   */
-  EReference getQueryModule_DefaultQuery();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.yazgel.jpql.xtext.jPQL.QueryModule#getNamedQueries <em>Named Queries</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Named Queries</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.QueryModule#getNamedQueries()
-   * @see #getQueryModule()
-   * @generated
-   */
-  EReference getQueryModule_NamedQueries();
-
-  /**
-   * Returns the meta object for class '{@link org.yazgel.jpql.xtext.jPQL.Import <em>Import</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Import</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.Import
-   * @generated
-   */
-  EClass getImport();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.yazgel.jpql.xtext.jPQL.Import#getImportURI <em>Import URI</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Import URI</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.Import#getImportURI()
-   * @see #getImport()
-   * @generated
-   */
-  EAttribute getImport_ImportURI();
-
-  /**
-   * Returns the meta object for class '{@link org.yazgel.jpql.xtext.jPQL.NamedQuery <em>Named Query</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Named Query</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.NamedQuery
-   * @generated
-   */
-  EClass getNamedQuery();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.yazgel.jpql.xtext.jPQL.NamedQuery#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.NamedQuery#getName()
-   * @see #getNamedQuery()
-   * @generated
-   */
-  EAttribute getNamedQuery_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.yazgel.jpql.xtext.jPQL.NamedQuery#getQuery <em>Query</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Query</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.NamedQuery#getQuery()
-   * @see #getNamedQuery()
-   * @generated
-   */
-  EReference getNamedQuery_Query();
-
-  /**
-   * Returns the meta object for class '{@link org.yazgel.jpql.xtext.jPQL.JPQLQuery <em>Query</em>}'.
+   * Returns the meta object for class '{@link org.yazgel.jpql.xtext.jPQL.Query <em>Query</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for class '<em>Query</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.JPQLQuery
+   * @see org.yazgel.jpql.xtext.jPQL.Query
    * @generated
    */
-  EClass getJPQLQuery();
+  EClass getQuery();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.yazgel.jpql.xtext.jPQL.JPQLQuery#getWhereClause <em>Where Clause</em>}'.
+   * Returns the meta object for the containment reference '{@link org.yazgel.jpql.xtext.jPQL.Query#getWhereClause <em>Where Clause</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Where Clause</em>'.
-   * @see org.yazgel.jpql.xtext.jPQL.JPQLQuery#getWhereClause()
-   * @see #getJPQLQuery()
+   * @see org.yazgel.jpql.xtext.jPQL.Query#getWhereClause()
+   * @see #getQuery()
    * @generated
    */
-  EReference getJPQLQuery_WhereClause();
+  EReference getQuery_WhereClause();
 
   /**
    * Returns the meta object for class '{@link org.yazgel.jpql.xtext.jPQL.SelectStatement <em>Select Statement</em>}'.
@@ -2874,15 +2716,15 @@ public interface JPQLPackage extends EPackage
   EClass getFromClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.yazgel.jpql.xtext.jPQL.FromClass#getType <em>Type</em>}'.
+   * Returns the meta object for the reference '{@link org.yazgel.jpql.xtext.jPQL.FromClass#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
+   * @return the meta object for the reference '<em>Type</em>'.
    * @see org.yazgel.jpql.xtext.jPQL.FromClass#getType()
    * @see #getFromClass()
    * @generated
    */
-  EAttribute getFromClass_Type();
+  EReference getFromClass_Type();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.yazgel.jpql.xtext.jPQL.FromClass#getJoins <em>Joins</em>}'.
@@ -3753,82 +3595,22 @@ public interface JPQLPackage extends EPackage
     EClass QUERY_MODULE = eINSTANCE.getQueryModule();
 
     /**
-     * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Queries</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference QUERY_MODULE__IMPORTS = eINSTANCE.getQueryModule_Imports();
+    EReference QUERY_MODULE__QUERIES = eINSTANCE.getQueryModule_Queries();
 
     /**
-     * The meta object literal for the '<em><b>Default Query</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.yazgel.jpql.xtext.jPQL.impl.QueryImpl <em>Query</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.yazgel.jpql.xtext.jPQL.impl.QueryImpl
+     * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getQuery()
      * @generated
      */
-    EReference QUERY_MODULE__DEFAULT_QUERY = eINSTANCE.getQueryModule_DefaultQuery();
-
-    /**
-     * The meta object literal for the '<em><b>Named Queries</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference QUERY_MODULE__NAMED_QUERIES = eINSTANCE.getQueryModule_NamedQueries();
-
-    /**
-     * The meta object literal for the '{@link org.yazgel.jpql.xtext.jPQL.impl.ImportImpl <em>Import</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.yazgel.jpql.xtext.jPQL.impl.ImportImpl
-     * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getImport()
-     * @generated
-     */
-    EClass IMPORT = eINSTANCE.getImport();
-
-    /**
-     * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IMPORT__IMPORT_URI = eINSTANCE.getImport_ImportURI();
-
-    /**
-     * The meta object literal for the '{@link org.yazgel.jpql.xtext.jPQL.impl.NamedQueryImpl <em>Named Query</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.yazgel.jpql.xtext.jPQL.impl.NamedQueryImpl
-     * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getNamedQuery()
-     * @generated
-     */
-    EClass NAMED_QUERY = eINSTANCE.getNamedQuery();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NAMED_QUERY__NAME = eINSTANCE.getNamedQuery_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Query</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference NAMED_QUERY__QUERY = eINSTANCE.getNamedQuery_Query();
-
-    /**
-     * The meta object literal for the '{@link org.yazgel.jpql.xtext.jPQL.impl.JPQLQueryImpl <em>Query</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLQueryImpl
-     * @see org.yazgel.jpql.xtext.jPQL.impl.JPQLPackageImpl#getJPQLQuery()
-     * @generated
-     */
-    EClass JPQL_QUERY = eINSTANCE.getJPQLQuery();
+    EClass QUERY = eINSTANCE.getQuery();
 
     /**
      * The meta object literal for the '<em><b>Where Clause</b></em>' containment reference feature.
@@ -3836,7 +3618,7 @@ public interface JPQLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JPQL_QUERY__WHERE_CLAUSE = eINSTANCE.getJPQLQuery_WhereClause();
+    EReference QUERY__WHERE_CLAUSE = eINSTANCE.getQuery_WhereClause();
 
     /**
      * The meta object literal for the '{@link org.yazgel.jpql.xtext.jPQL.impl.SelectStatementImpl <em>Select Statement</em>}' class.
@@ -4303,12 +4085,12 @@ public interface JPQLPackage extends EPackage
     EClass FROM_CLASS = eINSTANCE.getFromClass();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FROM_CLASS__TYPE = eINSTANCE.getFromClass_Type();
+    EReference FROM_CLASS__TYPE = eINSTANCE.getFromClass_Type();
 
     /**
      * The meta object literal for the '<em><b>Joins</b></em>' containment reference list feature.

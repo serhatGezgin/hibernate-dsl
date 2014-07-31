@@ -29,7 +29,7 @@ import org.yazgel.jpql.xtext.jPQL.UpdateStatement;
  *
  * @generated
  */
-public class UpdateStatementImpl extends JPQLQueryImpl implements UpdateStatement
+public class UpdateStatementImpl extends QueryImpl implements UpdateStatement
 {
   /**
    * The cached value of the '{@link #getUpdateClause() <em>Update Clause</em>}' containment reference.

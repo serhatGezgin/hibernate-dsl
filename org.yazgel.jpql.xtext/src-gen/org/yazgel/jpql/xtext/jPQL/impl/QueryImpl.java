@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.yazgel.jpql.xtext.jPQL.JPQLPackage;
-import org.yazgel.jpql.xtext.jPQL.JPQLQuery;
+import org.yazgel.jpql.xtext.jPQL.Query;
 import org.yazgel.jpql.xtext.jPQL.WhereClause;
 
 /**
@@ -22,13 +22,13 @@ import org.yazgel.jpql.xtext.jPQL.WhereClause;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.yazgel.jpql.xtext.jPQL.impl.JPQLQueryImpl#getWhereClause <em>Where Clause</em>}</li>
+ *   <li>{@link org.yazgel.jpql.xtext.jPQL.impl.QueryImpl#getWhereClause <em>Where Clause</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQuery
+public class QueryImpl extends MinimalEObjectImpl.Container implements Query
 {
   /**
    * The cached value of the '{@link #getWhereClause() <em>Where Clause</em>}' containment reference.
@@ -45,7 +45,7 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
    * <!-- end-user-doc -->
    * @generated
    */
-  protected JPQLQueryImpl()
+  protected QueryImpl()
   {
     super();
   }
@@ -58,7 +58,7 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
   @Override
   protected EClass eStaticClass()
   {
-    return JPQLPackage.Literals.JPQL_QUERY;
+    return JPQLPackage.Literals.QUERY;
   }
 
   /**
@@ -82,7 +82,7 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
     whereClause = newWhereClause;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JPQLPackage.JPQL_QUERY__WHERE_CLAUSE, oldWhereClause, newWhereClause);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JPQLPackage.QUERY__WHERE_CLAUSE, oldWhereClause, newWhereClause);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -99,14 +99,14 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
     {
       NotificationChain msgs = null;
       if (whereClause != null)
-        msgs = ((InternalEObject)whereClause).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JPQLPackage.JPQL_QUERY__WHERE_CLAUSE, null, msgs);
+        msgs = ((InternalEObject)whereClause).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JPQLPackage.QUERY__WHERE_CLAUSE, null, msgs);
       if (newWhereClause != null)
-        msgs = ((InternalEObject)newWhereClause).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JPQLPackage.JPQL_QUERY__WHERE_CLAUSE, null, msgs);
+        msgs = ((InternalEObject)newWhereClause).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JPQLPackage.QUERY__WHERE_CLAUSE, null, msgs);
       msgs = basicSetWhereClause(newWhereClause, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JPQLPackage.JPQL_QUERY__WHERE_CLAUSE, newWhereClause, newWhereClause));
+      eNotify(new ENotificationImpl(this, Notification.SET, JPQLPackage.QUERY__WHERE_CLAUSE, newWhereClause, newWhereClause));
   }
 
   /**
@@ -119,7 +119,7 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
   {
     switch (featureID)
     {
-      case JPQLPackage.JPQL_QUERY__WHERE_CLAUSE:
+      case JPQLPackage.QUERY__WHERE_CLAUSE:
         return basicSetWhereClause(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -135,7 +135,7 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
   {
     switch (featureID)
     {
-      case JPQLPackage.JPQL_QUERY__WHERE_CLAUSE:
+      case JPQLPackage.QUERY__WHERE_CLAUSE:
         return getWhereClause();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -151,7 +151,7 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
   {
     switch (featureID)
     {
-      case JPQLPackage.JPQL_QUERY__WHERE_CLAUSE:
+      case JPQLPackage.QUERY__WHERE_CLAUSE:
         setWhereClause((WhereClause)newValue);
         return;
     }
@@ -168,7 +168,7 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
   {
     switch (featureID)
     {
-      case JPQLPackage.JPQL_QUERY__WHERE_CLAUSE:
+      case JPQLPackage.QUERY__WHERE_CLAUSE:
         setWhereClause((WhereClause)null);
         return;
     }
@@ -185,10 +185,10 @@ public class JPQLQueryImpl extends MinimalEObjectImpl.Container implements JPQLQ
   {
     switch (featureID)
     {
-      case JPQLPackage.JPQL_QUERY__WHERE_CLAUSE:
+      case JPQLPackage.QUERY__WHERE_CLAUSE:
         return whereClause != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //JPQLQueryImpl
+} //QueryImpl

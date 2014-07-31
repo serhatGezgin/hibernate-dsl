@@ -1,22 +1,14 @@
 grammar org.yazgel.jpql.xtext.JPQL with org.eclipse.xtext.common.Terminals
 
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmTypes
+
 generate jPQL "http://www.yazgel.org/jpql/xtext/JPQL"
 
 QueryModule:
-	(imports+=Import)*
-	(defaultQuery=JPQLQuery)?
-	(namedQueries+=NamedQuery)*
+	(queries+=Query)*
 ;
 
-Import :
-	'IMPORT' importURI=STRING
-;
-
-NamedQuery:
-	name=ID ":" query=JPQLQuery
-;
-
-JPQLQuery:
+Query:
 	SelectStatement |
 	UpdateStatement |
 	DeleteStatement
@@ -139,11 +131,11 @@ FromClass:
 ;
 
 FromClassId returns FromClass:
-	type=ID
+	type=[jvmTypes::JvmType|QualifiedName]
 ;
 
 FromClassVar returns FromClass:
-	type=ID variable=VariableDeclaration (joins+=FromJoin)*
+	type=[jvmTypes::JvmType|QualifiedName] variable=VariableDeclaration (joins+=FromJoin)*
 ;
 
 FromCollection returns FromCollection:	
@@ -371,6 +363,8 @@ terminal DATE_STRING
 terminal TIME_STRING
     : '0'..'9' ('0'..'9')? ':' '0'..'9' '0'..'9' ':' '0'..'9' '0'..'9' '.' '0'..'9'*
     ;
+    
+QualifiedName: ID ('.' ID)* ;
 
 //terminal SINGED_LONG returns ecore::ELong: '-'?('0'..'9')+;	
 //terminal SIGNED_DOUBLE returns ecore::EDouble: '-'?('0'..'9')+ ('.' ('0'..'9')+)?;

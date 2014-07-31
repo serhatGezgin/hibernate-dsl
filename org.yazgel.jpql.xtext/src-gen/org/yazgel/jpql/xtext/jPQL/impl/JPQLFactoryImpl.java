@@ -66,9 +66,7 @@ public class JPQLFactoryImpl extends EFactoryImpl implements JPQLFactory
     switch (eClass.getClassifierID())
     {
       case JPQLPackage.QUERY_MODULE: return createQueryModule();
-      case JPQLPackage.IMPORT: return createImport();
-      case JPQLPackage.NAMED_QUERY: return createNamedQuery();
-      case JPQLPackage.JPQL_QUERY: return createJPQLQuery();
+      case JPQLPackage.QUERY: return createQuery();
       case JPQLPackage.SELECT_STATEMENT: return createSelectStatement();
       case JPQLPackage.HAVING_CLAUSE: return createHavingClause();
       case JPQLPackage.ORDER_CLAUSE: return createOrderClause();
@@ -181,32 +179,10 @@ public class JPQLFactoryImpl extends EFactoryImpl implements JPQLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Import createImport()
+  public Query createQuery()
   {
-    ImportImpl import_ = new ImportImpl();
-    return import_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NamedQuery createNamedQuery()
-  {
-    NamedQueryImpl namedQuery = new NamedQueryImpl();
-    return namedQuery;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public JPQLQuery createJPQLQuery()
-  {
-    JPQLQueryImpl jpqlQuery = new JPQLQueryImpl();
-    return jpqlQuery;
+    QueryImpl query = new QueryImpl();
+    return query;
   }
 
   /**

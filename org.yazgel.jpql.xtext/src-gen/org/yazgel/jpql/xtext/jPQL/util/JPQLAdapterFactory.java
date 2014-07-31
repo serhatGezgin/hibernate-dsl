@@ -80,19 +80,9 @@ public class JPQLAdapterFactory extends AdapterFactoryImpl
         return createQueryModuleAdapter();
       }
       @Override
-      public Adapter caseImport(Import object)
+      public Adapter caseQuery(Query object)
       {
-        return createImportAdapter();
-      }
-      @Override
-      public Adapter caseNamedQuery(NamedQuery object)
-      {
-        return createNamedQueryAdapter();
-      }
-      @Override
-      public Adapter caseJPQLQuery(JPQLQuery object)
-      {
-        return createJPQLQueryAdapter();
+        return createQueryAdapter();
       }
       @Override
       public Adapter caseSelectStatement(SelectStatement object)
@@ -417,46 +407,16 @@ public class JPQLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.yazgel.jpql.xtext.jPQL.Import <em>Import</em>}'.
+   * Creates a new adapter for an object of class '{@link org.yazgel.jpql.xtext.jPQL.Query <em>Query</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.yazgel.jpql.xtext.jPQL.Import
+   * @see org.yazgel.jpql.xtext.jPQL.Query
    * @generated
    */
-  public Adapter createImportAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.yazgel.jpql.xtext.jPQL.NamedQuery <em>Named Query</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.yazgel.jpql.xtext.jPQL.NamedQuery
-   * @generated
-   */
-  public Adapter createNamedQueryAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.yazgel.jpql.xtext.jPQL.JPQLQuery <em>Query</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.yazgel.jpql.xtext.jPQL.JPQLQuery
-   * @generated
-   */
-  public Adapter createJPQLQueryAdapter()
+  public Adapter createQueryAdapter()
   {
     return null;
   }

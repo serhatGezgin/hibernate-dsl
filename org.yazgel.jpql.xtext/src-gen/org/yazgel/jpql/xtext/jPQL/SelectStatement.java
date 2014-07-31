@@ -21,7 +21,7 @@ package org.yazgel.jpql.xtext.jPQL;
  * @model
  * @generated
  */
-public interface SelectStatement extends JPQLQuery, ExpressionTerm
+public interface SelectStatement extends Query, ExpressionTerm
 {
   /**
    * Returns the value of the '<em><b>Select From Clause</b></em>' containment reference.

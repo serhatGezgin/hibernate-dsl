@@ -31,7 +31,7 @@ import org.yazgel.jpql.xtext.jPQL.SelectStatement;
  *
  * @generated
  */
-public class SelectStatementImpl extends JPQLQueryImpl implements SelectStatement
+public class SelectStatementImpl extends QueryImpl implements SelectStatement
 {
   /**
    * The cached value of the '{@link #getSelectFromClause() <em>Select From Clause</em>}' containment reference.

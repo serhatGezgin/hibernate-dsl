@@ -19,7 +19,7 @@ package org.yazgel.jpql.xtext.jPQL;
  * @model
  * @generated
  */
-public interface DeleteStatement extends JPQLQuery
+public interface DeleteStatement extends Query
 {
   /**
    * Returns the value of the '<em><b>Delete Clause</b></em>' containment reference.

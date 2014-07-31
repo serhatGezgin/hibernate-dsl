@@ -78,188 +78,48 @@ ruleQueryModule returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQueryModuleAccess().getImportsImportParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getQueryModuleAccess().getQueriesQueryParserRuleCall_0()); 
 	    }
-		lv_imports_0_0=ruleImport		{
+		lv_queries_0_0=ruleQuery		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQueryModuleRule());
 	        }
        		add(
        			$current, 
-       			"imports",
-        		lv_imports_0_0, 
-        		"Import");
+       			"queries",
+        		lv_queries_0_0, 
+        		"Query");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getQueryModuleAccess().getDefaultQueryJPQLQueryParserRuleCall_1_0()); 
-	    }
-		lv_defaultQuery_1_0=ruleJPQLQuery		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getQueryModuleRule());
-	        }
-       		set(
-       			$current, 
-       			"defaultQuery",
-        		lv_defaultQuery_1_0, 
-        		"JPQLQuery");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)?(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getQueryModuleAccess().getNamedQueriesNamedQueryParserRuleCall_2_0()); 
-	    }
-		lv_namedQueries_2_0=ruleNamedQuery		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getQueryModuleRule());
-	        }
-       		add(
-       			$current, 
-       			"namedQueries",
-        		lv_namedQueries_2_0, 
-        		"NamedQuery");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*)
+)*
 ;
 
 
 
 
 
-// Entry rule entryRuleImport
-entryRuleImport returns [EObject current=null] 
+// Entry rule entryRuleQuery
+entryRuleQuery returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getImportRule()); }
-	 iv_ruleImport=ruleImport 
-	 { $current=$iv_ruleImport.current; } 
+	{ newCompositeNode(grammarAccess.getQueryRule()); }
+	 iv_ruleQuery=ruleQuery 
+	 { $current=$iv_ruleQuery.current; } 
 	 EOF 
 ;
 
-// Rule Import
-ruleImport returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='IMPORT' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getImportAccess().getIMPORTKeyword_0());
-    }
-(
-(
-		lv_importURI_1_0=RULE_STRING
-		{
-			newLeafNode(lv_importURI_1_0, grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getImportRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"importURI",
-        		lv_importURI_1_0, 
-        		"STRING");
-	    }
-
-)
-))
-;
-
-
-
-
-
-// Entry rule entryRuleNamedQuery
-entryRuleNamedQuery returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getNamedQueryRule()); }
-	 iv_ruleNamedQuery=ruleNamedQuery 
-	 { $current=$iv_ruleNamedQuery.current; } 
-	 EOF 
-;
-
-// Rule NamedQuery
-ruleNamedQuery returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getNamedQueryAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getNamedQueryRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_1=':' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getNamedQueryAccess().getColonKeyword_1());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getNamedQueryAccess().getQueryJPQLQueryParserRuleCall_2_0()); 
-	    }
-		lv_query_2_0=ruleJPQLQuery		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getNamedQueryRule());
-	        }
-       		set(
-       			$current, 
-       			"query",
-        		lv_query_2_0, 
-        		"JPQLQuery");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
-;
-
-
-
-
-
-// Entry rule entryRuleJPQLQuery
-entryRuleJPQLQuery returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getJPQLQueryRule()); }
-	 iv_ruleJPQLQuery=ruleJPQLQuery 
-	 { $current=$iv_ruleJPQLQuery.current; } 
-	 EOF 
-;
-
-// Rule JPQLQuery
-ruleJPQLQuery returns [EObject current=null] 
+// Rule Query
+ruleQuery returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (
     { 
-        newCompositeNode(grammarAccess.getJPQLQueryAccess().getSelectStatementParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getQueryAccess().getSelectStatementParserRuleCall_0()); 
     }
     this_SelectStatement_0=ruleSelectStatement
     { 
@@ -269,7 +129,7 @@ ruleJPQLQuery returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getJPQLQueryAccess().getUpdateStatementParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getQueryAccess().getUpdateStatementParserRuleCall_1()); 
     }
     this_UpdateStatement_1=ruleUpdateStatement
     { 
@@ -279,7 +139,7 @@ ruleJPQLQuery returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getJPQLQueryAccess().getDeleteStatementParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getQueryAccess().getDeleteStatementParserRuleCall_2()); 
     }
     this_DeleteStatement_2=ruleDeleteStatement
     { 
@@ -1833,19 +1693,16 @@ ruleFromClassId returns [EObject current=null]
     @after { leaveRule(); }:
 (
 (
-		lv_type_0_0=RULE_ID
 		{
-			newLeafNode(lv_type_0_0, grammarAccess.getFromClassIdAccess().getTypeIDTerminalRuleCall_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getFromClassIdRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"type",
-        		lv_type_0_0, 
-        		"ID");
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getFromClassIdAccess().getTypeJvmTypeCrossReference_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -1872,19 +1729,16 @@ ruleFromClassVar returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_type_0_0=RULE_ID
 		{
-			newLeafNode(lv_type_0_0, grammarAccess.getFromClassVarAccess().getTypeIDTerminalRuleCall_0_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getFromClassVarRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"type",
-        		lv_type_0_0, 
-        		"ID");
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getFromClassVarAccess().getTypeJvmTypeCrossReference_0_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -4327,6 +4181,47 @@ ruleLITERAL_TEMPORAL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRu
     newLeafNode(this_TIMESTAMP_LITERAL_2, grammarAccess.getLITERAL_TEMPORALAccess().getTIMESTAMP_LITERALTerminalRuleCall_2()); 
     }
 )
+    ;
+
+
+
+
+
+// Entry rule entryRuleQualifiedName
+entryRuleQualifiedName returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getQualifiedNameRule()); } 
+	 iv_ruleQualifiedName=ruleQualifiedName 
+	 { $current=$iv_ruleQualifiedName.current.getText(); }  
+	 EOF 
+;
+
+// Rule QualifiedName
+ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(    this_ID_0=RULE_ID    {
+		$current.merge(this_ID_0);
+    }
+
+    { 
+    newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
+    }
+(
+	kw='.' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
+    }
+    this_ID_2=RULE_ID    {
+		$current.merge(this_ID_2);
+    }
+
+    { 
+    newLeafNode(this_ID_2, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
+    }
+)*)
     ;
 
 
